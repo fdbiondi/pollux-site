@@ -1,0 +1,14 @@
+version: '3.7'
+services:
+  pollux-site:
+    container_name: 'pollux-site-nuxt'
+    build:
+      context: .
+      target: 'dev-stage'
+    volumes:
+      - '.:/usr/src/app'
+    ports:
+      - '3000:3000'
+    command: >
+      bash -c "yarn install && yarn dev --hostname 0.0.0.0"
+
