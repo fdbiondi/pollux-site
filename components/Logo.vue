@@ -1,17 +1,15 @@
 <template>
   <div class="container">
-    <div class="font-fredoka-one text-white">
-      <div class="px-1 tracking-wider text-7xl">Pollux</div>
-      <div class="text-rose-500 text-2xl">Software Engineering</div>
+    <div class="font-fredoka-one text-white pl-2">
+      <div class="tracking-wider text-5xl">Pollux</div>
+      <div class="text-pollux-cyan text-md">Software Engineering</div>
     </div>
     <div class="overlay"></div>
   </div>
 </template>
 
 <script>
-export default {
-
-}
+export default {}
 </script>
 
 <style lang="scss" scoped>

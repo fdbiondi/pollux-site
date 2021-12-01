@@ -2,13 +2,13 @@
   <div class="text-gray-200 bg-opacity-25 p-8 m-4 rounded-sm" :class="classes">
     <slot></slot>
     <div class="pt-6 space-y-4">
-      <h4 class="text-2xl font-semibold lines-2">
+      <h4 class="text-2xl lines-2">
         {{ title }}
       </h4>
     </div>
 
     <div class="pt-4 space-y-4">
-      <p class="min-h-[10rem] text-md font-semibold">{{ description }}</p>
+      <p class="min-h-[10rem] text-md">{{ description }}</p>
     </div>
   </div>
 </template>

@@ -4,14 +4,14 @@
 
     <div class="pt-6 space-y-4">
       <slot name="title">
-        <h4 class="text-2xl font-semibold flex">
+        <h4 class="text-2xl flex">
           {{ title }}
         </h4>
       </slot>
     </div>
 
     <div class="pt-4 space-y-4">
-      <p class="min-h-[6rem] text-md font-semibold">{{ description }}</p>
+      <p class="min-h-[6rem] text-md">{{ description }}</p>
     </div>
   </div>
 </template>

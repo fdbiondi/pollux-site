@@ -1,13 +1,22 @@
 <template>
   <div class="hero__titles text-gray-200">
-    <h2 class="text-md lg:text-2xl font-bold">
+    <h2 class="text-md lg:text-2xl font-fredoka-one">
       Custom Software Solutions for
     </h2>
-    <h1 class="text-5xl lg:text-6xl font-black text-green-400 mb-2 lg:mb-6">
+    <h1
+      class="
+        text-5xl
+        lg:text-6xl
+        font-fredoka-one
+        text-pollux-pink-dark
+        mb-2
+        lg:mb-6
+      "
+    >
       Business Success
     </h1>
 
-    <p class="text-md lg:text-xl font-light mb-8">
+    <p class="text-md lg:text-xl font-roboto-mono font-light mb-8">
       Innovative software development and consulting partner. We help products
       scale through the use of technology solutions to improve customer
       experience and internal processes.
