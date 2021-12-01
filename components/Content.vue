@@ -1,6 +1,8 @@
 <template>
-  <div class="w-full bg-black-light">
-    <Services />
+  <div class="w-full">
+    <Services class="bg-black-light"/>
+
+    <Tools />
 
   </div>
 </template>
