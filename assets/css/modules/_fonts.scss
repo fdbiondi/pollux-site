@@ -1,0 +1,51 @@
+
+
+@mixin font-muli {
+  font-family: "Mulish", sans-serif;
+}
+
+@mixin font-sohne-var {
+  font-family: sohne-var, "Helvetica Neue", "Arial", sans-serif;
+}
+
+@mixin font-fredoka-one {
+  font-family: "Fredoka One", cursive;
+}
+
+@mixin font-arch-daughter {
+  font-family: "Architects Daughter", cursive;
+}
+
+@mixin font-roboto-mono {
+  font-family: "Roboto Mono", monospace;
+}
+
+@mixin font-source-code-pro {
+  font-family: "Source Code Pro", monospace;
+}
+
+.font-muli {
+  @include font-muli;
+}
+
+.font-sohne-var {
+  @include font-sohne-var;
+  font-weight: 500;
+  line-height: 1.04;
+}
+
+.font-fredoka-one {
+  @include font-fredoka-one;
+}
+
+.font-arch-daughter {
+  @include font-arch-daughter;
+}
+
+.font-roboto-mono {
+  @include font-roboto-mono;
+}
+
+.font-source-code-pro {
+  @include font-source-code-pro;
+}

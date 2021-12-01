@@ -3,7 +3,7 @@
     <!-- <LineSection /> -->
 
     <div class="container mx-auto py-12 px-6 pb-16">
-      <h2 class="font-arch-daughter text-5xl font-bold text-gray-200 px-8 mb-8">
+      <h2 class="title">
         Find your software development Service
       </h2>
 

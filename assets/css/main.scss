@@ -1,32 +1,9 @@
+@import "assets/css/modules/fonts";
+
 @import "assets/css/modules/animations";
+@import "assets/css/modules/common";
 @import "assets/css/modules/hero";
 
 body {
-  font-family: "Mulish", sans-serif;
-}
-
-.font-muli {
-  font-family: "Mulish", sans-serif;
-}
-
-.font-sohne-var {
-  font-family: sohne-var, "Helvetica Neue", "Arial", sans-serif;
-  font-weight: 500;
-  line-height: 1.04;
-}
-
-.font-fredoka-one {
-  font-family: "Fredoka One", cursive;
-}
-
-.font-arch-daughter {
-  font-family: "Architects Daughter", cursive;
-}
-
-.font-roboto-mono {
-  font-family: "Roboto Mono", monospace;
-}
-
-.font-source-code-pro {
-  font-family: "Source Code Pro", monospace;
+  @include font-muli;
 }
