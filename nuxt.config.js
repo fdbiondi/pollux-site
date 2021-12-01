@@ -33,6 +33,28 @@ export default {
     '@nuxtjs/eslint-module',
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
+    // https://google-fonts.nuxtjs.org/
+    '@nuxtjs/google-fonts',
+    // https://www.npmjs.com/package/@nuxtjs/fontawesome
+    ['@nuxtjs/fontawesome', {
+      component: 'fa',
+      suffix: true,
+      icons: {
+        // list the icons you want to add, not listed icons will be tree-shaked
+        brands: [],
+        // include all icons. But dont do this.
+        // regular: true
+        regular: [],
+        solid: [
+          'faCloud',
+          'faCubes',
+          'faDraftingCompass',
+          'faLaptopCode',
+          'faMobileAlt',
+          'faShoppingCart',
+        ],
+      }
+    }]
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -46,5 +68,18 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+    transpile: [
+    ],
+  },
+
+  googleFonts: {
+    families: {
+      'Architects+Daughter': true,
+      'Fredoka+One': true,
+      'Roboto+Mono': [300, 400],
+      'Source+Code+Pro': [300, 400],
+      'Mulish': [300, 400, 600, 800, 900],
+    },
+    preload: true
   }
 }
