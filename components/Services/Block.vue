@@ -1,10 +1,13 @@
 <template>
   <div class="p-8 text-gray-200">
     <slot></slot>
+
     <div class="pt-6 space-y-4">
-      <h4 class="text-2xl font-semibold">
-        {{ title }}
-      </h4>
+      <slot name="title">
+        <h4 class="text-2xl font-semibold flex">
+          {{ title }}
+        </h4>
+      </slot>
     </div>
 
     <div class="pt-4 space-y-4">

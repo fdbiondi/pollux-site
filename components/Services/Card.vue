@@ -1,5 +1,5 @@
 <template>
-  <div class="text-gray-200 bg-gray-700 bg-opacity-25 p-8 m-4 rounded-sm">
+  <div class="text-gray-200 bg-opacity-25 p-8 m-4 rounded-sm" :class="classes">
     <slot></slot>
     <div class="pt-6 space-y-4">
       <h4 class="text-2xl font-semibold lines-2">
@@ -24,6 +24,23 @@ export default {
     title: {
       default: "",
       type: String,
+    },
+
+    bgColor: {
+      default: "bg-gray-700",
+      type: String,
+    },
+  },
+
+  computed: {
+    classes() {
+      const classes = []
+
+      if (this.bgColor) {
+        classes.push(this.bgColor)
+      }
+
+      return classes.join(" ")
     },
   },
 }

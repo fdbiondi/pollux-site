@@ -6,6 +6,8 @@
 
     <LetsConnectGradient />
 
+    <ServicesOthers class="bg-black-light" />
+
     <Clients />
   </div>
 </template>
