@@ -18,10 +18,16 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
+    // CSS files in the project
+    '@/assets/css/fonts/sohne-var.css',
+    // SCSS file in the project
+    '@/assets/css/main.scss'
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+    // https://michalsnik.github.io/aos/
+    { src: '@/plugins/aos.js', mode: 'client' }
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -69,6 +75,7 @@ export default {
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
     transpile: [
+      'anim-gradient'
     ],
   },
 

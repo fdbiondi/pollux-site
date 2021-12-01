@@ -1,0 +1,7 @@
+@font-face {
+  font-family: sohne-var;
+  src: url("~assets/fonts/sohne-var.woff2") format("woff2-variations");
+  font-weight: 1 1000;
+  font-display: block;
+  unicode-range: U+0000-007e;
+}
