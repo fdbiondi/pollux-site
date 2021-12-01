@@ -5,6 +5,8 @@
     <Tools />
 
     <LetsConnectGradient />
+
+    <Clients />
   </div>
 </template>
 

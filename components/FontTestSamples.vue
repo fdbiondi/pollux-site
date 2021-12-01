@@ -1,5 +1,5 @@
 <template>
-  <div class="text-white flex items-center mt-12 overflow-hidden">
+  <div class="text-white flex flex-wrap items-center mt-12 overflow-hidden">
     <Logo class="text-center w-1/2"/>
 
     <div class="w-1/2">
@@ -31,6 +31,10 @@
       <div class="font-roboto-mono" data-aos="fade-down-left">
         <h2>Pollux</h2>
       </div>
+    </div>
+
+    <div class="w-full">
+      <a target="_blank" href="https://icons8.com/icon/HKUjzhHqqOJK/client">Client</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
     </div>
   </div>
 </template>
