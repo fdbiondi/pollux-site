@@ -1,9 +1,10 @@
 <template>
   <div class="w-full">
-    <Services class="bg-black-light"/>
+    <Services class="bg-black-light" />
 
     <Tools />
 
+    <LetsConnectGradient />
   </div>
 </template>
 

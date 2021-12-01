@@ -4,7 +4,7 @@
     <div class="custom-shape-divider-bottom shape-sizing">
       <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 120" preserveAspectRatio="none">
         <path d="M 0,0 L0,120 L400,120 L600,0 z" class="shape-fill"></path>
-      </svg>npm set registry https://registry.npmjs.org
+      </svg>
     </div>
   </section>
 </template>
