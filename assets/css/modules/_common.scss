@@ -2,3 +2,8 @@
   @include font-arch-daughter;
   @apply text-5xl font-bold text-gray-200 px-8 mb-8;
 }
+
+.subtitle {
+  @include font-arch-daughter;
+  @apply text-2xl font-bold text-gray-200 mb-4;
+}
