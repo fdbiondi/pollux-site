@@ -1,8 +1,8 @@
 <template>
-  <section class="relative mt-8 lg:mt-16 xl:mt-32">
+  <section class="relative py-8 lg:py-16 xl:py-32">
     <!-- <LineSection /> -->
 
-    <div class="container mx-auto py-12 px-6 pb-16">
+    <div class="container mx-auto">
       <h2 class="title">
         Find your software development Service
       </h2>
@@ -18,7 +18,7 @@
           </ServicesCard>
         </div>
       </div>
-      <div class="flex flex-wrap justify-between items-center">
+      <div class="hidden flex flex-wrap justify-between items-center">
         <div
           v-for="({ service, description, icon }, i) in services"
           :key="i"

@@ -1,5 +1,5 @@
 <template>
-  <div class="text-gray-200 bg-opacity-25 p-8 m-4 rounded-sm" :class="classes">
+  <div class="p-8 m-4" :class="classes">
     <slot></slot>
     <div class="pt-6 space-y-4">
       <h4 class="text-2xl font-semibold lines-2">
@@ -16,18 +16,33 @@
 <script>
 export default {
   props: {
+    bgColor: {
+      default: "bg-gray-700",
+      type: String,
+    },
+
+    bgOpacity: {
+      default: "bg-opacity-25",
+      type: String,
+    },
+
+    borderRounded: {
+      default: "rounded-sm",
+      type: String,
+    },
+
     description: {
       default: "",
       type: String,
     },
 
-    title: {
-      default: "",
+    textColor: {
+      default: "text-gray-200",
       type: String,
     },
 
-    bgColor: {
-      default: "bg-gray-700",
+    title: {
+      default: "",
       type: String,
     },
   },
@@ -38,6 +53,18 @@ export default {
 
       if (this.bgColor) {
         classes.push(this.bgColor)
+      }
+
+      if (this.bgOpacity) {
+        classes.push(this.bgOpacity)
+      }
+
+      if (this.borderRounded) {
+        classes.push(this.borderRounded)
+      }
+
+      if (this.textColor) {
+        classes.push(this.textColor)
       }
 
       return classes.join(" ")

@@ -1,27 +1,25 @@
 <template>
-  <div>
-    <div class="py-8 lg:py-16 xl:py-32">
-      <div class="container mx-auto py-12 px-6 pb-16">
-        <h2 class="title">The Development Process</h2>
+  <div class="py-8 lg:py-16 xl:py-32">
+    <div class="container mx-auto py-12 px-6 pb-16">
+      <h2 class="title">The Development Process</h2>
 
-        <div class="flex flex-wrap">
-          <template v-for="(section, index) in sections">
-            <div v-if="index % 2 !== 0" :key="index" class="w-2/6"></div>
-            <div :key="index" class="w-4/6 py-8">
-              <h4 class="subtitle">{{ section.subtitle }}</h4>
+      <div class="flex flex-wrap">
+        <template v-for="(section, index) in sections">
+          <div v-if="index % 2 !== 0" :key="index" class="w-2/6"></div>
+          <div :key="index" class="w-4/6 py-8">
+            <h4 class="subtitle">{{ section.subtitle }}</h4>
 
-              <p
-                v-for="(text, textIndex) in section.text"
-                :key="textIndex"
-                class="text-gray-200 text-xl mb-4 text-justify"
-                :data-aos="index % 2 === 0 ? 'zoom-in-right' : 'zoom-in-left'"
-              >
-                {{ text }}
-              </p>
-            </div>
-            <div v-if="index % 2 === 0" :key="index" class="w-2/6"></div>
-          </template>
-        </div>
+            <p
+              v-for="(text, textIndex) in section.text"
+              :key="textIndex"
+              class="text-gray-200 text-xl mb-4 text-justify"
+              :data-aos="index % 2 === 0 ? 'zoom-in-right' : 'zoom-in-left'"
+            >
+              {{ text }}
+            </p>
+          </div>
+          <div v-if="index % 2 === 0" :key="index" class="w-2/6"></div>
+        </template>
       </div>
     </div>
   </div>
