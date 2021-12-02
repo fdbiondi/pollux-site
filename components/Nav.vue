@@ -6,23 +6,20 @@
       </a>
 
       <div class="flex items-center">
-        <div class="font-sohne-var text-lg text-gray-400 hidden lg:flex">
-          <!-- <a href="#" class="block mt-4 lg:inline-block text-green-400 hover:text-green-500 lg:mt-0 mr-10">
-            Home
-          </a> -->
-          <a href="#services" class="block mt-4 lg:inline-block hover:text-green-400 lg:mt-0 mr-10">
+        <div class="text-lg text-gray-400 font-bold transform scale-y-110 hidden lg:flex mt-4">
+          <a href="#services" class="block lg:inline-block hover:text-green-400 mt-0 mr-10">
             Services
           </a>
-          <a href="#" class="block mt-4 lg:inline-block hover:text-green-400 lg:mt-0 mr-10">
+          <a href="#our-clients" class="block lg:inline-block hover:text-green-400 mt-0 mr-10">
             Our Clients
           </a>
-          <a href="#" class="block mt-4 lg:inline-block hover:text-green-400 lg:mt-0 mr-10">
+          <a href="#about" class="block lg:inline-block hover:text-green-400 mt-0 mr-10">
             About Us
           </a>
-          <a href="#" class="block mt-4 lg:inline-block hover:text-green-400 lg:mt-0 mr-10">
+          <a href="#our-team" class="block lg:inline-block hover:text-green-400 mt-0 mr-10">
             Our Team
           </a>
-          <a href="#" class="block mt-4 lg:inline-block hover:text-green-400 lg:mt-0">
+          <a href="#career" class="block lg:inline-block hover:text-green-400 mt-0">
             Career
           </a>
         </div>

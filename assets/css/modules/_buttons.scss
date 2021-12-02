@@ -1,7 +1,5 @@
 @mixin button {
-  @include font-arch-daughter;
-
-  @apply px-8 py-4 text-2xl font-bold /* rounded-3xl */;
+  @apply font-serif px-8 py-4 text-2xl font-bold;
 
   &:hover {
     @apply bg-gray-200 text-gray-800;

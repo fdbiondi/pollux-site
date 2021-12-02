@@ -16,7 +16,7 @@
     <DevProcess />
 
     <!-- Our clients -->
-    <Clients />
+    <Clients class="bg-black-light" />
 
     <!-- About Us -->
 
@@ -26,14 +26,12 @@
 
     <!-- Talk to us / Contact Form -->
 
-
     <!-- Footer -->
   </div>
 </template>
 
 <script>
-export default {
-}
+export default {}
 </script>
 
 <style lang="scss" scoped></style>

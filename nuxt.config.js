@@ -1,33 +1,29 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'pollux_site',
+    title: "pollux_site",
     htmlAttrs: {
-      lang: 'en'
+      lang: "en",
     },
     meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
-      { name: 'format-detection', content: 'telephone=no' }
+      { charset: "utf-8" },
+      { name: "viewport", content: "width=device-width, initial-scale=1" },
+      { hid: "description", name: "description", content: "" },
+      { name: "format-detection", content: "telephone=no" },
     ],
-    link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]
+    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
-    // CSS files in the project
-    '@/assets/css/fonts/sohne-var.css',
     // SCSS file in the project
-    '@/assets/css/main.scss'
+    "@/assets/css/main.scss",
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     // https://michalsnik.github.io/aos/
-    { src: '@/plugins/aos.js', mode: 'client' }
+    { src: "@/plugins/aos.js", mode: "client" },
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -36,37 +32,40 @@ export default {
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     // https://go.nuxtjs.dev/eslint
-    '@nuxtjs/eslint-module',
+    "@nuxtjs/eslint-module",
     // https://go.nuxtjs.dev/tailwindcss
-    '@nuxtjs/tailwindcss',
+    "@nuxtjs/tailwindcss",
     // https://google-fonts.nuxtjs.org/
-    '@nuxtjs/google-fonts',
+    "@nuxtjs/google-fonts",
     // https://www.npmjs.com/package/@nuxtjs/fontawesome
-    ['@nuxtjs/fontawesome', {
-      component: 'fa',
-      suffix: true,
-      icons: {
-        // list the icons you want to add, not listed icons will be tree-shaked
-        brands: [],
-        // include all icons. But dont do this.
-        // regular: true
-        regular: [],
-        solid: [
-          'faCloud',
-          'faCubes',
-          'faDraftingCompass',
-          'faLaptopCode',
-          'faMobileAlt',
-          'faShoppingCart',
-        ],
-      }
-    }]
+    [
+      "@nuxtjs/fontawesome",
+      {
+        component: "fa",
+        suffix: true,
+        icons: {
+          // list the icons you want to add, not listed icons will be tree-shaked
+          brands: [],
+          // include all icons. But dont do this.
+          // regular: true
+          regular: [],
+          solid: [
+            "faCloud",
+            "faCubes",
+            "faDraftingCompass",
+            "faLaptopCode",
+            "faMobileAlt",
+            "faShoppingCart",
+          ],
+        },
+      },
+    ],
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/axios
-    '@nuxtjs/axios',
+    "@nuxtjs/axios",
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -74,19 +73,16 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-    transpile: [
-      'anim-gradient'
-    ],
+    transpile: ["anim-gradient"],
   },
 
   googleFonts: {
     families: {
-      'Architects+Daughter': true,
-      'Fredoka+One': true,
-      'Roboto+Mono': [300, 400],
-      'Source+Code+Pro': [300, 400],
-      'Mulish': [300, 400, 600, 800, 900],
+      "Architects+Daughter": true,
+      "Fredoka+One": true,
+      "Roboto+Mono": [300, 400],
+      Mulish: [300, 400, 600, 800, 900],
     },
-    preload: true
-  }
+    preload: true,
+  },
 }

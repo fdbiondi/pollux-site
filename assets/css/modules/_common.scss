@@ -1,9 +1,11 @@
+.font-title {
+  @apply font-serif;
+}
+
 .title {
-  @include font-arch-daughter;
-  @apply text-5xl font-bold text-gray-200 px-8 mb-8;
+  @apply font-serif text-5xl font-bold text-gray-200 px-8 mb-8;
 }
 
 .subtitle {
-  @include font-arch-daughter;
-  @apply text-2xl font-bold text-gray-200 mb-4;
+  @apply font-serif text-2xl font-bold text-gray-200 mb-4;
 }

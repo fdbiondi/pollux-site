@@ -1,6 +1,6 @@
 <template>
   <AnimGradient>
-    <LetsConnect class="font-arch-daughter absolute w-full" />
+    <LetsConnect class="font-title absolute w-full" />
   </AnimGradient>
 </template>
 

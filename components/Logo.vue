@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <div class="font-fredoka-one text-white">
+    <div class="font-pollux text-white">
       <div class="px-1 tracking-wider text-7xl">Pollux</div>
       <div class="text-rose-500 text-2xl">Software Engineering</div>
     </div>
