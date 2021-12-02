@@ -22,6 +22,7 @@
     <About />
 
     <!-- Our team -->
+    <OurTeam class="bg-black-light" />
 
     <!-- Career / Get On Board -->
 
