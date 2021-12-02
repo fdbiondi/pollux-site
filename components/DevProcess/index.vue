@@ -1,5 +1,5 @@
 <template>
-  <div class="py-8 lg:py-16 xl:py-32">
+  <section class="py-8 lg:py-16 xl:py-32">
     <div class="container mx-auto py-12 px-6 pb-16">
       <h2 class="title">The Development Process</h2>
 
@@ -18,11 +18,13 @@
               {{ text }}
             </p>
           </div>
-          <div v-if="index % 2 === 0" :key="index" class="w-2/6"></div>
+          <div v-if="index % 2 === 0" :key="index" class="w-2/6 p-8 lg:p-16">
+            <!-- <img src="~/assets/images/_1.png" alt="temp" /> -->
+          </div>
         </template>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
@@ -68,4 +70,14 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+section {
+  background-image: url(~/assets/images/_4_alt.png);
+  // background-image: url(~/assets/images/2.jpg);
+  background-position: left;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: auto;
+  background-color: transparent;
+}
+</style>

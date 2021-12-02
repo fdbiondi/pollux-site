@@ -1,5 +1,5 @@
 <template>
-  <div class="py-8 lg:py-16 xl:py-24">
+  <section class="py-8 lg:py-16 xl:py-24">
     <div class="container mx-auto py-12 px-6 pb-16">
       <div class="flex">
         <div class="w-3/4 flex flex-row items-center px-8">
@@ -33,7 +33,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
