@@ -59,28 +59,4 @@ export default {
   display: flex;
   flex-direction: row;
 }
-
-/*
-// Shadows
-.tools-slider::before,
-.tools-slider::after {
-  content: "";
-  width: 100vw;
-  height: 8rem;
-  position: absolute;
-  z-index: 2;
-}
-
-.tools-slider::after {
-  top: 0;
-  left: 0;
-  transform: rotateZ(180deg);
-  box-shadow: -50px 0px 50px -50px inset;
-}
-
-.tools-slider::before {
-  left: 0;
-  bottom: 0;
-  box-shadow: -50px 0px 50px -50px inset;
-} */
 </style>
