@@ -4,14 +4,16 @@
 
     <div class="pt-6 space-y-4">
       <slot name="title">
-        <h4 class="text-2xl font-semibold flex">
-          {{ title }}
+        <h4 class="font-title text-2xl font-semibold flex items-center">
+          <img v-if="image" :src="image" alt="pollux services" class="mr-2" />
+          <fa-icon v-if="icon" class="mr-2" />
+          <span>{{ title }}</span>
         </h4>
       </slot>
     </div>
 
     <div class="pt-4 space-y-4">
-      <p class="min-h-[6rem] text-md font-semibold">{{ description }}</p>
+      <p class="min-h-[6rem] text-xl font-semibold">{{ description }}</p>
     </div>
   </div>
 </template>
@@ -21,6 +23,16 @@ export default {
   props: {
     description: {
       default: "",
+      type: String,
+    },
+
+    icon: {
+      default: null,
+      type: String,
+    },
+
+    image: {
+      default: null,
       type: String,
     },
 

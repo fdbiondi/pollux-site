@@ -19,14 +19,13 @@
     <Clients class="bg-black-light" />
 
     <!-- About Us -->
+    <About />
 
     <!-- Our team -->
 
     <!-- Career / Get On Board -->
 
     <!-- Talk to us / Contact Form -->
-
-    <!-- Footer -->
   </div>
 </template>
 

@@ -25,15 +25,10 @@
             <ServicesBlock
               :key="index"
               :description="description"
+              :image="image"
+              :title="title"
               data-aos="zoom-in-up"
-            >
-              <template slot="title">
-                <h4 class="font-title text-2xl font-semibold flex items-center">
-                  <img :src="image" alt="pollux services" />
-                  <span class="ml-2">{{ title }}</span>
-                </h4>
-              </template>
-            </ServicesBlock>
+            />
           </template>
         </div>
       </div>
