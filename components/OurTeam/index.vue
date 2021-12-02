@@ -10,17 +10,17 @@
 
       <div class="flex flex-wrap">
         <div
-          v-for="(ape, index) in apes"
+          v-for="(avatar, index) in apes"
           :key="index"
           class="w-1/5 p-8 mx-auto my-6"
         >
           <img
-            :src="ape.pathLong"
-            :alt="`Bored Ape Yacht Club ${ape.name}`"
+            :src="avatar.pathLong"
+            :alt="`${alt} - ${avatar.name}`"
             class="rounded-[100%] border-4 border-gray-100 border-solid"
           />
           <h4 class="font-title text-gray-200 text-center text-2xl mt-2">
-            {{ ape.name }}
+            {{ avatar.name }}
           </h4>
         </div>
       </div>
@@ -30,9 +30,23 @@
 
 <script>
 export default {
+  props: {
+    avatarType: {
+      default: "apes",
+      type: String,
+      validator: (value) => ["apes", "astronauts", "punks"].includes(value),
+    },
+  },
+
   data() {
     return {
       apes: [],
+      alt: "",
+      alts: {
+        apes: "Bored Ape Yacht Club",
+        astronauts: "Bored Ape Astronaut",
+        punks: "CryptoPunks",
+      },
       names: [
         "Fabian",
         "Federico",
@@ -48,15 +62,24 @@ export default {
   },
 
   mounted() {
-    this.getAll(require.context("@/assets/images/apes/", true, /\.png$/))
+    this.alt = this.alts[this.avatarType]
+    if (this.avatarType === "apes") {
+      this.getAll(require.context("@/assets/images/apes/", true, /\.png$/))
+    }
+    if (this.avatarType === "astronauts") {
+      this.getAll(
+        require.context("@/assets/images/astronauts/", true, /\.png$/)
+      )
+    }
+    if (this.avatarType === "punks") {
+      this.getAll(require.context("@/assets/images/punks/", true, /\.png$/))
+    }
   },
 
   methods: {
     getAll(r) {
       const names = this.shuffle(this.names)
-      const images = this.shuffle(r.keys())
-
-      images.pop()
+      const images = this.shuffle(r.keys()).splice(0, this.names.length)
 
       images.forEach((key, index) =>
         this.apes.push({
