@@ -56,6 +56,7 @@ export default {
             "faLaptopCode",
             "faMobileAlt",
             "faShoppingCart",
+            "faUsers",
           ],
         },
       },

@@ -26,7 +26,7 @@ export default {
       type: String,
     },
 
-    borderRounded: {
+    border: {
       default: "rounded-sm",
       type: String,
     },
@@ -59,8 +59,8 @@ export default {
         classes.push(this.bgOpacity)
       }
 
-      if (this.borderRounded) {
-        classes.push(this.borderRounded)
+      if (this.border) {
+        classes.push(this.border)
       }
 
       if (this.textColor) {

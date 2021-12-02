@@ -3,9 +3,23 @@
     <!-- <LineSection /> -->
 
     <div class="container mx-auto">
-      <h2 class="title">
-        Find your software development Service
-      </h2>
+      <h2 class="title">Find your software development Service</h2>
+
+      <div class="flex flex-wrap justify-between items-center">
+        <div
+          v-for="({ service, description, image }, i) in services"
+          :key="i"
+          class="w-full md:w-1/2 lg:w-1/4 flex-grow-0"
+        >
+          <ServicesCard
+            :title="service"
+            :description="description"
+            data-aos="zoom-in-up"
+          >
+            <img :src="image" alt="pollux services" />
+          </ServicesCard>
+        </div>
+      </div>
 
       <div class="flex flex-wrap justify-between items-center">
         <div
@@ -13,18 +27,11 @@
           :key="i"
           class="w-full md:w-1/2 lg:w-1/4 flex-grow-0"
         >
-          <ServicesCard :title="service" :description="description" data-aos="zoom-in-up">
-            <fa-icon :icon="icon" class="text-3xl" />
-          </ServicesCard>
-        </div>
-      </div>
-      <div class="hidden flex flex-wrap justify-between items-center">
-        <div
-          v-for="({ service, description, icon }, i) in services"
-          :key="i"
-          class="w-full md:w-1/2 lg:w-1/4 flex-grow-0"
-        >
-          <ServicesBlock :title="service" :description="description" data-aos="zoom-in-up">
+          <ServicesBlock
+            :title="service"
+            :description="description"
+            data-aos="zoom-in-up"
+          >
             <fa-icon :icon="icon" class="text-3xl" />
           </ServicesBlock>
         </div>
@@ -42,6 +49,7 @@ export default {
           description:
             "Create beautiful, fast and secure web applications tailored exclusively for your business goals.",
           icon: "laptop-code",
+          image: require("~/assets/images/icons/icons8-source-code-64.png"),
           service: "Web Development",
         },
 
@@ -49,6 +57,7 @@ export default {
           description:
             "Build well-designed and optimized custom mobile applications with a delightful UX for both iOS and Android.",
           icon: "mobile-alt",
+          image: require("~/assets/images/icons/icons8-iphone-64.png"),
           service: "Mobile Development",
         },
 
@@ -56,20 +65,15 @@ export default {
           description:
             "Give your product idea a shape. Plan and evaluate the essential features of your product to accomplish your business goals and eliminate possible mistakes.",
           icon: "drafting-compass",
+          image: require("~/assets/images/icons/icons8-multiple-devices-64.png"),
           service: "Product Design",
         },
-
-        /* {
-          description:
-            "We have rock-solid DevOps/SLA practices to help you leverage cloud technology speeding up development and increasing app security and scalability.",
-          icon: "cloud",
-          service: "Cloud Technology",
-        }, */
 
         {
           description:
             "Leverage the power of sales online, with a customized ecommerce platform that suits your needs.",
           icon: "shopping-cart",
+          image: require("~/assets/images/icons/icons8-shopping-cart-64.png"),
           service: "Ecommerce Development",
         },
       ],

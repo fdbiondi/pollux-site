@@ -9,11 +9,7 @@
           :key="client"
           class="p-4 flex-grow-0 flex-shrink-0 max-h-full"
         >
-          <img
-            src="~/assets/images/icons/icons8-anmeld-64.png"
-            alt="Pollux client"
-            class="w-24 h-24"
-          />
+          <fa-icon icon="users" class="text-7xl text-gray-200" />
         </div>
       </div>
     </div>
