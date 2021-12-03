@@ -21,7 +21,7 @@
         </div>
       </div>
 
-      <div class="flex flex-wrap justify-between items-center">
+      <div class="hidden flex-wrap justify-between items-center">
         <div
           v-for="({ service, description, icon }, i) in services"
           :key="i"

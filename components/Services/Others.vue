@@ -6,15 +6,15 @@
           <div
             v-for="({ description, image, service }, i) in services"
             :key="i"
-            class="w-1/2"
+            class="w-1/2 px-16"
           >
-            <ServicesCard
+            <ServicesBlock
               :title="service"
               :description="description"
               data-aos="zoom-in-up"
             >
               <img :src="image" alt="pollux services" />
-            </ServicesCard>
+            </ServicesBlock>
           </div>
         </div>
 
