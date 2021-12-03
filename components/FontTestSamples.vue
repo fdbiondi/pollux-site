@@ -1,6 +1,11 @@
 <template>
   <div class="container text-white flex flex-wrap items-center mx-auto mt-12">
-    <Logo class="text-center w-1/2" />
+    <div class="flex flex-wrap flex-col justify-center w-1/2">
+      <Logo class="mx-auto my-4" size="small" />
+      <Logo class="mx-auto my-4" size="medium" />
+      <Logo class="mx-auto my-4" size="large" />
+    </div>
+
 
     <div class="w-1/2">
       <div class="text-right font-extrabold" data-aos="zoom-out-up">
