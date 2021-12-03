@@ -44,11 +44,11 @@ export default {
 }
 
 .custom-shape-divider-bottom .shape-fill {
-    fill: #FFFFFF;
+    fill: theme('colors.black.light');
 }
 
 .shape-sizing {
     width: 100vw;
-    height: 80vh;
+    height: 100vh;
 }
 </style>

@@ -1,9 +1,9 @@
 <template>
-  <section class="relative py-8 lg:py-16 xl:py-32">
+  <section class="py-8 lg:py-16 xl:py-32">
     <div class="container mx-auto px-6">
       <h2 class="title">Our Team</h2>
 
-      <p class="text-xl text-gray-200 mb-4 text-justify">
+      <p class="text-3xl text-gray-200 mb-4 text-justify leading-relaxed">
         Technology alone is not enough to succeed, every product needs a team of
         passionate people who will give it their best.
       </p>

@@ -76,12 +76,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.container {
-  position: relative;
-  width: auto;
-  height: auto;
-  margin: auto;
-}
 .overlay {
   position: absolute;
   top: 0;

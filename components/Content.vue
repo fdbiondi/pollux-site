@@ -25,6 +25,7 @@
     <OurTeam class="bg-black-light" />
 
     <!-- Career / Get On Board -->
+    <Career />
 
     <!-- Talk to us / Contact Form -->
   </div>
