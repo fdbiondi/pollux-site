@@ -1,7 +1,5 @@
 <template>
-  <section class="relative py-8 lg:py-16 xl:py-32">
-    <!-- <LineSection /> -->
-
+  <section class="py-8 lg:py-16 xl:py-32">
     <div class="container mx-auto">
       <h2 class="title">Find your software development Service</h2>
 

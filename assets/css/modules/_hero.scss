@@ -1,20 +1,20 @@
 /* Hero */
+@mixin hero-button {
+  @include button;
+
+  &:hover {
+    box-shadow: 0 1rem 2.5rem rgba(35, 35, 35, 0.1),
+      0 0.5rem 1rem -0.75rem rgba(35, 35, 35, 0.1);
+    transition: box-shadow 0.25s ease, transform 0.25s ease,
+      -webkit-transform 0.25s ease;
+  }
+}
+
 .hero {
   &__titles {
     animation: zoomInUp;
     animation-duration: 1s;
     animation-timing-function: ease-in-out;
-  }
-
-  @mixin hero-button {
-    @include button;
-
-    &:hover {
-      box-shadow: 0 1rem 2.5rem rgba(35, 35, 35, 0.1),
-        0 0.5rem 1rem -0.75rem rgba(35, 35, 35, 0.1);
-      transition: box-shadow 0.25s ease, transform 0.25s ease,
-        -webkit-transform 0.25s ease;
-    }
   }
 
   &__button {

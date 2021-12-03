@@ -1,11 +1,7 @@
-.font-title {
-  @apply font-serif;
-}
-
 .title {
-  @apply font-serif text-5xl font-bold text-gray-200 px-8 mb-8;
+  @apply font-title text-5xl font-bold text-gray-200 px-8 mb-8;
 }
 
 .subtitle {
-  @apply font-serif text-2xl font-bold text-gray-200 mb-4;
+  @apply font-title text-2xl font-bold text-gray-200 mb-4;
 }

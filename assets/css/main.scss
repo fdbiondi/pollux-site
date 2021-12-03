@@ -1,9 +1,3 @@
-@import "assets/css/modules/buttons";
-
-@import "assets/css/modules/animations";
-@import "assets/css/modules/common";
-@import "assets/css/modules/hero";
-
 body::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 8px 8px theme("colors.black.light");
   box-shadow: inset 0 0 8px 8px theme("colors.black.light");
@@ -28,3 +22,17 @@ body::-webkit-scrollbar-thumb {
     box-shadow: inset 0 0 8px 8px theme("colors.gray.500");
   }
 }
+
+@mixin outline-none {
+  &:focus,
+  &:focus-visible,
+  &:focus-within {
+    @apply outline-none;
+  }
+}
+
+@import "assets/css/modules/animations";
+@import "assets/css/modules/common";
+@import "assets/css/modules/buttons";
+@import "assets/css/modules/hero";
+@import "assets/css/modules/inputs";

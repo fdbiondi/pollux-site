@@ -1,6 +1,6 @@
 <template>
-  <div class="tools-slider relative overflow-hidden w-full p-0">
-    <div class="slide-track">
+  <div class="slider">
+    <div class="slider__track">
       <div
         v-for="{ pathLong, pathShort } in images"
         :key="pathShort"
@@ -53,10 +53,14 @@ export default {
   }
 }
 
-.tools-slider .slide-track {
-  -webkit-animation: scroll 40s linear infinite;
-  animation: scroll 20s linear infinite;
-  display: flex;
-  flex-direction: row;
+.slider {
+  @apply overflow-hidden w-full p-0;
+
+  &__track {
+    @apply flex flex-row;
+
+    -webkit-animation: scroll 20s linear infinite;
+    animation: scroll 20s linear infinite;
+  }
 }
 </style>

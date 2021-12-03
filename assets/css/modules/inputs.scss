@@ -1,0 +1,48 @@
+@mixin input {
+  @apply font-title shadow appearance-none border-2 border-black-light rounded-none py-4 px-6 text-2xl text-black-light leading-tight;
+}
+
+textarea,
+input[type="text"],
+input[type="email"],
+select {
+  @include input;
+  @include outline-none;
+}
+
+select {
+  @apply bg-white text-gray-400;
+
+  option {
+    @apply text-black-light;
+
+    &:disabled {
+      @apply text-gray-400;
+    }
+  }
+}
+
+input[type="checkbox"] {
+  @include outline-none;
+  @apply relative cursor-pointer appearance-none w-6 h-6;
+
+  & ~ span,
+  & ~ label {
+    @apply font-title text-xl cursor-pointer;
+  }
+
+  &:before {
+    content: "";
+    @apply absolute top-0 left-0 w-6 h-6 border-2 border-solid border-gray-200 bg-transparent;
+  }
+
+  &:checked:after {
+    content: "";
+    @apply absolute border-gray-200 border-solid border-r-2 border-b-2;
+    @apply w-3 h-7 top-[-0.5rem] left-3 transform rotate-45;
+  }
+}
+
+input#file-upload-button {
+  display: none;
+}
