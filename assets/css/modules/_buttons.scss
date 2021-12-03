@@ -10,7 +10,7 @@
 }
 
 @mixin primary-button {
-  @apply bg-green-400 text-white;
+  @apply bg-pollux-cyan text-white;
 
   &:hover {
     @apply bg-gray-200 text-gray-800;

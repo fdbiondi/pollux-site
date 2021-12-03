@@ -1,25 +1,25 @@
 <template>
   <header>
     <nav class="flex items-center justify-between p-6 container mx-auto">
-      <a href="#">
-        <img src="logo.svg" alt="Pollux Software Engineering" class="h-24 w-24">
+      <a href="/">
+        <Logo />
       </a>
 
       <div class="flex items-center">
         <div class="text-lg text-gray-400 font-bold transform scale-y-110 hidden lg:flex mt-4">
-          <a href="#services" class="block lg:inline-block hover:text-green-400 mt-0 mr-10">
+          <a href="#services" class="block lg:inline-block hover:text-pollux-cyan-light mt-0 mr-10">
             Services
           </a>
-          <a href="#our-clients" class="block lg:inline-block hover:text-green-400 mt-0 mr-10">
+          <a href="#our-clients" class="block lg:inline-block hover:text-pollux-cyan-light mt-0 mr-10">
             Our Clients
           </a>
-          <a href="#about" class="block lg:inline-block hover:text-green-400 mt-0 mr-10">
+          <a href="#about" class="block lg:inline-block hover:text-pollux-cyan-light mt-0 mr-10">
             About Us
           </a>
-          <a href="#our-team" class="block lg:inline-block hover:text-green-400 mt-0 mr-10">
+          <a href="#our-team" class="block lg:inline-block hover:text-pollux-cyan-light mt-0 mr-10">
             Our Team
           </a>
-          <a href="#career" class="block lg:inline-block hover:text-green-400 mt-0">
+          <a href="#career" class="block lg:inline-block hover:text-pollux-cyan-light mt-0">
             Career
           </a>
         </div>

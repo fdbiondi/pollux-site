@@ -25,6 +25,15 @@ module.exports = {
         cyan: colors.cyan,
         rose: colors.rose,
         gray: colors.trueGray,
+        "pollux-cyan": {
+          DEFAULT: "#0BC8FE",
+          light: "#73F4FF",
+          dark: "#008AFF",
+        },
+        "pollux-pink": {
+          DEFAULT: "#F3448B",
+          dark: "#E9005C",
+        },
       },
     },
   },
