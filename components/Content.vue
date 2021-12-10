@@ -28,6 +28,7 @@
     <Career />
 
     <!-- Talk to us / Contact Form -->
+    <Contact class="bg-black-light" />
   </div>
 </template>
 

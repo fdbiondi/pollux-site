@@ -15,7 +15,7 @@
         <p>Scale fast your business with expert software engineering teams.</p>
       </div>
 
-      <div class="text-right font-serif" data-aos="zoom-out-up">
+      <div class="text-right font-title" data-aos="zoom-out-up">
         <h2>Pollux</h2>
         <h4>titles</h4>
         <h4>buttons</h4>

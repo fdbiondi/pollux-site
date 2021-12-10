@@ -1,6 +1,6 @@
 <template>
   <header>
-    <nav class="flex items-center justify-between p-6 container mx-auto">
+    <nav class="flex items-center justify-between px-6 py-2 container mx-auto">
       <a href="/">
         <Logo />
       </a>

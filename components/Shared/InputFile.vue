@@ -6,7 +6,9 @@
         class="flex w-full h-full justify-center items-center cursor-pointer"
       >
         <fa-icon icon="paperclip" class="text-white text-2xl"></fa-icon>
-        <span class="font-title text-white text-2xl ml-2"> Attach File </span>
+        <span class="font-title text-white text-2xl ml-2">
+          {{ label }}
+        </span>
       </label>
     </slot>
     <input
@@ -37,6 +39,11 @@ export default {
     canLoad: {
       type: Boolean,
       default: true,
+    },
+
+    label: {
+      type: String,
+      default: 'Attach File'
     },
 
     name: {
