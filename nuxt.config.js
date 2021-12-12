@@ -45,7 +45,13 @@ export default {
         suffix: true,
         icons: {
           // list the icons you want to add, not listed icons will be tree-shaked
-          brands: [],
+          brands: [
+            "faFacebookSquare",
+            "faGithub",
+            "faInstagram",
+            "faLinkedinIn",
+            "faTwitter",
+          ],
           // include all icons. But dont do this.
           // regular: true
           regular: [],

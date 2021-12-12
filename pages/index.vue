@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-gray-800">
+  <div class="bg-gray-900">
     <!-- Navigation Bar -->
     <Nav />
 
@@ -8,9 +8,6 @@
 
     <!-- Content Section -->
     <Content />
-
-    <!-- Fonts Section -->
-    <FontTestSamples />
 
     <!-- Footer Section -->
     <Footer />
