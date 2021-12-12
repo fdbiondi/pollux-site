@@ -6,6 +6,34 @@
   @apply font-title text-2xl font-bold text-gray-200 mb-4;
 }
 
+.route {
+  @apply font-mono font-bold text-xl text-gray-200 tracking-wider leading-loose cursor-pointer;
+
+  &--underline {
+    @apply relative overflow-hidden;
+
+    &::after {
+      content: "";
+      @apply absolute bottom-0 left-0 w-full h-[0.1em] rounded-sm bg-pollux-cyan;
+      transition: transform 500ms;
+      transform: translate3d(-100%, 0, 0);
+    }
+
+    &:hover,
+    &:focus {
+      &::after {
+        transform: translate3d(0, 0, 0);
+      }
+    }
+  }
+}
+
+.line-block {
+  width: 2rem;
+  height: 0.2rem;
+  @apply rounded-sm bg-gray-200 mb-6;
+}
+
 img {
   -webkit-user-select: none;
   -khtml-user-select: none;

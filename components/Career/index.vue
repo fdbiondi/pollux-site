@@ -4,8 +4,8 @@
       <h2 class="title">Career / Get On Board</h2>
 
       <h4 class="subtitle">
-        We have a passion for the digital world. Enthusiasm for technology.
-        And a really great team. We are Pollux.
+        We have a passion for the digital world. Enthusiasm for technology. And
+        a really great team. We are Pollux.
         <span class="font-bold">Nice to meet you!</span>
       </h4>
 
@@ -87,7 +87,6 @@ export default {
     send() {
       // TODO: implement validation and return
       // if (!this.curriculum || !this.name) {}
-
       // TODO: implement send form
     },
 

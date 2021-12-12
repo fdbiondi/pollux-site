@@ -7,7 +7,11 @@
       @mouseleave="gestureEnd"
       @mousemove="gestureMove"
     >
-      <div v-for="{ src, link, name } in images" :key="name" class="p-4 flex-shrink-0">
+      <div
+        v-for="{ src, link, name } in images"
+        :key="name"
+        class="p-4 flex-shrink-0"
+      >
         <a :href="link" target="_blank">
           <img :src="src" :alt="name" class="w-24 h-24" />
         </a>

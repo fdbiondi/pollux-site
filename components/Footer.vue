@@ -25,7 +25,7 @@
 
       <div class="flex">
         <div class="w-1/4 p-6 font-mono leading-loose text-xl text-gray-200">
-          <div class="underline"></div>
+          <div class="line-block"></div>
 
           Pollux Cooperative<br />
 
@@ -40,34 +40,46 @@
 
         <div class="flex justify-around w-1/2">
           <div class="flex flex-col p-6">
-            <div class="underline"></div>
+            <div class="line-block"></div>
 
-            <a href="#" class="footer--route">About</a>
+            <a href="#" class="route route--underline mr-auto">About</a>
 
-            <a href="#" class="footer--route">Services</a>
+            <a href="#" class="route route--underline mr-auto">Services</a>
 
-            <a href="#" class="footer--route">Career</a>
+            <a href="#" class="route route--underline mr-auto">Career</a>
 
-            <a href="#" class="footer--route">Our Clients</a>
+            <a href="#" class="route route--underline mr-auto">Our Clients</a>
           </div>
 
           <div class="flex flex-col p-6">
-            <div class="underline"></div>
+            <div class="line-block"></div>
 
-            <a href="#" class="footer--route">Contact</a>
+            <a href="#" class="route route--underline mr-auto">Contact</a>
 
-            <a href="#" class="footer--route">Our Workflow</a>
+            <a href="#" class="route route--underline mr-auto">Our Workflow</a>
 
-            <a href="#" class="footer--route">Our Team</a>
+            <a href="#" class="route route--underline mr-auto">Our Team</a>
 
-            <a href="#" class="footer--route">Technologies</a>
+            <a href="#" class="route route--underline mr-auto">Technologies</a>
           </div>
         </div>
       </div>
 
       <div class="p-6">
         <div class="border-t border-gray-200 text-gray-200 pt-4 text-xs">
-          Copyright © 2021 Pollux | Privacy policy
+          <div class="flex justify-between">
+            <span>Copyright © 2021 Pollux | Privacy policy</span>
+
+            <span>
+              <a
+                target="_blank"
+                href="https://icons8.com/icon/HKUjzhHqqOJK/client"
+              >
+                Client
+              </a>
+              icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+            </span>
+          </div>
         </div>
       </div>
     </div>
@@ -79,12 +91,6 @@ export default {}
 </script>
 
 <style lang="scss" scoped>
-.underline {
-  width: 2rem;
-  height: 0.2rem;
-  @apply rounded-sm bg-gray-200 mb-6;
-}
-
 .footer {
   &--icon {
     @apply text-gray-200 text-3xl cursor-pointer;
@@ -93,24 +99,6 @@ export default {}
       @apply text-white transform scale-105 origin-center;
       transition: transform 200ms, scale 100ms;
       // transform: scale(1.03);
-    }
-  }
-
-  &--route {
-    @apply relative font-mono font-bold text-xl text-gray-200 tracking-wider leading-loose mb-4 cursor-pointer overflow-hidden mr-auto;
-
-    &::after {
-      content: "";
-      @apply absolute bottom-0 left-0 w-full h-[0.1em] bg-pollux-cyan;
-      transition: transform 500ms;
-      transform: translate3d(-100%, 0, 0);
-    }
-
-    &:hover,
-    &:focus {
-      &::after {
-        transform: translate3d(0, 0, 0);
-      }
     }
   }
 }

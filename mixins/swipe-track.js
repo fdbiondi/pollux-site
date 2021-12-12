@@ -22,7 +22,9 @@ export default {
         this.initialPosition = event.pageX
         this.moving = true
 
-        const transformMatrix = window.getComputedStyle(this.track).getPropertyValue("transform")
+        const transformMatrix = window
+          .getComputedStyle(this.track)
+          .getPropertyValue("transform")
 
         if (transformMatrix !== "none") {
           this.transform = parseInt(transformMatrix.split(",")[4].trim())
@@ -37,8 +39,10 @@ export default {
         const maxTrackSize = this.images.length * 16 * (6 - 1 / 2) // count * 16[=>1rem] * (6 rem - 1/2)
 
         if (this.moving) {
-          if (event.pageX - this.lastPageX < 0 && this.transform > 0) {
-            return
+          if (event.pageX - this.lastPageX < 0) {
+            if (this.transform > 0) {
+              return
+            }
           } else if (Math.abs(this.transform) > maxTrackSize) {
             return
           }
@@ -46,7 +50,9 @@ export default {
           const diff = event.pageX - this.initialPosition
 
           if (this.track) {
-            this.track.style.transform = `translateX(${this.transform - diff}px)`
+            this.track.style.transform = `translateX(${
+              this.transform - diff
+            }px)`
           }
         }
 

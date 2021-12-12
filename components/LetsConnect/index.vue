@@ -8,7 +8,9 @@
           <span> Let Build a Great</span> <span>Product!</span>
         </h2>
 
-         <button class="button--secondary mx-2">Tell us about your project</button>
+        <button class="button--secondary mx-2">
+          Tell us about your project
+        </button>
       </div>
     </div>
   </section>
