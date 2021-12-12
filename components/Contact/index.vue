@@ -96,7 +96,12 @@ export default {
 
   data() {
     return {
-      nda: true,
+      budget: null,
+      description: null,
+      email: null,
+      files: null,
+      name: null,
+      nda: false,
     }
   },
 

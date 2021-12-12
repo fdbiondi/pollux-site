@@ -1,19 +1,28 @@
 <template>
   <div class="slider">
-    <div class="slider__track">
-      <div
-        v-for="{ pathLong, pathShort } in images"
-        :key="pathShort"
-        class="p-4 flex-grow-0 flex-shrink-0 max-h-full"
-      >
-        <img :src="pathLong" :alt="pathShort" class="w-24 h-24" />
+    <div
+      class="slider--swipe-track"
+      @mousedown="gestureStart"
+      @mouseup="gestureEnd"
+      @mouseleave="gestureEnd"
+      @mousemove="gestureMove"
+    >
+      <div v-for="{ src, link, name } in images" :key="name" class="p-4 flex-shrink-0">
+        <a :href="link" target="_blank">
+          <img :src="src" :alt="name" class="w-24 h-24" />
+        </a>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import SwipeTrack from "~/mixins/swipe-track"
+import { filename, getToolLink } from "~/support/strings"
+
 export default {
+  mixins: [SwipeTrack],
+
   data() {
     return {
       images: [],
@@ -21,13 +30,19 @@ export default {
   },
 
   mounted() {
-    this.getAll(require.context("@/assets/images/tools/", true, /\.svg$/))
+    this.getFiles(require.context("@/assets/images/tools/", true, /\.svg$/))
   },
 
   methods: {
-    getAll(r) {
-      r.keys().forEach((key) =>
-        this.images.push({ pathLong: r(key), pathShort: key })
+    getFiles(r) {
+      const extension = ".svg"
+
+      r.keys().forEach((path) =>
+        this.images.push({
+          src: r(path),
+          link: getToolLink(path, extension),
+          name: filename(path, extension).replace("-", " "),
+        })
       )
     },
   },
@@ -35,32 +50,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@-webkit-keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(calc(-50vw * 3));
-  }
-}
+img {
+  filter: grayscale(1);
 
-@keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(calc(-50vw * 3));
-  }
-}
-
-.slider {
-  @apply overflow-hidden w-full p-0;
-
-  &__track {
-    @apply flex flex-row;
-
-    -webkit-animation: scroll 20s linear infinite;
-    animation: scroll 20s linear infinite;
+  &:hover {
+    filter: saturate(1.5);
+    @apply transform scale-105 transition-transform;
   }
 }
 </style>
