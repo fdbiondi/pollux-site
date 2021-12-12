@@ -43,7 +43,7 @@ export default {
       otherServices: [
         {
           description: "Take your business prototype app for a test drive",
-          image: require("~/assets/images/icons/icons8-microscope-64.png"),
+          image: require("~/assets/images/icons/icons8-web-design-64.png"),
           title: "UX Design & Testing",
         },
         {
@@ -77,7 +77,7 @@ export default {
         {
           description:
             "Ship your MVP to market without spending months on assembling an in-house development team for your startup.",
-          image: require("~/assets/images/icons/icons8-prototype-64.png"),
+          image: require("~/assets/images/icons/icons8-process-64.png"),
           service: "MVP Development",
         },
       ],
