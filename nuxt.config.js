@@ -1,4 +1,10 @@
 export default {
+  target: "static",
+
+  router: {
+    base: "/pollux-site/",
+  },
+
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: "pollux_site",
