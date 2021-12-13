@@ -1,5 +1,5 @@
 <template>
-  <main class="hero__wrapper py-8 lg:py-16 xl:py-24 min-h-[70vh]">
+  <main class="hero__wrapper py-8 lg:py-16 xl:py-24 min-h-[90vh]">
     <section class="container mx-auto px-6 pb-16">
       <div class="w-full lg:flex items-center">
         <div class="w-full lg:w-1/2">
@@ -8,7 +8,7 @@
 
         <div class="w-full lg:w-1/2 lg:pl-24">
           <div class="flex justify-center float-content">
-            <img src="~/assets/images/_1_alt.png" alt="pollux test image" />
+            <img src="~/assets/images/sphere.png" alt="pollux test image" />
           </div>
         </div>
       </div>

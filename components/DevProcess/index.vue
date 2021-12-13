@@ -6,6 +6,7 @@
       <div class="flex flex-wrap">
         <template v-for="(section, index) in sections">
           <div v-if="index % 2 !== 0" :key="index" class="w-2/6"></div>
+
           <div :key="index" class="w-4/6 py-8">
             <h4 class="subtitle">{{ section.subtitle }}</h4>
 
@@ -18,9 +19,11 @@
               {{ text }}
             </p>
           </div>
-          <div v-if="index % 2 === 0" :key="index" class="w-2/6 p-8 lg:p-16">
-            <!-- <img src="~/assets/images/_1.png" alt="temp" /> -->
-          </div>
+          <div
+            v-if="index % 2 === 0"
+            :key="index"
+            class="w-2/6 p-8 lg:p-16"
+          ></div>
         </template>
       </div>
     </div>
@@ -72,7 +75,7 @@ export default {
 
 <style lang="scss" scoped>
 section {
-  background-image: url(~/assets/images/_4_alt.png);
+  background-image: url(~/assets/images/clouds.png);
   background-position: left;
   background-repeat: no-repeat;
   background-attachment: fixed;

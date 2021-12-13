@@ -9,8 +9,11 @@
     <!-- Content Section -->
     <Content />
 
+    <BgCode1 />
+    <!-- <BgCode2 /> -->
+
     <!-- Footer Section -->
-    <Footer />
+    <Footer class="bg-black-light" />
   </div>
 </template>
 

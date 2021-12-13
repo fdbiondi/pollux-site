@@ -18,22 +18,6 @@
           </ServicesCard>
         </div>
       </div>
-
-      <div class="hidden flex-wrap justify-between items-center">
-        <div
-          v-for="({ service, description, icon }, i) in services"
-          :key="i"
-          class="w-full md:w-1/2 lg:w-1/4 flex-grow-0"
-        >
-          <ServicesBlock
-            :title="service"
-            :description="description"
-            data-aos="zoom-in-up"
-          >
-            <fa-icon :icon="icon" class="text-3xl" />
-          </ServicesBlock>
-        </div>
-      </div>
     </div>
   </section>
 </template>
