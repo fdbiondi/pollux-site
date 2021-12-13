@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/font-samples", {data:[{}],fetch:{},mutations:void 0});
