@@ -12,10 +12,18 @@ export default {
     track() {
       return document.querySelector(".slider--swipe-track")
     },
+
+    trackNotExists() {
+      return this.track === null
+    },
   },
 
   methods: {
     gestureStart(event) {
+      if (this.trackNotExists) {
+        return
+      }
+
       if (process.client) {
         event.preventDefault()
 
@@ -33,6 +41,10 @@ export default {
     },
 
     gestureMove(event) {
+      if (this.trackNotExists) {
+        return
+      }
+
       if (process.client) {
         event.preventDefault()
 
@@ -61,6 +73,10 @@ export default {
     },
 
     gestureEnd(event) {
+      if (this.trackNotExists) {
+        return
+      }
+
       if (process.client) {
         event.preventDefault()
         this.moving = false

@@ -4,12 +4,36 @@
       <h2 class="title">Some of the Technologies that we use</h2>
     </div>
 
-    <ToolsSlider />
+    <Slider :images="images">
+      <template #default="{ props: { name, src, link } }">
+        <a :href="link" target="_blank">
+          <img :src="src" :alt="name" class="w-24 h-24" />
+        </a>
+      </template>
+    </Slider>
   </section>
 </template>
 
 <script>
-export default {}
+import Slider from "~/components/Shared/Slider"
+import { getFromContext } from "~/support/files"
+
+export default {
+  components: {
+    Slider,
+  },
+
+  data() {
+    return { images: [] }
+  },
+
+  mounted() {
+    this.images = getFromContext(
+      require.context("@/assets/images/tools/", true, /\.svg$/),
+      ".svg"
+    )
+  },
+}
 </script>
 
 <style lang="scss" scoped></style>
