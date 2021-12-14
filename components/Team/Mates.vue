@@ -1,9 +1,9 @@
 <template>
-  <section class="py-8 lg:py-16 xl:py-32">
+  <section class="py-4 lg:py-8 xl:py-16">
     <div class="container mx-auto px-6">
       <h2 class="title">Our Team</h2>
 
-      <p class="text-3xl text-gray-200 mb-4 text-justify leading-relaxed">
+      <p class="text-xl text-gray-200 mb-4 text-justify leading-relaxed">
         Technology alone is not enough to succeed, every product needs a team of
         passionate people who will give it their best.
       </p>
@@ -12,12 +12,12 @@
         <div
           v-for="(avatar, index) in apes"
           :key="index"
-          class="w-1/5 p-8 mx-auto my-6"
+          class="p-4 mx-auto my-2 flex flex-col items-center"
         >
           <img
             :src="avatar.pathLong"
             :alt="`${alt} - ${avatar.name}`"
-            class="rounded-[100%] border-4 border-gray-100 border-solid"
+            class="rounded-[100%] border-4 border-gray-100 border-solid w-32 h-32"
           />
           <h4 class="font-title text-gray-200 text-center text-2xl mt-2">
             {{ avatar.name }}

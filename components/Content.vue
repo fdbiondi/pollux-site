@@ -18,11 +18,11 @@
     <!-- Our clients -->
     <Clients class="bg-black-light" />
 
-    <!-- About Us -->
-    <About />
+    <!-- Team -->
+    <Team />
 
-    <!-- Our team -->
-    <OurTeam class="bg-black-light" />
+    <!-- Teammates -->
+    <TeamMates class="bg-black-light" />
 
     <!-- Career / Get On Board -->
     <Career />
