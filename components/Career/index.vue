@@ -35,6 +35,7 @@
             Send
           </button>
         </form>
+
         <div
           v-if="curriculum"
           class="font-title text-gray-200 transition-opacity mt-2"

@@ -12,10 +12,11 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     fontFamily: {
-      sans: 'Mulish, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
-      serif: '"Architects Daughter", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif',
+      sans: '"Roboto Mono", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif',
+      serif: '"Architects Daughter", ui-serif, Georgia, Cambria, serif',
       mono: '"Roboto Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace',
       pollux: '"Fredoka One"',
+      hero: "Mulish, ui-sans-serif",
     },
     extend: {
       colors: {
