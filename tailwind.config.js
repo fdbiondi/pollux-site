@@ -13,10 +13,11 @@ module.exports = {
   theme: {
     fontFamily: {
       sans: '"Roboto Mono", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif',
-      serif: '"Architects Daughter", ui-serif, Georgia, Cambria, serif',
+      serif: 'Mulish, ui-serif, Georgia, Cambria, serif',
       mono: '"Roboto Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace',
       pollux: '"Fredoka One"',
-      hero: "Mulish, ui-sans-serif",
+      mulish: "Mulish, ui-sans-serif",
+      arch: '"Architects Daughter", ui-serif, Georgia, Cambria, serif',
     },
     extend: {
       colors: {

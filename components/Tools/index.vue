@@ -17,6 +17,7 @@
 <script>
 import Slider from "~/components/Shared/Slider"
 import { getFromContext } from "~/support/files"
+import { getToolLink } from "~/support/strings"
 
 export default {
   components: {

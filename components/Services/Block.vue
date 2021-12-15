@@ -1,10 +1,10 @@
 <template>
-  <div class="p-8 text-gray-200">
+  <div class="my-8 text-gray-200">
     <slot></slot>
 
     <div class="pt-6 space-y-4">
       <slot name="title">
-        <h4 class="font-title text-2xl font-semibold flex items-center">
+        <h4 class="flex items-center subtitle">
           <img v-if="image" :src="image" alt="pollux services" class="mr-2" />
           <fa-icon v-if="icon" class="mr-2" />
           <span>{{ title }}</span>
@@ -13,7 +13,7 @@
     </div>
 
     <div class="pt-4 space-y-4">
-      <p class="min-h-[6rem] text-xl font-medium">{{ description }}</p>
+      <p class="min-h-[6rem] text-md font-medium">{{ description }}</p>
     </div>
   </div>
 </template>

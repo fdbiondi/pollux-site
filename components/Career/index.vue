@@ -1,5 +1,5 @@
 <template>
-  <section class="py-8 lg:py-12 xl:py-16">
+  <section class="font-arch py-8 lg:py-12 xl:py-16">
     <div class="container mx-auto px-32 text-center">
       <h2 class="title">Career / Get On Board</h2>
 
@@ -38,7 +38,7 @@
 
         <div
           v-if="curriculum"
-          class="font-title text-gray-200 transition-opacity mt-2"
+          class="text-gray-200 transition-opacity mt-2"
         >
           <span class="cursor-pointer hover:text-white" @click="clearFile">
             <fa-icon icon="times" />

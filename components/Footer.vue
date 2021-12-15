@@ -7,7 +7,7 @@
         </div>
 
         <div class="flex flex-wrap items-center justify-around w-3/4 p-6">
-          <span class="font-title text-2xl text-gray-200">Let's connect</span>
+          <span class="font-arch text-2xl text-gray-200">Let's connect</span>
 
           <fa-icon :icon="['fab', 'twitter']" class="footer--icon"></fa-icon>
           <fa-icon :icon="['fab', 'instagram']" class="footer--icon"></fa-icon>
@@ -24,7 +24,7 @@
       </div>
 
       <div class="flex">
-        <div class="w-1/4 p-6 font-mono leading-loose text-xl text-gray-200">
+        <div class="w-1/4 p-6 leading-loose text-xl text-gray-200">
           <div class="line-block"></div>
 
           Pollux Cooperative<br />

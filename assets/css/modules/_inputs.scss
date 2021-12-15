@@ -1,5 +1,5 @@
 @mixin input {
-  @apply font-title shadow appearance-none border-2 border-black-light rounded-none py-4 px-6 text-2xl text-black-light leading-tight;
+  @apply shadow appearance-none border-2 border-black-light rounded-none py-4 px-6 text-2xl text-black-light leading-tight;
 }
 
 form {
@@ -29,7 +29,7 @@ form {
 
     & ~ span,
     & ~ label {
-      @apply font-title text-xl cursor-pointer;
+      @apply text-xl cursor-pointer;
     }
 
     &:before {

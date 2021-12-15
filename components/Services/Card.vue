@@ -2,7 +2,7 @@
   <div class="p-8 m-4" :class="classes">
     <slot></slot>
     <div class="pt-6 space-y-4">
-      <h4 class="text-2xl font-semibold lines-2">
+      <h4 class="font-title text-2xl font-bold lines-2">
         {{ title }}
       </h4>
     </div>

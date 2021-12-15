@@ -1,5 +1,5 @@
 <template>
-  <section class="py-8 lg:py-16 xl:py-32">
+  <section class="font-arch py-8 lg:py-16 xl:py-32">
     <div class="container mx-auto px-6">
       <div class="flex">
         <div class="w-1/2">
@@ -7,7 +7,7 @@
           <h2 class="talk-with-us font-bold">get your</h2>
           <h2 class="talk-with-us font-bold">project moving!</h2>
 
-          <span class="font-title text-gray-200 text-xl p-8">
+          <span class="text-gray-200 text-xl p-8">
             Simply fill out the form or email us at
             <a href="mailto: hello@polluxcoop.com" class="text-pollux-pink">
               hello@polluxcoop.com
@@ -74,7 +74,7 @@
                 BOOK A CALL
               </button>
 
-              <span class="w-1/2 font-title text-gray-200 p-8">
+              <span class="w-1/2 text-gray-200 p-8">
                 I consent to Pollux processing my personal data according to the
                 <a href="" class="text-pollux-pink">Privacy Policy</a>
               </span>
@@ -115,6 +115,6 @@ export default {
 
 <style lang="scss" scoped>
 .talk-with-us {
-  @apply font-title text-8xl text-gray-200 my-16 px-8;
+  @apply text-8xl text-gray-200 my-16 px-8;
 }
 </style>

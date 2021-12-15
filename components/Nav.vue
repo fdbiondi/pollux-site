@@ -12,7 +12,6 @@
             Our Clients
           </a>
           <a href="#about" class="nav-item route--underline"> About Us </a>
-          <a href="#our-team" class="nav-item route--underline"> Our Team </a>
           <a href="#career" class="nav-item route--underline"> Career </a>
 
           <LanguageSwitch />

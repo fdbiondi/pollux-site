@@ -63,7 +63,7 @@ export default {
 
 <style lang="scss" scoped>
 section {
-  background-image: url(~/assets/images/galaxy.png);
+  background-image: url(~/assets/images/clouds.png);
   background-position: left bottom;
   background-repeat: no-repeat;
   background-attachment: fixed;

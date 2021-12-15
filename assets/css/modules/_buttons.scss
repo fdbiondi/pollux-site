@@ -1,5 +1,5 @@
 @mixin button {
-  @apply font-serif px-8 py-4 text-2xl font-bold hover:bg-gray-200 hover:text-gray-800;
+  @apply font-arch px-8 py-4 text-2xl font-bold hover:bg-gray-200 hover:text-gray-800;
 
   @include outline-none;
 

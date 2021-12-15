@@ -19,7 +19,7 @@
             :alt="`${alt} - ${avatar.name}`"
             class="rounded-[100%] border-4 border-gray-100 border-solid w-32 h-32"
           />
-          <h4 class="font-title text-gray-200 text-center text-2xl mt-2">
+          <h4 class="font-arch text-gray-200 text-center text-2xl mt-2">
             {{ avatar.name }}
           </h4>
         </div>

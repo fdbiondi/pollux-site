@@ -1,5 +1,5 @@
 <template>
-  <div class="slider" :style="{ '--carousel-size': carouselSize }">
+  <div class="slider" :class="{ 'w-full': !swipe }" :style="{ '--carousel-size': carouselSize }">
     <div
       :key="carouselSize"
       :class="{
@@ -109,7 +109,7 @@ img {
 }
 
 .slider {
-  @apply overflow-hidden w-full p-0;
+  @apply overflow-hidden p-0;
 
   &--swipe-track {
     @apply cursor-[grab] flex flex-row;
