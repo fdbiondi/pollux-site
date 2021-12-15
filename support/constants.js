@@ -32,6 +32,7 @@ export const TOOLS_LINKS = {
   "google-analytics": "https://analytics.google.com/",
   mongodb: "https://www.mongodb.com/",
   mysql: "https://www.mysql.com/",
+  nuxt: "https://nuxtjs.org/",
   postgresql: "https://www.postgresql.org/",
   redis: "https://redis.io/",
   babel: "https://babeljs.io/",

@@ -6,7 +6,7 @@
           <div
             v-for="({ description, image, service }, i) in services"
             :key="i"
-            class="w-1/2 px-16"
+            class="w-1/2 px-8 flex justify-center"
           >
             <ServicesBlock
               :title="service"
@@ -19,17 +19,15 @@
         </div>
 
         <div class="w-1/4 flex flex-col items-center">
-          <template
+          <ServicesBlock
             v-for="({ description, image, title }, index) in otherServices"
-          >
-            <ServicesBlock
-              :key="index"
-              :description="description"
-              :image="image"
-              :title="title"
-              data-aos="zoom-in-up"
-            />
-          </template>
+            :key="index"
+            :description="description"
+            :image="image"
+            :title="title"
+            data-aos="zoom-in-up"
+            class="my-2"
+          />
         </div>
       </div>
     </div>

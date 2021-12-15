@@ -1,5 +1,5 @@
 <template>
-  <div class="my-8 text-gray-200">
+  <div class="text-gray-200">
     <slot></slot>
 
     <div class="pt-6 space-y-4">
@@ -7,13 +7,13 @@
         <h4 class="flex items-center subtitle">
           <img v-if="image" :src="image" alt="pollux services" class="mr-2" />
           <fa-icon v-if="icon" class="mr-2" />
-          <span>{{ title }}</span>
+          <span class="font-bold">{{ title }}</span>
         </h4>
       </slot>
     </div>
 
     <div class="pt-4 space-y-4">
-      <p class="min-h-[6rem] font-medium">{{ description }}</p>
+      <p class="min-h-[6rem]" :class="fontSize">{{ description }}</p>
     </div>
   </div>
 </template>
@@ -38,6 +38,11 @@ export default {
 
     title: {
       default: "",
+      type: String,
+    },
+
+    fontSize: {
+      default: "text-md",
       type: String,
     },
   },

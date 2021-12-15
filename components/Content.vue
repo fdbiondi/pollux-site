@@ -30,7 +30,7 @@
     <!-- Talk to us / Contact Form -->
     <Contact class="bg-black-light" />
 
-    <Partners />
+    <!-- <Partners /> -->
   </div>
 </template>
 

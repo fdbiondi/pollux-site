@@ -5,7 +5,7 @@
       Business Success
     </h1>
 
-    <p class="text-md lg:text-2xl font-light mb-8">
+    <p class="lg:text-2xl font-light mb-8">
       Innovative software development and consulting partner. We help products
       scale through the use of technology solutions to improve customer
       experience and internal processes.

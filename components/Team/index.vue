@@ -20,7 +20,9 @@
             :key="index"
             :description="description"
             :title="title"
+            font-size="text-xl"
             data-aos="zoom-in-up"
+            class="my-4"
           />
         </div>
       </div>
