@@ -9,8 +9,7 @@
     <!-- Content Section -->
     <Content />
 
-    <BgCode1 />
-    <!-- <BgCode2 /> -->
+    <BackgroundCodeHtml />
 
     <!-- Footer Section -->
     <Footer class="bg-black-light" />
