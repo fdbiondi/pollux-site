@@ -13,7 +13,7 @@
     </div>
 
     <div class="pt-4 space-y-4">
-      <p class="min-h-[6rem] text-md font-medium">{{ description }}</p>
+      <p class="min-h-[6rem] font-medium">{{ description }}</p>
     </div>
   </div>
 </template>

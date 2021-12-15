@@ -12,20 +12,20 @@
     <!-- Other services -->
     <ServicesOthers class="bg-black-light" />
 
-    <!-- Development process -->
-    <DevProcess />
-
-    <!-- Our clients -->
-    <Clients class="bg-black-light" />
-
     <!-- Team -->
     <Team />
 
+    <!-- Our clients -->
+    <Clients />
+
+    <!-- Development process -->
+    <!-- <DevProcess /> -->
+
     <!-- Teammates -->
-    <TeamMates class="bg-black-light" />
+    <!-- <TeamMates class="bg-black-light" /> -->
 
     <!-- Career / Get On Board -->
-    <Career />
+    <!-- <Career /> -->
 
     <!-- Talk to us / Contact Form -->
     <Contact class="bg-black-light" />

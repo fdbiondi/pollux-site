@@ -31,7 +31,8 @@ export default {
   mounted() {
     this.images = getFromContext(
       require.context("@/assets/images/tools/", true, /\.svg$/),
-      ".svg"
+      ".svg",
+      (path, extension) => ({ link: getToolLink(path, extension) })
     )
   },
 }
