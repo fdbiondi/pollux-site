@@ -1,10 +1,10 @@
 <template>
-  <section class="mt-4 lg:mt-8 xl:mt-16">
-    <div class="container mx-auto px-6 py-8 lg:py-16 xl:py-32">
-      <div class="text-center">
+  <section>
+    <div class="container perspective mx-auto px-6 py-8 lg:py-16 xl:py-24">
+      <div class="text-center text-section">
         <h4 class="text-4xl text-gray-200">Ready for this?</h4>
 
-        <h2 class="text-9xl font-bold text-gray-200 my-16">
+        <h2 class="font-bold text-gray-200 my-16">
           <span> Let Build a Great</span> <span>Product!</span>
         </h2>
 
@@ -22,4 +22,16 @@
 export default {}
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+h2 {
+  font-size: 10rem;
+}
+
+.perspective {
+  perspective: 50rem;
+}
+
+.text-section {
+  transform: rotateY(-5deg);
+}
+</style>

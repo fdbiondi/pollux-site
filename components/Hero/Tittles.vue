@@ -1,11 +1,12 @@
 <template>
   <div class="hero__titles text-gray-200">
-    <h2 class="font-mulish text-xl lg:text-3xl font-bold">
+    <h2 class="font-title uppercase text-xl lg:text-3xl font-bold">
       Custom Software Solutions for
     </h2>
     <h1
       class="
-        font-mulish
+        font-title
+        uppercase
         text-5xl
         lg:text-[5rem]
         font-black

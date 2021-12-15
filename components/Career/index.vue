@@ -1,5 +1,5 @@
 <template>
-  <section class="font-arch py-8 lg:py-12 xl:py-16">
+  <section class="font-stylish py-8 lg:py-12 xl:py-16">
     <div class="container mx-auto px-32 text-center">
       <h2 class="title">Career / Get On Board</h2>
 

@@ -22,15 +22,7 @@
           </p>
         </div>
 
-        <div class="text-right font-mulish" data-aos="zoom-out-up">
-          <h2>Pollux</h2>
-
-          <p>
-            Scale fast your business with expert software engineering teams.
-          </p>
-        </div>
-
-        <div class="text-right font-arch" data-aos="zoom-in-up">
+        <div class="text-right font-stylish" data-aos="zoom-in-up">
           <h2>Pollux</h2>
 
           <p>

@@ -1,11 +1,11 @@
 <template>
-  <section id="contact" class="font-arch py-8 lg:py-16 xl:py-32">
+  <section id="contact" class="font-stylish py-8 lg:py-16 xl:py-32">
     <div class="container mx-auto px-6">
       <div class="flex">
         <div class="w-1/2">
-          <h2 class="talk-with-us">Talk to us and</h2>
+          <h2 class="talk-with-us font-light">Talk to us and</h2>
           <h2 class="talk-with-us font-bold">get your</h2>
-          <h2 class="talk-with-us font-bold">project moving!</h2>
+          <h2 class="talk-with-us font-bold"><span class="text-pollux-pink">project</span> moving!</h2>
 
           <span class="text-gray-200 text-xl p-8">
             Simply fill out the form or email us at
@@ -54,7 +54,9 @@
               class="mb-4 w-full"
             />
 
-            <div class="flex flex-row wrapper justify-between text-white">
+            <div
+              class="flex flex-row wrapper justify-between text-white italic"
+            >
               <label class="flex items-center">
                 <input
                   ref="nda"
@@ -115,6 +117,10 @@ export default {
 
 <style lang="scss" scoped>
 .talk-with-us {
-  @apply text-8xl text-gray-200 my-16 px-8;
+  @apply text-8xl text-gray-200 my-16 px-8 uppercase cursor-default;
+
+  &:hover {
+    text-shadow: 0 0 1.5rem hsl(0 0 100% / 0.5);
+  }
 }
 </style>

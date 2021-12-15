@@ -6,7 +6,7 @@
       </a>
 
       <div class="flex items-center">
-        <div class="text-lg text-gray-200 hidden lg:flex">
+        <div class="text-lg text-white hidden lg:flex">
           <a href="#services" class="nav-item route--underline"> Services </a>
           <a href="#our-clients" class="nav-item route--underline">
             Our Clients

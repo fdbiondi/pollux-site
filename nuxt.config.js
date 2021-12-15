@@ -116,10 +116,11 @@ export default {
 
   googleFonts: {
     families: {
-      "Architects+Daughter": true,
+      // "Architects+Daughter": true,
       "Fredoka+One": true,
-      "Roboto+Mono": [300, 400],
-      Mulish: [300, 400, 600, 800, 900],
+      "Roboto+Mono": true,
+      // Mulish: true,
+      Oswald: true,
     },
     preload: true,
   },
