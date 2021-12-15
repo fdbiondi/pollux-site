@@ -19,7 +19,7 @@ export default {
 
   mounted() {
     this.images = getFromContext(
-      require.context("@/assets/images/clients/", true, /\.*$/),
+      require.context("@/assets/images/partners/", true, /\.*$/),
       ".*"
     )
   },

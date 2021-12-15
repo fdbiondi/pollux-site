@@ -29,6 +29,8 @@
 
     <!-- Talk to us / Contact Form -->
     <Contact class="bg-black-light" />
+
+    <Partners />
   </div>
 </template>
 
