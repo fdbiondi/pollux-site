@@ -14,7 +14,7 @@
 
     <div class="container flex flex-wrap items-center mx-auto py-12">
       <div class="w-full">
-        <div class="text-right font-mono" data-aos="zoom-out-up">
+        <div class="text-right font-mono" data-aos="zoom-in-up">
           <h2>Pollux</h2>
 
           <p>

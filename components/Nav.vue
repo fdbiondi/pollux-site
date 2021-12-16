@@ -24,9 +24,7 @@
           </div>-->
 
         <div class="block lg:hidden">
-          <button
-            class="flex items-center px-4 py-3 border rounded text-gray-200 border-gray-400 focus:outline-none"
-          >
+          <button class="flex items-center px-4 py-3 border rounded text-gray-200 border-gray-400 focus:outline-none">
             <svg
               class="fill-current h-3 w-3"
               viewBox="0 0 20 20"

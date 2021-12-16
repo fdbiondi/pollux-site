@@ -1,36 +1,29 @@
 <template>
-  <div class="hero__titles text-gray-200">
-    <h2 class="font-title uppercase text-xl lg:text-3xl font-bold">
+  <div class="hero--titles">
+    <h2 class="hero--title" style="--order: 1">
       Custom Software Solutions for
     </h2>
-    <h1
-      class="
-        font-title
-        uppercase
-        text-5xl
-        lg:text-[5rem]
-        font-black
-        text-pollux-cyan
-        mb-2
-        lg:mb-6
-      "
-    >
-      Business Success
-    </h1>
+    <h1 class="hero--title" style="--order: 2">Business Success</h1>
 
-    <p class="lg:text-2xl font-light mb-8">
+    <p class="hero--title" style="--order: 3">
       Innovative software development and consulting partner. We help products
       scale through the use of technology solutions to improve customer
       experience and internal processes.
     </p>
 
-    <nuxt-link to="#services">
-      <button class="hero__button">Know more</button>
-    </nuxt-link>
+    <div class="flex flex-row gap-4">
+      <div class="animate-in" style="--order: 1">
+        <nuxt-link to="#services">
+          <button class="hero--button">Know more</button>
+        </nuxt-link>
+      </div>
 
-    <nuxt-link to="#contact">
-      <button class="hero__button--secondary mx-2">Let's connect</button>
-    </nuxt-link>
+      <div class="animate-in" style="--order: 2">
+        <nuxt-link to="#contact">
+          <button class="hero--button--secondary">Let's connect</button>
+        </nuxt-link>
+      </div>
+    </div>
   </div>
 </template>
 

@@ -13,6 +13,7 @@
             :title="service"
             :description="description"
             data-aos="zoom-in-up"
+            :data-aos-delay="200 * i"
           >
             <img :src="image" alt="pollux services" />
           </ServicesCard>

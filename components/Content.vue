@@ -12,9 +12,6 @@
     <!-- Other services -->
     <ServicesOthers class="bg-black-light" />
 
-    <!-- Team -->
-    <!-- <Team /> -->
-
     <!-- Our clients -->
     <Clients />
 

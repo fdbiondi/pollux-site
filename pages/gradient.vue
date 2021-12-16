@@ -1,9 +1,9 @@
 <template>
   <section class="isLoaded">
     <canvas id="gradient-canvas" width="1920" height="600" class="isLoaded shape-sizing"></canvas>
-    <div class="custom-shape-divider-bottom shape-sizing">
+    <div class="divider shape-sizing">
       <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 120" preserveAspectRatio="none">
-        <path d="M 0,0 L0,120 L400,120 L600,0 z" class="shape-fill"></path>
+        <path d="M 0,0 L0,120 L50,120 L650,0 z" class="shape-fill"></path>
       </svg>
     </div>
   </section>
@@ -28,7 +28,7 @@ export default {
     --gradient-color-4: #E63946;
 }
 
-.custom-shape-divider-bottom {
+.divider {
     position: absolute;
     top: 0;
     right: 0;
@@ -36,14 +36,14 @@ export default {
     line-height: 0;
 }
 
-.custom-shape-divider-bottom svg {
+.divider svg {
     position: relative;
     display: block;
     width: 100%;
     height: 100%;
 }
 
-.custom-shape-divider-bottom .shape-fill {
+.divider .shape-fill {
     fill: theme('colors.black.light');
 }
 

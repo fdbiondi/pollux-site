@@ -3,24 +3,46 @@
   @include button;
 
   &:hover {
-    box-shadow: 0 1rem 2.5rem rgba(35, 35, 35, 0.1), 0 0.5rem 1rem -0.75rem rgba(35, 35, 35, 0.1);
-    transition: box-shadow 0.25s ease, transform 0.25s ease, -webkit-transform 0.25s ease;
+    box-shadow: 0 1rem 2.5rem rgba(35, 35, 35, 0.1),
+      0 0.5rem 1rem -0.75rem rgba(35, 35, 35, 0.1);
+    transition: box-shadow 0.25s ease, transform 0.25s ease,
+      -webkit-transform 0.25s ease;
   }
 }
 
 .hero {
-  &__titles {
-    animation: zoomInUp;
-    animation-duration: 1s;
-    animation-timing-function: ease-in-out;
+  &--titles {
+    @apply text-gray-200;
+
+    h1 {
+      @apply font-title uppercase text-5xl lg:text-[5rem] font-black text-pollux-cyan mb-2 lg:mb-6;
+    }
+    h2 {
+      @apply font-title uppercase text-xl lg:text-3xl font-bold;
+    }
+    p {
+      @apply lg:text-2xl font-light mb-8;
+    }
+
+    .animate-in {
+      opacity: 0;
+      animation: fadeInRight 0.5s ease forwards;
+      animation-delay: calc(var(--order) * 200ms + 4 * 200ms);
+    }
   }
 
-  &__button {
+  &--title {
+    opacity: 0;
+    animation: zoomInUp 0.5s ease forwards;
+    animation-delay: calc(var(--order) * 200ms);
+  }
+
+  &--button {
     @include hero-button;
     @include primary-button;
   }
 
-  &__button--secondary {
+  &--button--secondary {
     @include hero-button;
     @include secondary-button;
   }

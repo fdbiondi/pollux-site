@@ -12,6 +12,7 @@
               :title="service"
               :description="description"
               data-aos="zoom-in-up"
+              :data-aos-delay="400 * (1 / (i + 1))"
             >
               <img :src="image" alt="pollux services" />
             </ServicesBlock>

@@ -34,7 +34,7 @@ export default {
     avatarType: {
       default: "apes",
       type: String,
-      validator: (value) => ["apes", "astronauts", "punks"].includes(value),
+      validator: (value) => ["apes", "punks"].includes(value),
     },
   },
 
@@ -44,7 +44,6 @@ export default {
       alt: "",
       alts: {
         apes: "Bored Ape Yacht Club",
-        astronauts: "Bored Ape Astronaut",
         punks: "CryptoPunks",
       },
       names: [
@@ -65,11 +64,6 @@ export default {
     this.alt = this.alts[this.avatarType]
     if (this.avatarType === "apes") {
       this.getAll(require.context("@/assets/images/apes/", true, /\.png$/))
-    }
-    if (this.avatarType === "astronauts") {
-      this.getAll(
-        require.context("@/assets/images/astronauts/", true, /\.png$/)
-      )
     }
     if (this.avatarType === "punks") {
       this.getAll(require.context("@/assets/images/punks/", true, /\.png$/))

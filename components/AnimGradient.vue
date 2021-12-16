@@ -5,7 +5,7 @@
         <div class="title-area">
           <div class="background-wrap">
             <canvas id="gradient-canvas" class="absolute top-0" />
-            <div class="custom-shape-divider-bottom">
+            <div class="divider">
               <svg
                 data-name="Layer 1"
                 xmlns="http://www.w3.org/2000/svg"
@@ -13,7 +13,7 @@
                 preserveAspectRatio="none"
               >
                 <path
-                  d="M 0,0 L0,120 L200,120 L600,0 z"
+                  d="M 0,0 L0,120 L50,120 L600,0 z"
                   class="shape-fill"
                 ></path>
               </svg>
@@ -81,18 +81,18 @@ export default {
 }
 
 /* Polygon Shape */
-.custom-shape-divider-bottom {
+.divider {
   @apply absolute top-0 right-0 overflow-hidden;
   line-height: 0;
 }
 
-.custom-shape-divider-bottom svg {
+.divider svg {
   @include section-height;
   @apply relative block w-full;
   z-index: 11;
 }
 
-.custom-shape-divider-bottom .shape-fill {
+.divider .shape-fill {
   fill: theme("colors.black.light");
 }
 </style>

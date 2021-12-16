@@ -1,17 +1,20 @@
 <template>
   <div class="container mx-auto px-6">
-      <div class="flex justify-center items-center w-full mb-6">
-        <div
-          v-for="({ src, name }, index) in images"
-          :key="index"
-          class="mx-4 p-8 max-h-full"
-        >
-          <img :src="src" :alt="name" class="w-20" />
-        </div>
+    <div class="flex justify-center items-center w-full mb-6">
+      <div
+        v-for="({ src, name }, i) in images"
+        :key="i"
+        class="mx-4 p-8 max-h-full"
+        data-aos="fade-in-up"
+        :data-aos-delay="200 * i"
+        data-aos-once="true"
+      >
+        <img :src="src" :alt="name" class="w-20" />
       </div>
-
-      <hr class="mx-16" />
     </div>
+
+    <hr class="mx-16" />
+  </div>
 </template>
 
 <script>
@@ -22,8 +25,6 @@ export default {
       default: () => [],
     },
   },
-
-  mounted() {},
 }
 </script>
 
