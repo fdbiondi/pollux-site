@@ -6,7 +6,7 @@
         :key="i"
         class="mx-4 p-8 max-h-full"
         data-aos="fade-in-up"
-        :data-aos-delay="200 * i"
+        :data-aos-delay="100 * i"
         data-aos-once="true"
       >
         <img :src="src" :alt="name" class="w-20" />

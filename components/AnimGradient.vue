@@ -5,6 +5,7 @@
         <div class="title-area">
           <div class="background-wrap">
             <canvas id="gradient-canvas" class="absolute top-0" />
+
             <div class="divider">
               <svg
                 data-name="Layer 1"
@@ -13,7 +14,7 @@
                 preserveAspectRatio="none"
               >
                 <path
-                  d="M 0,0 L0,120 L50,120 L600,0 z"
+                  d="M 0,0 L0,120 L-600,120 L900,0 z"
                   class="shape-fill"
                 ></path>
               </svg>
@@ -73,10 +74,10 @@ export default {
   }
 
   #gradient-canvas {
-    --gradient-color-1: theme("colors.rose.500");
-    --gradient-color-2: theme("colors.cyan.300");
+    --gradient-color-1: theme("colors.pollux-pink.DEFAULT");
+    --gradient-color-2: theme("colors.pollux-cyan.DEFAULT");
     --gradient-color-3: theme("colors.purple.500");
-    --gradient-color-4: theme("colors.gray.400");
+    --gradient-color-4: theme("colors.gray.300");
   }
 }
 

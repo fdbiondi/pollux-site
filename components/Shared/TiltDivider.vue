@@ -1,5 +1,5 @@
 <template>
-  <div class="tilt" :class="position">
+  <div class="tilt">
     <svg
       data-name="Tilt"
       xmlns="http://www.w3.org/2000/svg"
@@ -16,45 +16,19 @@
 </template>
 
 <script>
-export default {
-  props: {
-    position: {
-      type: String,
-      default: "bottom-0 left-0",
-    },
-
-    slope: {
-      type: String,
-      validator: (value) => ["normal", "steep"].includes(value),
-      default: null,
-    },
-  },
-}
+export default {}
 </script>
 
 <style lang="scss" scoped>
 .tilt {
-  position: absolute;
-  width: 100%;
-  overflow: hidden;
+  @apply absolute w-full bottom-0 left-0 overflow-hidden transform rotate-180;
   line-height: 0;
-  transform: rotate(180deg);
 }
 
 .tilt svg {
-  position: relative;
-  display: block;
+  @apply relative block h-96;
+  width: 115%;
   transform: rotateY(180deg);
-
-  &.normal {
-    width: calc(100% + 1.3px);
-    @apply h-40;
-  }
-
-  &.steep {
-    width: calc(135% + 1.3px);
-    @apply h-64;
-  }
 }
 
 .tilt .shape-fill {

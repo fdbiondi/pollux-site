@@ -68,7 +68,7 @@
       <div class="p-6">
         <div class="border-t border-gray-200 text-gray-200 pt-4 text-xs">
           <div class="flex justify-between">
-            <span>Copyright © 2021 Pollux | Privacy policy</span>
+            <span>Copyright © 2021 <span @click="$emit('bonus')">Pollux</span> | Privacy policy</span>
 
             <span>
               <a
@@ -98,7 +98,6 @@ export default {}
     &:hover {
       @apply text-white transform scale-105 origin-center;
       transition: transform 200ms, scale 100ms;
-      // transform: scale(1.03);
     }
   }
 }

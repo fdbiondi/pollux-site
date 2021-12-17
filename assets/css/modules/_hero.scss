@@ -27,14 +27,14 @@
     .animate-in {
       opacity: 0;
       animation: fadeInRight 0.5s ease forwards;
-      animation-delay: calc(var(--order) * 200ms + 4 * 200ms);
+      animation-delay: calc(var(--order) * 100ms + 4 * 100ms);
     }
   }
 
   &--title {
     opacity: 0;
     animation: zoomInUp 0.5s ease forwards;
-    animation-delay: calc(var(--order) * 200ms);
+    animation-delay: calc(var(--order) * 100ms);
   }
 
   &--button {

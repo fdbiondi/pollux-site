@@ -2,7 +2,7 @@
   <div class="text-gray-200">
     <slot></slot>
 
-    <div class="pt-6 space-y-4">
+    <div class="pt-6">
       <slot name="title">
         <h4 class="flex items-center subtitle">
           <img v-if="image" :src="image" alt="pollux services" class="mr-2" />
@@ -11,6 +11,8 @@
         </h4>
       </slot>
     </div>
+
+    <slot name="middle"></slot>
 
     <div class="pt-4 space-y-4">
       <p class="min-h-[6rem]" :class="fontSize">{{ description }}</p>

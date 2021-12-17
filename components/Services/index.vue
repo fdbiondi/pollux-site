@@ -1,5 +1,5 @@
 <template>
-  <section id="services" class="py-8 lg:py-16 xl:py-32">
+  <section id="services" class="py-8 lg:py-16 xl:py-16">
     <div class="container mx-auto">
       <h2 class="title">Find your software development Service</h2>
 
@@ -13,7 +13,8 @@
             :title="service"
             :description="description"
             data-aos="zoom-in-up"
-            :data-aos-delay="200 * i"
+            :data-aos-delay="100 * i"
+            bg-color="bg-transparent"
           >
             <img :src="image" alt="pollux services" />
           </ServicesCard>

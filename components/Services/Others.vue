@@ -1,37 +1,47 @@
 <template>
-  <section class="py-8 lg:py-16 xl:py-24">
-    <div class="container mx-auto py-12 px-6 pb-16">
+  <section class="relative py-8 lg:py-16 xl:py-24">
+    <div class="container mx-auto py-12 pb-16">
       <div class="flex">
-        <div class="w-3/4 flex flex-row items-center px-8">
+        <div class="w-2/3 flex flex-col justify-center">
           <div
             v-for="({ description, image, service }, i) in services"
             :key="i"
-            class="w-1/2 px-8 flex justify-center"
+            class="relative"
           >
+            <div class="float-section-line" style="top: 10rem"></div>
+
             <ServicesBlock
               :title="service"
               :description="description"
               data-aos="zoom-in-up"
-              :data-aos-delay="400 * (1 / (i + 1))"
+              class="my-16 px-8 w-1/2"
             >
               <img :src="image" alt="pollux services" />
             </ServicesBlock>
           </div>
         </div>
 
-        <div class="w-1/4 flex flex-col items-center">
-          <ServicesBlock
+        <div class="w-1/3 flex flex-col items-start">
+          <div
             v-for="({ description, image, title }, index) in otherServices"
             :key="index"
-            :description="description"
-            :image="image"
-            :title="title"
-            data-aos="zoom-in-up"
-            class="my-2"
-          />
+            class="relative"
+          >
+            <div class="float-section-line" style="top: 3.5rem"></div>
+
+            <ServicesBlock
+              :description="description"
+              :image="image"
+              :title="title"
+              data-aos="zoom-in-up"
+              class="my-2 px-8"
+            />
+          </div>
         </div>
       </div>
     </div>
+
+    <LineSection />
   </section>
 </template>
 

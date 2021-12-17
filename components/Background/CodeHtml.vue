@@ -12,6 +12,5 @@
   background-attachment: fixed;
   background-size: cover;
   background-color: transparent;
-  // filter: grayscale(0.5);
 }
 </style>

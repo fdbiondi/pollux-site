@@ -26,9 +26,4 @@ export default {
 }
 </script>
 
-<style scoped>
-* >>> .tilt svg {
-  @apply h-96;
-  width: 115%;
-}
-</style>
+<style scoped></style>
