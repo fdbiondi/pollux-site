@@ -8,12 +8,16 @@
   }
 
   .title-gradient {
-    background: -webkit-linear-gradient(
+    background: linear-gradient(
       45deg,
       theme("colors.pollux-cyan.light"),
       theme("colors.pollux-cyan.dark") 80%
     );
-    -webkit-background-clip: text;
+    background-size: 150%;
     -webkit-text-fill-color: transparent;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+
   }
 }

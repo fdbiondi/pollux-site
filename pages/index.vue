@@ -28,11 +28,61 @@ export default {
 
 <style lang="scss" scoped>
 .colorful {
-  background-image: linear-gradient(
-    135deg,
-    theme("colors.pollux-pink.light") 10%,
-    theme("colors.pollux-cyan.dark") 100%
+  background: linear-gradient(
+    225deg,
+    theme("colors.pollux-cyan.light"),
+    theme("colors.pollux-cyan.dark"),
+    theme("colors.pollux-pink.light"),
+    theme("colors.gray.200")
   );
-  // background-image: linear-gradient(135deg, #f97794 10%, #623aa2 100%);
+  background-size: 300% 300%;
+  -webkit-animation: colorfulBg 30s ease infinite;
+  -moz-animation: colorfulBg 30s ease infinite;
+  -o-animation: colorfulBg 30s ease infinite;
+  animation: colorfulBg 30s ease infinite;
+}
+@-webkit-keyframes colorfulBg {
+  0% {
+    background-position: 0% 7%;
+  }
+  50% {
+    background-position: 100% 94%;
+  }
+  100% {
+    background-position: 0% 7%;
+  }
+}
+@-moz-keyframes colorfulBg {
+  0% {
+    background-position: 0% 7%;
+  }
+  50% {
+    background-position: 100% 94%;
+  }
+  100% {
+    background-position: 0% 7%;
+  }
+}
+@-o-keyframes colorfulBg {
+  0% {
+    background-position: 0% 7%;
+  }
+  50% {
+    background-position: 100% 94%;
+  }
+  100% {
+    background-position: 0% 7%;
+  }
+}
+@keyframes colorfulBg {
+  0% {
+    background-position: 0% 7%;
+  }
+  50% {
+    background-position: 100% 94%;
+  }
+  100% {
+    background-position: 0% 7%;
+  }
 }
 </style>
