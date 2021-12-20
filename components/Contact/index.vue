@@ -72,7 +72,7 @@
             </div>
 
             <div class="flex">
-              <button class="w-1/2 button--secondary m-auto">
+              <button class="w-1/2 button button--outline m-auto">
                 BOOK A CALL
               </button>
 

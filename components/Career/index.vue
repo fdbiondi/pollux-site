@@ -31,7 +31,7 @@
             </div>
           </File>
 
-          <button class="button--secondary" type="button" @click="send">
+          <button class="button button--secondary" type="button" @click="send">
             Send
           </button>
         </form>

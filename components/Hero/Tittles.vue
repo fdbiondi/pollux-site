@@ -16,13 +16,13 @@
     <div class="flex flex-row gap-4">
       <div class="animate-in" style="--order: 1">
         <nuxt-link to="#services">
-          <button class="hero--button">Know more</button>
+          <button class="button button--primary">Know more</button>
         </nuxt-link>
       </div>
 
       <div class="animate-in" style="--order: 2">
         <nuxt-link to="#contact">
-          <button class="hero--button--secondary">Let's connect</button>
+          <button class="button button--secondary">Let's connect</button>
         </nuxt-link>
       </div>
     </div>
