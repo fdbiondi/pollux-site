@@ -3,7 +3,7 @@
     <h2 class="hero--title" style="--order: 1">
       Custom Software Solutions for
     </h2>
-    <h1 class="hero--title title-gradient" style="--order: 2">
+    <h1 class="hero--title title-gradient tracking-wider" style="--order: 2">
       Business Success
     </h1>
 
