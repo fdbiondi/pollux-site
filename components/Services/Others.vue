@@ -63,7 +63,7 @@ export default {
         },
         {
           description:
-            "Well-designed and colorful app, personalized on your brand’s concept and values, to build trust with your users",
+            "Well-designed and colorful apps, personalized on your brand’s concept and values, to build trust with your users",
           image: require("~/assets/images/icons/icons8-tune-64.png"),
           title: "Custom Designed",
         },

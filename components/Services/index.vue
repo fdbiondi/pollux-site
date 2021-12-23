@@ -32,7 +32,7 @@ export default {
         {
           description:
             "Create beautiful, fast and secure web applications tailored exclusively for your business goals.",
-          icon: "laptop-code",
+
           image: require("~/assets/images/icons/icons8-source-code-64.png"),
           service: "Web Development",
         },
@@ -40,7 +40,7 @@ export default {
         {
           description:
             "Build well-designed and optimized custom mobile applications with a delightful UX for both iOS and Android.",
-          icon: "mobile-alt",
+
           image: require("~/assets/images/icons/icons8-iphone-64.png"),
           service: "Mobile Development",
         },
@@ -48,7 +48,7 @@ export default {
         {
           description:
             "Give your product idea a shape. Plan and evaluate the essential features of your product to accomplish your business goals and eliminate possible mistakes.",
-          icon: "drafting-compass",
+
           image: require("~/assets/images/icons/icons8-multiple-devices-64.png"),
           service: "Product Design",
         },
@@ -56,7 +56,7 @@ export default {
         {
           description:
             "Leverage the power of sales online, with a customized ecommerce platform that suits your needs.",
-          icon: "shopping-cart",
+
           image: require("~/assets/images/icons/icons8-shopping-cart-64.png"),
           service: "Ecommerce Development",
         },
