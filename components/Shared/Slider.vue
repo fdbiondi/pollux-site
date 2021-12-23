@@ -1,5 +1,9 @@
 <template>
-  <div class="slider" :class="{ 'w-full': !swipe }" :style="{ '--carousel-size': carouselSize }">
+  <div
+    class="slider"
+    :class="{ 'w-full': !swipe }"
+    :style="{ '--carousel-size': carouselSize }"
+  >
     <div
       :key="carouselSize"
       :class="{
@@ -87,7 +91,7 @@ export default {
         items = [
           ...this.images,
           ...this.images
-            .slice(0, track.clientWidth / this.imagePixels)
+            .slice(0, track.clientWidth / this.imagePixels + 1)
             .map((item) => ({ ...item, name: `${item.name}-1` })),
         ]
       }
@@ -100,11 +104,10 @@ export default {
 
 <style lang="scss" scoped>
 img {
-  filter: grayscale(1);
+  @apply grayscale;
 
   &:hover {
-    filter: saturate(1.5);
-    @apply transform scale-105 transition-transform;
+    @apply filter-none saturate-150 transform scale-105 transition-transform;
   }
 }
 

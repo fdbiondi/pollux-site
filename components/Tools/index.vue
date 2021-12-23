@@ -5,9 +5,9 @@
     </div>
 
     <Slider :images="images">
-      <template #default="{ props: { name, src, link } }">
+      <template #default="{ props: { name, src, link, vClass } }">
         <a :href="link" target="_blank">
-          <img :src="src" :alt="name" class="w-24 h-24" />
+          <img :src="src" :alt="name" class="w-24 h-24" :class="vClass" />
         </a>
       </template>
     </Slider>
@@ -17,7 +17,7 @@
 <script>
 import Slider from "~/components/Shared/Slider"
 import { getFromContext } from "~/support/files"
-import { getToolLink } from "~/support/strings"
+import { getToolClass, getToolLink } from "~/support/strings"
 
 export default {
   components: {
@@ -32,7 +32,10 @@ export default {
     this.images = getFromContext(
       require.context("@/assets/images/tools/", true, /\.svg$/),
       ".svg",
-      (path, extension) => ({ link: getToolLink(path, extension) })
+      (path, extension) => ({
+        link: getToolLink(path, extension),
+        vClass: getToolClass(path, extension),
+      })
     )
   },
 }

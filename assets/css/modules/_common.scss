@@ -43,3 +43,11 @@
   top: 2.25rem;
   left: -1rem;
 }
+
+a {
+  &:focus,
+  &:focus-visible,
+  &:focus-within {
+    @apply outline-1 outline-dashed outline-gray-200;
+  }
+}
