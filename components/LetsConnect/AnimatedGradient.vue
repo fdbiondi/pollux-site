@@ -14,7 +14,7 @@
                 preserveAspectRatio="none"
               >
                 <path
-                  d="M 0,0 L0,120 L-600,120 L900,0 z"
+                  d="M 0,0 L0,120 L-1235,120 L1370,0 z"
                   class="shape-fill"
                 ></path>
               </svg>

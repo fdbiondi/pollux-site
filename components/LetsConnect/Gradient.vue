@@ -1,11 +1,16 @@
 <template>
-  <AnimGradient>
+  <AnimatedGradient>
     <LetsConnect class="font-stylish absolute w-full" />
-  </AnimGradient>
+  </AnimatedGradient>
 </template>
 
 <script>
-export default {}
+import AnimatedGradient from "./AnimatedGradient"
+export default {
+  components: {
+    AnimatedGradient,
+  },
+}
 </script>
 
 <style lang="scss" scoped></style>
