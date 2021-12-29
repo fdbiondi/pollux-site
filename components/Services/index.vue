@@ -14,7 +14,6 @@
             :description="description"
             data-aos="zoom-in-up"
             :data-aos-delay="100 * i"
-            bg-color="bg-transparent"
           >
             <img :src="image" alt="pollux services" />
           </ServicesCard>
@@ -66,4 +65,16 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style scoped>
+* >>> .card {
+  @apply text-white border-4 border-white hover:bg-white hover:text-black-light hover:shadow-xl hover:shadow-gray-200;
+}
+
+* >>> .card:hover img {
+  @apply grayscale;
+}
+
+* >>> .card h3 {
+  @apply lines-2;
+}
+</style>

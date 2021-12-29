@@ -12,7 +12,11 @@
     <!-- Other services -->
     <ServicesOthers class="bg-black-light" />
 
-    <ServicesProductDesign />
+    <!-- <Test /> -->
+
+    <!-- <div class="ruler"></div> -->
+
+    <!-- <ServicesProductDesign /> -->
 
     <!-- Our clients -->
     <Clients />
@@ -28,4 +32,14 @@
 export default {}
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.ruler {
+  width: 100vw;
+  position: fixed;
+  height: 2px;
+  background-color: white;
+  transform: rotate(-8.5deg);
+  bottom: 15%;
+  z-index: 100;
+}
+</style>

@@ -18,6 +18,9 @@
     color: transparent;
     -webkit-background-clip: text;
     background-clip: text;
+  }
 
+  .lines-2 {
+    word-spacing: 100vw;
   }
 }
