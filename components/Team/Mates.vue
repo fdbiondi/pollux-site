@@ -110,7 +110,7 @@ export default {
 <style lang="scss" scoped>
 img {
   &:hover {
-    @apply transform scale-105 transition-all border-0;
+    @apply scale-105 transition-all border-0;
   }
 }
 </style>

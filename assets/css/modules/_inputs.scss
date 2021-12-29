@@ -40,7 +40,7 @@ form {
     &:checked:after {
       content: "";
       @apply absolute border-gray-200 border-solid border-r-2 border-b-2;
-      @apply w-3 h-7 top-[-0.5rem] left-3 transform rotate-45;
+      @apply w-3 h-7 top-[-0.5rem] left-3 rotate-45;
     }
   }
 

@@ -13,7 +13,7 @@ export default {}
 
 <style lang="scss">
 .line-section {
-  @apply absolute h-full top-0 left-1/2 max-w-full pointer-events-none opacity-20 transform -translate-x-1/2;
+  @apply absolute h-full top-0 left-1/2 max-w-full pointer-events-none opacity-20 -translate-x-1/2;
   width: 1536px;
   z-index: 0;
 }

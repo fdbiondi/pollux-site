@@ -1,15 +1,14 @@
 const colors = require("tailwindcss/colors")
 
 module.exports = {
-  mode: "jit",
-  purge: [
-    "./components/**/*.{vue,js}",
+  content: [
+    "./components/**/*.{vue,js,ts}",
     "./layouts/**/*.vue",
     "./pages/**/*.vue",
     "./plugins/**/*.{js,ts}",
     "./nuxt.config.{js,ts}",
   ],
-  darkMode: false, // or 'media' or 'class'
+
   theme: {
     fontFamily: {
       sans: '"Roboto Mono", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif',
@@ -25,7 +24,7 @@ module.exports = {
         },
         cyan: colors.cyan,
         rose: colors.rose,
-        gray: colors.trueGray,
+        gray: colors.neutral,
         "pollux-cyan": {
           DEFAULT: "#0BC8FE",
           light: "#73F4FF",
@@ -39,8 +38,4 @@ module.exports = {
       },
     },
   },
-  variants: {
-    extend: {},
-  },
-  plugins: [],
 }

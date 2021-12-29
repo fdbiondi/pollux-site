@@ -20,7 +20,7 @@ export default {}
 
 <style lang="scss" scoped>
 .tilt {
-  @apply absolute w-full bottom-0 left-0 overflow-hidden transform rotate-180;
+  @apply absolute w-full bottom-0 left-0 overflow-hidden rotate-180;
   line-height: 0;
 }
 

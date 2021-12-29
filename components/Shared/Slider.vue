@@ -107,7 +107,7 @@ img {
   @apply grayscale;
 
   &:hover {
-    @apply filter-none saturate-150 transform scale-105 transition-transform;
+    @apply filter-none saturate-150 scale-105 transition-transform;
   }
 }
 

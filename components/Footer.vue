@@ -96,7 +96,7 @@ export default {}
     @apply text-gray-200 text-3xl cursor-pointer;
 
     &:hover {
-      @apply text-white transform scale-105 origin-center;
+      @apply text-white scale-105 origin-center;
       transition: transform 200ms, scale 100ms;
     }
   }

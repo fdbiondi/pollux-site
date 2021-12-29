@@ -5,7 +5,9 @@
         <div class="w-1/2">
           <h2 class="talk-with-us font-light">Talk to us and</h2>
           <h2 class="talk-with-us font-bold">get your</h2>
-          <h2 class="talk-with-us font-bold"><span class="text-pollux-pink">project</span> moving!</h2>
+          <h2 class="talk-with-us font-bold">
+            <span class="text-pollux-pink">project</span> moving!
+          </h2>
 
           <span class="text-gray-200 text-xl p-8">
             Simply fill out the form or email us at
@@ -120,7 +122,7 @@ export default {
   @apply text-8xl text-gray-200 my-16 px-8 uppercase cursor-default;
 
   &:hover {
-    text-shadow: 0 0 1.5rem hsl(0 0 100% / 0.5);
+    text-shadow: 0 0 1.5rem hsl(0deg 0% 100% / 0.5);
   }
 }
 </style>
