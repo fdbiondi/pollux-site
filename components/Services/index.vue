@@ -67,11 +67,12 @@ export default {
 
 <style scoped>
 * >>> .card {
-  @apply text-white border-4 border-white hover:bg-white hover:text-black-light hover:shadow-xl hover:shadow-gray-200;
+  @apply border-4 hover:text-white dark:hover:text-black-light border-gray-800 dark:border-white hover:bg-gray-800 dark:hover:bg-white
+    hover:shadow-xl hover:shadow-gray-400 dark:hover:shadow-gray-200;
 }
 
 * >>> .card:hover img {
-  @apply grayscale;
+  @apply contrast-0;
 }
 
 * >>> .card h3 {

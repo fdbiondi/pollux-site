@@ -1,5 +1,5 @@
 @mixin button {
-  @apply font-stylish border-4 px-8 py-4 text-2xl font-bold tracking-wider;
+  @apply font-stylish border-4 px-8 py-4 text-2xl font-bold tracking-[0.08em];
 
   @include outline-none;
 
@@ -16,19 +16,8 @@
 }
 
 @mixin secondary-button {
-  @apply bg-gray-200 border-gray-200 text-gray-800 hover:bg-gray-600 hover:border-gray-600 hover:text-gray-100;
-}
-
-@mixin radial-button($first, $second) {
-  background: radial-gradient(
-    100% 185.14% at 100% 100%,
-    $first 0%,
-    $second 100%
-  );
-}
-
-@mixin shadow($color) {
-  box-shadow: $color 0px 0px 18px;
+  @apply text-gray-200 dark:text-gray-800 bg-gray-800 dark:bg-gray-200 border-gray-800 dark:border-gray-200
+    hover:text-gray-800 dark:hover:text-gray-100 hover:bg-gray-400 dark:hover:bg-gray-600 hover:border-gray-400 dark:hover:border-gray-600;
 }
 
 .button {
@@ -38,7 +27,7 @@
     @include primary-button;
 
     &:hover {
-      @include shadow(theme("colors.pollux-cyan.light"));
+      @apply shadow-[0_0_20px_0] shadow-pollux-cyan-light;
     }
   }
 
@@ -46,15 +35,16 @@
     @include secondary-button;
 
     &:hover {
-      @include shadow(theme("colors.gray.600"));
+      @apply shadow-[0_0_20px_0] shadow-gray-400 dark:shadow-gray-600;
     }
   }
 
   &--outline {
-    @apply bg-transparent border-white text-white hover:bg-white hover:text-gray-900;
+    @apply text-gray-800 dark:text-white hover:text-white dark:hover:text-gray-900
+      bg-transparent hover:bg-gray-800 dark:hover:bg-white border-gray-800 dark:border-white;
 
     &:hover {
-      @include shadow(theme("colors.white"));
+      @apply shadow-[0_0_20px_0] shadow-gray-800 dark:shadow-white;
     }
   }
 }

@@ -1,8 +1,6 @@
 /* Hero */
 .hero {
   &--titles {
-    @apply text-gray-200;
-
     h1 {
       @apply font-title uppercase text-5xl lg:text-[5rem] font-black text-pollux-cyan mb-2 lg:mb-6;
     }

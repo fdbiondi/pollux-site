@@ -1,13 +1,13 @@
 .title {
-  @apply font-title uppercase text-4xl font-bold text-gray-200 px-8 mb-8;
+  @apply font-title uppercase text-4xl font-bold px-8 mb-8 tracking-[0.08rem];
 }
 
 .subtitle {
-  @apply font-title uppercase text-xl font-semibold text-gray-200 mb-4;
+  @apply font-title uppercase text-xl font-semibold mb-4 tracking-[0.08rem];
 }
 
 .route {
-  @apply font-mono font-bold text-xl text-gray-200 tracking-wider leading-loose cursor-pointer;
+  @apply font-mono font-bold text-xl tracking-wider leading-loose cursor-pointer;
 
   &--underline {
     @apply relative overflow-hidden;
@@ -31,11 +31,11 @@
 .line-block {
   width: 2rem;
   height: 0.2rem;
-  @apply rounded-sm bg-gray-200 mb-6;
+  @apply rounded-sm bg-gray-800 dark:bg-gray-200 mb-6;
 }
 
 .float-section-line {
-  @apply absolute rounded-sm bg-gray-200 mb-6;
+  @apply absolute rounded-sm bg-gray-800 dark:bg-gray-200 mb-6;
 
   width: 2rem;
   height: 0.2rem;
@@ -48,6 +48,6 @@ a {
   &:focus,
   &:focus-visible,
   &:focus-within {
-    @apply outline-1 outline-dashed outline-gray-200;
+    @apply outline-1 outline-dashed outline-gray-800 dark:outline-gray-200;
   }
 }

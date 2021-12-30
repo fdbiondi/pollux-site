@@ -9,7 +9,7 @@
             <span class="text-pollux-pink">project</span> moving!
           </h2>
 
-          <span class="text-gray-200 text-xl p-8">
+          <span class="text-xl p-8">
             Simply fill out the form or email us at
             <a href="mailto: hello@polluxcoop.com" class="text-pollux-pink">
               hello@polluxcoop.com
@@ -57,7 +57,7 @@
             />
 
             <div
-              class="flex flex-row wrapper justify-between text-white italic"
+              class="flex flex-row wrapper justify-between text-black-light dark:text-white italic"
             >
               <label class="flex items-center">
                 <input
@@ -78,7 +78,7 @@
                 BOOK A CALL
               </button>
 
-              <span class="w-1/2 text-gray-200 p-8">
+              <span class="w-1/2 p-8">
                 I consent to Pollux processing my personal data according to the
                 <a href="" class="text-pollux-pink">Privacy Policy</a>
               </span>
@@ -119,10 +119,14 @@ export default {
 
 <style lang="scss" scoped>
 .talk-with-us {
-  @apply text-8xl text-gray-200 my-16 px-8 uppercase cursor-default;
+  @apply text-8xl my-16 px-8 uppercase cursor-default;
 
   &:hover {
-    text-shadow: 0 0 1.5rem hsl(0deg 0% 100% / 0.5);
+    text-shadow: 0 0 1.5rem hsl(0deg 0% 0% / 0.5);
   }
+}
+
+html.dark .talk-with-us:hover {
+  text-shadow: 0 0 1.5rem hsl(0deg 0% 100% / 0.5);
 }
 </style>

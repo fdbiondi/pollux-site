@@ -1,7 +1,7 @@
 <template>
   <div>
     <svg
-      class="h-7 w-7 cursor-pointer hover:text-white mx-6"
+      class="h-7 w-7 cursor-pointer mx-6"
       viewBox="0 0 24 24"
       stroke-width="2"
       stroke="currentColor"

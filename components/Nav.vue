@@ -6,7 +6,7 @@
       </a>
 
       <div class="flex items-center">
-        <div class="text-lg text-white hidden lg:flex">
+        <div class="text-lg text-gray-900 dark:text-white hidden lg:flex">
           <a href="#services" class="nav-item route--underline"> Services </a>
           <a href="#our-clients" class="nav-item route--underline">
             Our Clients
@@ -18,13 +18,10 @@
           <ThemeSwitch />
         </div>
 
-        <!--<div class="mr-5 lg:mr-0">
-              <button class="py-2 px-6 rounded-md text-gray-500 hover:text-gray-700 text-lg">Sign in</button>
-              <button class="py-2 px-6 bg-green-500 hover:bg-green-700 rounded-md text-white text-lg">Sign up</button>
-          </div>-->
-
         <div class="block lg:hidden">
-          <button class="flex items-center px-4 py-3 border rounded text-gray-200 border-gray-400 focus:outline-none">
+          <button
+            class="flex items-center px-4 py-3 border rounded text-gray-200 border-gray-400 focus:outline-none"
+          >
             <svg
               class="fill-current h-3 w-3"
               viewBox="0 0 20 20"

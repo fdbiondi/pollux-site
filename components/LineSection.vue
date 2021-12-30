@@ -39,6 +39,6 @@ export default {}
 }
 
 .line-section .line {
-  @apply absolute h-full border-l border-dashed border-white;
+  @apply absolute h-full border-l border-dashed border-black-light dark:border-white;
 }
 </style>

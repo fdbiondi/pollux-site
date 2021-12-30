@@ -7,7 +7,9 @@
         </div>
 
         <div class="flex flex-wrap items-center justify-around w-3/4 p-6">
-          <span class="font-stylish text-2xl text-gray-200 tracking-widest">Let's connect</span>
+          <span class="font-stylish text-2xl tracking-widest">
+            Let's connect
+          </span>
 
           <fa-icon :icon="['fab', 'twitter']" class="footer--icon"></fa-icon>
           <fa-icon :icon="['fab', 'instagram']" class="footer--icon"></fa-icon>
@@ -24,7 +26,7 @@
       </div>
 
       <div class="flex">
-        <div class="w-1/4 p-6 leading-loose text-xl text-gray-200">
+        <div class="w-1/4 p-6 leading-loose text-xl">
           <div class="line-block"></div>
 
           Pollux Cooperative<br />
@@ -66,9 +68,12 @@
       </div>
 
       <div class="p-6">
-        <div class="border-t border-gray-200 text-gray-200 pt-4 text-xs">
+        <div class="border-t border-gray-800 dark:border-gray-200 pt-4 text-xs">
           <div class="flex justify-between">
-            <span>Copyright © 2021 <span @click="$emit('bonus')">Pollux</span> | Privacy policy</span>
+            <span>
+              Copyright © 2021 <span @click="bonus">Pollux</span> | Privacy
+              policy
+            </span>
 
             <span>
               <a
@@ -99,10 +104,10 @@ export default {
 <style lang="scss" scoped>
 .footer {
   &--icon {
-    @apply text-gray-200 text-3xl cursor-pointer;
+    @apply text-3xl cursor-pointer;
 
     &:hover {
-      @apply text-white scale-105 origin-center;
+      @apply text-black-light dark:text-white scale-105 origin-center;
       transition: transform 200ms, scale 100ms;
     }
   }

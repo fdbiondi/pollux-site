@@ -31,6 +31,6 @@ export default {}
 }
 
 .tilt .shape-fill {
-  fill: theme("colors.black.light");
+  @apply fill-gray-100 dark:fill-black-light;
 }
 </style>

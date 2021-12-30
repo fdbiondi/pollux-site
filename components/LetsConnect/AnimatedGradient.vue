@@ -45,7 +45,7 @@ export default {
 
 <style lang="scss" scoped>
 @mixin section-height {
-  height: 100vh;
+  height: 58rem;
 }
 
 .section-gradient {
@@ -58,12 +58,10 @@ export default {
 
   .text-under-blended {
     @apply relative;
-    color: theme("colors.gray.400");
     mix-blend-mode: color-burn;
   }
 
   .text-under-overlay {
-    color: theme("colors.gray.400");
     opacity: 0.5;
   }
 
@@ -94,6 +92,6 @@ export default {
 }
 
 .divider .shape-fill {
-  fill: theme("colors.black.light");
+  @apply fill-gray-100 dark:fill-black-light;
 }
 </style>

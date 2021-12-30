@@ -11,7 +11,7 @@
         }"
       />
       <div class="relative mt-4">
-        <div class="font-pollux text-white">
+        <div class="font-pollux dark:text-white">
           <div
             class="px-1 tracking-wider"
             :class="{

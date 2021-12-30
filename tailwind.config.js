@@ -9,6 +9,8 @@ module.exports = {
     "./nuxt.config.{js,ts}",
   ],
 
+  darkMode: "class",
+
   theme: {
     fontFamily: {
       sans: '"Roboto Mono", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif',

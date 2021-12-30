@@ -1,7 +1,10 @@
 <template>
   <div class="switch flex items-center justify-center">
     <label for="theme-switcher" class="flex items-center cursor-pointer">
-      <div class="switch--container" :class="{ dark: value, light: !value }">
+      <div
+        class="switch--container"
+        :class="{ 'dark-theme': value, 'light-theme': !value }"
+      >
         <input
           id="theme-switcher"
           v-model="value"
@@ -11,20 +14,6 @@
         />
         <div class="switch--slider">
           <div class="switch--knob"></div>
-
-          <!-- <svg
-            class="switch--icon icon-left"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
-            />
-          </svg> -->
 
           <svg
             class="switch--icon icon-left"
@@ -66,6 +55,24 @@ export default {
       value: true,
     }
   },
+
+  watch: {
+    value(newValue, oldValue) {
+      if (newValue !== oldValue) {
+        this.switchTheme()
+      }
+    },
+  },
+
+  mounted() {
+    this.value = localStorage.getItem("nuxt-color-mode") === "dark"
+  },
+
+  methods: {
+    switchTheme() {
+      this.$colorMode.preference = this.value ? "dark" : "light"
+    },
+  },
 }
 </script>
 
@@ -76,10 +83,10 @@ export default {
   &--container {
     @apply relative cursor-pointer overflow-hidden h-6 w-[50px] rounded-[100px];
 
-    &.dark {
+    &.dark-theme {
       @apply bg-gray-300;
     }
-    &.light {
+    &.light-theme {
       @apply bg-gray-700;
     }
   }
