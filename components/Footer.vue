@@ -87,7 +87,13 @@
 </template>
 
 <script>
-export default {}
+import { mapMutations } from "vuex"
+
+export default {
+  methods: {
+    ...mapMutations(["bonus"]),
+  },
+}
 </script>
 
 <style lang="scss" scoped>

@@ -54,3 +54,18 @@ img {
 @import "assets/css/modules/inputs";
 
 @import "assets/css/modules/hero";
+
+.colorful {
+  background: linear-gradient(
+    225deg,
+    theme("colors.pollux-cyan.light"),
+    theme("colors.pollux-cyan.dark"),
+    theme("colors.pollux-pink.light"),
+    theme("colors.gray.200")
+  );
+  background-size: 300% 300%;
+  -webkit-animation: colorfulBg 30s ease infinite;
+  -moz-animation: colorfulBg 30s ease infinite;
+  -o-animation: colorfulBg 30s ease infinite;
+  animation: colorfulBg 30s ease infinite;
+}
