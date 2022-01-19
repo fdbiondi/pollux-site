@@ -69,3 +69,19 @@ img {
   -o-animation: colorfulBg 30s ease infinite;
   animation: colorfulBg 30s ease infinite;
 }
+
+.bg-primary {
+  @apply bg-gray-200 dark:bg-gray-800;
+}
+
+.bg-secondary {
+  @apply bg-white dark:bg-black-light;
+
+  &__alt {
+    @apply bg-gray-100 dark:bg-black-light;
+  }
+}
+
+.fill-secondary {
+  @apply fill-white dark:fill-black-light;
+}

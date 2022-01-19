@@ -13,7 +13,7 @@
       </div>
     </div>
 
-    <hr class="mx-16" />
+    <hr class="mx-16 border-t border-solid border-gray-900 dark:border-white" />
   </div>
 </template>
 

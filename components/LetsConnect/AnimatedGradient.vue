@@ -15,7 +15,7 @@
               >
                 <path
                   d="M 0,0 L0,120 L-1235,120 L1370,0 z"
-                  class="shape-fill"
+                  class="fill-secondary"
                 ></path>
               </svg>
             </div>
@@ -89,9 +89,5 @@ export default {
   @include section-height;
   @apply relative block w-full;
   z-index: 11;
-}
-
-.divider .shape-fill {
-  @apply fill-gray-100 dark:fill-black-light;
 }
 </style>

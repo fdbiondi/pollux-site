@@ -1,28 +1,22 @@
 <template>
   <div class="w-full">
     <!-- Our services -->
-    <Services class="bg-gray-100 dark:bg-black-light" />
+    <Services class="bg-secondary" />
 
     <!-- Technologies that we use -->
-    <Tools class="bg-gray-100 dark:bg-black-light" />
+    <Tools class="bg-secondary" />
 
     <!-- Let's connect => to contact form -->
     <LetsConnectGradient />
 
     <!-- Other services -->
-    <ServicesOthers class="bg-gray-100 dark:bg-black-light" />
-
-    <!-- <Test /> -->
-
-    <!-- <div class="ruler"></div> -->
-
-    <!-- <ServicesProductDesign /> -->
+    <ServicesOthers class="bg-secondary__alt shadow-inner shadow-black-light/40" />
 
     <!-- Our clients -->
-    <Clients />
+    <Clients class="shadow-md shadow-black-light/20" />
 
     <!-- Talk to us / Contact Form -->
-    <Contact class="bg-gray-100 dark:bg-black-light" />
+    <Contact class="bg-secondary__alt" />
 
     <BackgroundCodeHtml />
   </div>

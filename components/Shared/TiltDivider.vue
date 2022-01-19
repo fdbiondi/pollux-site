@@ -8,7 +8,7 @@
     >
       <path
         d="M1200 120L0 16.48 0 0 1200 0 1200 120z"
-        class="shape-fill"
+        class="fill-secondary"
       ></path>
     </svg>
   </div>
@@ -28,9 +28,5 @@ export default {}
   @apply relative block h-96;
   width: 115%;
   transform: rotateY(180deg);
-}
-
-.tilt .shape-fill {
-  @apply fill-gray-100 dark:fill-black-light;
 }
 </style>

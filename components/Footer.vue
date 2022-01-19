@@ -1,5 +1,5 @@
 <template>
-  <footer class="py-8 lg:py-16 xl:py-32">
+  <footer class="py-8 lg:py-16 xl:py-32 shadow-inner shadow-black-light/40">
     <div class="container mx-auto flex flex-col">
       <div class="flex mb-6">
         <div class="w-1/4 p-6">
