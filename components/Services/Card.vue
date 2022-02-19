@@ -1,5 +1,5 @@
 <template>
-  <div class="card px-8 py-12 m-4 cursor-pointer dark:text-white">
+  <div class="card px-8 py-12 m-4 cursor-pointer dark:text-white h-full">
     <slot></slot>
     <div class="mt-12">
       <h3 class="font-title text-3xl tracking-widest">
@@ -7,8 +7,8 @@
       </h3>
     </div>
 
-    <div class="pt-4">
-      <p class="min-h-[14rem]">{{ description }}</p>
+    <div class="py-4">
+      <p>{{ description }}</p>
     </div>
   </div>
 </template>

@@ -3,11 +3,10 @@
     <div class="container mx-auto">
       <h2 class="title">Find your software development Service</h2>
 
-      <div class="flex flex-wrap justify-between items-center">
+      <div class="grid grid-cols-4 grid-flow-col-dense">
         <div
           v-for="({ service, description, image }, i) in services"
           :key="i"
-          class="w-full md:w-1/2 lg:w-1/4 flex-grow-0"
         >
           <ServicesCard
             :title="service"
