@@ -11,4 +11,3 @@ services:
       - '3000:3000'
     command: >
       bash -c "yarn install && yarn dev --hostname 0.0.0.0"
-

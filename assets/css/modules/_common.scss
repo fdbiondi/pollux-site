@@ -1,20 +1,20 @@
 .title {
-  @apply font-title uppercase text-4xl font-bold px-8 mb-8 tracking-[0.08rem];
+  @apply font-title mb-8 px-8 text-4xl font-bold uppercase tracking-[0.08rem];
 }
 
 .subtitle {
-  @apply font-title uppercase text-xl font-semibold mb-4 tracking-[0.08rem];
+  @apply font-title mb-4 text-xl font-semibold uppercase tracking-[0.08rem];
 }
 
 .route {
-  @apply font-mono font-bold text-xl tracking-wider leading-loose cursor-pointer;
+  @apply cursor-pointer font-mono text-xl font-bold leading-loose tracking-wider;
 
   &--underline {
     @apply relative overflow-hidden;
 
     &::after {
-      content: "";
-      @apply absolute bottom-0 left-0 w-full h-[0.1em] rounded-sm bg-pollux-cyan;
+      content: '';
+      @apply absolute bottom-0 left-0 h-[0.1em] w-full rounded-sm bg-pollux-cyan;
       transition: transform 500ms;
       transform: translate3d(-100%, 0, 0);
     }
@@ -31,11 +31,11 @@
 .line-block {
   width: 2rem;
   height: 0.2rem;
-  @apply rounded-sm bg-gray-800 dark:bg-gray-200 mb-6;
+  @apply mb-6 rounded-sm bg-gray-800 dark:bg-gray-200;
 }
 
 .float-section-line {
-  @apply absolute rounded-sm bg-gray-800 dark:bg-gray-200 mb-6;
+  @apply absolute mb-6 rounded-sm bg-gray-800 dark:bg-gray-200;
 
   width: 2rem;
   height: 0.2rem;
@@ -48,6 +48,6 @@ a {
   &:focus,
   &:focus-visible,
   &:focus-within {
-    @apply outline-1 outline-dashed outline-gray-800 dark:outline-gray-200;
+    @apply outline-dashed outline-1 outline-gray-800 dark:outline-gray-200;
   }
 }

@@ -10,8 +10,8 @@
   .title-gradient {
     background: linear-gradient(
       45deg,
-      theme("colors.pollux-cyan.light"),
-      theme("colors.pollux-cyan.dark") 80%
+      theme('colors.pollux-cyan.light'),
+      theme('colors.pollux-cyan.dark') 80%
     );
     background-size: 150%;
     -webkit-text-fill-color: transparent;

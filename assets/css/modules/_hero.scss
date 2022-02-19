@@ -2,25 +2,25 @@
 .hero {
   &--titles {
     h1 {
-      @apply font-title uppercase text-5xl lg:text-[5rem] font-black text-pollux-cyan mb-2 lg:mb-6;
+      @apply font-title mb-2 text-5xl font-black uppercase text-pollux-cyan lg:mb-6 lg:text-[5rem];
     }
     h2 {
-      @apply font-title uppercase text-xl lg:text-3xl font-bold;
+      @apply font-title text-xl font-bold uppercase lg:text-3xl;
     }
     p {
-      @apply lg:text-2xl font-light mb-8;
+      @apply mb-8 font-light lg:text-2xl;
     }
 
     .animate-in {
       opacity: 0;
-      animation: fadeInRight 0.5s ease forwards;
-      animation-delay: calc(var(--order) * 100ms + 4 * 100ms);
+      animation: fade-in-right 0.5s ease forwards;
+      animation-delay: calc(var(--order) * 200ms + 4 * 200ms);
     }
   }
 
   &--title {
     opacity: 0;
-    animation: zoomInUp 0.5s ease forwards;
-    animation-delay: calc(var(--order) * 100ms);
+    animation: zoom-in-up 0.5s ease forwards;
+    animation-delay: calc(var(--order) * 200ms);
   }
 }

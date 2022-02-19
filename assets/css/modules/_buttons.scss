@@ -1,5 +1,5 @@
 @mixin button {
-  @apply font-stylish border-4 px-8 py-4 text-2xl font-bold tracking-[0.08em];
+  @apply border-4 px-8 py-4 font-stylish text-2xl font-bold tracking-[0.08em];
 
   @include outline-none;
 
@@ -12,12 +12,12 @@
 }
 
 @mixin primary-button {
-  @apply bg-pollux-cyan border-pollux-cyan text-gray-100 hover:bg-pollux-cyan-light hover:border-pollux-cyan-light hover:text-gray-800;
+  @apply border-pollux-cyan bg-pollux-cyan text-gray-100 hover:border-pollux-cyan-light hover:bg-pollux-cyan-light hover:text-gray-800;
 }
 
 @mixin secondary-button {
-  @apply text-gray-200 dark:text-gray-800 bg-gray-800 dark:bg-gray-200 border-gray-800 dark:border-gray-200
-    hover:text-gray-800 dark:hover:text-gray-100 hover:bg-gray-400 dark:hover:bg-gray-600 hover:border-gray-400 dark:hover:border-gray-600;
+  @apply border-gray-800 bg-gray-800 text-gray-200 hover:border-gray-400 hover:bg-gray-400 hover:text-gray-800
+    dark:border-gray-200 dark:bg-gray-200 dark:text-gray-800 dark:hover:border-gray-600 dark:hover:bg-gray-600 dark:hover:text-gray-100;
 }
 
 .button {
@@ -40,8 +40,8 @@
   }
 
   &--outline {
-    @apply text-gray-800 dark:text-white hover:text-white dark:hover:text-gray-900
-      bg-transparent hover:bg-gray-800 dark:hover:bg-white border-gray-800 dark:border-white;
+    @apply border-gray-800 bg-transparent text-gray-800 hover:bg-gray-800
+      hover:text-white dark:border-white dark:text-white dark:hover:bg-white dark:hover:text-gray-900;
 
     &:hover {
       @apply shadow-[0_0_20px_0] shadow-gray-800 dark:shadow-white;

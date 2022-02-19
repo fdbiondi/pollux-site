@@ -10,7 +10,7 @@ export default {
 
   computed: {
     track() {
-      return document.querySelector(".slider--swipe-track")
+      return document.querySelector('.slider--swipe-track')
     },
 
     trackNotExists() {
@@ -32,10 +32,10 @@ export default {
 
         const transformMatrix = window
           .getComputedStyle(this.track)
-          .getPropertyValue("transform")
+          .getPropertyValue('transform')
 
-        if (transformMatrix !== "none") {
-          this.transform = parseInt(transformMatrix.split(",")[4].trim())
+        if (transformMatrix !== 'none') {
+          this.transform = parseInt(transformMatrix.split(',')[4].trim())
         }
       }
     },
