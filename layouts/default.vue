@@ -1,6 +1,7 @@
 <template>
   <div class="bg-primary text-gray-800 dark:text-gray-200">
     <Notification
+      v-if="showCookiesNotification"
       action="Accept"
       hide-icon
       @ok="acceptCookies"
@@ -50,16 +51,29 @@ export default {
     Notification,
   },
 
+  data() {
+    return {
+      showCookiesNotification: false,
+    }
+  },
+
   computed: {
     ...mapGetters(['colorful']),
+
+    ...mapGetters('cookies', ['cookiesAccepted']),
+  },
+
+  mounted() {
+    this.showCookiesNotification = !this.cookiesAccepted
   },
 
   methods: {
     acceptCookies() {
-      // TODO manejar con vuex
+      localStorage.setItem('accept_cookies', true)
     },
+
     rejectCookies() {
-      // TODO manejar con vuex
+      localStorage.setItem('reject_cookies', true)
     },
   },
 }

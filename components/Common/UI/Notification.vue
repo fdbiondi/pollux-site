@@ -30,7 +30,6 @@
             <slot name="action">
               <a
                 v-if="action"
-                href="#"
                 class="flex items-center justify-center border border-transparent px-4 py-2 text-sm font-medium shadow-sm"
                 :class="actionColor"
                 @click="onAction"

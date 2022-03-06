@@ -162,7 +162,7 @@ export default {
   },
 
   methods: {
-    ...mapMutations(['bonus']),
+    ...mapMutations(['BONUS']),
   },
 }
 </script>
