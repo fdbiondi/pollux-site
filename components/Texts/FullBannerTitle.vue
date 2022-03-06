@@ -10,7 +10,9 @@
       </h2>
 
       <nuxt-link v-if="linkText" :to="link">
-        <button class="button button--secondary mx-2 transition-none">
+        <button
+          class="button button--secondary dark:button--secondary-dark mx-2 transition-none"
+        >
           {{ linkText }}
         </button>
       </nuxt-link>

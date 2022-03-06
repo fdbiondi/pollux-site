@@ -6,7 +6,7 @@
       </a>
 
       <div class="z-20 flex items-center">
-        <div class="hidden text-lg text-gray-400 dark:text-white lg:flex">
+        <div class="hidden text-lg text-gray-400 dark:text-white xl:flex">
           <a href="#services" class="nav-item route--underline"> Services </a>
           <a href="#our-clients" class="nav-item route--underline">
             Our Clients
@@ -18,7 +18,7 @@
           <ThemeSwitch />
         </div>
 
-        <div class="block lg:hidden">
+        <div class="block xl:hidden">
           <button
             class="flex items-center rounded border border-gray-400 px-4 py-3 text-gray-200 focus:outline-none"
           >

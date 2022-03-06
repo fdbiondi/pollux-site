@@ -1,13 +1,13 @@
 <template>
   <colorful class="relative">
     <!-- Navigation Bar -->
-    <Header />
+    <Header class="z-20" />
 
     <!-- Hero Content -->
-    <HeroContent class="py-8 lg:py-16 xl:py-24" />
+    <HeroContent class="z-20 py-8 lg:py-16 xl:py-24" />
 
     <svg
-      class="absolute inset-y-0 left-1/2 z-10 hidden h-full w-48 -translate-x-1/2 fill-gray-100 dark:fill-gray-900 lg:block xl:block"
+      class="absolute inset-y-0 left-1/2 z-10 hidden h-full w-48 -translate-x-1/2 fill-gray-100 dark:fill-gray-900 xl:block"
       fill="currentColor"
       viewBox="0 0 100 100"
       preserveAspectRatio="none"
@@ -16,11 +16,11 @@
       <polygon points="50,0 100,0 50,100 0,100" />
     </svg>
 
-    <div class="z-0 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
-      <img
-        class="h-56 w-full object-cover sm:h-72 md:h-96 lg:h-full lg:w-full"
-        :src="image"
-      />
+    <div
+      class="absolute inset-0 z-0 xl:inset-y-0 xl:inset-x-auto xl:right-0 xl:w-1/2"
+    >
+      <!-- class="h-56 w-full object-cover sm:h-72 md:h-96 lg:h-full lg:w-full" -->
+      <img class="h-full w-full object-cover" :src="image" />
     </div>
   </colorful>
 </template>

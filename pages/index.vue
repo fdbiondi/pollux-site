@@ -49,7 +49,9 @@
     </section>
 
     <!-- Our partners -->
-    <section class="bg-gray-400 py-4 brightness-110 lg:py-8 xl:py-16">
+    <section
+      class="bg-gray-400 py-4 brightness-110 dark:bg-gray-900 lg:py-8 xl:py-16"
+    >
       <div class="container mx-auto px-6">
         <div v-show="false" class="mb-1 text-center">
           <h4 class="font-serif font-medium">TRUSTED BY</h4>

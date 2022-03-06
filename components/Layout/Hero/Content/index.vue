@@ -1,12 +1,12 @@
 <template>
   <main class="hero--wrapper relative flex items-center">
     <section class="container mx-auto px-6 pb-16">
-      <div class="w-full items-center lg:flex">
-        <div class="z-20 w-full lg:w-1/2">
+      <div class="w-full items-center xl:flex">
+        <div class="z-20 w-full xl:w-1/2">
           <HeroTitle />
         </div>
 
-        <div v-show="showImage" class="z-20 w-full lg:w-1/2 lg:pl-24">
+        <div v-show="showImage" class="z-20 w-full xl:w-1/2 xl:pl-24">
           <HeroImage />
         </div>
       </div>

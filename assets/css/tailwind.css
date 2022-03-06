@@ -24,3 +24,92 @@
     word-spacing: 100vw;
   }
 }
+
+@layer components {
+  /* Button Components */
+  .button {
+    @apply border-4 px-8 py-4 font-stylish text-2xl font-bold tracking-[0.08em];
+  }
+
+  .button:focus,
+  .button:focus-visible,
+  .button:focus-within {
+    @apply outline-none;
+  }
+
+  .button:hover {
+    -webkit-transform: translateY(-3px);
+    transform: translateY(-3px);
+    transition: box-shadow 0.25s ease, transform 0.25s ease,
+      -webkit-transform 0.25s ease;
+  }
+
+  .button-pollux-cyan {
+    @apply border-pollux-cyan bg-pollux-cyan text-gray-100;
+    @apply hover:border-pollux-cyan-light hover:bg-pollux-cyan-light hover:text-gray-800;
+  }
+
+  .button-black {
+    @apply border-gray-800 bg-gray-800 text-gray-200 hover:border-gray-400 hover:bg-gray-400 hover:text-gray-800;
+  }
+
+  .button-white {
+    @apply border-gray-200 bg-gray-200 text-gray-800 hover:border-gray-600 hover:bg-gray-600 hover:text-gray-100;
+  }
+
+  .button-black-outline {
+    @apply border-gray-800 bg-transparent text-gray-800 hover:bg-gray-800 hover:text-white;
+  }
+
+  .button-white-outline {
+    @apply border-white bg-transparent text-white hover:bg-white hover:text-gray-900;
+  }
+
+  .button-reflex {
+    @apply shadow-[0_0_20px_0];
+  }
+
+  .button-cyan-reflex {
+    @apply shadow-pollux-cyan-light;
+  }
+
+  .button-white-reflex {
+    @apply shadow-white;
+  }
+
+  .button-light-reflex {
+    @apply shadow-gray-400;
+  }
+
+  .button-dark-reflex {
+    @apply shadow-gray-600;
+  }
+
+  .button-darker-reflex {
+    @apply shadow-gray-600;
+  }
+
+  .button-darkest-reflex {
+    @apply shadow-gray-800;
+  }
+
+  .button--primary {
+    @apply button-pollux-cyan hover:button-reflex hover:button-cyan-reflex;
+  }
+
+  .button--secondary {
+    @apply button-black hover:button-reflex hover:button-light-reflex;
+  }
+
+  .button--secondary-dark {
+    @apply button-white hover:button-reflex hover:button-dark-reflex;
+  }
+
+  .button--outline {
+    @apply button-black-outline hover:button-reflex hover:button-darkest-reflex;
+  }
+
+  .button--outline-dark {
+    @apply button-white-outline hover:button-reflex hover:button-white-reflex;
+  }
+}

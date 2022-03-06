@@ -20,7 +20,11 @@
 
       <div class="animate-in" style="--order: 2">
         <nuxt-link :to="rightLink">
-          <button class="button button--secondary">{{ letsConnect }}</button>
+          <button
+            class="button button--outline-dark xl:dark:button--secondary-dark xl:button--secondary"
+          >
+            {{ letsConnect }}
+          </button>
         </nuxt-link>
       </div>
     </div>

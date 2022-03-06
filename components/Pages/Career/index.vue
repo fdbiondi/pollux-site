@@ -31,7 +31,11 @@
             </div>
           </FileInput>
 
-          <button class="button button--secondary" type="button" @click="send">
+          <button
+            class="button button--secondary dark:button--secondary-dark"
+            type="button"
+            @click="send"
+          >
             Send
           </button>
         </form>

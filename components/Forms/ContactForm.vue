@@ -66,7 +66,9 @@
           </div>
 
           <div class="flex">
-            <button class="button button--outline m-auto w-1/2">
+            <button
+              class="button button--outline dark:button--outline-dark m-auto w-1/2"
+            >
               BOOK A CALL
             </button>
 

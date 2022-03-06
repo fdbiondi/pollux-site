@@ -2,7 +2,9 @@
   <div class="container mx-auto">
     <h2 class="title">{{ sectionTitle }}</h2>
 
-    <div class="grid grid-flow-col-dense grid-cols-4">
+    <div
+      class="grid grid-cols-2 gap-4 xl:grid-flow-col-dense xl:grid-cols-4 xl:gap-0"
+    >
       <div v-for="({ title, description, image }, i) in items" :key="i">
         <Card
           :title="title"
