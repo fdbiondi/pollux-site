@@ -7,19 +7,34 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'pollux_site',
+    title: process.env.HEAD_TITLE,
     htmlAttrs: {
-      lang: 'en',
+      lang: 'es',
     },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      {
+        hid: 'description',
+        name: 'description',
+        content: process.env.HEAD_DESCRIPTION,
+      },
       { name: 'format-detection', content: 'telephone=no' },
-      { name: 'msapplication-TileColor', content: '#da532c' },
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      {
+        rel: 'android-chrome-512x512',
+        type: 'image/png',
+        sizes: '512x512',
+        href: '/android-chrome-512x512.png',
+      },
+      {
+        rel: 'android-chrome-192x192',
+        type: 'image/png',
+        sizes: '192x192',
+        href: '/android-chrome-192x192.png',
+      },
       {
         rel: 'apple-touch-icon',
         type: 'image/png',
@@ -39,7 +54,7 @@ export default {
         href: '/favicon-16x16.png',
       },
       { rel: 'manifest', href: '/site.webmanifest' },
-      { rel: 'mask-icon', href: '/safari-pinned-tab.svg', color: '#5bbad5' },
+      { rel: 'mask-icon', href: '/safari-pinned-tab.svg', color: '#0BC8FE' },
     ],
   },
 

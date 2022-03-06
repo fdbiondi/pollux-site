@@ -37,9 +37,10 @@
         </div>
       </AnimatedGradient>
     </section>
+
     <!-- Dev & Design -->
     <section
-      class="bg-secondary__alt shadow-inner shadow-black-light/40 dark:shadow-gray-800/20"
+      class="bg-secondary__alt shadow-inner shadow-black-light/40 dark:shadow-white/5"
     >
       <CardColumns :items="development" :right-items="design" />
     </section>
@@ -48,6 +49,7 @@
     <section class="py-4 brightness-150 lg:py-8 xl:py-16">
       <ImageList :images="partners" :has-link="true" />
     </section>
+
     <!-- Talk to us / Contact Form -->
     <section
       id="contact"
