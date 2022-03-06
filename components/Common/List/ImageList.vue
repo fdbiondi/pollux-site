@@ -1,30 +1,35 @@
 <template>
-  <div class="container mx-auto px-6">
-    <div class="mb-6 flex w-full items-center justify-center">
-      <div
-        v-for="(image, i) in images"
-        :key="i"
-        class="mx-4 max-h-full p-8"
-        data-aos="fade-in-up"
-        :data-aos-delay="100 * i"
-        data-aos-once="true"
-      >
-        <slot :props="image" :index="i">
-          <a v-if="hasLink" :href="href(image.name)">
-            <img :src="image.src" :alt="name(image.name)" class="w-20" />
-          </a>
+  <div class="flex w-full items-center justify-center">
+    <div
+      v-for="(image, i) in images"
+      :key="i"
+      class="mx-4 max-h-full p-8"
+      :data-aos="'fade-in-up'"
+      :data-aos-delay="100 * i"
+      data-aos-once="true"
+    >
+      <slot :image="image" :index="i">
+        <a v-if="hasLink" :href="filenameGetHref(image.name)">
+          <img
+            :src="image.src"
+            :alt="filenameFromPath(image.name)"
+            class="w-20"
+          />
+        </a>
 
-          <img v-else :src="image.src" :alt="name(image.name)" class="w-20" />
-        </slot>
-      </div>
+        <img
+          v-else
+          :src="image.src"
+          :alt="filenameFromPath(image.name)"
+          class="w-20"
+        />
+      </slot>
     </div>
-
-    <hr class="mx-16 border-t border-solid border-gray-900 dark:border-white" />
   </div>
 </template>
 
 <script>
-import { cleanFilename } from '~/support/files'
+import { filenameFromPath, filenameGetHref } from '~/support/files'
 
 export default {
   props: {
@@ -39,26 +44,10 @@ export default {
     },
   },
 
-  computed: {
-    name() {
-      return (filename) => {
-        const name = cleanFilename(filename.split('_')[0]).trim()
+  methods: {
+    filenameFromPath,
 
-        return name
-      }
-    },
-
-    href() {
-      return (filename) => {
-        if (filename.split('_').length <= 1) {
-          return null
-        }
-
-        const link = cleanFilename(filename.split('_')[1]).trim()
-
-        return `https://${link}/`
-      }
-    },
+    filenameGetHref,
   },
 }
 </script>

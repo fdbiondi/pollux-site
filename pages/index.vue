@@ -1,7 +1,7 @@
 <template>
   <div class="w-full">
     <!-- Our services -->
-    <section id="services" class="bg-secondary py-8 lg:py-16 xl:py-16">
+    <section id="services" class="bg-secondary py-8 lg:py-16 xl:py-24">
       <CardList :items="services" :section-title="servicesSectionTitle" />
     </section>
 
@@ -9,7 +9,7 @@
     <Tools class="bg-secondary" />
 
     <!-- Let's connect => to contact form -->
-    <section>
+    <section v-show="false">
       <AnimatedGradient class="anim-gradient">
         <template #tilt>
           <div class="anim-gradient--tilt">
@@ -46,8 +46,30 @@
     </section>
 
     <!-- Our partners -->
-    <section class="py-4 brightness-150 lg:py-8 xl:py-16">
-      <ImageList :images="partners" :has-link="true" />
+    <section class="py-4 brightness-110 lg:py-8 xl:py-16">
+      <div v-show="false" class="container mx-auto px-6">
+        <div class="mb-1 text-center">
+          <h4 class="font-serif font-medium">TRUSTED BY</h4>
+        </div>
+
+        <ImageList :images="partners">
+          <template #default="{ image }">
+            <img
+              :src="image.src"
+              :alt="filenameFromPath(image.name)"
+              class="w-14"
+            />
+          </template>
+        </ImageList>
+      </div>
+
+      <div v-show="true" class="container mx-auto px-6">
+        <ImageList class="mb-6" :images="partners" :has-link="true" />
+
+        <hr
+          class="mx-16 border-t border-solid border-gray-900 dark:border-white"
+        />
+      </div>
     </section>
 
     <!-- Talk to us / Contact Form -->
@@ -81,7 +103,7 @@ import {
   services,
   servicesSectionTitle,
 } from '~/support/constants/home'
-import { getFromContext } from '~/support/files'
+import { filenameFromPath, loadPartners } from '~/support/files'
 
 const tellUsAbout = 'Tell us about your project'
 const readyForThis = 'Ready for this?'
@@ -118,16 +140,11 @@ export default {
   },
 
   mounted() {
-    this.loadPartners()
+    this.partners = loadPartners()
   },
 
   methods: {
-    loadPartners() {
-      this.partners = getFromContext(
-        require.context('@/assets/images/partners/', true, /\.*$/),
-        '.*'
-      )
-    },
+    filenameFromPath,
   },
 }
 </script>

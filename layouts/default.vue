@@ -27,7 +27,7 @@
       <Header />
 
       <!-- Hero Section -->
-      <Hero />
+      <Hero class="py-8 lg:py-16 xl:py-24" />
     </div>
 
     <!-- Content -->
