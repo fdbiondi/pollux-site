@@ -1,5 +1,5 @@
 <template>
-  <colorful class="relative bg-gray-300 dark:bg-black-light">
+  <colorful class="relative">
     <!-- Navigation Bar -->
     <Header />
 
@@ -7,7 +7,7 @@
     <HeroContent class="py-8 lg:py-16 xl:py-24" />
 
     <svg
-      class="fill-gray-300 absolute inset-y-0 left-1/2 z-10 hidden h-full w-48 -translate-x-1/2 lg:block xl:block"
+      class="absolute inset-y-0 left-1/2 z-10 hidden h-full w-48 -translate-x-1/2 fill-gray-100 dark:fill-gray-900 lg:block xl:block"
       fill="currentColor"
       viewBox="0 0 100 100"
       preserveAspectRatio="none"

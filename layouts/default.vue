@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-primary text-gray-800 dark:text-gray-200">
+  <div class="text-gray-800 dark:text-gray-200">
     <Notification
       v-if="showCookiesNotification"
       action="Accept"
@@ -23,13 +23,13 @@
     </Notification>
 
     <!-- Hero -->
-    <Hero />
+    <Hero class="bg-gray-100 dark:bg-gray-900" />
 
     <!-- Content -->
     <nuxt />
 
     <!-- Footer Section -->
-    <Footer class="bg-secondary" />
+    <Footer class="bg-white dark:bg-black-light" />
   </div>
 </template>
 

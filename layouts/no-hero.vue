@@ -4,7 +4,7 @@
 
     <nuxt />
 
-    <Footer class="bg-secondary" />
+    <Footer class="bg-white dark:bg-black-light" />
   </div>
 </template>
 

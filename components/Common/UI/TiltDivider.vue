@@ -8,7 +8,7 @@
     >
       <path
         d="M1200 120L0 16.48 0 0 1200 0 1200 120z"
-        class="fill-secondary"
+        class="fill-white dark:fill-black-light"
       ></path>
     </svg>
   </div>

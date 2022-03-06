@@ -9,20 +9,11 @@
       data-aos-once="true"
     >
       <slot :image="image" :index="i">
-        <a v-if="hasLink" :href="filenameGetHref(image.name)">
-          <img
-            :src="image.src"
-            :alt="filenameFromPath(image.name)"
-            class="w-20"
-          />
+        <a v-if="hasLink" :href="href(image.name)">
+          <img :src="image.src" :alt="name(image.name)" class="w-20" />
         </a>
 
-        <img
-          v-else
-          :src="image.src"
-          :alt="filenameFromPath(image.name)"
-          class="w-20"
-        />
+        <img v-else :src="image.src" :alt="name(image.name)" class="w-20" />
       </slot>
     </div>
   </div>
@@ -44,10 +35,14 @@ export default {
     },
   },
 
-  methods: {
-    filenameFromPath,
+  computed: {
+    name() {
+      return filenameFromPath
+    },
 
-    filenameGetHref,
+    href() {
+      return filenameGetHref
+    },
   },
 }
 </script>

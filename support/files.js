@@ -23,16 +23,14 @@ export const getFromContext = (r, extension, fn = null) => {
 export const filenameFromPath = (path, split = '_') =>
   cleanFilename(path?.split(split)[0]).trim()
 
-export const filenameGetHref = () => {
-  return (filename) => {
-    if (filename.split('_').length <= 1) {
-      return null
-    }
-
-    const link = cleanFilename(filename.split('_')[1]).trim()
-
-    return `https://${link}/`
+export const filenameGetHref = (filename) => {
+  if (filename.split('_').length <= 1) {
+    return null
   }
+
+  const link = cleanFilename(filename.split('_')[1]).trim()
+
+  return `https://${link}/`
 }
 
 export const loadPartners = () => {

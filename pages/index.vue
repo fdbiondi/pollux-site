@@ -1,12 +1,15 @@
 <template>
   <div class="w-full">
     <!-- Our services -->
-    <section id="services" class="bg-secondary py-8 lg:py-16 xl:py-24">
+    <section
+      id="services"
+      class="bg-white py-8 dark:bg-black-light lg:py-16 xl:py-24"
+    >
       <CardList :items="services" :section-title="servicesSectionTitle" />
     </section>
 
     <!-- Technologies that we use -->
-    <Tools class="bg-secondary" />
+    <Tools class="bg-white dark:bg-black-light" />
 
     <!-- Let's connect => to contact form -->
     <section v-show="false">
@@ -21,7 +24,7 @@
             >
               <path
                 d="M 0,0 L0,120 L-1235,120 L1370,0 z"
-                class="fill-secondary"
+                class="fill-white dark:fill-black-light"
               ></path>
             </svg>
           </div>
@@ -40,30 +43,18 @@
 
     <!-- Dev & Design -->
     <section
-      class="bg-secondary__alt shadow-inner shadow-black-light/40 dark:shadow-white/5"
+      class="bg-gray-100 shadow-inner shadow-black-light/40 dark:bg-black-light dark:shadow-white/5 dark:brightness-110"
     >
       <CardColumns :items="development" :right-items="design" />
     </section>
 
     <!-- Our partners -->
-    <section class="py-4 brightness-110 lg:py-8 xl:py-16">
-      <div v-show="false" class="container mx-auto px-6">
-        <div class="mb-1 text-center">
+    <section class="bg-gray-400 py-4 brightness-110 lg:py-8 xl:py-16">
+      <div class="container mx-auto px-6">
+        <div v-show="false" class="mb-1 text-center">
           <h4 class="font-serif font-medium">TRUSTED BY</h4>
         </div>
 
-        <ImageList :images="partners">
-          <template #default="{ image }">
-            <img
-              :src="image.src"
-              :alt="filenameFromPath(image.name)"
-              class="w-14"
-            />
-          </template>
-        </ImageList>
-      </div>
-
-      <div v-show="true" class="container mx-auto px-6">
         <ImageList class="mb-6" :images="partners" :has-link="true" />
 
         <hr
@@ -75,7 +66,7 @@
     <!-- Talk to us / Contact Form -->
     <section
       id="contact"
-      class="bg-secondary__alt py-8 shadow-inner shadow-black-light/20 dark:shadow-gray-800/20 lg:py-16 xl:py-32"
+      class="bg-gray-100 py-8 shadow-inner shadow-black-light/20 dark:bg-black-light dark:shadow-gray-800/20 lg:py-16 xl:py-32"
     >
       <ContactForm>
         <TalkWithUs />
@@ -103,7 +94,7 @@ import {
   services,
   servicesSectionTitle,
 } from '~/support/constants/home'
-import { filenameFromPath, loadPartners } from '~/support/files'
+import { loadPartners } from '~/support/files'
 
 const tellUsAbout = 'Tell us about your project'
 const readyForThis = 'Ready for this?'
@@ -141,10 +132,6 @@ export default {
 
   mounted() {
     this.partners = loadPartners()
-  },
-
-  methods: {
-    filenameFromPath,
   },
 }
 </script>
