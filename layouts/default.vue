@@ -9,7 +9,10 @@
       <span class="font-mono text-sm">
         This website uses cookies for analytics and to improve provided
         services.
-        <nuxt-link to="privacy-policy" class="font-bold text-white underline">
+        <nuxt-link
+          to="privacy-policy"
+          class="font-bold text-white underline hover:text-gray-100"
+        >
           Find out more
           <span aria-hidden="true" class="-ml-1">
             <fa-icon icon="arrow-right" size="xs"></fa-icon>

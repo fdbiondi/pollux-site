@@ -10,8 +10,7 @@
             <slot name="text">
               <span
                 v-if="!hideIcon"
-                class="flex rounded-lg p-2"
-                :class="iconColor"
+                class="flex rounded-md bg-black/30 py-1 px-2"
               >
                 <fa-icon
                   :icon="icon"
@@ -44,7 +43,7 @@
           <div class="order-2 flex-shrink-0 sm:order-3 sm:ml-3">
             <button
               type="button"
-              class="-mr-1 flex rounded-md p-2 focus:outline-none sm:-mr-2"
+              class="-mr-1 flex py-1 px-3 hover:bg-black/30 focus:outline-none sm:-mr-2"
               @click="onClose"
             >
               <span class="sr-only">Dismiss</span>
@@ -64,14 +63,19 @@
 <script>
 export default {
   props: {
-    bgColor: {
+    action: {
       type: String,
-      default: 'bg-cyan-600',
+      default: 'Learn more',
     },
 
-    iconColor: {
+    actionColor: {
+      type: [Array, String],
+      default: 'bg-white text-pollux-cyan hover:bg-gray-50',
+    },
+
+    bgColor: {
       type: String,
-      default: 'bg-cyan-800',
+      default: 'bg-pollux-cyan',
     },
 
     icon: {
@@ -92,21 +96,6 @@ export default {
     fixed: {
       type: Boolean,
       default: true,
-    },
-
-    action: {
-      type: String,
-      default: 'Learn more',
-    },
-
-    actionColor: {
-      type: [Array, String],
-      default: 'bg-white text-cyan-600 hover:bg-cyan-50',
-    },
-
-    closeColor: {
-      type: [Array, String],
-      default: 'hover:bg-cyan-500 focus:ring-2 focus:ring-white',
     },
   },
 
@@ -129,5 +118,3 @@ export default {
   },
 }
 </script>
-
-<style lang="scss" scoped></style>

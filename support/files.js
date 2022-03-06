@@ -1,7 +1,10 @@
 import { filename } from '~/support/strings'
 
 export const cleanFilename = (filename) =>
-  filename.replace(/\.[^/.]+$/, '').trim()
+  filename
+    .replace(/\.[^/.]+$/, '')
+    .replace(/\.[/]+/, '')
+    .trim()
 
 export const getFromContext = (r, extension, fn = null) => {
   const files = []

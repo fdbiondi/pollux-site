@@ -1,5 +1,5 @@
 <template>
-  <div class="container mx-auto px-6">
+  <div class="container mx-auto px-6 font-serif">
     <div class="flex">
       <div v-if="$slots.default" class="w-1/2">
         <slot />
