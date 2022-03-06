@@ -23,4 +23,8 @@
     animation: zoom-in-up 0.5s ease forwards;
     animation-delay: calc(var(--order) * 200ms);
   }
+
+  &--wrapper {
+    min-height: calc(100vh - 8rem);
+  }
 }

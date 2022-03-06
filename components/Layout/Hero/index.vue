@@ -1,5 +1,5 @@
 <template>
-  <main class="hero--wrapper relative min-h-[90vh] py-8 lg:py-16 xl:py-24">
+  <main class="hero--wrapper relative flex items-center py-8 lg:py-16 xl:py-24">
     <section class="container mx-auto px-6 pb-16">
       <div class="w-full items-center lg:flex">
         <div class="z-10 w-full lg:w-1/2">
@@ -12,7 +12,7 @@
       </div>
     </section>
 
-    <TiltDivider />
+    <TiltDivider v-show="showDivider" />
   </main>
 </template>
 
@@ -26,6 +26,13 @@ export default {
     HeroTittles,
     HeroImage,
     TiltDivider,
+  },
+
+  props: {
+    showDivider: {
+      default: false,
+      type: Boolean,
+    },
   },
 }
 </script>

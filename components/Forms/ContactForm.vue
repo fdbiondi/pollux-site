@@ -45,7 +45,7 @@
           />
 
           <div
-            class="wrapper flex flex-row justify-between italic text-black-light dark:text-white"
+            class="flex flex-row justify-between italic text-black-light dark:text-white"
           >
             <label class="flex items-center">
               <input
