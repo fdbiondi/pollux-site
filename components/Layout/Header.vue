@@ -5,7 +5,7 @@
         <logo />
       </a>
 
-      <div class="flex items-center">
+      <div class="z-20 flex items-center">
         <div class="hidden text-lg text-gray-900 dark:text-white lg:flex">
           <a href="#services" class="nav-item route--underline"> Services </a>
           <a href="#our-clients" class="nav-item route--underline">

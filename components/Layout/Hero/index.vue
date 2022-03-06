@@ -1,38 +1,48 @@
 <template>
-  <main class="hero--wrapper relative flex items-center">
-    <section class="container mx-auto px-6 pb-16">
-      <div class="w-full items-center lg:flex">
-        <div class="z-10 w-full lg:w-1/2">
-          <HeroTittles />
-        </div>
+  <colorful class="relative bg-gray-300 dark:bg-black-light">
+    <!-- Navigation Bar -->
+    <Header />
 
-        <div class="z-10 w-full lg:w-1/2 lg:pl-24">
-          <HeroImage v-show="false" />
-        </div>
-      </div>
-    </section>
+    <!-- Hero Content -->
+    <HeroContent class="py-8 lg:py-16 xl:py-24" />
 
-    <TiltDivider v-show="showDivider" class="-mb-24" />
-  </main>
+    <svg
+      class="fill-gray-300 absolute inset-y-0 left-1/2 z-10 hidden h-full w-48 -translate-x-1/2 lg:block xl:block"
+      fill="currentColor"
+      viewBox="0 0 100 100"
+      preserveAspectRatio="none"
+      aria-hidden="true"
+    >
+      <polygon points="50,0 100,0 50,100 0,100" />
+    </svg>
+
+    <div class="z-0 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
+      <img
+        class="h-56 w-full object-cover sm:h-72 md:h-96 lg:h-full lg:w-full"
+        :src="image"
+      />
+    </div>
+  </colorful>
 </template>
 
 <script>
-import TiltDivider from '~/components/Common/UI/TiltDivider'
-import HeroTittles from '~/components/Layout/Hero/Tittles'
-import HeroImage from '~/components/Layout/Hero/Image'
+import Colorful from './Colorful'
+import HeroContent from '~/components/Layout/Hero/Content'
+
+import Header from '~/components/Layout/Header'
 
 export default {
   components: {
-    HeroTittles,
-    HeroImage,
-    TiltDivider,
+    Colorful,
+    Header,
+    HeroContent,
   },
 
-  props: {
-    showDivider: {
-      default: false,
-      type: Boolean,
-    },
+  data() {
+    return {
+      image:
+        'https://images.unsplash.com/photo-1623520333087-62b8793e3d23?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80',
+    }
   },
 }
 </script>

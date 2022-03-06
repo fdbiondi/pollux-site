@@ -5,6 +5,7 @@
         src="logo.svg"
         alt="Pollux Software Engineering"
         :class="{
+          'z-20': true,
           'h-20 w-20': isSmall,
           'h-28 w-28': isMedium,
           'h-40 w-40': isLarge,

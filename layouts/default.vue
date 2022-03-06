@@ -22,13 +22,8 @@
       </span>
     </Notification>
 
-    <div :class="{ colorful: colorful > 10 }">
-      <!-- Navigation Bar -->
-      <Header />
-
-      <!-- Hero Section -->
-      <Hero class="py-8 lg:py-16 xl:py-24" />
-    </div>
+    <!-- Hero -->
+    <Hero />
 
     <!-- Content -->
     <nuxt />
@@ -40,12 +35,11 @@
 
 <script>
 import { mapGetters } from 'vuex'
-import { Header, Hero, Footer } from '~/components/Layout'
+import { Hero, Footer } from '~/components/Layout'
 import Notification from '~/components/Common/UI/Notification'
 
 export default {
   components: {
-    Header,
     Hero,
     Footer,
     Notification,
@@ -58,8 +52,6 @@ export default {
   },
 
   computed: {
-    ...mapGetters(['colorful']),
-
     ...mapGetters('cookies', ['cookiesAccepted']),
   },
 
@@ -78,5 +70,3 @@ export default {
   },
 }
 </script>
-
-<style lang="scss" scoped></style>

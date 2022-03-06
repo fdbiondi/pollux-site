@@ -13,9 +13,8 @@ export default {}
 
 <style lang="scss">
 .line-section {
-  @apply pointer-events-none absolute top-0 left-1/2 h-full max-w-full -translate-x-1/2 opacity-20;
+  @apply pointer-events-none absolute top-0 left-1/2 z-0 h-full max-w-full -translate-x-1/2 opacity-20;
   width: 1536px;
-  z-index: 0;
 }
 
 .line-section .line {
