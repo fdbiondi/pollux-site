@@ -1,27 +1,10 @@
 <template>
   <div class="bg-white dark:bg-black-light">
     <div class="text-black-light dark:text-white">
-      <!-- Logo's Section -->
-      <div class="flex h-screen w-full items-center justify-center py-24">
-        <div class="flex w-1/2 flex-col flex-wrap justify-center">
-          <Logo class="mx-auto my-4" size="small" />
-          <Logo class="mx-auto my-4" size="medium" />
-          <Logo class="mx-auto my-4" size="large" />
-        </div>
-
-        <div class="flex w-1/2 justify-center">
-          <h4 class="route--underline font-pollux">Pollux fonts samples</h4>
-        </div>
-      </div>
-
       <!-- Fonts Section -->
-      <div class="container mx-auto flex flex-wrap items-center py-24">
+      <div class="container mx-auto flex flex-wrap items-center pb-24">
         <div class="w-full">
-          <div
-            class="text-right font-mono"
-            data-aos="zoom-in-up"
-            data-aos-once="true"
-          >
+          <div class="text-right font-mono">
             <h2>Pollux</h2>
 
             <p>
@@ -29,11 +12,7 @@
             </p>
           </div>
 
-          <div
-            class="text-right font-serif"
-            data-aos="zoom-in-up"
-            data-aos-once="true"
-          >
+          <div class="text-right font-serif">
             <h2>Pollux</h2>
 
             <p>
@@ -41,11 +20,7 @@
             </p>
           </div>
 
-          <div
-            class="text-right font-pollux"
-            data-aos="zoom-in-up"
-            data-aos-once="true"
-          >
+          <div class="text-right font-pollux">
             <h2>Pollux</h2>
 
             <p>
@@ -54,63 +29,32 @@
           </div>
         </div>
 
-        <!-- Color Palette Section -->
-        <div class="my-24 w-full">
+        <div class="my-24 flex w-full items-center">
+          <!-- Logo's Section -->
+          <div class="w-1/2 items-center justify-center py-24">
+            <Logo class="mx-auto my-4" size="large" />
+          </div>
+
+          <!-- Color Palette Section -->
           <div
-            class="text-center font-serif"
+            class="w-1/2 text-center font-serif"
             data-aos="zoom-in-up"
             data-aos-once="true"
           >
             <h3 class="text-7xl">Color Palette</h3>
 
-            <div class="m-4 flex items-center justify-center gap-1 p-4">
-              <div class="h-12 w-12 bg-pollux-cyan-50"></div>
-              <div class="h-12 w-12 bg-pollux-cyan-100"></div>
-              <div class="h-12 w-12 bg-pollux-cyan-200"></div>
-              <div class="h-12 w-12 bg-pollux-cyan-300"></div>
-              <div class="h-12 w-12 bg-pollux-cyan-400"></div>
-              <div class="h-12 w-12 bg-pollux-cyan-500"></div>
-              <div class="h-12 w-12 bg-pollux-cyan-600"></div>
-              <div class="h-12 w-12 bg-pollux-cyan-700"></div>
-              <div class="h-12 w-12 bg-pollux-cyan-800"></div>
-              <div class="h-12 w-12 bg-pollux-cyan-900"></div>
-              <div class="h-12 w-12 bg-pollux-cyan-A100"></div>
-              <div class="h-12 w-12 bg-pollux-cyan-A200"></div>
-              <div class="h-12 w-12 bg-pollux-cyan-A300"></div>
-              <div class="h-12 w-12 bg-pollux-cyan-A400"></div>
-              <div class="h-12 w-12 bg-pollux-cyan-light"></div>
-              <div class="h-12 w-12 bg-pollux-cyan-dark"></div>
-            </div>
-            <div class="m-4 flex items-center justify-center gap-1 p-4">
-              <div class="h-12 w-12 bg-pollux-pink-50"></div>
-              <div class="h-12 w-12 bg-pollux-pink-100"></div>
-              <div class="h-12 w-12 bg-pollux-pink-200"></div>
-              <div class="h-12 w-12 bg-pollux-pink-300"></div>
-              <div class="h-12 w-12 bg-pollux-pink-400"></div>
-              <div class="h-12 w-12 bg-pollux-pink-500"></div>
-              <div class="h-12 w-12 bg-pollux-pink-600"></div>
-              <div class="h-12 w-12 bg-pollux-pink-700"></div>
-              <div class="h-12 w-12 bg-pollux-pink-800"></div>
-              <div class="h-12 w-12 bg-pollux-pink-900"></div>
-              <div class="h-12 w-12 bg-pollux-pink-A100"></div>
-              <div class="h-12 w-12 bg-pollux-pink-A200"></div>
-              <div class="h-12 w-12 bg-pollux-pink-A300"></div>
-              <div class="h-12 w-12 bg-pollux-pink-A400"></div>
-              <div class="h-12 w-12 bg-pollux-pink-light"></div>
-              <div class="h-12 w-12 bg-pollux-pink-dark"></div>
-            </div>
-          </div>
-        </div>
-
-        <div class="flex w-full flex-row flex-wrap justify-end">
-          <div class="p-6 text-white">
-            <a
-              target="_blank"
-              href="https://icons8.com/icon/HKUjzhHqqOJK/client"
+            <div
+              v-for="color in colorPalette.colors"
+              :key="`palette-pollux-${color}`"
+              class="m-4 flex items-center justify-center gap-1 p-4"
             >
-              Client
-            </a>
-            icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+              <div
+                v-for="tone in colorPalette.tones"
+                :key="`palette-pollux-${color}-${tone}`"
+                class="h-12 w-12"
+                :class="[`bg-pollux-${color}-${tone}`]"
+              ></div>
+            </div>
           </div>
         </div>
       </div>
@@ -130,7 +74,33 @@ export default {
     Logo,
   },
 
-  layout: 'empty',
+  layout: 'no-hero',
+
+  data() {
+    return {
+      colorPalette: {
+        colors: ['cyan', 'pink'],
+        tones: [
+          '50',
+          '100',
+          '200',
+          '300',
+          '400',
+          '500',
+          '600',
+          '700',
+          '800',
+          '900',
+          'A100',
+          'A200',
+          'A300',
+          'A400',
+          'light',
+          'dark',
+        ],
+      },
+    }
+  },
 }
 </script>
 

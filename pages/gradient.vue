@@ -23,6 +23,8 @@
 import { Gradient } from 'anim-gradient'
 
 export default {
+  layout: 'empty',
+
   mounted() {
     const g = new Gradient()
     g.initGradient('#gradient-canvas')
