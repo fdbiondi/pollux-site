@@ -14,15 +14,17 @@
     <div class="flex flex-row gap-4">
       <div class="animate-in" style="--order: 1">
         <nuxt-link :to="leftLink">
-          <button class="button button--primary">{{ knowMore }}</button>
+          <button
+            class="button button--outline-dark xl:dark:button--secondary-dark xl:button--secondary"
+          >
+            {{ knowMore }}
+          </button>
         </nuxt-link>
       </div>
 
       <div class="animate-in" style="--order: 2">
         <nuxt-link :to="rightLink">
-          <button
-            class="button button--outline-dark xl:dark:button--secondary-dark xl:button--secondary"
-          >
+          <button class="button button--primary">
             {{ letsConnect }}
           </button>
         </nuxt-link>
