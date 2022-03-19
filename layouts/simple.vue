@@ -2,13 +2,7 @@
   <div class="bg-white text-gray-800 dark:bg-black-light dark:text-gray-200">
     <Header />
 
-    <div class="flex min-h-screen flex-col items-center justify-evenly">
-      <nuxt />
-
-      <div class="bg-white dark:bg-black-light">
-        <span>Simple Footer</span>
-      </div>
-    </div>
+    <nuxt />
   </div>
 </template>
 

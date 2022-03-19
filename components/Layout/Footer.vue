@@ -8,7 +8,7 @@
 
         <div class="flex w-3/4 flex-wrap items-center justify-around p-6">
           <span class="font-stylish text-2xl tracking-widest">
-            {{ letsConnect }}
+            {{ LETS_CONNECT }}
           </span>
 
           <fa-icon :icon="['fab', 'twitter']" class="footer--icon"></fa-icon>
@@ -29,15 +29,15 @@
         <div class="w-1/4 p-6 text-xl leading-loose">
           <div class="line-block"></div>
 
-          {{ info.company }}<br />
+          {{ POLLUX_COOP }}<br />
 
-          {{ info.city }}<br />
+          {{ CITY }}<br />
 
-          {{ info.state }}<br /><br />
+          {{ STATE }}<br /><br />
 
-          {{ info.email }}<br />
+          {{ EMAIL }}<br />
 
-          {{ info.phone }}<br />
+          {{ PHONE }}<br />
         </div>
 
         <div class="flex w-1/2 justify-around">
@@ -73,18 +73,15 @@
         <div class="border-t border-gray-800 pt-4 text-xs dark:border-gray-200">
           <div class="flex justify-between">
             <span>
-              Copyright © 2022 <span @click="bonus">{{ company }}</span> |
-              Privacy policy
+              {{ COPYRIGHT }} <span @click="bonus">{{ COMPANY }}</span> |
+              <nuxt-link to="#" class="hover:underline">
+                {{ PRIVACY_POLICY }}
+              </nuxt-link>
             </span>
 
             <span>
-              <a
-                target="_blank"
-                href="https://icons8.com/icon/HKUjzhHqqOJK/client"
-              >
-                Client
-              </a>
-              icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+              Gradient icons by
+              <a target="_blank" href="https://icons8.com">Icons8</a>
             </span>
           </div>
         </div>
@@ -96,55 +93,19 @@
 <script>
 import { mapMutations } from 'vuex'
 import Logo from '~/components/Common/Logo'
+import { sitemap } from '~/support/constants'
+import {
+  COMPANY,
+  COPYRIGHT,
+  PRIVACY_POLICY,
+  POLLUX_COOP,
+  CITY,
+  STATE,
+  EMAIL,
+  PHONE,
+} from '~/support/constants/info'
 
-const letsConnect = `Let's connect`
-const company = 'Pollux'
-const info = {
-  company: 'Pollux Cooperative',
-  city: '2000 Rosario',
-  state: 'Santa Fe, Argentina',
-  email: 'hello@polluxcoop.com',
-  phone: '+54 934 1111 0000',
-}
-
-const siteMap = {
-  firstColumn: [
-    {
-      href: '#',
-      name: 'About',
-    },
-    {
-      href: '#',
-      name: 'Services',
-    },
-    {
-      href: '#',
-      name: 'Career',
-    },
-    {
-      href: '#',
-      name: 'Our Clients',
-    },
-  ],
-  secondColumn: [
-    {
-      href: '#',
-      name: 'Contact',
-    },
-    {
-      href: '#',
-      name: 'Our Workflow',
-    },
-    {
-      href: '#',
-      name: 'Our Team',
-    },
-    {
-      href: '#',
-      name: 'Technologies',
-    },
-  ],
-}
+export const LETS_CONNECT = `Let's connect`
 
 export default {
   components: {
@@ -153,11 +114,18 @@ export default {
 
   data() {
     return {
-      info,
-      company,
-      letsConnect,
-      firstColumn: siteMap.firstColumn,
-      secondColumn: siteMap.secondColumn,
+      firstColumn: sitemap.firstColumn,
+      secondColumn: sitemap.secondColumn,
+
+      LETS_CONNECT,
+      COMPANY,
+      COPYRIGHT,
+      PRIVACY_POLICY,
+      POLLUX_COOP,
+      CITY,
+      STATE,
+      EMAIL,
+      PHONE,
     }
   },
 
