@@ -45,12 +45,12 @@
   }
 
   .button-pollux-cyan {
-    @apply border-pollux-cyan bg-pollux-cyan text-gray-100;
+    @apply border-pollux-cyan bg-pollux-cyan text-white;
     @apply hover:border-pollux-cyan-light hover:bg-pollux-cyan-light hover:text-gray-800;
   }
 
   .button-black {
-    @apply border-gray-800 bg-gray-800 text-gray-200 hover:border-gray-400 hover:bg-gray-400 hover:text-gray-800;
+    @apply border-gray-800 bg-gray-800 text-white hover:border-gray-400 hover:bg-gray-400 hover:text-gray-800;
   }
 
   .button-white {

@@ -6,7 +6,7 @@
       </a>
 
       <div class="z-20 flex items-center">
-        <div class="hidden text-lg text-gray-400 dark:text-white xl:flex">
+        <div class="hidden text-lg text-white xl:flex">
           <a href="#services" class="nav-item route--underline"> Services </a>
           <a href="#our-clients" class="nav-item route--underline">
             Our Clients
@@ -53,6 +53,6 @@ export default {
 
 <style lang="scss" scoped>
 .nav-item {
-  @apply mr-12 block lg:inline-block;
+  @apply mr-12 block filter drop-shadow-tight lg:inline-block;
 }
 </style>

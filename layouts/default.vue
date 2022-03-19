@@ -23,7 +23,7 @@
     </Notification>
 
     <!-- Hero -->
-    <Hero class="bg-gray-100 dark:bg-gray-900" />
+    <Hero class="bg-white dark:bg-gray-900" />
 
     <!-- Content -->
     <nuxt />

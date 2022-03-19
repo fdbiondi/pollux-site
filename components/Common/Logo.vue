@@ -4,8 +4,8 @@
       <img
         src="logo.svg"
         alt="Pollux Software Engineering"
+        class="z-20 drop-shadow-lg filter"
         :class="{
-          'z-20': true,
           'h-20 w-20': isSmall,
           'h-28 w-28': isMedium,
           'h-40 w-40': isLarge,
@@ -14,7 +14,7 @@
       <div class="relative mt-4">
         <div class="font-pollux dark:text-white">
           <div
-            class="px-1 tracking-wider"
+            class="px-1 tracking-wider drop-shadow-lg filter"
             :class="{
               'text-3xl': isSmall,
               'text-5xl': isMedium,
@@ -24,7 +24,7 @@
             Pollux
           </div>
           <div
-            class="text-pollux-cyan"
+            class="text-pollux-cyan drop-shadow-lg filter"
             :class="{
               'text-[0.65rem]': isSmall,
               'text-md': isMedium,

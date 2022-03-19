@@ -50,14 +50,14 @@
 
     <!-- Our partners -->
     <section
-      class="bg-gray-400 py-4 brightness-110 dark:bg-gray-900 lg:py-8 xl:py-16"
+      class="bg-white py-4 brightness-110 dark:bg-gray-900 lg:py-8 xl:py-16"
     >
       <div class="container mx-auto px-6">
         <div v-show="false" class="mb-1 text-center">
           <h4 class="font-serif font-medium">TRUSTED BY</h4>
         </div>
 
-        <ImageList class="mb-6" :images="partners" :has-link="true" />
+        <ImageList class="partners mb-6" :images="partners" :has-link="true" />
 
         <hr
           class="mx-16 border-t border-solid border-gray-900 dark:border-white"
@@ -166,6 +166,12 @@ export default {
     @apply relative block w-full;
     height: var(--section-height);
     z-index: 11;
+  }
+}
+
+.partners {
+  ::v-deep img {
+    @apply grayscale filter drop-shadow-tight dark:brightness-200 dark:drop-shadow-none;
   }
 }
 </style>

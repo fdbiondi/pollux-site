@@ -7,7 +7,7 @@
     <HeroContent class="z-20 py-8 lg:py-16 xl:py-24" />
 
     <svg
-      class="absolute inset-y-0 left-1/2 z-10 hidden h-full w-48 -translate-x-1/2 fill-gray-100 dark:fill-gray-900 xl:block"
+      class="absolute inset-y-0 left-1/2 z-10 hidden h-full w-48 -translate-x-1/2 fill-white dark:fill-gray-900 xl:block"
       fill="currentColor"
       viewBox="0 0 100 100"
       preserveAspectRatio="none"

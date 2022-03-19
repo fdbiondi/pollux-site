@@ -46,9 +46,3 @@ export default {
   },
 }
 </script>
-
-<style lang="scss" scoped>
-img {
-  filter: grayscale(1) brightness(2);
-}
-</style>
