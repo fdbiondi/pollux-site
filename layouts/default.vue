@@ -23,7 +23,12 @@
     </Notification>
 
     <!-- Hero -->
-    <Hero class="bg-white dark:bg-gray-900" />
+    <Hero class="bg-white dark:bg-gray-900">
+      <template #header>
+        <!-- Navigation Bar -->
+        <Header class="z-20" />
+      </template>
+    </Hero>
 
     <!-- Content -->
     <nuxt />
@@ -35,11 +40,12 @@
 
 <script>
 import { mapGetters } from 'vuex'
-import { Hero, Footer } from '~/components/Layout'
+import { Header, Hero, Footer } from '~/components/Layout'
 import Notification from '~/components/Common/UI/Notification'
 
 export default {
   components: {
+    Header,
     Hero,
     Footer,
     Notification,

@@ -68,6 +68,8 @@ export default {
   plugins: [
     // https://michalsnik.github.io/aos/
     { src: '@/plugins/aos.js', mode: 'client' },
+
+    '~/plugins/axios',
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components

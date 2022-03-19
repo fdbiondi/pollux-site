@@ -1,7 +1,6 @@
 <template>
-  <colorful class="relative">
-    <!-- Navigation Bar -->
-    <Header class="z-20" />
+  <div class="relative">
+    <slot name="header" />
 
     <!-- Hero Content -->
     <HeroContent class="z-20 py-8 lg:py-16 xl:py-24" />
@@ -22,19 +21,14 @@
       <!-- class="h-56 w-full object-cover sm:h-72 md:h-96 lg:h-full lg:w-full" -->
       <img class="h-full w-full object-cover" :src="image" />
     </div>
-  </colorful>
+  </div>
 </template>
 
 <script>
-import Colorful from './Colorful'
 import HeroContent from '~/components/Layout/Hero/Content'
-
-import Header from '~/components/Layout/Header'
 
 export default {
   components: {
-    Colorful,
-    Header,
     HeroContent,
   },
 
