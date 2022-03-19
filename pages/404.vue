@@ -33,8 +33,10 @@
       </div>
     </div>
 
-    <div class="text-center font-mono uppercase">
-      <div class="flex gap-1">
+    <div
+      class="container mx-auto border-t border-gray-800 pt-4 text-center font-mono uppercase"
+    >
+      <div class="mb-1 flex justify-center gap-3">
         <nuxt-link to="#" class="hover:underline">
           {{ PRIVACY_POLICY }}
         </nuxt-link>
