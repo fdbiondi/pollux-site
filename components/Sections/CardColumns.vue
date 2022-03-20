@@ -4,7 +4,7 @@
       <div class="flex">
         <div class="flex w-2/3 flex-col justify-center">
           <div
-            v-for="({ description, image, title }, i) in items"
+            v-for="({ description, image, title }, i) in leftItems"
             :key="i"
             class="relative"
           >
@@ -61,7 +61,7 @@ export default {
       default: () => [],
     },
 
-    items: {
+    leftItems: {
       type: Array,
       default: () => [],
     },

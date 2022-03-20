@@ -13,18 +13,11 @@ export default {}
 
 <style lang="scss">
 .line-section {
-  @apply pointer-events-none absolute top-0 left-1/2 z-0 h-full max-w-full -translate-x-1/2 opacity-20;
-  width: 1536px;
+  @apply pointer-events-none absolute top-0 left-1/2 z-0 h-full lg:w-[1024px] xl:w-[1280px] 2xl:w-[1536px] max-w-full -translate-x-1/2 opacity-20;
 }
 
 .line-section .line {
-  @apply hidden;
-}
-
-@media only screen and (min-width: 1600px) {
-  .line-section .line {
-    @apply block;
-  }
+  @apply hidden lg:block;
 }
 
 .line-section .line:nth-child(2) {

@@ -45,7 +45,7 @@
     <section
       class="bg-gray-100 shadow-inner shadow-black-light/40 dark:bg-black-light dark:shadow-white/5 dark:brightness-110"
     >
-      <CardColumns :items="development" :right-items="design" />
+      <CardColumns :left-items="development" :right-items="design" />
     </section>
 
     <!-- Our partners -->
