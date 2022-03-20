@@ -1,5 +1,7 @@
 <template>
-  <div class="flex w-full items-center justify-center">
+  <div
+    class="flex w-full flex-row flex-wrap items-center justify-center lg:flex-nowrap"
+  >
     <div
       v-for="(image, i) in images"
       :key="i"
