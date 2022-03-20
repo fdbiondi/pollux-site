@@ -44,7 +44,7 @@ img {
   &:focus,
   &:focus-visible,
   &:focus-within {
-    @apply outline-none;
+    @apply outline-none dark:outline-none;
   }
 }
 

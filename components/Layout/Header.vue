@@ -1,5 +1,5 @@
 <template>
-  <header>
+  <header id="header">
     <nav class="container mx-auto flex items-center justify-between px-6 py-2">
       <a href="/">
         <logo />
@@ -19,11 +19,11 @@
         </div>
 
         <div class="block 2xl:hidden">
-          <div class="header__hamburger header__item h-align-left">
+          <div class="header__hamburger">
             <a
               href="#header"
               aria-label="Hamburger Menu"
-              class="hamburger"
+              class="hamburger focus-within:!outline-none focus:!outline-none focus-visible:!outline-none dark:focus-within:!outline-none dark:focus:!outline-none dark:focus-visible:!outline-none"
               :class="{ 'is-active': menuOpen }"
               @click="menuOpen = !menuOpen"
             >
@@ -31,20 +31,6 @@
               <div class="hamburger__slice"></div>
             </a>
           </div>
-
-          <!-- <button
-            class="flex items-center rounded border border-gray-400 px-4 py-3 text-gray-200 focus:outline-none"
-          >
-            <svg
-              class="h-3 w-3 fill-current"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <title>Menu</title>
-              <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
-            </svg>
-          </button>
-           -->
         </div>
       </div>
     </nav>
@@ -76,74 +62,49 @@ export default {
   @apply mr-12 block filter drop-shadow-tight lg:inline-block;
 }
 
-.hamburger {
-  &__slice {
+@mixin hamburger-transition() {
+  -webkit-transition: all 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -moz-transition: all 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -ms-transition: all 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -o-transition: all 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: all 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.header {
+  &__hamburger {
+    @apply inline-block;
+
+    .hamburger {
+      @apply block w-8 cursor-pointer;
+
+      .hamburger__slice {
+        @apply my-2 block h-0.5 bg-white/60 first-of-type:w-8 last-of-type:w-[1.375rem];
+        @include hamburger-transition();
+      }
+
+      &:hover {
+        .hamburger__slice {
+          @apply bg-pollux-cyan-light first-of-type:w-[1.375rem] last-of-type:w-8;
+          @include hamburger-transition();
+        }
+      }
+    }
   }
-}
 
-.header__item {
-  float: left;
-  clear: none;
-  text-align: inherit;
-  width: 33.33333333333333%;
-  margin-left: 0;
-  margin-right: 0;
-}
+  &__hamburger .hamburger.is-active .hamburger__slice {
+    width: 2rem !important;
+    background-color: #fff;
+    -webkit-animation: none !important;
+    animation: none !important;
+    transform-origin: center;
+  }
 
-.header__hamburger {
-  display: inline-block;
-  padding-left: 0.875rem;
-}
+  &__hamburger .hamburger.is-active .hamburger__slice:first-of-type {
+    transform: rotate(45deg) translate(0.125rem, 0.3125rem);
+  }
 
-.header__hamburger .hamburger {
-  display: block;
-  width: 2rem;
-  margin-right: 1.25rem;
-  cursor: pointer;
-}
-
-.header__hamburger .hamburger__slice {
-  display: block;
-  height: 0.125rem;
-  margin: 0.5rem 0;
-  background-color: hsla(0, 0%, 100%, 0.6);
-  transition: all 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-
-.header__hamburger .hamburger:hover .hamburger__slice {
-  background-color: #dac19d;
-  transition: all 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-
-.header__hamburger .hamburger__slice:first-of-type {
-  width: 2rem;
-}
-
-.header__hamburger .hamburger__slice:last-of-type {
-  width: 1.375rem;
-}
-
-.header__hamburger .hamburger:hover .hamburger__slice:first-of-type {
-  width: 1.375rem;
-}
-
-.header__hamburger .hamburger:hover .hamburger__slice:last-of-type {
-  width: 2rem;
-}
-
-.header__hamburger .hamburger.is-active .hamburger__slice {
-  width: 2rem !important;
-  background-color: #fff;
-  -webkit-animation: none !important;
-  animation: none !important;
-  transform-origin: center;
-}
-
-.header__hamburger .hamburger.is-active .hamburger__slice:first-of-type {
-  transform: rotate(45deg) translate(0.125rem, 0.3125rem);
-}
-
-.header__hamburger .hamburger.is-active .hamburger__slice:last-of-type {
-  transform: rotate(-45deg) translate(0.125rem, -0.3125rem);
+  &__hamburger .hamburger.is-active .hamburger__slice:last-of-type {
+    transform: rotate(-45deg) translate(0.125rem, -0.3125rem);
+  }
 }
 </style>
