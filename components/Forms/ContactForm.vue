@@ -1,20 +1,20 @@
 <template>
-  <div class="container mx-auto px-6 font-serif">
-    <div class="flex">
-      <div v-if="$slots.default" class="w-1/2">
+  <div class="container mx-auto px-4 font-serif sm:px-6">
+    <div class="flex flex-wrap">
+      <div v-if="$slots.default" class="mb-16 w-full 2xl:mb-0 2xl:w-1/2">
         <slot />
       </div>
 
-      <div class="w-1/2">
-        <form class="flex flex-col px-16">
+      <div class="w-full 2xl:w-1/2">
+        <form class="mx-auto flex max-w-3xl flex-col sm:px-16">
           <textarea
             v-model="description"
             name="description"
             cols="30"
             rows="10"
             placeholder="Project Description"
-            class="mb-4 w-full"
-          ></textarea>
+            class="mb-4 max-h-64 w-full sm:max-h-96"
+          />
 
           <select
             v-model="budget"
@@ -65,14 +65,14 @@
             ></FileInput>
           </div>
 
-          <div class="flex">
+          <div class="mt-8 flex flex-wrap sm:mt-0">
             <button
-              class="button button--outline dark:button--outline-dark m-auto w-1/2"
+              class="button button--outline dark:button--outline-dark m-auto w-full sm:w-1/2"
             >
               BOOK A CALL
             </button>
 
-            <span class="w-1/2 p-8">
+            <span class="w-full sm:w-1/2 sm:p-8">
               I consent to Pollux processing my personal data according to the
               <a href="" class="text-pollux-pink">Privacy Policy</a>
             </span>
