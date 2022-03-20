@@ -2,7 +2,8 @@
   <header id="header">
     <nav class="container mx-auto flex items-center justify-between px-6 py-2">
       <a href="/">
-        <logo />
+        <logo class="hidden md:block" />
+        <logo size="small" class="md:hidden" />
       </a>
 
       <div class="z-20 flex items-center">
