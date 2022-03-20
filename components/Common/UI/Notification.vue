@@ -21,7 +21,6 @@
               <a
                 v-if="action"
                 class="flex cursor-pointer items-center justify-center border border-transparent bg-white px-4 py-2 text-sm font-medium shadow-sm hover:bg-gray-100 hover:drop-shadow-md hover:filter dark:bg-black dark:text-white dark:hover:bg-gray-800"
-                :class="actionColor"
                 @click="onAction"
               >
                 {{ action }}
