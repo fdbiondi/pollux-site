@@ -11,11 +11,11 @@
       {{ subtitle }}
     </p>
 
-    <div class="flex flex-row gap-4">
+    <div class="flex flex-col gap-2 sm:flex-row sm:gap-4">
       <div class="animate-in" style="--order: 1">
         <nuxt-link :to="leftLink">
           <button
-            class="button button--outline-dark xl:dark:button--secondary-dark xl:button--secondary"
+            class="button button--outline-dark xl:dark:button--secondary-dark xl:button--secondary w-full sm:w-auto"
           >
             {{ knowMore }}
           </button>
@@ -24,7 +24,7 @@
 
       <div class="animate-in" style="--order: 2">
         <nuxt-link :to="rightLink">
-          <button class="button button--primary">
+          <button class="button button--primary w-full sm:w-auto">
             {{ letsConnect }}
           </button>
         </nuxt-link>

@@ -43,6 +43,7 @@ module.exports = {
       pollux: '"Fredoka One"',
       stylish: 'Oswald, ui-serif, serif',
     },
+
     extend: {
       colors: {
         black: {
