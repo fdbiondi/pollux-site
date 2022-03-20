@@ -2,17 +2,16 @@
   <div class="text-gray-800 dark:text-gray-200">
     <Notification
       v-if="showCookiesNotification"
-      action="Accept"
-      hide-icon
+      action="I Accept"
       @ok="acceptCookies"
       @close="rejectCookies"
     >
-      <span class="font-mono text-sm">
+      <span class="font-mono sm:text-sm">
         This website uses cookies for analytics and to improve provided
         services.
         <nuxt-link
           to="privacy-policy"
-          class="font-bold text-white underline hover:text-gray-100"
+          class="whitespace-nowrap font-bold underline hover:text-gray-200 dark:hover:text-gray-800"
         >
           Find out more
           <span aria-hidden="true" class="-ml-1">
