@@ -2,12 +2,14 @@
   <footer class="py-8 shadow-inner shadow-black-light/40 lg:py-16 xl:py-32">
     <div class="container mx-auto flex flex-col">
       <div class="mb-6 flex">
-        <div class="w-1/4 p-6">
+        <div class="hidden w-1/4 p-6 lg:block">
           <Logo />
         </div>
 
-        <div class="flex w-3/4 flex-wrap items-center justify-around p-6">
-          <span class="font-stylish text-2xl tracking-widest">
+        <div
+          class="flex w-full flex-wrap items-center justify-around p-6 lg:w-3/4"
+        >
+          <span class="hidden font-stylish text-2xl tracking-widest sm:block">
             {{ LETS_CONNECT }}
           </span>
 
@@ -25,8 +27,8 @@
         </div>
       </div>
 
-      <div class="flex">
-        <div class="w-1/4 p-6 text-xl leading-loose">
+      <div class="flex flex-col flex-wrap lg:flex-row">
+        <div class="w-full p-6 text-xl leading-loose sm:px-10 lg:w-1/4 lg:p-6">
           <div class="line-block"></div>
 
           {{ POLLUX_COOP }}<br />
@@ -40,8 +42,10 @@
           {{ PHONE }}<br />
         </div>
 
-        <div class="flex w-1/2 justify-around">
-          <div class="flex flex-col p-6">
+        <div
+          class="flex w-full flex-col justify-around lg:w-3/4 lg:flex-row 2xl:w-1/2"
+        >
+          <div class="flex flex-col p-6 sm:px-10 lg:p-6">
             <div class="line-block"></div>
 
             <a
@@ -54,7 +58,7 @@
             </a>
           </div>
 
-          <div class="flex flex-col p-6">
+          <div class="flex flex-col p-6 sm:px-10 lg:p-6">
             <div class="line-block"></div>
 
             <a
@@ -70,7 +74,9 @@
       </div>
 
       <div class="p-6">
-        <div class="border-t border-gray-800 pt-4 text-xs dark:border-gray-200">
+        <div
+          class="border-t border-gray-800 pt-4 text-sm dark:border-gray-200 lg:text-xs"
+        >
           <div class="flex justify-between">
             <span>
               {{ COPYRIGHT }} <span @click="bonus">{{ COMPANY }}</span> |
@@ -79,7 +85,7 @@
               </nuxt-link>
             </span>
 
-            <span>
+            <span class="hidden lg:block">
               Gradient icons by
               <a target="_blank" href="https://icons8.com">Icons8</a>
             </span>

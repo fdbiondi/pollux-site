@@ -5,7 +5,7 @@
     <div
       v-for="(image, i) in images"
       :key="i"
-      class="mx-4 max-h-full p-8"
+      class="max-h-full p-8 sm:mx-4"
       :data-aos="'fade-in-up'"
       :data-aos-delay="100 * i"
       data-aos-once="true"
