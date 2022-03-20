@@ -42,7 +42,7 @@
           <div class="order-2 flex-shrink-0 sm:order-3 sm:ml-3">
             <button
               type="button"
-              class="-mr-1 flex py-1 px-3 hover:bg-black/30 focus:outline-none sm:-mr-2"
+              class="-mr-1 flex py-1 px-3 hover:bg-black/30 focus:outline-0 sm:-mr-2"
               @click="onClose"
             >
               <span class="sr-only">Dismiss</span>

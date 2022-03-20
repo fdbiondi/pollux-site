@@ -40,14 +40,6 @@ img {
   user-drag: none;
 }
 
-@mixin outline-none {
-  &:focus,
-  &:focus-visible,
-  &:focus-within {
-    @apply outline-none dark:outline-none;
-  }
-}
-
 @import 'assets/css/modules/common';
 @import 'assets/css/modules/animations';
 @import 'assets/css/modules/inputs';

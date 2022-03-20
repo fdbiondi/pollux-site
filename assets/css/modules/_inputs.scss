@@ -1,5 +1,5 @@
 @mixin input {
-  @apply appearance-none rounded-none border-2 border-white py-4 px-6 text-2xl leading-tight text-gray-800 shadow dark:border-black-light;
+  @apply appearance-none rounded-none border-2 border-white py-4 px-6 text-2xl leading-tight text-gray-800 shadow outline-0 dark:border-black-light;
 }
 
 form {
@@ -8,7 +8,6 @@ form {
   input[type='email'],
   select {
     @include input;
-    @include outline-none;
   }
 
   select {
@@ -28,8 +27,7 @@ form {
   }
 
   input[type='checkbox'] {
-    @include outline-none;
-    @apply relative h-6 w-6 cursor-pointer appearance-none;
+    @apply relative h-6 w-6 cursor-pointer appearance-none outline-0;
 
     & ~ span,
     & ~ label {

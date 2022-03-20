@@ -23,7 +23,7 @@
             <a
               href="#header"
               aria-label="Hamburger Menu"
-              class="hamburger focus-within:!outline-none focus:!outline-none focus-visible:!outline-none dark:focus-within:!outline-none dark:focus:!outline-none dark:focus-visible:!outline-none"
+              class="hamburger"
               :class="{ 'is-active': menuOpen }"
               @click="menuOpen = !menuOpen"
             >
@@ -75,7 +75,7 @@ export default {
     @apply inline-block;
 
     .hamburger {
-      @apply block w-8 cursor-pointer;
+      @apply block w-8 cursor-pointer outline-0;
 
       .hamburger__slice {
         @apply my-2 block h-0.5 bg-white/60 first-of-type:w-8 last-of-type:w-[1.375rem];

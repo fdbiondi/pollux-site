@@ -78,3 +78,9 @@ export default {
   },
 }
 </script>
+
+<style lang="scss" scoped>
+a {
+  @apply outline-0;
+}
+</style>

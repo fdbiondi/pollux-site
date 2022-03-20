@@ -28,13 +28,7 @@
 @layer components {
   /* Button Components */
   .button {
-    @apply border-4 px-8 py-4 font-stylish text-2xl font-bold tracking-[0.08em];
-  }
-
-  .button:focus,
-  .button:focus-visible,
-  .button:focus-within {
-    @apply outline-none;
+    @apply border-4 px-8 py-4 font-stylish text-2xl font-bold tracking-[0.08em] outline-0;
   }
 
   .button:hover {
