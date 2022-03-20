@@ -1,6 +1,6 @@
 <template>
   <section class="py-4 lg:py-8 xl:py-16">
-    <div class="container mx-auto px-6">
+    <div class="container mx-auto px-8 sm:px-4 md:px-2">
       <h2 class="title">{{ toolsSectionTitle }}</h2>
     </div>
 

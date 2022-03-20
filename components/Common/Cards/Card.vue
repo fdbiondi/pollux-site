@@ -1,5 +1,5 @@
 <template>
-  <div class="card m-4 h-full cursor-pointer px-8 py-12 dark:text-white">
+  <div class="card h-full cursor-pointer px-8 py-12 dark:text-white">
     <slot></slot>
 
     <div class="mt-12">

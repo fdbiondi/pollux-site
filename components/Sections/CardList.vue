@@ -1,12 +1,13 @@
 <template>
-  <div class="container mx-auto">
+  <div class="container mx-auto px-8 sm:px-4 md:px-2">
     <h2 class="title">{{ sectionTitle }}</h2>
 
     <div
-      class="grid grid-cols-2 gap-4 xl:grid-flow-col-dense xl:grid-cols-4 xl:gap-0"
+      class="grid grid-cols-1 gap-3 md:grid-cols-2 md:gap-8 lg:m-0 xl:grid-flow-col-dense xl:grid-cols-4"
     >
       <div v-for="({ title, description, image }, i) in items" :key="i">
         <Card
+          class="xl:my-4"
           :title="title"
           :description="description"
           data-aos="zoom-in-up"
