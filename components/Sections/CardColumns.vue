@@ -1,11 +1,11 @@
 <template>
   <div class="relative">
     <div class="container mx-auto py-24">
-      <div class="flex">
+      <div class="flex flex-wrap px-6 md:px-0">
         <div
           v-for="(column, colIndex) in columns"
           :key="`column-${colIndex}`"
-          class="flex w-1/3 flex-col justify-center"
+          class="grid w-full justify-center md:grid-cols-2 lg:flex lg:w-1/3 lg:flex-col"
         >
           <div
             v-for="({ description, image, title }, itemIndex) in column.items"
@@ -20,31 +20,12 @@
               :image="column.sideImage ? image : null"
               :title="title"
               data-aos="zoom-in-up"
+              data-aos-once="true"
             >
               <img v-if="!column.sideImage" :src="image" :alt="title" />
             </CardSimple>
           </div>
         </div>
-        <!--
-        <div class="w-1/3"></div>
-
-        <div class="flex w-1/3 flex-col justify-center">
-          <div
-            v-for="({ description, image, title }, index) in rightItems"
-            :key="index"
-            class="relative"
-          >
-            <div class="float-section-line" style="top: 3.5rem" />
-
-            <CardSimple
-              :description="description"
-              :image="image"
-              :title="title"
-              data-aos="zoom-in-up"
-              class="my-2 px-8"
-            />
-          </div>
-        </div> -->
       </div>
     </div>
 
