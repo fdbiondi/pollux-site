@@ -20,7 +20,7 @@
               :image="column.sideImage ? image : null"
               :title="title"
               data-aos="zoom-in-up"
-              data-aos-once="true"
+              :data-aos-once="true"
             >
               <img v-if="!column.sideImage" :src="image" :alt="title" />
             </CardSimple>

@@ -11,6 +11,7 @@
           :title="title"
           :description="description"
           data-aos="zoom-in-up"
+          :data-aos-once="true"
           :data-aos-delay="100 * i"
         >
           <img :src="image" :alt="title" />
