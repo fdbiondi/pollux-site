@@ -22,7 +22,10 @@
     </Notification>
 
     <!-- Hero -->
-    <Hero class="bg-white dark:bg-gray-900">
+    <Hero
+      class="bg-white dark:bg-black-light"
+      tilt-color="fill-white dark:fill-black-light"
+    >
       <template #header>
         <!-- Navigation Bar -->
         <Header class="z-20" />

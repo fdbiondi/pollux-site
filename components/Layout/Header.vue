@@ -9,14 +9,14 @@
       <div class="z-20 flex items-center">
         <div class="hidden text-lg text-white 2xl:flex">
           <a href="#services" class="nav-item route--underline"> Services </a>
-          <a href="#our-clients" class="nav-item route--underline">
-            Our Clients
+          <a href="#partners" class="nav-item route--underline">
+            Our Partners
           </a>
           <a href="#about" class="nav-item route--underline"> About Us </a>
-          <a href="#career" class="nav-item route--underline"> Career </a>
+          <a href="#contact" class="nav-item route--underline"> Contact Us </a>
 
-          <LanguageSwitch />
-          <ThemeSwitch />
+          <LanguageSwitch v-show="false" />
+          <ThemeSwitch v-show="false" />
         </div>
 
         <div class="block 2xl:hidden">

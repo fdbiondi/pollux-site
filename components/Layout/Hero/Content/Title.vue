@@ -61,7 +61,7 @@ export default {
 
     leftLink: {
       type: [Object, String],
-      default: '#services',
+      default: '#what-we-offer',
     },
 
     rightLink: {
