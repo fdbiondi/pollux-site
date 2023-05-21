@@ -60,6 +60,7 @@
 
     <!-- Our partners -->
     <section
+      id="partners"
       class="bg-white py-4 brightness-110 dark:bg-gray-900 lg:py-8 xl:py-16"
     >
       <div class="container mx-auto px-6">
