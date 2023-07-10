@@ -4,7 +4,7 @@
     :class="{ fixed, 'top-0': top, 'bottom-0': !top, invisible: !visible }"
   >
     <div class="bg-black/80 dark:bg-white/90">
-      <div class="mx-auto max-w-7xl py-3 px-3 sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-7xl px-3 py-3 sm:px-6 lg:px-8">
         <div class="flex flex-wrap items-center justify-between">
           <div class="flex w-0 flex-1 items-center">
             <slot name="content">
@@ -31,7 +31,7 @@
           <div class="order-2 flex-shrink-0 sm:order-3 sm:ml-3">
             <button
               type="button"
-              class="-mr-1 flex py-1 px-3 hover:bg-white/10 focus:outline-0 dark:hover:bg-black/10 sm:-mr-2"
+              class="-mr-1 flex px-3 py-1 hover:bg-white/10 focus:outline-0 dark:hover:bg-black/10 sm:-mr-2"
               @click="onClose"
             >
               <span class="sr-only">Dismiss</span>
