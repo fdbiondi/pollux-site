@@ -18,5 +18,6 @@ module.exports = {
       { allowTemplateLiterals: true, avoidEscape: true },
     ],
     'vue/html-quotes': ['error', 'double', { avoidEscape: false }],
+    'vue/multi-word-component-names': 'off',
   },
 }
