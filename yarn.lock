@@ -2115,13 +2115,14 @@
     consola "^2.15.3"
     defu "^5.0.0"
 
-"@nuxtjs/color-mode@^2.1.1":
-  version "2.1.1"
-  resolved "https://registry.yarnpkg.com/@nuxtjs/color-mode/-/color-mode-2.1.1.tgz#374f995f56a8fe27c6263ab865a034a50e90c1ea"
-  integrity sha512-kGB/FoICF4RwZkfNBhL/yGrHfaUFpviYq6HGvSkZEm2dCpjRXIv9VsWoP0uzwxnoaRAQQOkkWjaGv/nSk0gUSQ==
+"@nuxtjs/color-mode@^3.3.0":
+  version "3.3.0"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/color-mode/-/color-mode-3.3.0.tgz#4c0e2ea2b23813461e6cfaa10dd169805a5145a6"
+  integrity sha512-YVFNmTISke1eL7uk5p9I1suOsM222FxrqKoF13HS4x94OKCWwPLLeTCEzHZ8orzKnaFUbCXpuL4pRv8gvW+0Kw==
   dependencies:
-    defu "^5.0.0"
+    "@nuxt/kit" "^3.5.3"
     lodash.template "^4.5.0"
+    pathe "^1.1.1"
 
 "@nuxtjs/eslint-config@^8.0.0":
   version "8.0.0"
