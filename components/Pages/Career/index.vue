@@ -9,7 +9,7 @@
         <span class="font-bold">Nice to meet you!</span>
       </h4>
 
-      <div class="mb-4 px-8 pt-6 pb-8">
+      <div class="mb-4 px-8 pb-8 pt-6">
         <form class="flex flex-row justify-center">
           <FileInput
             :value="curriculum"

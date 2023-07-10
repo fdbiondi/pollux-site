@@ -168,7 +168,7 @@ export default {
   --gradient-color-4: theme('colors.gray.300');
 
   .anim-gradient--tilt {
-    @apply absolute top-0 right-0 overflow-hidden;
+    @apply absolute right-0 top-0 overflow-hidden;
     line-height: 0;
   }
 
