@@ -3,24 +3,28 @@ export const design = [
     description: 'Take your business prototype app for a test drive',
     image: require('~/assets/images/icons/icons8-web-design-64.png'),
     title: 'UX Design & Testing',
+    bgColor: 'bg-pink-600',
   },
   {
     description:
       'Create a beautiful and understandable interface to delight your users',
     image: require('~/assets/images/icons/icons8-light-64.png'),
     title: 'UI Design & Branding',
+    bgColor: 'bg-gray-600',
   },
   {
     description:
       'Well-designed and colorful apps, personalized on your brand’s concept and values, to build trust with your users',
     image: require('~/assets/images/icons/icons8-tune-64.png'),
     title: 'Custom Designed',
+    bgColor: 'bg-green-600',
   },
   {
     description:
       'Responsive and accessible user interfaces that allow more people to access it from different types of devices with different needs',
     image: require('~/assets/images/icons/icons8-amiable-64.png'),
     title: 'User Friendly',
+    bgColor: 'bg-red-600',
   },
 ]
 
@@ -30,6 +34,7 @@ export const development = [
       'We have rock-solid DevOps/SLA practices to help you leverage cloud technology speeding up development and increasing app security and scalability.',
     image: require('~/assets/images/icons/icons8-cloud-done-64.png'),
     title: 'Cloud Technology',
+    bgColor: 'bg-blue-600',
   },
 
   {
@@ -37,6 +42,7 @@ export const development = [
       'Ship your MVP to market without spending months on assembling an in-house development team for your startup.',
     image: require('~/assets/images/icons/icons8-process-64.png'),
     title: 'MVP Development',
+    bgColor: 'bg-orange-600',
   },
 ]
 
