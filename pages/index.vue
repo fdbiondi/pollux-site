@@ -3,7 +3,7 @@
     <!-- Our services -->
     <section
       id="services"
-      class="bg-white py-8 dark:bg-black-light lg:py-16 xl:py-24"
+      class="bg-white py-20 dark:bg-black-light lg:py-16 xl:py-24"
     >
       <CardList :items="services" :section-title="servicesSectionTitle" />
     </section>
@@ -14,19 +14,9 @@
     <!-- Dev & Design -->
     <section
       id="what-we-offer"
-      class="bg-gray-200 shadow-inner shadow-black-light/40 dark:bg-black-light dark:shadow-white/5 dark:brightness-110"
+      class="bg-white py-20 dark:bg-black-light lg:py-16 xl:py-24"
     >
-      <CardColumns
-        :left-items="development"
-        :right-items="design"
-        :settings="{
-          left: {
-            sideImage: false,
-            decoratorStyle: 'top: 10rem',
-            cardClass: 'my-16 px-8',
-          },
-        }"
-      />
+      <CardRows :development="development" :design="design" />
     </section>
 
     <!-- Our partners -->
@@ -63,8 +53,8 @@
 
 <script>
 import BackgroundCodeHtml from '~/components/Layout/Background/CodeHtml'
-import CardColumns from '~/components/Sections/CardColumns'
 import CardList from '~/components/Sections/CardList'
+import CardRows from '~/components/Sections/CardRows'
 import ContactForm from '~/components/Forms/ContactForm'
 import ImageList from '~/components/Common/List/ImageList'
 import TalkWithUs from '~/components/Texts/TalkWithUs'
@@ -81,7 +71,7 @@ import { loadPartners } from '~/support/files'
 export default {
   components: {
     BackgroundCodeHtml,
-    CardColumns,
+    CardRows,
     CardList,
     ContactForm,
     ImageList,
