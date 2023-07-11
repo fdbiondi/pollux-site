@@ -42,7 +42,7 @@ export default {
   height: var(--section-height);
 
   .text-under {
-    @apply absolute left-0 top-0 h-full w-full;
+    @apply absolute top-0 left-0 h-full w-full;
     z-index: 12;
   }
 
