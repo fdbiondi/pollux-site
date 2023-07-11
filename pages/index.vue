@@ -8,6 +8,9 @@
       <CardList :items="services" :section-title="servicesSectionTitle" />
     </section>
 
+    <!-- Technologies that we use -->
+    <Tools class="bg-white dark:bg-black-light" />
+
     <!-- Dev & Design -->
     <section
       id="what-we-offer"
@@ -59,12 +62,13 @@
 </template>
 
 <script>
-import ImageList from '~/components/Common/List/ImageList'
-import ContactForm from '~/components/Forms/ContactForm'
 import BackgroundCodeHtml from '~/components/Layout/Background/CodeHtml'
 import CardColumns from '~/components/Sections/CardColumns'
 import CardList from '~/components/Sections/CardList'
+import ContactForm from '~/components/Forms/ContactForm'
+import ImageList from '~/components/Common/List/ImageList'
 import TalkWithUs from '~/components/Texts/TalkWithUs'
+import Tools from '~/components/Tools'
 
 import {
   design,
@@ -82,6 +86,7 @@ export default {
     ContactForm,
     ImageList,
     TalkWithUs,
+    Tools,
   },
 
   data() {

@@ -1,26 +1,26 @@
 export default {
   firstColumn: [
     {
-      href: '#',
+      href: '#about',
       name: 'About',
     },
     {
-      href: '#',
+      href: '#services',
       name: 'Services',
     },
     {
-      href: '#',
-      name: 'Career',
+      href: '#contact',
+      name: 'Contact',
     },
     {
-      href: '#',
-      name: 'Our Clients',
+      href: '#partners',
+      name: 'Our Partners',
     },
   ],
   secondColumn: [
     {
       href: '#',
-      name: 'Contact',
+      name: 'Career',
     },
     {
       href: '#',

@@ -26,32 +26,13 @@
         class="flex flex-col space-y-3 text-center text-xl font-light text-white"
       >
         <a
-          href="#services"
+          v-for="(link, index) in links"
+          :key="`menu-link-${index}`"
+          :href="link.href"
           class="nav-item route duration-300 hover:text-pollux-cyan-light"
           @click="close"
         >
-          Services
-        </a>
-        <a
-          href="#our-clients"
-          class="nav-item route duration-300 hover:text-pollux-cyan-light"
-          @click="close"
-        >
-          Our Clients
-        </a>
-        <a
-          href="#about"
-          class="nav-item route duration-300 hover:text-pollux-cyan-light"
-          @click="close"
-        >
-          About Us
-        </a>
-        <a
-          href="#career"
-          class="nav-item route duration-300 hover:text-pollux-cyan-light"
-          @click="close"
-        >
-          Career
+          {{ link.label }}
         </a>
       </div>
     </div>
@@ -60,6 +41,13 @@
 
 <script>
 export default {
+  props: {
+    links: {
+      type: Array,
+      required: true,
+    },
+  },
+
   data() {
     return {
       menuOpen: false,
