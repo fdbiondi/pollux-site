@@ -34,10 +34,10 @@
 </template>
 
 <script>
-const title = 'Business Success'
-const upperTitle = 'Custom Software Solutions for'
+const title = 'CUSTOM SOFTWARE SOLUTIONS'
+const upperTitle = 'We build awesome'
 const subtitle =
-  'Innovative software development and consulting partner. We help products scale through the use of technology solutions to improve customer experience and internal processes.'
+  'We are a software company dedicated to building custom web and mobile applications.'
 
 const knowMore = 'Know more'
 const letsConnect = "Let's connect"

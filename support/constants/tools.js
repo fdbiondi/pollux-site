@@ -150,4 +150,10 @@ export default {
   'digital-ocean': {
     link: 'https://www.digitalocean.com/',
   },
+  wordpress: {
+    link: 'https://wordpress.com',
+  },
+  flask: {
+    link: 'https://flask.palletsprojects.com/en/2.3.x',
+  },
 }
