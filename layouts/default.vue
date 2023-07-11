@@ -39,14 +39,14 @@
 
 <script>
 import { mapGetters } from 'vuex'
-import { AppHeader, Hero, AppFooter } from '~/components/Layout'
+import { AppFooter, AppHeader, Hero } from '~/components/Layout'
 import Notification from '~/components/Common/UI/Notification'
 
 export default {
   components: {
+    AppFooter,
     AppHeader,
     Hero,
-    AppFooter,
     Notification,
   },
 
