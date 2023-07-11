@@ -58,7 +58,7 @@
             </a>
           </div>
 
-          <div class="flex flex-col p-6 sm:px-10 lg:p-6">
+          <div v-show="false" class="flex flex-col p-6 sm:px-10 lg:p-6">
             <div class="line-block"></div>
 
             <a

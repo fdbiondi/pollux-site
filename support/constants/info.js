@@ -1,6 +1,6 @@
 export const COMPANY = 'Pollux'
-export const COPYRIGHT = 'Copyright © 2022'
-export const COPYRIGHT_SHORT = '© 2022'
+export const COPYRIGHT = `Copyright © ${new Date().getFullYear()}`
+export const COPYRIGHT_SHORT = `© ${new Date().getFullYear()}`
 export const PRIVACY_POLICY = 'Privacy policy'
 
 export const POLLUX_COOP = 'Pollux Cooperative'

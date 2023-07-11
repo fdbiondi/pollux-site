@@ -11,39 +11,10 @@
     <!-- Technologies that we use -->
     <Tools class="bg-white dark:bg-black-light" />
 
-    <!-- Let's connect => to contact form -->
-    <section v-show="false">
-      <AnimatedGradient class="anim-gradient">
-        <template #tilt>
-          <div class="anim-gradient--tilt">
-            <svg
-              data-name="Layer 1"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 800 120"
-              preserveAspectRatio="none"
-            >
-              <path
-                d="M 0,0 L0,120 L-1235,120 L1370,0 z"
-                class="fill-white dark:fill-black-light"
-              ></path>
-            </svg>
-          </div>
-        </template>
-
-        <div class="absolute w-full font-serif">
-          <FullBannerTitle
-            link="#contact"
-            :link-text="tellUsAbout"
-            :upper-title="readyForThis"
-            :title="letBuild"
-          />
-        </div>
-      </AnimatedGradient>
-    </section>
-
     <!-- Dev & Design -->
     <section
-      class="bg-gray-100 shadow-inner shadow-black-light/40 dark:bg-black-light dark:shadow-white/5 dark:brightness-110"
+      id="what-we-offer"
+      class="bg-gray-200 shadow-inner shadow-black-light/40 dark:bg-black-light dark:shadow-white/5 dark:brightness-110"
     >
       <CardColumns
         :left-items="development"
@@ -79,7 +50,7 @@
     <!-- Talk to us / Contact Form -->
     <section
       id="contact"
-      class="bg-gray-100 py-8 shadow-inner shadow-black-light/20 dark:bg-black-light dark:shadow-gray-800/20 lg:py-16 xl:py-32"
+      class="bg-gray-200 py-8 shadow-inner shadow-black-light/20 dark:bg-black-light dark:shadow-gray-800/20 lg:py-16 xl:py-32"
     >
       <ContactForm>
         <TalkWithUs />
@@ -91,13 +62,11 @@
 </template>
 
 <script>
-import ImageList from '~/components/Common/List/ImageList'
-import AnimatedGradient from '~/components/Common/UI/AnimatedGradient'
-import ContactForm from '~/components/Forms/ContactForm'
 import BackgroundCodeHtml from '~/components/Layout/Background/CodeHtml'
 import CardColumns from '~/components/Sections/CardColumns'
 import CardList from '~/components/Sections/CardList'
-import FullBannerTitle from '~/components/Texts/FullBannerTitle'
+import ContactForm from '~/components/Forms/ContactForm'
+import ImageList from '~/components/Common/List/ImageList'
 import TalkWithUs from '~/components/Texts/TalkWithUs'
 import Tools from '~/components/Tools'
 
@@ -109,19 +78,13 @@ import {
 } from '~/support/constants/home'
 import { loadPartners } from '~/support/files'
 
-const tellUsAbout = 'Tell us about your project'
-const readyForThis = 'Ready for this?'
-const letBuild = 'Let Build a Great Product!'
-
 export default {
   components: {
-    AnimatedGradient,
     BackgroundCodeHtml,
     CardColumns,
     CardList,
     ContactForm,
     ImageList,
-    FullBannerTitle,
     TalkWithUs,
     Tools,
   },
@@ -136,10 +99,6 @@ export default {
       development,
       // Partners
       partners: [],
-      // Let's Connect Banner
-      tellUsAbout,
-      readyForThis,
-      letBuild,
     }
   },
 

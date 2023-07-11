@@ -8,18 +8,20 @@
 
       <div class="z-30 flex items-center">
         <div class="hidden text-lg text-white 2xl:flex">
-          <a href="#services" class="nav-item route--underline"> Services </a>
-          <a href="#our-clients" class="nav-item route--underline">
-            Our Clients
+          <a
+            v-for="(link, index) in links"
+            :key="`nav-item-link-${index}`"
+            :href="link.href"
+            class="nav-item route--underline"
+          >
+            {{ link.label }}
           </a>
-          <a href="#about" class="nav-item route--underline"> About Us </a>
-          <a href="#career" class="nav-item route--underline"> Career </a>
 
-          <LanguageSwitch />
+          <LanguageSwitch v-show="false" />
           <ThemeSwitch />
         </div>
 
-        <MobileMenu class="block 2xl:hidden" />
+        <MobileMenu class="block 2xl:hidden" :links="links" />
       </div>
     </nav>
   </header>
@@ -37,6 +39,17 @@ export default {
     Logo,
     ThemeSwitch,
     MobileMenu,
+  },
+
+  data() {
+    return {
+      links: [
+        { href: '#services', label: 'Services' },
+        { href: '#partners', label: 'Our Partners' },
+        { href: '#about', label: 'About Us' },
+        { href: '#contact', label: 'Contact Us' },
+      ],
+    }
   },
 }
 </script>
