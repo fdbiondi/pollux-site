@@ -1,20 +1,20 @@
 <template>
   <div class="bg-white text-gray-800 dark:bg-black-light dark:text-gray-200">
-    <Header />
+    <AppHeader />
 
     <nuxt />
 
-    <Footer class="bg-white dark:bg-black-light" />
+    <AppFooter class="bg-white dark:bg-black-light" />
   </div>
 </template>
 
 <script>
-import { Header, Footer } from '~/components/Layout'
+import { AppHeader, AppFooter } from '~/components/Layout'
 
 export default {
   components: {
-    Header,
-    Footer,
+    AppHeader,
+    AppFooter,
   },
 }
 </script>

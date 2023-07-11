@@ -1,17 +1,17 @@
 <template>
   <div class="bg-white text-gray-800 dark:bg-black-light dark:text-gray-200">
-    <Header />
+    <AppHeader />
 
     <nuxt />
   </div>
 </template>
 
 <script>
-import { Header } from '~/components/Layout'
+import { AppHeader } from '~/components/Layout'
 
 export default {
   components: {
-    Header,
+    AppHeader,
   },
 }
 </script>

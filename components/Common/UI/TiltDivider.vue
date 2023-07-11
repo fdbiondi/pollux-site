@@ -8,14 +8,21 @@
     >
       <path
         d="M1200 120L0 16.48 0 0 1200 0 1200 120z"
-        class="fill-white dark:fill-black-light"
+        :class="tiltColor"
       ></path>
     </svg>
   </div>
 </template>
 
 <script>
-export default {}
+export default {
+  props: {
+    tiltColor: {
+      default: 'fill-white dark:fill-black-light',
+      type: String,
+    },
+  },
+}
 </script>
 
 <style lang="scss" scoped>
