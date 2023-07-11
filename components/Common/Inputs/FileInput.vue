@@ -87,6 +87,6 @@ export default {
 
 <style lang="scss" scoped>
 input[type='file'] {
-  @apply absolute left-0 top-0 h-full w-full cursor-pointer opacity-0;
+  @apply absolute top-0 left-0 h-full w-full cursor-pointer opacity-0;
 }
 </style>

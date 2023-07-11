@@ -18,7 +18,7 @@
             :data-aos-delay="100 * i"
           >
             <template #middle>
-              <hr class="mb-8 mt-4" />
+              <hr class="mt-4 mb-8" />
             </template>
           </CardSimple>
         </div>
