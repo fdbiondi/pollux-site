@@ -40,12 +40,12 @@ export const development = [
   },
 ]
 
-export const servicesSectionTitle = 'Find your software development Service'
+export const servicesSectionTitle = 'What we do'
 
 export const services = [
   {
     description:
-      'Create beautiful, fast and secure web applications tailored exclusively for your business goals.',
+      'From responsive design to backend development and deployment, we deliver high-quality web applications that enhance user experiences and drive your online presence forward.',
 
     image: require('~/assets/images/icons/icons8-source-code-64.png'),
     title: 'Web Development',
@@ -53,7 +53,7 @@ export const services = [
 
   {
     description:
-      'Build well-designed and optimized custom mobile applications with a delightful UX for both iOS and Android.',
+      'We specialize in Flutter mobile application development, providing robust solutions tailored to your needs. From UI/UX design to seamless integration and maintenance, we deliver innovative and high-performance mobile apps that engage users and drive business growth.',
 
     image: require('~/assets/images/icons/icons8-iphone-64.png'),
     title: 'Mobile Development',
@@ -61,17 +61,17 @@ export const services = [
 
   {
     description:
-      'Give your product idea a shape. Plan and evaluate the essential features of your product to accomplish your business goals and eliminate possible mistakes.',
+      'We offer comprehensive services in building and managing cloud-based infrastructure using AWS. From architectural design to deployment and optimization, we leverage AWS technologies to ensure scalable, secure, and highly available cloud solutions that empower your business to thrive in the digital era.',
 
     image: require('~/assets/images/icons/icons8-multiple-devices-64.png'),
-    title: 'Product Design',
+    title: 'Cloud-based Infrastructure',
   },
 
   {
     description:
-      'Leverage the power of sales online, with a customized ecommerce platform that suits your needs.',
+      'We have a strong focus on developing e-commerce websites using WooCommerce. From intuitive design and seamless integration to custom theme and plugin development, we provide tailored solutions that enhance user experiences, drive conversions, and empower businesses to succeed in the online marketplace.',
 
     image: require('~/assets/images/icons/icons8-shopping-cart-64.png'),
-    title: 'Ecommerce Development',
+    title: 'E-commerce Development',
   },
 ]
