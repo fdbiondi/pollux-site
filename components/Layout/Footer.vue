@@ -150,7 +150,9 @@ export default {
 
     &:hover {
       @apply origin-center scale-105 text-black-light dark:text-white;
-      transition: transform 200ms, scale 100ms;
+      transition:
+        transform 200ms,
+        scale 100ms;
     }
   }
 }

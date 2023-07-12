@@ -14,7 +14,7 @@ export const getFromContext = (r, extension, fn = null) => {
       src: r(path),
       name: filename(path, extension).replace('-', ' '),
       ...(fn ? fn(path, extension) : {}),
-    })
+    }),
   )
 
   return files
@@ -36,6 +36,6 @@ export const filenameGetHref = (filename) => {
 export const loadPartners = () => {
   return getFromContext(
     require.context('~/assets/images/partners/', true, /\.*$/),
-    '.*'
+    '.*',
   )
 }
