@@ -11,13 +11,13 @@
       >
         <div
           class="flex w-5 flex-shrink-0 rounded-l-md"
-          :class="item.bgColor"
+          :style="item.bgColor"
         ></div>
         <div
-          class="flex flex-1 items-center justify-between truncate rounded-r-md border-b border-r border-t border-gray-200 bg-white"
+          class="flex flex-1 items-center justify-between truncate rounded-r-md border-b border-r border-t border-gray-200 bg-white bg-white dark:bg-black-light"
         >
           <div class="flex-1 truncate px-4 py-2 text-sm">
-            <p class="font-medium text-gray-900">
+            <p class="font-medium dark:text-white">
               {{ item.title }}
             </p>
           </div>
