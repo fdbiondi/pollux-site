@@ -1,5 +1,5 @@
 @mixin input {
-  @apply appearance-none rounded-none border-2 border-white py-4 px-6 text-2xl leading-tight text-gray-800 shadow outline-0 dark:border-black-light;
+  @apply appearance-none rounded-none border-2 border-white px-6 py-4 text-2xl leading-tight text-gray-800 shadow outline-0 dark:border-black-light;
 }
 
 form {
@@ -36,13 +36,13 @@ form {
 
     &:before {
       content: '';
-      @apply absolute top-0 left-0 h-6 w-6 border-2 border-solid border-gray-800 bg-transparent dark:border-gray-200;
+      @apply absolute left-0 top-0 h-6 w-6 border-2 border-solid border-gray-800 bg-transparent dark:border-gray-200;
     }
 
     &:checked:after {
       content: '';
-      @apply absolute border-r-2 border-b-2 border-solid border-gray-800 dark:border-gray-200;
-      @apply top-[-0.5rem] left-3 h-7 w-3 rotate-45;
+      @apply absolute border-b-2 border-r-2 border-solid border-gray-800 dark:border-gray-200;
+      @apply left-3 top-[-0.5rem] h-7 w-3 rotate-45;
     }
   }
 

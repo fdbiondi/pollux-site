@@ -1,6 +1,6 @@
 <template>
   <section class="py-8 lg:py-16 xl:py-32">
-    <div class="container mx-auto py-12 px-6 pb-16">
+    <div class="container mx-auto px-6 py-12 pb-16">
       <h2 class="title">The Development Process</h2>
 
       <div class="flex flex-wrap">
