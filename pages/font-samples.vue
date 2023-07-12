@@ -76,6 +76,10 @@ export default {
 
   layout: 'no-hero',
 
+  middleware({ redirect }) {
+    redirect('/404')
+  },
+
   data() {
     return {
       colorPalette: {
