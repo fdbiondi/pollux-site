@@ -46,7 +46,7 @@ export default {
       (path, extension) => ({
         link: getToolLink(path, extension),
         vClass: getToolClass(path, extension),
-      })
+      }),
     )
   },
 }

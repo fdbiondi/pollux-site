@@ -80,7 +80,7 @@ export default {
           pathLong: r(key),
           pathShort: key,
           name: names[index],
-        })
+        }),
       )
     },
 
