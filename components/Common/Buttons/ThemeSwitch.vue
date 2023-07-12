@@ -1,10 +1,7 @@
 <template>
   <div class="switch flex items-center justify-center">
     <label for="theme-switcher" class="flex cursor-pointer items-center">
-      <div
-        class="switch--container"
-        :class="{ 'dark-theme': value, 'light-theme': !value }"
-      >
+      <div class="switch--container" :class="[`${theme}-theme`]">
         <input
           id="theme-switcher"
           v-model="value"
@@ -49,28 +46,46 @@
 </template>
 
 <script>
+const DARK = 'dark'
+const LIGHT = 'light'
+
 export default {
   data() {
+    const defaultTheme = DARK
+
     return {
-      value: false,
+      defaultTheme,
+      theme: defaultTheme,
     }
   },
 
-  watch: {
-    value(newValue, oldValue) {
-      if (newValue !== oldValue) {
-        this.switchTheme()
-      }
+  computed: {
+    value: {
+      // dark-theme': value, 'LIGHT-theme
+      set(value) {
+        if (!value) {
+          this.theme = LIGHT
+        } else {
+          this.theme = DARK
+        }
+
+        this.switchTheme(this.theme)
+      },
+
+      get() {
+        return this.theme === this.defaultTheme
+      },
     },
   },
 
   mounted() {
-    this.value = localStorage.getItem('nuxt-color-mode') === 'dark'
+    this.theme = localStorage.getItem('nuxt-color-mode') ?? this.defaultTheme
+    this.switchTheme(this.theme)
   },
 
   methods: {
-    switchTheme() {
-      this.$colorMode.preference = this.value ? 'dark' : 'light'
+    switchTheme(theme) {
+      this.$colorMode.preference = theme
     },
   },
 }

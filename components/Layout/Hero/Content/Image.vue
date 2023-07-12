@@ -61,23 +61,23 @@
             >
               <stop
                 offset="0"
-                style="stop-color: #3fa1ff; stop-opacity: 0%"
+                style="stop-color: #3fa1ff; stop-opacity: 0"
               ></stop>
               <stop
                 offset="0.1902"
-                style="stop-color: #308eff; stop-opacity: 761%"
+                style="stop-color: #308eff; stop-opacity: 7.61"
               ></stop>
               <stop
                 offset="0.4491"
-                style="stop-color: #217bff; stop-opacity: 18%"
+                style="stop-color: #217bff; stop-opacity: 0.18"
               ></stop>
               <stop
                 offset="0.7158"
-                style="stop-color: #1870ff; stop-opacity: 28.6%"
+                style="stop-color: #1870ff; stop-opacity: 0.286"
               ></stop>
               <stop
                 offset="1"
-                style="stop-color: #156cff; stop-opacity: 40%"
+                style="stop-color: #156cff; stop-opacity: 0.4"
               ></stop>
             </linearGradient>
             <path

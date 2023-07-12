@@ -34,7 +34,9 @@
   .button:hover {
     -webkit-transform: translateY(-3px);
     transform: translateY(-3px);
-    transition: box-shadow 0.25s ease, transform 0.25s ease,
+    transition:
+      box-shadow 0.25s ease,
+      transform 0.25s ease,
       -webkit-transform 0.25s ease;
   }
 
