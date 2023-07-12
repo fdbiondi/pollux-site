@@ -21,7 +21,7 @@
     </svg>
 
     <div
-      class="absolute inset-0 z-0 xl:inset-y-0 xl:inset-x-auto xl:right-0 xl:w-1/2"
+      class="absolute inset-0 z-0 xl:inset-x-auto xl:inset-y-0 xl:right-0 xl:w-1/2"
     >
       <!-- class="h-56 w-full object-cover sm:h-72 md:h-96 lg:h-full lg:w-full" -->
       <img class="h-full w-full object-cover" :src="imageSrc" />
