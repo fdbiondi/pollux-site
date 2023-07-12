@@ -5,28 +5,33 @@
       id="services"
       class="bg-white py-8 dark:bg-black-light lg:py-16 xl:py-24"
     >
-      <CardList :items="services" :section-title="servicesSectionTitle" />
+      <CardList
+        :items="servicesTypes"
+        :section-title="SERVICES_SECTION_TITLE"
+      />
     </section>
 
     <!-- Technologies that we use -->
     <Tools class="bg-white dark:bg-black-light" />
 
-    <!-- Dev & Design -->
+    <!-- What we offer -->
     <section
       id="what-we-offer"
-      class="bg-gray-200 shadow-inner shadow-black-light/40 dark:bg-black-light dark:shadow-white/5 dark:brightness-110"
+      class="bg-white py-16 dark:bg-black-light lg:py-24 xl:py-32"
     >
-      <CardColumns
-        :left-items="development"
-        :right-items="design"
-        :settings="{
-          left: {
-            sideImage: false,
-            decoratorStyle: 'top: 10rem',
-            cardClass: 'my-16 px-8',
-          },
-        }"
-      />
+      <div class="container mx-auto px-4 sm:px-4 md:px-2">
+        <ul
+          role="list"
+          class="grid grid-cols-1 gap-6 lg:grid-cols-3 lg:gap-12 lg:gap-y-16"
+        >
+          <CardGradient
+            v-for="(item, index) in servicesCategories"
+            :key="`card-gradient-${index}`"
+            :title="item.title"
+            :description="item.description"
+          />
+        </ul>
+      </div>
     </section>
 
     <!-- Our partners -->
@@ -63,7 +68,7 @@
 
 <script>
 import BackgroundCodeHtml from '~/components/Layout/Background/CodeHtml'
-import CardColumns from '~/components/Sections/CardColumns'
+import CardGradient from '~/components/Common/Cards/CardGradient'
 import CardList from '~/components/Sections/CardList'
 import ContactForm from '~/components/Forms/ContactForm'
 import ImageList from '~/components/Common/List/ImageList'
@@ -71,17 +76,16 @@ import TalkWithUs from '~/components/Texts/TalkWithUs'
 import Tools from '~/components/Tools'
 
 import {
-  design,
-  development,
-  services,
-  servicesSectionTitle,
+  servicesCategories,
+  servicesTypes,
+  SERVICES_SECTION_TITLE,
 } from '~/support/constants/home'
 import { loadPartners } from '~/support/files'
 
 export default {
   components: {
     BackgroundCodeHtml,
-    CardColumns,
+    CardGradient,
     CardList,
     ContactForm,
     ImageList,
@@ -91,19 +95,12 @@ export default {
 
   data() {
     return {
-      // Our services
-      services,
-      servicesSectionTitle,
-      // Dev & Design
-      design,
-      development,
-      // Partners
-      partners: [],
-    }
-  },
+      SERVICES_SECTION_TITLE,
+      servicesCategories,
+      servicesTypes,
 
-  mounted() {
-    this.partners = loadPartners()
+      partners: loadPartners(),
+    }
   },
 }
 </script>
@@ -141,7 +138,8 @@ export default {
 
 .partners {
   ::v-deep img {
-    @apply grayscale drop-shadow-tight dark:brightness-200 dark:drop-shadow-none;
+    filter: drop-shadow(0 2px 1px rgb(0 0 0 / 0.2))
+      drop-shadow(0 2px 2px rgb(0 0 0 / 0.5)) grayscale(100%);
   }
 }
 </style>

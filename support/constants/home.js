@@ -1,4 +1,16 @@
-export const design = [
+export const servicesCategories = [
+  {
+    description:
+      'We have rock-solid DevOps/SLA practices to help you leverage cloud technology speeding up development and increasing app security and scalability.',
+    image: require('~/assets/images/icons/icons8-cloud-done-64.png'),
+    title: 'Cloud Technology',
+  },
+  {
+    description:
+      'Ship your MVP to market without spending months on assembling an in-house development team for your startup.',
+    image: require('~/assets/images/icons/icons8-process-64.png'),
+    title: 'MVP Development',
+  },
   {
     description: 'Take your business prototype app for a test drive',
     image: require('~/assets/images/icons/icons8-web-design-64.png'),
@@ -24,25 +36,9 @@ export const design = [
   },
 ]
 
-export const development = [
-  {
-    description:
-      'We have rock-solid DevOps/SLA practices to help you leverage cloud technology speeding up development and increasing app security and scalability.',
-    image: require('~/assets/images/icons/icons8-cloud-done-64.png'),
-    title: 'Cloud Technology',
-  },
+export const SERVICES_SECTION_TITLE = 'Find your software development Service'
 
-  {
-    description:
-      'Ship your MVP to market without spending months on assembling an in-house development team for your startup.',
-    image: require('~/assets/images/icons/icons8-process-64.png'),
-    title: 'MVP Development',
-  },
-]
-
-export const servicesSectionTitle = 'Find your software development Service'
-
-export const services = [
+export const servicesTypes = [
   {
     description:
       'Create beautiful, fast and secure web applications tailored exclusively for your business goals.',
