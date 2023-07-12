@@ -32,7 +32,7 @@
     <!-- Our partners -->
     <section
       id="partners"
-      class="bg-white py-4 brightness-110 dark:bg-gray-900 lg:py-8 xl:py-16"
+      class="bg-white py-4 brightness-110 dark:bg-gray-800 lg:py-8 xl:py-16"
     >
       <div class="container mx-auto px-6">
         <div v-show="false" class="mb-1 text-center">
@@ -127,7 +127,7 @@ export default {
   --gradient-color-4: theme('colors.gray.300');
 
   .anim-gradient--tilt {
-    @apply absolute top-0 right-0 overflow-hidden;
+    @apply absolute right-0 top-0 overflow-hidden;
     line-height: 0;
   }
 
@@ -141,7 +141,7 @@ export default {
 
 .partners {
   ::v-deep img {
-    @apply grayscale filter drop-shadow-tight dark:brightness-200 dark:drop-shadow-none;
+    @apply grayscale drop-shadow-tight dark:brightness-200 dark:drop-shadow-none;
   }
 }
 </style>
