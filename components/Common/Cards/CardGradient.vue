@@ -8,7 +8,7 @@
     >
       <h2 class="m-0 mt-2 text-xl">
         {{ title }}
-        <span>&rarr;</span>
+        <!-- <span>&rarr;</span> -->
       </h2>
 
       <slot>
