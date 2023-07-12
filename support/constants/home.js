@@ -34,27 +34,6 @@ export const servicesCategories = [
     image: require('~/assets/images/icons/icons8-amiable-64.png'),
     title: 'User Friendly',
   },
-  {
-    description:
-      'Give your product idea a shape. Plan and evaluate the essential features of your product to accomplish your business goals and eliminate possible mistakes.',
-
-    image: require('~/assets/images/icons/icons8-multiple-devices-64.png'),
-    title: 'Product Design',
-  },
-  {
-    description:
-      'Give your product idea a shape. Plan and evaluate the essential features of your product to accomplish your business goals and eliminate possible mistakes.',
-
-    image: require('~/assets/images/icons/icons8-multiple-devices-64.png'),
-    title: 'Product Design',
-  },
-  {
-    description:
-      'Give your product idea a shape. Plan and evaluate the essential features of your product to accomplish your business goals and eliminate possible mistakes.',
-
-    image: require('~/assets/images/icons/icons8-multiple-devices-64.png'),
-    title: 'Product Design',
-  },
 ]
 
 export const SERVICES_SECTION_TITLE = 'Find your software development Service'

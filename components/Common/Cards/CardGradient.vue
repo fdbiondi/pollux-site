@@ -8,7 +8,7 @@
     >
       <h2 class="m-0 mt-2 text-xl">
         {{ title }}
-        <span class="text-3xl">&rarr;</span>
+        <span>&rarr;</span>
       </h2>
 
       <slot>
@@ -54,9 +54,7 @@ li {
   background-size: 400%;
   background-position: 0;
   background-image: var(--accent-gradient);
-  box-shadow:
-    0 4px 6px -1px rgba(0 0 0 / 10%),
-    0 2px 4px -2px rgba(0 0 0 / 10%);
+  box-shadow: 0 4px 6px -1px rgba(0 0 0 / 10%), 0 2px 4px -2px rgba(0 0 0 / 10%);
   transition: background-position 0.6s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
