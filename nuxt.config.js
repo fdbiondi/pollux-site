@@ -1,8 +1,15 @@
-export default {
+import { defineNuxtConfig } from '@nuxt/bridge'
+
+export default defineNuxtConfig({
   target: 'static',
 
   router: {
     base: '/pollux-site/',
+  },
+
+  runtimeConfig: {
+    apiKey: '',
+    public: {},
   },
 
   // Global page headers: https://go.nuxtjs.dev/config-head
@@ -149,4 +156,4 @@ export default {
     },
     preload: true,
   },
-}
+})
