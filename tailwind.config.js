@@ -1,5 +1,4 @@
 const colors = require('tailwindcss/colors')
-const plugin = require('tailwindcss/plugin')
 
 const hsl = (h, s, l) => {
   return ({ opacityVariable, opacityValue }) => {
@@ -23,17 +22,6 @@ module.exports = {
   ],
 
   darkMode: 'class',
-
-  plugins: [
-    plugin(({ addUtilities }) => {
-      addUtilities({
-        '.drop-shadow-tight': {
-          '--tw-drop-shadow':
-            'drop-shadow(0 2px 1px rgb(0 0 0 / 0.2)) drop-shadow(0 2px 2px rgb(0 0 0 / 0.5));',
-        },
-      })
-    }),
-  ],
 
   theme: {
     fontFamily: {
@@ -91,6 +79,10 @@ module.exports = {
           A300: hsl(335, '100%', '71%'),
           A400: hsl(339, '100%', '66%'),
         },
+      },
+
+      dropShadow: {
+        tight: ['0 2px 1px rgb(0 0 0 / 0.2)', '0 2px 2px rgb(0 0 0 / 0.5)'],
       },
     },
   },

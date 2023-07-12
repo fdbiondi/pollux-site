@@ -10,9 +10,8 @@
           <img
             :src="src"
             :alt="name"
-            class="h-24 w-24 hover:scale-105 hover:saturate-150 hover:!filter-none hover:transition-transform"
             :class="vClass"
-            style="filter: grayscale(1)"
+            class="custom-grayscale h-24 w-24 hover:scale-105 hover:saturate-150 hover:!filter-none hover:transition-transform"
           />
         </a>
       </template>

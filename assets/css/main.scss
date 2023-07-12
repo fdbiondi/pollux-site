@@ -59,3 +59,12 @@ img {
   -o-animation: colorful-bg 30s ease infinite;
   animation: colorful-bg 30s ease infinite;
 }
+
+/* fixes drop-shadow, grayscale tailwind classes, once fixed on tw should replace with tw classes */
+.custom-drop-shadow-lg {
+  filter: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04))
+    drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
+}
+.custom-grayscale {
+  filter: grayscale(1);
+}

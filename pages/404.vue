@@ -1,7 +1,7 @@
 <template>
   <div class="flex min-h-screen flex-col items-center justify-evenly">
     <div
-      class="container -mx-8 flex items-center justify-center text-black-light drop-shadow-lg filter dark:text-white"
+      class="container -mx-8 flex items-center justify-center text-black-light dark:text-white custom-drop-shadow-lg"
     >
       <div class="mx-auto px-2 text-center font-mono">
         <h3 class="my-8 text-5xl font-bold">Woops! Something's wrong.</h3>
