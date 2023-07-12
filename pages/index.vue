@@ -14,7 +14,7 @@
     <!-- Dev & Design -->
     <section
       id="what-we-offer"
-      class="bg-white py-10 dark:bg-black-light lg:py-16 xl:py-24"
+      class="bg-white py-5 dark:bg-black-light lg:py-16 xl:py-24"
     >
       <CardRows :development="development" :design="design" />
     </section>
