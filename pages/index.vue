@@ -141,7 +141,11 @@ export default {
 
 .partners {
   ::v-deep img {
-    @apply grayscale drop-shadow-tight dark:brightness-200 dark:drop-shadow-none;
+    @apply dark:brightness-200 dark:drop-shadow-none;
+
+    /* fix for classes -> grayscale drop-shadow-tight */
+    filter: grayscale(1) drop-shadow(0 2px 1px rgb(0 0 0 / 0.2))
+      drop-shadow(0 2px 2px rgb(0 0 0 / 0.5));
   }
 }
 </style>

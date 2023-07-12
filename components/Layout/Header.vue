@@ -56,6 +56,10 @@ export default {
 
 <style lang="scss" scoped>
 .nav-item {
-  @apply mr-12 block filter drop-shadow-tight lg:inline-block;
+  @apply mr-12 block lg:inline-block;
+
+  /* fix for drop-shadow-tight */
+  filter: drop-shadow(0 2px 1px rgb(0 0 0 / 0.2))
+    drop-shadow(0 2px 2px rgb(0 0 0 / 0.5));
 }
 </style>
