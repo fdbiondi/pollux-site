@@ -15,11 +15,7 @@
       @mouseleave="gestureEnd"
       @mousemove="gestureMove"
     >
-      <div
-        v-for="(item, index) in items"
-        :key="index"
-        class="shrink-0 p-4"
-      >
+      <div v-for="(item, index) in items" :key="index" class="shrink-0 p-4">
         <slot :props="item" :index="index" />
       </div>
     </div>
