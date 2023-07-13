@@ -42,9 +42,9 @@
       id="contact"
       class="bg-gray-200 py-8 shadow-inner shadow-black-light/20 dark:bg-black-light dark:shadow-gray-800/20 lg:py-16 xl:py-32"
     >
-      <ContactForm>
-        <TalkWithUs />
-      </ContactForm>
+      <ContactFormLaravel>
+        <ContactUs />
+      </ContactFormLaravel>
     </section>
 
     <BackgroundCodeHtml />
@@ -55,9 +55,9 @@
 import BackgroundCodeHtml from '~/components/Layout/Background/CodeHtml'
 import CardList from '~/components/Sections/CardList'
 import CardRows from '~/components/Sections/CardRows'
-import ContactForm from '~/components/Forms/ContactForm'
+import ContactFormLaravel from '~/components/Forms/ContactFormLaravel'
 import ImageList from '~/components/Common/List/ImageList'
-import TalkWithUs from '~/components/Texts/TalkWithUs'
+import ContactUs from '~/components/Texts/ContactUs'
 import Tools from '~/components/Tools'
 
 import {
@@ -73,9 +73,9 @@ export default {
     BackgroundCodeHtml,
     CardRows,
     CardList,
-    ContactForm,
+    ContactFormLaravel,
     ImageList,
-    TalkWithUs,
+    ContactUs,
     Tools,
   },
 
