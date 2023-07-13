@@ -96,7 +96,7 @@ export default {
         icons: {
           // list the icons you want to add, not listed icons will be tree-shaked
           brands: [
-            'faFacebookSquare',
+            'faSquareFacebook',
             'faGithub',
             'faInstagram',
             'faLinkedinIn',
