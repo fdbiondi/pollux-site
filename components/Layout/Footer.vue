@@ -16,7 +16,7 @@
           <fa-icon :icon="['fab', 'twitter']" class="footer--icon"></fa-icon>
           <fa-icon :icon="['fab', 'instagram']" class="footer--icon"></fa-icon>
           <fa-icon
-            :icon="['fab', 'facebook-square']"
+            :icon="['fab', 'square-facebook']"
             class="footer--icon"
           ></fa-icon>
           <fa-icon :icon="['fab', 'github']" class="footer--icon"></fa-icon>

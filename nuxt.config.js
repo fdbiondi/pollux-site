@@ -61,6 +61,7 @@ export default {
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
     // SCSS file in the project
+    '@/assets/css/tailwind.css',
     '@/assets/css/main.scss',
   ],
 
@@ -96,7 +97,7 @@ export default {
         icons: {
           // list the icons you want to add, not listed icons will be tree-shaked
           brands: [
-            'faFacebookSquare',
+            'faSquareFacebook',
             'faGithub',
             'faInstagram',
             'faLinkedinIn',
@@ -138,6 +139,8 @@ export default {
   },
 
   colorMode: {
+    preference: 'system', // default value of $colorMode.preference
+    fallback: 'dark',
     classSuffix: '',
   },
 
@@ -148,5 +151,14 @@ export default {
       Oswald: true,
     },
     preload: true,
+  },
+
+  postcss: {
+    postcssOptions: {
+      plugins: {
+        tailwindcss: {},
+        autoprefixer: {},
+      },
+    },
   },
 }
