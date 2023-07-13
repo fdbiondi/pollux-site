@@ -1,4 +1,6 @@
-const colors = require('tailwindcss/colors')
+import colors from 'tailwindcss/colors'
+import tailwindcss from 'tailwindcss'
+import autoprefixer from 'autoprefixer'
 
 const hsl = (h, s, l) => {
   return ({ opacityVariable, opacityValue }) => {
@@ -12,9 +14,9 @@ const hsl = (h, s, l) => {
   }
 }
 
-module.exports = {
+export default {
   content: [
-    './components/**/*.{vue,js,ts}',
+    './components/**/*.{js,vue,ts}',
     './layouts/**/*.vue',
     './pages/**/*.vue',
     './plugins/**/*.{js,ts}',
@@ -86,4 +88,6 @@ module.exports = {
       },
     },
   },
+
+  plugins: [tailwindcss, autoprefixer],
 }

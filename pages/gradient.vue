@@ -25,6 +25,10 @@ import { Gradient } from 'anim-gradient'
 export default {
   layout: 'empty',
 
+  middleware({ redirect }) {
+    redirect('/404')
+  },
+
   mounted() {
     const g = new Gradient()
     g.initGradient('#gradient-canvas')

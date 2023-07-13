@@ -1,6 +1,6 @@
 <template>
   <div
-    class="relative border-b border-dashed border-white border-opacity-20 py-8 lg:py-16 xl:py-32"
+    class="relative border-b border-dashed border-white/20 py-8 lg:py-16 xl:py-32"
   >
     <div class="container mx-auto">
       <div class="flex items-start">

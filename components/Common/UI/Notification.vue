@@ -15,7 +15,7 @@
           </div>
 
           <div
-            class="order-3 mt-6 w-full flex-shrink-0 sm:order-2 sm:mt-0 sm:w-auto"
+            class="order-3 mt-6 w-full shrink-0 sm:order-2 sm:mt-0 sm:w-auto"
           >
             <slot name="action">
               <a
@@ -28,7 +28,7 @@
             </slot>
           </div>
 
-          <div class="order-2 flex-shrink-0 sm:order-3 sm:ml-3">
+          <div class="order-2 shrink-0 sm:order-3 sm:ml-3">
             <button
               type="button"
               class="-mr-1 flex px-3 py-1 hover:bg-white/10 focus:outline-0 dark:hover:bg-black/10 sm:-mr-2"
