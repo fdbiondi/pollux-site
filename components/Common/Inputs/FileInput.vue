@@ -3,7 +3,7 @@
     <slot>
       <label
         :for="name"
-        class="flex h-full w-full cursor-pointer items-center justify-center"
+        class="flex cursor-pointer items-center justify-center"
       >
         <fa-icon
           icon="paperclip"
