@@ -138,6 +138,8 @@ export default {
   },
 
   colorMode: {
+    preference: 'system', // default value of $colorMode.preference
+    fallback: 'dark',
     classSuffix: '',
   },
 
