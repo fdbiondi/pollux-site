@@ -61,6 +61,7 @@ export default {
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
     // SCSS file in the project
+    '@/assets/css/tailwind.css',
     '@/assets/css/main.scss',
   ],
 
@@ -150,5 +151,14 @@ export default {
       Oswald: true,
     },
     preload: true,
+  },
+
+  postcss: {
+    postcssOptions: {
+      plugins: {
+        tailwindcss: {},
+        autoprefixer: {},
+      },
+    },
   },
 }
