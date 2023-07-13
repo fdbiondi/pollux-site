@@ -42,7 +42,6 @@ export const servicesTypes = [
   {
     description:
       'Ship your MVP to market without spending months on assembling an in-house development team for your startup.',
-    image: require('~/assets/images/icons/icons8-process-64.png'),
     title: 'MVP Development',
   },
 ]
@@ -69,16 +68,12 @@ export const services = [
   {
     description:
       'We offer comprehensive services in building and managing cloud-based infrastructure using AWS. From architectural design to deployment and optimization, we leverage AWS technologies to ensure scalable, secure, and highly available cloud solutions that empower your business to thrive in the digital era.',
-
-    image: require('~/assets/images/icons/icons8-multiple-devices-64.png'),
     title: 'Cloud-based Infrastructure',
   },
 
   {
     description:
       'We have a strong focus on developing e-commerce websites using WooCommerce. From intuitive design and seamless integration to custom theme and plugin development, we provide tailored solutions that enhance user experiences, drive conversions, and empower businesses to succeed in the online marketplace.',
-
-    image: require('~/assets/images/icons/icons8-shopping-cart-64.png'),
     title: 'E-commerce Development',
   },
 ]
