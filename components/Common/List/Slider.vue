@@ -18,7 +18,7 @@
       <div
         v-for="(item, index) in items"
         :key="index"
-        class="flex-shrink-0 p-4"
+        class="shrink-0 p-4"
       >
         <slot :props="item" :index="index" />
       </div>
