@@ -4,9 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "nuxi dev",
-    "build": "nuxi build",
+    "build": "nuxi generate",
     "start": "nuxi preview",
-    "generate": "nuxi generate",
     "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
     "lint:style": "stylelint \"**/*.{css,scss,sass,html,vue}\" --ignore-path .gitignore",
     "lint:prettier": "prettier --check .",
@@ -25,6 +24,7 @@
     "@babel/eslint-parser": "^7.22.9",
     "@fortawesome/free-brands-svg-icons": "^6.4.0",
     "@fortawesome/free-solid-svg-icons": "^6.4.0",
+    "@nuxt/devtools": "latest",
     "@nuxt/bridge": "npm:@nuxt/bridge-edge",
     "@nuxtjs/color-mode": "^2.1.1",
     "@nuxtjs/eslint-config": "^12.0.0",

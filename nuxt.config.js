@@ -3,12 +3,15 @@ import { defineNuxtConfig } from '@nuxt/bridge'
 export default defineNuxtConfig({
   target: 'static',
 
+  devtools: { enabled: true },
+
   router: {
     base: '/pollux-site/',
   },
 
   runtimeConfig: {
     apiKey: '',
+
     public: {},
   },
 
