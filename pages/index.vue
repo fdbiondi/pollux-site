@@ -34,9 +34,9 @@
       </div>
     </section>
 
-    <!-- Our partners -->
+    <!-- Our clients -->
     <section
-      id="partners"
+      id="clients"
       class="bg-white py-4 brightness-110 dark:bg-gray-800 lg:py-8 xl:py-16"
     >
       <div class="container mx-auto px-6">
@@ -44,7 +44,7 @@
           <h4 class="font-serif font-medium">TRUSTED BY</h4>
         </div>
 
-        <ImageList class="partners mb-6" :images="partners" :has-link="true" />
+        <ImageList class="clients mb-6" :images="clients" :has-link="true" />
 
         <hr
           class="mx-16 border-t border-solid border-gray-900 dark:border-white"
@@ -99,7 +99,7 @@ export default {
       servicesCategories,
       servicesTypes,
 
-      partners: loadClients(),
+      clients: loadClients(),
     }
   },
 }
@@ -136,7 +136,7 @@ export default {
   }
 }
 
-.partners {
+.clients {
   ::v-deep img {
     @apply dark:brightness-200 dark:drop-shadow-none;
 
