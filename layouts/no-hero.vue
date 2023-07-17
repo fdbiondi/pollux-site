@@ -22,7 +22,8 @@ export default {
 <style lang="scss" scoped>
 header {
   ::v-deep .nav-item {
-    @apply text-gray-900 filter-none dark:text-white;
+    /* TODO: fix tailwind version */
+    /* @apply text-gray-900 filter-none dark:text-white; */
   }
 }
 
