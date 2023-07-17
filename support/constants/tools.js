@@ -147,7 +147,16 @@ export default {
   jest: {
     link: 'https://jestjs.io/',
   },
+  cypress: {
+    link: 'https://www.cypress.io/',
+  },
   'digital-ocean': {
     link: 'https://www.digitalocean.com/',
+  },
+  wordpress: {
+    link: 'https://wordpress.com',
+  },
+  flask: {
+    link: 'https://flask.palletsprojects.com/',
   },
 }

@@ -14,7 +14,7 @@
           :data-aos-once="true"
           :data-aos-delay="100 * i"
         >
-          <img :src="image" :alt="title" />
+          <img class="-mx-2" :src="image" :alt="title" />
         </Card>
       </div>
     </div>
