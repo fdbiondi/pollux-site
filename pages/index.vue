@@ -80,7 +80,7 @@ import {
   servicesTypes,
   SERVICES_SECTION_TITLE,
 } from '~/support/constants/home'
-import { loadPartners } from '~/support/files'
+import { loadClients } from '~/support/files'
 
 export default {
   components: {
@@ -99,7 +99,7 @@ export default {
       servicesCategories,
       servicesTypes,
 
-      partners: loadPartners(),
+      partners: loadClients(),
     }
   },
 }
