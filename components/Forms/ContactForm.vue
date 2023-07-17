@@ -27,6 +27,7 @@
               type="text"
               placeholder="Full Name"
               class="w-full"
+              required
             />
 
             <input
@@ -35,6 +36,7 @@
               type="text"
               placeholder="Company Name"
               class="w-full"
+              required
             />
           </div>
 
@@ -44,13 +46,14 @@
             type="email"
             placeholder="Email"
             class="mb-4 w-full"
+            required
           />
 
           <div class="flex flex-col sm:flex-row gap-4 mb-4">
             <input
               v-model="startDate"
               type="text"
-              name="start-date"
+              name="estimated-start-date"
               placeholder="Estimated Start Date"
               onfocus="(this.type='date')"
               class="w-full"
