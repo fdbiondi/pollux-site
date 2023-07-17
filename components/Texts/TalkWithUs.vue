@@ -9,8 +9,8 @@
 
       <span class="my-16 text-xl sm:p-8 2xl:my-0">
         <span>{{ fillOutForm }}</span>
-        <a :href="`mailto: ${email}`" class="text-pollux-pink">
-          {{ email }}
+        <a :href="`mailto: ${EMAIL}`" class="text-pollux-pink">
+          {{ EMAIL }}
         </a>
       </span>
     </div>
@@ -18,8 +18,9 @@
 </template>
 
 <script>
-const email = 'hello@polluxcoop.com'
-const fillOutForm = 'Simply fill out the form or email us at'
+import { EMAIL } from '~/support/constants/info'
+
+const fillOutForm = 'Simply fill out the form or EMAIL us at'
 const getYour = 'get your'
 const moving = 'moving!'
 const project = 'project'
@@ -28,7 +29,7 @@ const talkToUs = 'Talk to us and'
 export default {
   data() {
     return {
-      email,
+      EMAIL,
       fillOutForm,
       getYour,
       moving,

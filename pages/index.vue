@@ -5,10 +5,7 @@
       id="services"
       class="bg-white py-8 dark:bg-black-light lg:py-16 xl:py-24"
     >
-      <CardList
-        :items="servicesTypes"
-        :section-title="SERVICES_SECTION_TITLE"
-      />
+      <CardList :items="servicesTypes" :title="SERVICES_SECTION_TITLE" />
     </section>
 
     <!-- Technologies that we use -->

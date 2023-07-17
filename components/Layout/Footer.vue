@@ -80,7 +80,7 @@
           <div class="flex justify-between">
             <span>
               {{ COPYRIGHT }} <span @click="bonus">{{ COMPANY }}</span> |
-              <nuxt-link to="#" class="hover:underline">
+              <nuxt-link to="privacy-policy" class="hover:underline">
                 {{ PRIVACY_POLICY }}
               </nuxt-link>
             </span>

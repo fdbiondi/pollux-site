@@ -1,7 +1,7 @@
 <template>
   <section class="py-4 lg:py-8 xl:py-16">
     <div class="container mx-auto px-8 sm:px-4 md:px-2">
-      <h2 class="title">{{ toolsSectionTitle }}</h2>
+      <h2 class="title">{{ title }}</h2>
     </div>
 
     <Slider :images="images">
@@ -25,8 +25,6 @@ import Slider from '~/components/Common/List/Slider'
 import { getFromContext } from '~/support/files'
 import { getToolClass, getToolLink } from '~/support/strings'
 
-const toolsSectionTitle = 'Some of the Technologies that we use'
-
 export default {
   components: {
     Slider,
@@ -35,7 +33,7 @@ export default {
   data() {
     return {
       images: [],
-      toolsSectionTitle,
+      title: 'Some of the Technologies that we use',
     }
   },
 
