@@ -13,8 +13,8 @@ export default {
       name: 'Contact',
     },
     {
-      href: '#partners',
-      name: 'Our Partners',
+      href: '#clients',
+      name: 'Our Clients',
     },
   ],
   secondColumn: [
