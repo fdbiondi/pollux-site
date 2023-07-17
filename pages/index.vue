@@ -37,7 +37,7 @@
     <!-- Our clients -->
     <section
       id="clients"
-      class="bg-white py-4 brightness-110 dark:bg-gray-800 lg:py-8 xl:py-16"
+      class="bg-white py-8 brightness-105 dark:bg-black-light lg:py-16 xl:py-24"
     >
       <div class="container mx-auto px-6">
         <div v-show="false" class="mb-1 text-center">
@@ -141,7 +141,7 @@ export default {
     @apply dark:brightness-200 dark:drop-shadow-none;
 
     /* fix for classes -> grayscale drop-shadow-tight */
-    filter: grayscale(1) drop-shadow(0 2px 1px rgb(0 0 0 / 0.2))
+    filter: grayscale(1) invert(0.2) drop-shadow(0 2px 1px rgb(0 0 0 / 0.2))
       drop-shadow(0 2px 2px rgb(0 0 0 / 0.5));
   }
 }
