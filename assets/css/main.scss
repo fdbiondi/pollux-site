@@ -1,5 +1,10 @@
 html {
   scroll-behavior: smooth;
+  background-color: theme('colors.gray.900');
+}
+
+html.dark {
+  background-color: theme('colors.black.light');
 }
 
 body::-webkit-scrollbar-track {
