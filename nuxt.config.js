@@ -1,6 +1,10 @@
 export default {
   target: 'static',
 
+  publicRuntimeConfig: {
+    CONTACT_FORM_URL: process.env.FORMSPREE_URL,
+  },
+
   router: {
     base: '/pollux-site/',
   },

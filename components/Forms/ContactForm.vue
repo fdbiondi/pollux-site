@@ -6,7 +6,11 @@
       </div>
 
       <div class="w-full 2xl:w-1/2">
-        <form class="mx-auto flex max-w-3xl flex-col sm:px-16">
+        <form
+          :action="formUrl"
+          method="POST"
+          class="mx-auto flex max-w-3xl flex-col sm:px-16"
+        >
           <textarea
             v-model="description"
             name="description"
@@ -86,6 +90,7 @@
           <div class="mt-8 flex flex-wrap sm:mt-0">
             <button
               class="button button--outline dark:button--outline-dark m-auto w-full sm:w-1/2"
+              type="submit"
             >
               BOOK A CALL
             </button>
@@ -121,6 +126,7 @@ export default {
       company: null,
       nda: false,
       startDate: null,
+      formUrl: this.$config.CONTACT_FORM_URL,
     }
   },
 }
