@@ -1,7 +1,3 @@
-const mutations = {
-  BONUS(state) {
-    state.colorful++
-  },
-}
+const mutations = {}
 
 export default mutations

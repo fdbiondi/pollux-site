@@ -64,13 +64,13 @@
 </template>
 
 <script>
-import BackgroundCodeHtml from '~/components/Layout/Background/CodeHtml'
 import CardGradient from '~/components/Common/Cards/CardGradient'
-import CardList from '~/components/Sections/CardList'
-import ContactForm from '~/components/Forms/ContactForm'
 import ImageList from '~/components/Common/List/ImageList'
+import ContactForm from '~/components/Forms/ContactForm'
+import BackgroundCodeHtml from '~/components/Layout/Background/CodeHtml'
+import CardList from '~/components/Sections/CardList'
+import Tools from '~/components/Sections/Tools'
 import TalkWithUs from '~/components/Texts/TalkWithUs'
-import Tools from '~/components/Tools'
 
 import {
   servicesCategories,

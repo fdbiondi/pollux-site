@@ -79,7 +79,7 @@
         >
           <div class="flex justify-between">
             <span>
-              {{ COPYRIGHT }} <span @click="bonus">{{ COMPANY }}</span> |
+              {{ COPYRIGHT }} {{ COMPANY }} |
               <nuxt-link to="privacy-policy" class="hover:underline">
                 {{ PRIVACY_POLICY }}
               </nuxt-link>
@@ -97,7 +97,6 @@
 </template>
 
 <script>
-import { mapMutations } from 'vuex'
 import Logo from '~/components/Common/Logo'
 import { sitemap } from '~/support/constants'
 import {
@@ -133,12 +132,6 @@ export default {
       EMAIL,
       PHONE,
     }
-  },
-
-  methods: {
-    ...mapMutations({
-      bonus: 'BONUS',
-    }),
   },
 }
 </script>
