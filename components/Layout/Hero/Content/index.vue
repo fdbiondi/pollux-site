@@ -5,10 +5,6 @@
         <div class="z-20 w-full xl:w-1/2">
           <HeroTitle />
         </div>
-
-        <div v-show="showImage" class="z-20 w-full xl:w-1/2 xl:pl-24">
-          <HeroImage />
-        </div>
       </div>
     </section>
 
@@ -19,21 +15,14 @@
 <script>
 import TiltDivider from '~/components/Common/UI/TiltDivider'
 import HeroTitle from '~/components/Layout/Hero/Content/Title'
-import HeroImage from '~/components/Layout/Hero/Content/Image'
 
 export default {
   components: {
     HeroTitle,
-    HeroImage,
     TiltDivider,
   },
 
   props: {
-    showImage: {
-      default: false,
-      type: Boolean,
-    },
-
     showDivider: {
       default: false,
       type: Boolean,

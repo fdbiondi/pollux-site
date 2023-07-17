@@ -39,8 +39,7 @@ export default {
 
   props: {
     imageSrc: {
-      default:
-        'https://images.unsplash.com/photo-1623520333087-62b8793e3d23?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80',
+      default: '/images/notebook.avif',
       type: String,
     },
 

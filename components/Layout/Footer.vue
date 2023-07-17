@@ -13,23 +13,17 @@
             {{ LETS_CONNECT }}
           </span>
 
-          <fa-icon :icon="['fab', 'twitter']" class="footer--icon"></fa-icon>
-          <fa-icon :icon="['fab', 'instagram']" class="footer--icon"></fa-icon>
-          <fa-icon
-            :icon="['fab', 'square-facebook']"
-            class="footer--icon"
-          ></fa-icon>
-          <fa-icon :icon="['fab', 'github']" class="footer--icon"></fa-icon>
-          <fa-icon
-            :icon="['fab', 'linkedin-in']"
-            class="footer--icon"
-          ></fa-icon>
+          <fa-icon :icon="['fab', 'twitter']" class="footer--icon" />
+          <fa-icon :icon="['fab', 'instagram']" class="footer--icon" />
+          <fa-icon :icon="['fab', 'square-facebook']" class="footer--icon" />
+          <fa-icon :icon="['fab', 'github']" class="footer--icon" />
+          <fa-icon :icon="['fab', 'linkedin-in']" class="footer--icon" />
         </div>
       </div>
 
       <div class="flex flex-col flex-wrap lg:flex-row">
         <div class="w-full p-6 text-xl leading-loose sm:px-10 lg:w-1/4 lg:p-6">
-          <div class="line-block"></div>
+          <div class="line-block" />
 
           {{ POLLUX_COOP }}<br />
 

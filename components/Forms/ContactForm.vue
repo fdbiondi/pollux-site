@@ -17,7 +17,7 @@
             cols="30"
             rows="10"
             placeholder="Brief Project Description"
-            class="mb-4 max-h-64 w-full sm:max-h-96"
+            class="mb-4 max-h-48 w-full sm:max-h-96"
           />
 
           <div class="flex flex-col sm:flex-row gap-4 mb-4">

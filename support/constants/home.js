@@ -36,28 +36,28 @@ export const servicesTypes = [
   {
     description:
       'From responsive design to backend development and deployment, we deliver high-quality web applications that enhance user experiences and drive your online presence forward.',
-    image: './icons/icons8-source-code-64.png',
+    image: '/icons/icons8-source-code-64.png',
     title: 'Web Development',
   },
 
   {
     description:
       'From UI/UX design to seamless integration and maintenance, we deliver innovative and high-performance mobile apps that engage users and drive business growth.',
-    image: './icons/icons8-iphone-64.png',
+    image: '/icons/icons8-iphone-64.png',
     title: 'Mobile Development',
   },
 
   {
     description:
       'From architectural design to deployment and optimization, we leverage AWS technologies to ensure scalable, secure, and highly available cloud solutions that empower your business to thrive in the digital era.',
-    image: './icons/icons8-cloud-done-64.png',
+    image: '/icons/icons8-cloud-done-64.png',
     title: 'Cloud-based Infrastructure',
   },
 
   {
     description:
       'From intuitive design and seamless integration to custom theme and plugin development, we provide tailored solutions that enhance user experiences, drive conversions, and empower businesses to succeed in the online marketplace.',
-    image: './icons/icons8-shopping-cart-64.png',
+    image: '/icons/icons8-shopping-cart-64.png',
     title: 'E-commerce Development',
   },
 ]

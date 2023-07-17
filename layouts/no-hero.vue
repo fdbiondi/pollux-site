@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-white text-gray-800 dark:bg-black-light dark:text-gray-200">
+  <div class="text-gray-800 dark:text-gray-200">
     <AppHeader />
 
     <nuxt />
@@ -27,7 +27,4 @@ header {
   }
 }
 
-::v-deep footer {
-  @apply shadow-none;
-}
 </style>

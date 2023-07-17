@@ -6,13 +6,13 @@
           <div class="background-wrap">
             <canvas id="gradient-canvas" class="absolute top-0" />
 
-            <slot name="tilt"></slot>
+            <slot name="tilt" />
           </div>
           <div class="text-under text-under-blended">
-            <slot></slot>
+            <slot />
           </div>
           <div class="text-under text-under-overlay">
-            <slot></slot>
+            <slot />
           </div>
         </div>
       </div>
