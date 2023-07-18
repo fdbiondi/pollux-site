@@ -168,8 +168,9 @@ export default {
       filter: grayscale(1) invert(0.2);
 
       &:hover {
-        filter: none;
-        transform: scaleX(1.05) scaleY(1.05)
+        filter: saturate(2) drop-shadow(0 2px 1px rgb(0 0 0 / 0.2))
+          drop-shadow(0 2px 2px rgb(0 0 0 / 0.5));
+        transform: scaleX(1.05) scaleY(1.05);
       }
     }
   }
