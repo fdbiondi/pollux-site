@@ -26,5 +26,4 @@ header {
     /* @apply text-gray-900 filter-none dark:text-white; */
   }
 }
-
 </style>
