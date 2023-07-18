@@ -3,6 +3,7 @@ export default {
 
   publicRuntimeConfig: {
     CONTACT_FORM_URL: process.env.FORMSPREE_URL,
+    CAREER_FORM_URL: process.env.FORMSPREE_URL,
   },
 
   router: {

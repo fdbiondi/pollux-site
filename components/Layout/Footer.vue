@@ -13,23 +13,17 @@
             {{ LETS_CONNECT }}
           </span>
 
-          <fa-icon :icon="['fab', 'twitter']" class="footer--icon"></fa-icon>
-          <fa-icon :icon="['fab', 'instagram']" class="footer--icon"></fa-icon>
-          <fa-icon
-            :icon="['fab', 'square-facebook']"
-            class="footer--icon"
-          ></fa-icon>
-          <fa-icon :icon="['fab', 'github']" class="footer--icon"></fa-icon>
-          <fa-icon
-            :icon="['fab', 'linkedin-in']"
-            class="footer--icon"
-          ></fa-icon>
+          <fa-icon :icon="['fab', 'twitter']" class="footer--icon" />
+          <fa-icon :icon="['fab', 'instagram']" class="footer--icon" />
+          <fa-icon :icon="['fab', 'square-facebook']" class="footer--icon" />
+          <fa-icon :icon="['fab', 'github']" class="footer--icon" />
+          <fa-icon :icon="['fab', 'linkedin-in']" class="footer--icon" />
         </div>
       </div>
 
       <div class="flex flex-col flex-wrap lg:flex-row">
         <div class="w-full p-6 text-xl leading-loose sm:px-10 lg:w-1/4 lg:p-6">
-          <div class="line-block"></div>
+          <div class="line-block" />
 
           {{ POLLUX_COOP }}<br />
 
@@ -58,7 +52,7 @@
             </a>
           </div>
 
-          <div v-show="false" class="flex flex-col p-6 sm:px-10 lg:p-6">
+          <div v-if="false" class="flex flex-col p-6 sm:px-10 lg:p-6">
             <div class="line-block"></div>
 
             <a
@@ -71,6 +65,18 @@
             </a>
           </div>
         </div>
+
+        <div class="w-full lg:w-1/4 py-8">
+          <div v-if="false" class="text-center mb-1">
+            <h4 class="font-serif font-medium uppercase">trusted by</h4>
+          </div>
+
+          <ImageList
+            class="partners my-4"
+            :images="partners"
+            :has-link="true"
+          />
+        </div>
       </div>
 
       <div class="p-6">
@@ -79,7 +85,7 @@
         >
           <div class="flex justify-between">
             <span>
-              {{ COPYRIGHT }} <span @click="bonus">{{ COMPANY }}</span> |
+              {{ COPYRIGHT }} {{ COMPANY }} |
               <nuxt-link to="privacy-policy" class="hover:underline">
                 {{ PRIVACY_POLICY }}
               </nuxt-link>
@@ -97,8 +103,8 @@
 </template>
 
 <script>
-import { mapMutations } from 'vuex'
 import Logo from '~/components/Common/Logo'
+import ImageList from '~/components/Common/List/ImageList'
 import { sitemap } from '~/support/constants'
 import {
   COMPANY,
@@ -110,11 +116,13 @@ import {
   EMAIL,
   PHONE,
 } from '~/support/constants/info'
+import { loadPartners } from '~/support/files'
 
 export const LETS_CONNECT = `Let's connect`
 
 export default {
   components: {
+    ImageList,
     Logo,
   },
 
@@ -122,6 +130,7 @@ export default {
     return {
       firstColumn: sitemap.firstColumn,
       secondColumn: sitemap.secondColumn,
+      partners: loadPartners(),
 
       LETS_CONNECT,
       COMPANY,
@@ -133,12 +142,6 @@ export default {
       EMAIL,
       PHONE,
     }
-  },
-
-  methods: {
-    ...mapMutations({
-      bonus: 'BONUS',
-    }),
   },
 }
 </script>
@@ -153,6 +156,22 @@ export default {
       transition:
         transform 200ms,
         scale 100ms;
+    }
+  }
+}
+
+.partners {
+  ::v-deep div {
+    @apply p-2;
+
+    img {
+      filter: grayscale(1) invert(0.2);
+
+      &:hover {
+        filter: saturate(2) drop-shadow(0 2px 1px rgb(0 0 0 / 0.2))
+          drop-shadow(0 2px 2px rgb(0 0 0 / 0.5));
+        transform: scaleX(1.05) scaleY(1.05);
+      }
     }
   }
 }

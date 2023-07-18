@@ -37,14 +37,10 @@
       class="bg-white py-8 brightness-105 dark:bg-black-light lg:py-16 xl:py-24"
     >
       <div class="container mx-auto px-6">
-        <div v-show="false" class="mb-1 text-center">
-          <h4 class="font-serif font-medium">TRUSTED BY</h4>
-        </div>
-
         <ImageList class="clients mb-6" :images="clients" :has-link="true" />
 
         <hr
-          class="mx-16 border-t border-solid border-gray-900 dark:border-white"
+          class="mx-16 border-t border-solid border-gray-800 dark:border-white"
         />
       </div>
     </section>
@@ -64,13 +60,13 @@
 </template>
 
 <script>
-import BackgroundCodeHtml from '~/components/Layout/Background/CodeHtml'
 import CardGradient from '~/components/Common/Cards/CardGradient'
-import CardList from '~/components/Sections/CardList'
-import ContactForm from '~/components/Forms/ContactForm'
 import ImageList from '~/components/Common/List/ImageList'
+import ContactForm from '~/components/Forms/ContactForm'
+import BackgroundCodeHtml from '~/components/Layout/Background/CodeHtml'
+import CardList from '~/components/Sections/CardList'
+import Tools from '~/components/Sections/Tools'
 import TalkWithUs from '~/components/Texts/TalkWithUs'
-import Tools from '~/components/Tools'
 
 import {
   servicesCategories,

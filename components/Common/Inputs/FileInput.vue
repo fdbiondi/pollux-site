@@ -8,12 +8,14 @@
         <fa-icon
           icon="paperclip"
           class="text-2xl text-black-light dark:text-white"
-        ></fa-icon>
+        />
+
         <span class="ml-2 text-2xl text-black-light dark:text-white">
           {{ label }}
         </span>
       </label>
     </slot>
+
     <input
       :id="name"
       ref="fileInput"

@@ -1,7 +1,5 @@
 const state = () => {
-  return {
-    colorful: 0,
-  }
+  return {}
 }
 
 export default state
