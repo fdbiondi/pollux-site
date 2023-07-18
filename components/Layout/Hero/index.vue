@@ -39,7 +39,7 @@ export default {
 
   props: {
     imageSrc: {
-      default: '/images/notebook.avif',
+      default: './images/notebook.avif',
       type: String,
     },
 
