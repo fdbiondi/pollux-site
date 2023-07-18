@@ -19,27 +19,23 @@
     <section class="overflow-hidden max-h-[20vh] w-full">
       <canvas id="gradient-canvas" :width="1920 * 4" :height="1080"></canvas>
     </section>
-
-    <!-- <BackgroundCodeHtml /> -->
   </div>
 </template>
 
 <script>
 import { Gradient } from 'anim-gradient'
 
-// import BackgroundCodeHtml from '~/components/Layout/Background/CodeHtml'
 import CareerForm from '~/components/Forms/CareerForm'
 
 export default {
   components: {
     CareerForm,
-    // BackgroundCodeHtml,
   },
 
   layout: 'no-hero',
 
-  data() {
-    return {}
+  middleware({ redirect }) {
+    redirect('/404')
   },
 
   mounted() {
