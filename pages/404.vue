@@ -34,10 +34,10 @@
     </div>
 
     <div
-      class="container mx-auto border-t border-gray-800 pt-4 text-center font-mono uppercase dark:border-gray-200"
+      class="hidden container mx-auto border-t border-gray-800 pt-4 text-center font-mono uppercase dark:border-gray-200"
     >
       <div class="mb-1 flex justify-center gap-3">
-        <nuxt-link to="#" class="hover:underline">
+        <nuxt-link to="privacy-policy" class="hover:underline">
           {{ PRIVACY_POLICY }}
         </nuxt-link>
         <span>•</span>
@@ -60,7 +60,7 @@ import {
 } from '~/support/constants/info'
 
 export default {
-  layout: 'simple',
+  layout: 'no-hero',
 
   data() {
     return {

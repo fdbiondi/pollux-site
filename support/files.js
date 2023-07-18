@@ -33,6 +33,13 @@ export const filenameGetHref = (filename) => {
   return `https://${link}/`
 }
 
+export const loadClients = () => {
+  return getFromContext(
+    require.context('~/assets/images/clients/', true, /\.*$/),
+    '.*',
+  )
+}
+
 export const loadPartners = () => {
   return getFromContext(
     require.context('~/assets/images/partners/', true, /\.*$/),

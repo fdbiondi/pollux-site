@@ -1,7 +1,3 @@
-const getters = {
-  colorful: (state) => {
-    return state.colorful
-  },
-}
+const getters = {}
 
 export default getters

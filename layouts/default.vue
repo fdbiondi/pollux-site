@@ -15,7 +15,7 @@
         >
           Find out more
           <span aria-hidden="true" class="-ml-1">
-            <fa-icon icon="arrow-right" size="xs"></fa-icon>
+            <fa-icon icon="arrow-right" size="xs" />
           </span>
         </nuxt-link>
       </span>

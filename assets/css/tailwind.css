@@ -108,4 +108,10 @@
   .button--outline-dark {
     @apply button-white-outline hover:button-reflex hover:button-white-reflex;
   }
+
+  .button:disabled {
+    @apply !border-gray-400 !bg-gray-400 !text-gray-800;
+    transform: none !important;
+    box-shadow: none !important;
+  }
 }

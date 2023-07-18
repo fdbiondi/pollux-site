@@ -12,7 +12,10 @@ export default defineNuxtConfig({
   runtimeConfig: {
     apiKey: '',
 
-    public: {},
+    public: {
+      CONTACT_FORM_URL: process.env.FORMSPREE_URL,
+      CAREER_FORM_URL: process.env.FORMSPREE_URL,
+    },
   },
 
   // Global page headers: https://go.nuxtjs.dev/config-head

@@ -1,6 +1,6 @@
 <template>
   <div class="container mx-auto px-8 sm:px-4 md:px-2">
-    <h2 class="title">{{ sectionTitle }}</h2>
+    <h2 class="title">{{ title }}</h2>
 
     <div
       class="grid grid-cols-1 gap-3 md:grid-cols-2 md:gap-8 lg:m-0 xl:grid-flow-col-dense xl:grid-cols-4"
@@ -14,7 +14,7 @@
           :data-aos-once="true"
           :data-aos-delay="100 * i"
         >
-          <img :src="image" :alt="title" />
+          <img class="-mx-2" :src="image" :alt="title" />
         </Card>
       </div>
     </div>
@@ -30,7 +30,7 @@ export default {
   },
 
   props: {
-    sectionTitle: {
+    title: {
       type: String,
       default: '',
     },

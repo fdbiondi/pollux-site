@@ -6,6 +6,7 @@ form {
   textarea,
   input[type='text'],
   input[type='email'],
+  input[type='date'],
   select {
     @include input;
   }
