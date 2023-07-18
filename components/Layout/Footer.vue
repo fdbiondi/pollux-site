@@ -52,7 +52,7 @@
             </a>
           </div>
 
-          <div v-show="false" class="flex flex-col p-6 sm:px-10 lg:p-6">
+          <div v-if="false" class="flex flex-col p-6 sm:px-10 lg:p-6">
             <div class="line-block"></div>
 
             <a
@@ -64,6 +64,18 @@
               {{ item.name }}
             </a>
           </div>
+        </div>
+
+        <div class="w-full lg:w-1/4 py-8">
+          <div v-if="false" class="text-center mb-1">
+            <h4 class="font-serif font-medium uppercase">trusted by</h4>
+          </div>
+
+          <ImageList
+            class="partners my-4"
+            :images="partners"
+            :has-link="true"
+          />
         </div>
       </div>
 
@@ -92,6 +104,7 @@
 
 <script>
 import Logo from '~/components/Common/Logo'
+import ImageList from '~/components/Common/List/ImageList'
 import { sitemap } from '~/support/constants'
 import {
   COMPANY,
@@ -103,11 +116,13 @@ import {
   EMAIL,
   PHONE,
 } from '~/support/constants/info'
+import { loadPartners } from '~/support/files'
 
 export const LETS_CONNECT = `Let's connect`
 
 export default {
   components: {
+    ImageList,
     Logo,
   },
 
@@ -115,6 +130,7 @@ export default {
     return {
       firstColumn: sitemap.firstColumn,
       secondColumn: sitemap.secondColumn,
+      partners: loadPartners(),
 
       LETS_CONNECT,
       COMPANY,
@@ -140,6 +156,21 @@ export default {
       transition:
         transform 200ms,
         scale 100ms;
+    }
+  }
+}
+
+.partners {
+  ::v-deep div {
+    @apply p-2;
+
+    img {
+      filter: grayscale(1) invert(0.2);
+
+      &:hover {
+        filter: none;
+        transform: scaleX(1.05) scaleY(1.05)
+      }
     }
   }
 }

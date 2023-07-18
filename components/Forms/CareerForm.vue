@@ -1,6 +1,11 @@
 <template>
   <div class="mb-4 px-8 pb-8 pt-6">
-    <form class="flex flex-row justify-center">
+    <form
+      :action="formUrl"
+      method="POST"
+      enctype="multipart/form-data"
+      class="flex flex-row justify-center"
+    >
       <FileInput
         name="curriculum"
         accept=".pdf"
@@ -23,9 +28,7 @@
 
       <button
         class="button button--secondary dark:button--secondary-dark"
-        type="button"
         :disabled="sendDisabled"
-        @click="alert('not implemented')"
       >
         Send
       </button>
@@ -56,6 +59,7 @@ export default {
     return {
       curriculum: null,
       name: null,
+      formUrl: this.$config.CAREER_FORM_URL,
     }
   },
 

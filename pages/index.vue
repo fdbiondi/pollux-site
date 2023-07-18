@@ -37,10 +37,6 @@
       class="bg-white py-8 brightness-105 dark:bg-black-light lg:py-16 xl:py-24"
     >
       <div class="container mx-auto px-6">
-        <div v-show="false" class="mb-1 text-center">
-          <h4 class="font-serif font-medium">TRUSTED BY</h4>
-        </div>
-
         <ImageList class="clients mb-6" :images="clients" :has-link="true" />
 
         <hr

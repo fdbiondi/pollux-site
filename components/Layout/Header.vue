@@ -46,7 +46,7 @@ export default {
       links: [
         { href: '#services', label: 'Services' },
         { href: '#clients', label: 'Our Clients' },
-        // { href: '#about', label: 'About Us' },
+        // { href: '/about', label: 'About Us' },
         { href: '#contact', label: 'Contact Us' },
       ],
     }
