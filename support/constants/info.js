@@ -9,5 +9,5 @@ export const STATE = 'Santa Fe, Argentina'
 export const PHONE = '+54 934 1111 0000'
 export const SITEURL = 'polluxcoop.com'
 
-export const EMAIL = 'hello@polluxcoop.com'
-export const PRIVACY_EMAIL = 'contact@polluxcoop.com'
+export const EMAIL = 'info@polluxcoop.com'
+export const PRIVACY_EMAIL = 'info@polluxcoop.com'
