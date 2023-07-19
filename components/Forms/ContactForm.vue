@@ -87,7 +87,12 @@
               <span class="ml-2" @click="nda = !nda"> Get an NDA </span>
             </label>
 
-            <FileInput v-model="files" name="files" label="Attach Files" />
+            <FileInput
+              v-if="false"
+              v-model="files"
+              name="files"
+              label="Attach Files"
+            />
           </div>
 
           <div class="mt-8 flex flex-wrap sm:mt-0">
