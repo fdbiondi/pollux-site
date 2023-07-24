@@ -32,17 +32,24 @@
         <div class="w-full p-6 text-xl leading-loose sm:px-10 lg:w-1/4 lg:p-6">
           <div class="line-block" />
 
-          {{ POLLUX_COOP }}<br />
+          {{ POLLUX_COOP }}
+          <br />
 
-          {{ ADDRESS }}<br />
+          {{ ADDRESS }}
+          <br />
 
-          {{ CITY }}<br />
+          {{ CITY }}
+          <br />
 
-          {{ STATE }}<br /><br />
+          {{ STATE }}
+          <br />
+          <br />
 
-          {{ EMAIL }}<br />
+          {{ EMAIL }}
+          <br />
 
-          {{ PHONE }}<br />
+          {{ PHONE }}
+          <br />
         </div>
 
         <div
@@ -116,7 +123,9 @@
               <a
                 target="_blank"
                 href="https://icons8.com"
-              >Icons8</a>
+              >
+                Icons8
+              </a>
             </span>
           </div>
         </div>

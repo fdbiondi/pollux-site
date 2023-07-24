@@ -8,7 +8,8 @@
         {{ getYour }}
       </h2>
       <h2 class="font-bold">
-        <span class="text-pollux-pink">{{ project }}</span> {{ moving }}
+        <span class="text-pollux-pink">{{ project }}</span>
+        {{ moving }}
       </h2>
 
       <span class="my-16 text-xl sm:p-8 2xl:my-0">
