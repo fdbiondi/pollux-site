@@ -24,7 +24,7 @@
       :class="{ 'z-[-1]': !$slots.default, hidden: !canLoad }"
       type="file"
       @change="selected"
-    />
+    >
   </div>
 </template>
 
