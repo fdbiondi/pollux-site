@@ -24,7 +24,7 @@
       :class="{ 'z-[-1]': !$slots.default, hidden: !canLoad }"
       type="file"
       @change="selected"
-    >
+    />
   </div>
 </template>
 
@@ -59,6 +59,8 @@ export default {
     // eslint-disable-next-line vue/require-default-prop
     value: null,
   },
+
+  emits: ['selected'],
 
   data() {
     return {

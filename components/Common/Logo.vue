@@ -2,7 +2,7 @@
   <div class="logo">
     <div class="flex items-center">
       <img
-        src="logo.svg"
+        src="/logo.svg"
         alt="Pollux Software Engineering"
         class="z-20 custom-drop-shadow-lg"
         :class="{

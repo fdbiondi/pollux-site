@@ -67,6 +67,8 @@ export default {
     },
   },
 
+  emits: ['close', 'ok'],
+
   data() {
     return {
       visible: true,
