@@ -103,4 +103,11 @@ export default defineNuxtConfig({
   },
 
   pinia: {},
+
+  postcss: {
+    plugins: {
+      tailwindcss: {},
+      autoprefixer: {},
+    },
+  },
 });

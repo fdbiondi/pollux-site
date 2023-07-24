@@ -134,7 +134,7 @@
   </footer>
 </template>
 
-<script>
+<script setup>
 import Logo from '~/components/Common/Logo';
 import ImageList from '~/components/Common/List/ImageList';
 import { sitemap } from '~/support/constants';
@@ -149,35 +149,19 @@ import {
   EMAIL,
   PHONE,
 } from '~/support/constants/info';
-import { loadPartners } from '~/support/files';
+import { getFromContext } from '~/support/files';
 
-export const LETS_CONNECT = `Let's connect`;
+const LETS_CONNECT = `Let's connect`;
 
-export default {
-  components: {
-    ImageList,
-    Logo,
-  },
+const firstColumn = sitemap.firstColumn;
+const secondColumn = sitemap.secondColumn;
 
-  data() {
-    return {
-      firstColumn: sitemap.firstColumn,
-      secondColumn: sitemap.secondColumn,
-      partners: loadPartners(),
-
-      LETS_CONNECT,
-      ADDRESS,
-      COMPANY,
-      COPYRIGHT,
-      PRIVACY_POLICY,
-      POLLUX_COOP,
-      CITY,
-      STATE,
-      EMAIL,
-      PHONE,
-    };
-  },
-};
+const glob = import.meta.glob('~/assets/images/partners/*.*', { eager: true });
+const partners = getFromContext(glob, '.*', (src) => {
+  return {
+    src: glob[src].default,
+  };
+});
 </script>
 
 <style lang="scss" scoped>

@@ -32,19 +32,3 @@ export const getFromContext = (files, extension, fn = null) => {
 
   return modules;
 };
-
-export const loadClients = () => {
-  return getFromContext(import.meta.glob('~/assets/images/clients/*.*'), '.*');
-};
-
-export const loadPartners = () => {
-  return getFromContext(import.meta.glob('~/assets/images/partners/*.*'), '.*');
-};
-
-export const loadTools = (fn = () => {}) => {
-  return getFromContext(
-    import.meta.glob('~/assets/images/tools/**/*.svg'),
-    '.svg',
-    fn
-  );
-};

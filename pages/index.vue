@@ -66,7 +66,7 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import CardGradient from '~/components/Common/Cards/CardGradient';
 import ImageList from '~/components/Common/List/ImageList';
 import ContactForm from '~/components/Forms/ContactForm';
@@ -80,29 +80,14 @@ import {
   servicesTypes,
   SERVICES_SECTION_TITLE,
 } from '~/support/constants/home';
-import { loadClients } from '~/support/files';
+import { getFromContext } from '~/support/files';
 
-export default {
-  components: {
-    BackgroundCodeHtml,
-    CardGradient,
-    CardList,
-    ContactForm,
-    ImageList,
-    TalkWithUs,
-    Tools,
-  },
-
-  data() {
-    return {
-      SERVICES_SECTION_TITLE,
-      servicesCategories,
-      servicesTypes,
-
-      clients: loadClients(),
-    };
-  },
-};
+const glob = import.meta.glob('~/assets/images/clients/*.*', { eager: true });
+const clients = getFromContext(glob, '.*', (src) => {
+  return {
+    src: glob[src].default,
+  };
+});
 </script>
 
 <style lang="scss" scoped>

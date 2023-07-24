@@ -27,7 +27,7 @@
 
 <script>
 import Slider from '~/components/Common/List/Slider';
-import { loadTools } from '~/support/files';
+import { getFromContext } from '~/support/files';
 import { getToolClass, getToolLink } from '~/support/strings';
 
 export default {
@@ -43,10 +43,17 @@ export default {
   },
 
   mounted() {
-    this.images = loadTools((path, extension) => ({
-      link: getToolLink(path, extension),
-      vClass: getToolClass(path, extension),
-    }));
+    const glob = import.meta.glob('~/assets/images/tools/**/*.svg', {
+      eager: true,
+    });
+
+    this.images = getFromContext(glob, '.svg', (path, extension) => {
+      return {
+        link: getToolLink(path, extension),
+        vClass: getToolClass(path, extension),
+        src: glob[path].default,
+      };
+    });
   },
 };
 </script>
