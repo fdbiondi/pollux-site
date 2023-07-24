@@ -18,7 +18,7 @@
             :class="vClass"
             class="h-24 w-24 hover:scale-105 hover:saturate-150 hover:!filter-none hover:transition-transform"
             style="filter: grayscale(1) invert(0.2)"
-          >
+          />
         </a>
       </template>
     </Slider>

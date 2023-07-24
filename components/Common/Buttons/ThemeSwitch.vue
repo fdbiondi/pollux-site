@@ -14,7 +14,7 @@
           type="checkbox"
           class="sr-only"
           checked
-        >
+        />
         <div class="switch-slider">
           <div class="switch-knob" />
 

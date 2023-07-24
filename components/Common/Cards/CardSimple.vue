@@ -10,7 +10,7 @@
             :src="image"
             alt="pollux services"
             class="mr-2"
-          >
+          />
           <fa-icon
             v-if="icon"
             class="mr-2"

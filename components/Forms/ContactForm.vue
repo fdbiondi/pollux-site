@@ -31,7 +31,7 @@
               type="text"
               placeholder="Full Name"
               class="w-full"
-            >
+            />
 
             <input
               v-model="phone"
@@ -39,7 +39,7 @@
               type="text"
               placeholder="Phone"
               class="w-full"
-            >
+            />
           </div>
 
           <input
@@ -49,7 +49,7 @@
             placeholder="Email"
             class="mb-4 w-full"
             required
-          >
+          />
 
           <div class="flex flex-col sm:flex-row gap-4 mb-4">
             <input
@@ -59,7 +59,7 @@
               placeholder="Estimated Start Date"
               onfocus="(this.type='date')"
               class="w-full"
-            >
+            />
 
             <select
               v-model="budget"
@@ -100,11 +100,13 @@
                 type="checkbox"
                 :value="nda"
                 @input="nda = !nda"
-              >
+              />
               <span
                 class="ml-2"
                 @click="nda = !nda"
-              > Get an NDA </span>
+              >
+                Get an NDA
+              </span>
             </label>
 
             <FileInput

@@ -22,7 +22,7 @@
             :src="image.src"
             :alt="name(image.name)"
             class="w-20"
-          >
+          />
         </a>
 
         <img
@@ -30,7 +30,7 @@
           :src="image.src"
           :alt="name(image.name)"
           class="w-20"
-        >
+        />
       </slot>
     </div>
   </div>

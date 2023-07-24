@@ -8,9 +8,9 @@
     "postinstall": "nuxt prepare",
     "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
     "lint:style": "stylelint \"**/*.{css,scss,sass,html,vue}\" --ignore-path .gitignore",
-    "lint:prettier": "prettier --check .",
-    "lint": "pnpm run lint:js && pnpm run lint:style && pnpm run lint:prettier",
-    "lint:fix": "prettier --write --list-different . && pnpm run lint:js -- --fix && pnpm run lint:style -- --fix"
+    "prettier": "prettier --check .",
+    "lint": "pnpm run prettier && pnpm run lint:js && pnpm run lint:style",
+    "lint:fix": "prettier --write --list-different . && pnpm run lint:js --fix && pnpm run lint:style --fix"
   },
   "devDependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.4.0",

@@ -10,7 +10,7 @@
           'h-28 w-28': isMedium,
           'h-40 w-40': isLarge,
         }"
-      >
+      />
       <div class="relative mt-4">
         <div class="font-pollux dark:text-white">
           <div

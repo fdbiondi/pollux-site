@@ -48,7 +48,7 @@
 
         <hr
           class="mx-16 border-t border-solid border-gray-800 dark:border-white"
-        >
+        />
       </div>
     </section>
 

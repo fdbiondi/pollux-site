@@ -23,7 +23,7 @@
             class="-mx-2"
             :src="item.image"
             :alt="item.title"
-          >
+          />
         </Card>
       </div>
     </div>

@@ -29,7 +29,7 @@
                 v-if="!column.sideImage"
                 :src="image"
                 :alt="title"
-              >
+              />
             </CardSimple>
           </div>
         </div>

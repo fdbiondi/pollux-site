@@ -22,7 +22,7 @@
             :placeholder="placeholder"
             :value="name"
             @input="name = $event.target.value"
-          >
+          />
         </div>
       </FileInput>
 
