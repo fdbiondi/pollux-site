@@ -45,6 +45,6 @@ export const loadTools = (fn = () => {}) => {
   return getFromContext(
     import.meta.glob('~/assets/images/tools/**/*.svg'),
     '.svg',
-    fn,
+    fn
   );
 };
