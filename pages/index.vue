@@ -5,7 +5,10 @@
       id="services"
       class="bg-white py-8 dark:bg-black-light lg:py-16 xl:py-24"
     >
-      <CardList :items="servicesTypes" :title="SERVICES_SECTION_TITLE" />
+      <CardList
+        :items="servicesTypes"
+        :title="SERVICES_SECTION_TITLE"
+      />
     </section>
 
     <!-- Technologies that we use -->
@@ -37,11 +40,15 @@
       class="bg-white py-8 brightness-105 dark:bg-black-light lg:py-16 xl:py-24"
     >
       <div class="container mx-auto px-6">
-        <ImageList class="clients mb-6" :images="clients" :has-link="true" />
+        <ImageList
+          class="clients mb-6"
+          :images="clients"
+          :has-link="true"
+        />
 
         <hr
           class="mx-16 border-t border-solid border-gray-800 dark:border-white"
-        />
+        >
       </div>
     </section>
 
@@ -60,20 +67,20 @@
 </template>
 
 <script>
-import CardGradient from '~/components/Common/Cards/CardGradient'
-import ImageList from '~/components/Common/List/ImageList'
-import ContactForm from '~/components/Forms/ContactForm'
-import BackgroundCodeHtml from '~/components/Layout/Background/CodeHtml'
-import CardList from '~/components/Sections/CardList'
-import Tools from '~/components/Sections/Tools'
-import TalkWithUs from '~/components/Texts/TalkWithUs'
+import CardGradient from '~/components/Common/Cards/CardGradient';
+import ImageList from '~/components/Common/List/ImageList';
+import ContactForm from '~/components/Forms/ContactForm';
+import BackgroundCodeHtml from '~/components/Layout/Background/CodeHtml';
+import CardList from '~/components/Sections/CardList';
+import Tools from '~/components/Sections/Tools';
+import TalkWithUs from '~/components/Texts/TalkWithUs';
 
 import {
   servicesCategories,
   servicesTypes,
   SERVICES_SECTION_TITLE,
-} from '~/support/constants/home'
-import { loadClients } from '~/support/files'
+} from '~/support/constants/home';
+import { loadClients } from '~/support/files';
 
 export default {
   components: {
@@ -93,19 +100,17 @@ export default {
       servicesTypes,
 
       clients: loadClients(),
-    }
+    };
   },
-}
+};
 </script>
 
 <style lang="scss" scoped>
-.clients {
-  ::v-deep img {
-    @apply dark:brightness-200 dark:drop-shadow-none;
+.clients :deep(img) {
+  @apply brightness-200 drop-shadow-none;
 
-    /* fix for classes -> grayscale drop-shadow-tight */
-    filter: grayscale(1) invert(0.2) drop-shadow(0 2px 1px rgb(0 0 0 / 0.2))
-      drop-shadow(0 2px 2px rgb(0 0 0 / 0.5));
-  }
+  /* fix for classes -> grayscale drop-shadow-tight */
+  filter: grayscale(1) invert(0.2) drop-shadow(0 2px 1px rgb(0 0 0 / 20%))
+    drop-shadow(0 2px 2px rgb(0 0 0 / 50%));
 }
 </style>

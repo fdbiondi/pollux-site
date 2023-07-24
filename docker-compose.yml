@@ -10,4 +10,4 @@ services:
     ports:
       - '3000:3000'
     command: >
-      bash -c "yarn install && yarn dev --hostname 0.0.0.0"
+      bash -c "pnpm install && pnpm run dev --host 0.0.0.0"

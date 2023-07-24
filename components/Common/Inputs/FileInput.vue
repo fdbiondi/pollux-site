@@ -24,7 +24,7 @@
       :class="{ 'z-[-1]': !$slots.default, hidden: !canLoad }"
       type="file"
       @change="selected"
-    />
+    >
   </div>
 </template>
 
@@ -63,28 +63,28 @@ export default {
   data() {
     return {
       file: null,
-    }
+    };
   },
 
   watch: {
     value(newVal, oldVal) {
       if (newVal === null && oldVal) {
-        this.$refs.fileInput.value = null
-        this.file = null
+        this.$refs.fileInput.value = null;
+        this.file = null;
       }
     },
   },
 
   methods: {
     selected(event) {
-      this.file = event.target.files[0]
+      this.file = event.target.files[0];
 
-      const { name, type } = this.file
+      const { name, type } = this.file;
 
-      this.$emit('selected', this.file, name, type)
+      this.$emit('selected', this.file, name, type);
     },
   },
-}
+};
 </script>
 
 <style lang="scss" scoped>

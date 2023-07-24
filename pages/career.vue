@@ -3,7 +3,9 @@
     <div class="container mx-auto flex flex-wrap items-center pb-24">
       <section class="py-8 font-stylish lg:py-12 xl:py-16">
         <div class="container mx-auto px-32 text-center">
-          <h2 class="title">Career / Get On Board</h2>
+          <h2 class="title">
+            Career / Get On Board
+          </h2>
 
           <h4 class="subtitle">
             We have a passion for the digital world, enthusiasm for technology,
@@ -17,32 +19,27 @@
     </div>
 
     <section class="overflow-hidden max-h-[20vh] w-full">
-      <canvas id="gradient-canvas" :width="1920 * 4" :height="1080"></canvas>
+      <canvas
+        id="gradient-canvas"
+        :width="1920 * 4"
+        :height="1080"
+      />
     </section>
   </div>
 </template>
 
-<script>
-import { Gradient } from 'anim-gradient'
+<script setup>
+import { Gradient } from 'anim-gradient';
+import { onMounted } from 'vue';
 
-import CareerForm from '~/components/Forms/CareerForm'
+import CareerForm from '~/components/Forms/CareerForm';
 
-export default {
-  components: {
-    CareerForm,
-  },
+definePageMeta({ layout: 'no-hero' });
 
-  layout: 'no-hero',
-
-  middleware({ redirect }) {
-    redirect('/404')
-  },
-
-  mounted() {
-    const g = new Gradient()
-    g.initGradient('#gradient-canvas')
-  },
-}
+onMounted(() => {
+  const g = new Gradient();
+  g.initGradient('#gradient-canvas');
+});
 </script>
 
 <style lang="scss" scoped>

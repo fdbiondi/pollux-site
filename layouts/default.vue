@@ -1,10 +1,10 @@
 <template>
   <div class="text-gray-800 dark:text-gray-200">
     <Notification
-      v-if="showCookiesNotification"
+      v-if="!cookies.accepted"
       action="I Accept"
-      @ok="acceptCookies"
-      @close="rejectCookies"
+      @ok="cookies.accept()"
+      @close="cookies.reject()"
     >
       <span class="font-mono sm:text-sm">
         This website uses cookies for analytics and to improve provided
@@ -14,8 +14,14 @@
           class="whitespace-nowrap font-bold underline hover:text-gray-200 dark:hover:text-gray-800"
         >
           Find out more
-          <span aria-hidden="true" class="-ml-1">
-            <fa-icon icon="arrow-right" size="xs" />
+          <span
+            aria-hidden="true"
+            class="-ml-1"
+          >
+            <fa-icon
+              icon="arrow-right"
+              size="xs"
+            />
           </span>
         </nuxt-link>
       </span>
@@ -33,48 +39,17 @@
     </Hero>
 
     <!-- Content -->
-    <nuxt />
+    <slot />
 
     <!-- Footer Section -->
     <AppFooter class="bg-white dark:bg-black-light" />
   </div>
 </template>
 
-<script>
-import { mapGetters } from 'vuex'
-import { AppFooter, AppHeader, Hero } from '~/components/Layout'
-import Notification from '~/components/Common/UI/Notification'
+<script setup>
+import { AppFooter, AppHeader, Hero } from '~/components/Layout';
+import Notification from '~/components/Common/UI/Notification';
+import { useCookies } from '@/stores/cookies';
 
-export default {
-  components: {
-    AppFooter,
-    AppHeader,
-    Hero,
-    Notification,
-  },
-
-  data() {
-    return {
-      showCookiesNotification: false,
-    }
-  },
-
-  computed: {
-    ...mapGetters('cookies', ['cookiesAccepted']),
-  },
-
-  mounted() {
-    this.showCookiesNotification = !this.cookiesAccepted
-  },
-
-  methods: {
-    acceptCookies() {
-      localStorage.setItem('accept_cookies', true)
-    },
-
-    rejectCookies() {
-      localStorage.setItem('reject_cookies', true)
-    },
-  },
-}
+const cookies = useCookies();
 </script>

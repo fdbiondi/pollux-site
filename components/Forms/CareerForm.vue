@@ -22,12 +22,12 @@
             :placeholder="placeholder"
             :value="name"
             @input="name = $event.target.value"
-          />
+          >
         </div>
       </FileInput>
 
       <button
-        class="button button--secondary dark:button--secondary-dark"
+        class="button button-secondary dark:button-secondary-dark"
         :disabled="sendDisabled"
       >
         Send
@@ -38,7 +38,10 @@
       v-if="curriculum"
       class="mt-2 text-gray-900 dark:text-gray-200 transition-opacity"
     >
-      <span class="cursor-pointer hover:text-white" @click="clearFile">
+      <span
+        class="cursor-pointer hover:text-white"
+        @click="clearFile"
+      >
         <fa-icon icon="xmark" />
       </span>
 
@@ -48,7 +51,7 @@
 </template>
 
 <script>
-import FileInput from '~/components/Common/Inputs/FileInput'
+import FileInput from '~/components/Common/Inputs/FileInput';
 
 export default {
   components: {
@@ -60,42 +63,42 @@ export default {
       curriculum: null,
       name: null,
       formUrl: this.$config.CAREER_FORM_URL,
-    }
+    };
   },
 
   computed: {
     filename() {
-      return this.curriculum?.name
+      return this.curriculum?.name;
     },
 
     notLoaded() {
-      return !this.curriculum
+      return !this.curriculum;
     },
 
     placeholder() {
-      return this.notLoaded ? 'Send us your cv' : 'Tell us your name'
+      return this.notLoaded ? 'Send us your cv' : 'Tell us your name';
     },
 
     sendDisabled() {
-      return !this.curriculum || !this.name
+      return !this.curriculum || !this.name;
     },
   },
 
   methods: {
     clearFile() {
-      this.curriculum = null
-      this.name = null
+      this.curriculum = null;
+      this.name = null;
     },
 
     selected(file, ...[, type]) {
       if (!type.includes('pdf')) {
-        return
+        return;
       }
 
-      this.curriculum = file
+      this.curriculum = file;
     },
   },
-}
+};
 </script>
 
 <style lang="scss" scoped>

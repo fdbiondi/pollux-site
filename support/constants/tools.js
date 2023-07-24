@@ -159,4 +159,4 @@ export default {
   flask: {
     link: 'https://flask.palletsprojects.com/',
   },
-}
+};

@@ -15,15 +15,22 @@
       @mouseleave="gestureEnd"
       @mousemove="gestureMove"
     >
-      <div v-for="(item, index) in items" :key="index" class="shrink-0 p-4">
-        <slot :props="item" :index="index" />
+      <div
+        v-for="(item, index) in items"
+        :key="index"
+        class="shrink-0 p-4"
+      >
+        <slot
+          :props="item"
+          :index="index"
+        />
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import SwipeTrack from '~/mixins/swipe-track'
+import SwipeTrack from '~/mixins/swipe-track';
 
 export default {
   mixins: [SwipeTrack],
@@ -50,50 +57,50 @@ export default {
     return {
       paddingSize: 2,
       remUnit: 16,
-    }
+    };
   },
 
   computed: {
     carouselSize() {
-      return this.imagePixels * this.images.length
+      return this.imagePixels * this.images.length;
     },
 
     imagePixels() {
-      return (this.paddingSize + this.imageSize) * this.remUnit
+      return (this.paddingSize + this.imageSize) * this.remUnit;
     },
 
     items() {
       if (!this.images.length) {
-        return []
+        return [];
       }
 
       if (this.swipe) {
-        return this.images
+        return this.images;
       }
 
-      return this.getCarouselItems()
+      return this.getCarouselItems();
     },
   },
 
   methods: {
     getCarouselItems() {
-      let items = []
+      let items = [];
 
       if (process.client) {
-        const track = document.querySelector('.slider')
+        const track = document.querySelector('.slider');
 
         items = [
           ...this.images,
           ...this.images
             .slice(0, track.clientWidth / this.imagePixels + 1)
             .map((item) => ({ ...item, name: `${item.name}-1` })),
-        ]
+        ];
       }
 
-      return items
+      return items;
     },
   },
-}
+};
 </script>
 
 <style lang="scss" scoped>

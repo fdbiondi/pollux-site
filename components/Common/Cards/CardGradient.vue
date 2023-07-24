@@ -36,7 +36,7 @@ export default {
       type: String,
     },
   },
-}
+};
 </script>
 
 <style scoped>

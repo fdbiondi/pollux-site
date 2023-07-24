@@ -1,30 +1,45 @@
 <template>
   <div class="hero--titles">
-    <h2 class="hero--title" style="--order: 1">
+    <h2
+      class="hero--title"
+      style="--order: 1"
+    >
       {{ upperTitle }}
     </h2>
-    <h1 class="hero--title title-gradient tracking-wider" style="--order: 2">
+    <h1
+      class="hero--title title-gradient tracking-wider"
+      style="--order: 2"
+    >
       {{ title }}
     </h1>
 
-    <p class="hero--title" style="--order: 3">
+    <p
+      class="hero--title"
+      style="--order: 3"
+    >
       {{ subtitle }}
     </p>
 
     <div class="flex flex-col gap-2 sm:flex-row sm:gap-4">
-      <div class="animate-in" style="--order: 1">
+      <div
+        class="animate-in"
+        style="--order: 1"
+      >
         <nuxt-link :to="leftLink">
           <button
-            class="button button--outline-dark xl:dark:button--secondary-dark xl:button--secondary w-full sm:w-auto"
+            class="button button-outline-dark xl:dark:button-secondary-dark xl:button-secondary w-full sm:w-auto"
           >
             {{ knowMore }}
           </button>
         </nuxt-link>
       </div>
 
-      <div class="animate-in" style="--order: 2">
+      <div
+        class="animate-in"
+        style="--order: 2"
+      >
         <nuxt-link :to="rightLink">
-          <button class="button button--primary w-full sm:w-auto">
+          <button class="button button-primary w-full sm:w-auto">
             {{ letsConnect }}
           </button>
         </nuxt-link>
@@ -34,13 +49,13 @@
 </template>
 
 <script>
-const title = 'SOFTWARE SOLUTIONS'
-const upperTitle = 'We build awesome and custom'
+const title = 'SOFTWARE SOLUTIONS';
+const upperTitle = 'We build awesome and custom';
 const subtitle =
-  'We are a software company dedicated to build custom web and mobile applications'
+  'We are a software company dedicated to build custom web and mobile applications';
 
-const knowMore = 'Know more'
-const letsConnect = "Let's connect"
+const knowMore = 'Know more';
+const letsConnect = "Let's connect";
 
 export default {
   props: {
@@ -74,9 +89,9 @@ export default {
     return {
       knowMore,
       letsConnect,
-    }
+    };
   },
-}
+};
 </script>
 
 <style lang="scss" scoped>

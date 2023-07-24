@@ -24,13 +24,16 @@
       class="absolute inset-0 z-0 xl:inset-x-auto xl:inset-y-0 xl:right-0 xl:w-1/2"
     >
       <!-- class="h-56 w-full object-cover sm:h-72 md:h-96 lg:h-full lg:w-full" -->
-      <img class="h-full w-full object-cover" :src="imageSrc" />
+      <img
+        class="h-full w-full object-cover"
+        :src="imageSrc"
+      >
     </div>
   </div>
 </template>
 
 <script>
-import HeroContent from '~/components/Layout/Hero/Content'
+import HeroContent from '~/components/Layout/Hero/Content';
 
 export default {
   components: {
@@ -47,7 +50,7 @@ export default {
       default: 'vertical',
       type: String,
       validator(value) {
-        return ['horizontal', 'vertical'].includes(value)
+        return ['horizontal', 'vertical'].includes(value);
       },
     },
 
@@ -56,5 +59,5 @@ export default {
       type: String,
     },
   },
-}
+};
 </script>

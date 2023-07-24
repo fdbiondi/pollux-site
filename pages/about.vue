@@ -2,18 +2,28 @@
   <div>
     <section class="pb-8 lg:pb-16 xl:pb-32">
       <div class="container mx-auto px-6 py-12 pb-16">
-        <h2 class="title">About Us</h2>
+        <h2 class="title">
+          About Us
+        </h2>
 
         <div class="flex flex-wrap">
-          <template v-for="(section, $section) in sections">
-            <div v-if="$section % 2 !== 0" :key="$section" class="w-2/6" />
+          <template
+            v-for="(section, $section) in sections"
+            :key="`article-${$section}`"
+          >
+            <div
+              v-if="$section % 2 !== 0"
+              class="w-2/6"
+            />
 
-            <article :key="`article-${$section}`" class="w-4/6 py-8">
-              <h4 class="subtitle">{{ section.subtitle }}</h4>
+            <article class="w-4/6 py-8">
+              <h4 class="subtitle">
+                {{ section.subtitle }}
+              </h4>
 
               <p
                 v-for="(text, $text) in section.body"
-                :key="$text"
+                :key="`paragraph-${$text}`"
                 class="mb-4 text-justify text-xl"
                 :data-aos="
                   $section % 2 === 0 ? 'zoom-in-right' : 'zoom-in-left'
@@ -25,7 +35,6 @@
 
             <div
               v-if="$section % 2 === 0"
-              :key="$section"
               class="w-2/6 p-8 lg:p-16"
             />
           </template>
@@ -42,8 +51,8 @@
 </template>
 
 <script>
-import BackgroundCodeHtml from '~/components/Layout/Background/CodeHtml'
-import ProductDesign from '~/components/Sections/ProductDesign'
+import BackgroundCodeHtml from '~/components/Layout/Background/CodeHtml';
+import ProductDesign from '~/components/Sections/ProductDesign';
 
 export default {
   components: {
@@ -54,7 +63,7 @@ export default {
   layout: 'no-hero',
 
   middleware({ redirect }) {
-    redirect('/404')
+    redirect('/404');
   },
 
   data() {
@@ -87,7 +96,7 @@ export default {
           ],
         },
       ],
-    }
+    };
   },
-}
+};
 </script>

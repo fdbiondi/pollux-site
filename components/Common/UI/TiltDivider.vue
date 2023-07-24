@@ -9,7 +9,7 @@
       <path
         d="M1200 120L0 16.48 0 0 1200 0 1200 120z"
         :class="tiltColor"
-      ></path>
+      />
     </svg>
   </div>
 </template>
@@ -22,17 +22,19 @@ export default {
       type: String,
     },
   },
-}
+};
 </script>
 
 <style lang="scss" scoped>
 .tilt {
   @apply absolute bottom-0 left-0 w-full rotate-180 overflow-hidden;
+
   line-height: 0;
 }
 
 .tilt svg {
   @apply relative block h-96;
+
   width: 115%;
   transform: rotateY(180deg);
 }

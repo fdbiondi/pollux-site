@@ -4,7 +4,9 @@
       class="container -mx-8 flex items-center justify-center text-black-light dark:text-white custom-drop-shadow-lg"
     >
       <div class="mx-auto px-2 text-center font-mono">
-        <h3 class="my-8 text-5xl font-bold">Woops! Something's wrong.</h3>
+        <h3 class="my-8 text-5xl font-bold">
+          Woops! Something's wrong.
+        </h3>
         <h3 class="mb-8 text-2xl">
           <span>It's just a 404 error! Page not found.</span>
 
@@ -37,7 +39,10 @@
       class="hidden container mx-auto border-t border-gray-800 pt-4 text-center font-mono uppercase dark:border-gray-200"
     >
       <div class="mb-1 flex justify-center gap-3">
-        <nuxt-link to="privacy-policy" class="hover:underline">
+        <nuxt-link
+          to="privacy-policy"
+          class="hover:underline"
+        >
           {{ PRIVACY_POLICY }}
         </nuxt-link>
         <span>•</span>
@@ -57,7 +62,7 @@ import {
   POLLUX_COOP,
   CITY,
   STATE,
-} from '~/support/constants/info'
+} from '~/support/constants/info';
 
 export default {
   layout: 'no-hero',
@@ -69,7 +74,7 @@ export default {
       POLLUX_COOP,
       CITY,
       STATE,
-    }
+    };
   },
-}
+};
 </script>

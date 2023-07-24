@@ -3,8 +3,8 @@
     <div class="container mx-auto">
       <div class="flex items-start">
         <div
-          v-for="({ title, description }, i) in sections"
-          :key="i"
+          v-for="({ title, description }, index) in sections"
+          :key="`section-${index}`"
           class="relative w-1/3 px-8"
         >
           <div class="float-section-line" />
@@ -16,7 +16,7 @@
             :data-aos-delay="100 * i"
           >
             <template #middle>
-              <hr class="mb-8 mt-4" />
+              <hr class="mb-8 mt-4">
             </template>
           </CardSimple>
         </div>
@@ -28,8 +28,8 @@
 </template>
 
 <script>
-import LineSection from '~/components/Common/UI/LineSection'
-import CardSimple from '~/components/Common/Cards/CardSimple'
+import LineSection from '~/components/Common/UI/LineSection';
+import CardSimple from '~/components/Common/Cards/CardSimple';
 
 export default {
   components: {
@@ -56,13 +56,13 @@ export default {
             'Establish the roadmap and the team to provide a predictable development process. Create efficient projects with the latest technologies and brand-new approaches.',
         },
       ],
-    }
+    };
   },
-}
+};
 </script>
 
 <style scoped>
-* >>> .subtitle {
+* :deep(.subtitle) {
   @apply title-gradient;
 }
 </style>

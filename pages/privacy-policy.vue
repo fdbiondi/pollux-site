@@ -1,8 +1,10 @@
 <template>
   <div
-    class="container mx-auto px-8 lg:px-16 xl:px-24 gap-8 min-h-screen flex items-center flex-col justify-center"
+    class="container mx-auto p-8 lg:p-16 xl:p-24 !pt-0 gap-8 min-h-screen flex items-center flex-col justify-center"
   >
-    <h2 class="title">Privacy Policy</h2>
+    <h2 class="title">
+      Privacy Policy
+    </h2>
 
     <p>
       {{ COMPANY }} a desarrollado esta Política de Privacidad para describir el
@@ -225,25 +227,8 @@
   </div>
 </template>
 
-<script>
-import {
-  COMPANY,
-  PHONE,
-  PRIVACY_EMAIL,
-  SITEURL,
-} from '~/support/constants/info'
+<script setup>
+import { COMPANY, SITEURL } from '~/support/constants/info';
 
-export default {
-  name: 'PrivacyPolicy',
-  layout: 'no-hero',
-
-  data() {
-    return {
-      COMPANY,
-      SITEURL,
-      PHONE,
-      MAILTO: PRIVACY_EMAIL,
-    }
-  },
-}
+definePageMeta({ layout: 'no-hero' });
 </script>

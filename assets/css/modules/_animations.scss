@@ -1,45 +1,50 @@
 @keyframes float {
   0% {
-    transform: translatey(0px);
+    transform: translateY(0);
   }
+
   50% {
-    transform: translatey(-20px);
+    transform: translateY(-20px);
   }
+
   100% {
-    transform: translatey(0px);
+    transform: translateY(0);
   }
 }
 
 @keyframes spinner {
-  from {
+  0% {
     transform: rotate(0deg);
   }
+
   25% {
     transform: rotate(-45deg);
   }
-  to {
+
+  100% {
     transform: rotate(360deg);
   }
 }
 
 @keyframes zoom-in-up {
-  from {
+  0% {
     opacity: 0;
     transform: translate3d(0, 50px, 0) scale(0.5);
   }
-  to {
+
+  100% {
     opacity: 1;
     transform: translate3d(0, 0, 0) scale(1);
   }
 }
 
 @keyframes fade-in-right {
-  from {
+  0% {
     opacity: 0;
     transform: translate3d(100px, 0, 0);
   }
 
-  to {
+  100% {
     opacity: 1;
     transform: translate3d(0, 0, 0);
   }
@@ -50,7 +55,7 @@
     transform: translateX(0);
   }
 
-  to {
+  100% {
     transform: translateX(calc(-1px * var(--carousel-size)));
   }
 }

@@ -32,7 +32,10 @@
         <div class="my-24 flex w-full items-center">
           <!-- Logo's Section -->
           <div class="w-1/2 items-center justify-center py-24">
-            <Logo class="mx-auto my-4" size="large" />
+            <Logo
+              class="mx-auto my-4"
+              size="large"
+            />
           </div>
 
           <!-- Color Palette Section -->
@@ -41,7 +44,9 @@
             data-aos="zoom-in-up"
             data-aos-once="true"
           >
-            <h3 class="text-7xl">Color Palette</h3>
+            <h3 class="text-7xl">
+              Color Palette
+            </h3>
 
             <div
               v-for="color in colorPalette.colors"
@@ -65,8 +70,8 @@
 </template>
 
 <script>
-import BackgroundCodeHtml from '~/components/Layout/Background/CodeHtml'
-import Logo from '~/components/Common/Logo'
+import BackgroundCodeHtml from '~/components/Layout/Background/CodeHtml';
+import Logo from '~/components/Common/Logo';
 
 export default {
   components: {
@@ -77,7 +82,7 @@ export default {
   layout: 'no-hero',
 
   middleware({ redirect }) {
-    redirect('/404')
+    redirect('/404');
   },
 
   data() {
@@ -103,9 +108,9 @@ export default {
           'dark',
         ],
       },
-    }
+    };
   },
-}
+};
 </script>
 
 <style lang="scss" scoped>

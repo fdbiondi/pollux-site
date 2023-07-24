@@ -1,9 +1,9 @@
-FROM node:16.20.0 as dev-stage
+FROM node:18.0.0 as dev-stage
 
 WORKDIR /usr/src/app
 COPY package*.json ./
 
-RUN yarn install
-COPY . .
+RUN npm install -g pnpm
+RUN pnpm install
 
-RUN yarn global add @vue/cli
+COPY . .

@@ -6,18 +6,40 @@
 
 ![PRs status](https://github.com/fdbiondi/pollux-site/actions/workflows/pr_builder.yml/badge.svg?event=push)
 
-## Build Setup
+Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+
+## Setup
+
+Make sure to install the dependencies:
 
 ```bash
-# install dependencies
-$ yarn install
-
-# serve with hot reload at localhost:3000
-$ yarn dev
-
-# build for production and launch server
-$ yarn generate
-$ yarn start
+# pnpm
+pnpm install
 ```
 
-For detailed explanation on how things work, check out the [documentation](https://nuxtjs.org).
+## Development Server
+
+Start the development server on `http://localhost:3000`:
+
+```bash
+# pnpm
+pnpm run dev
+```
+
+## Production
+
+Build the application for production:
+
+```bash
+# pnpm
+pnpm run build
+```
+
+Locally preview production build:
+
+```bash
+# pnpm
+pnpm run preview
+```
+
+Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.

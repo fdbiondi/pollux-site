@@ -1,7 +1,10 @@
 <template>
   <div class="container mx-auto px-4 font-serif sm:px-6">
     <div class="flex flex-wrap">
-      <div v-if="$slots.default" class="mb-16 w-full 2xl:mb-0 2xl:w-1/2">
+      <div
+        v-if="$slots.default"
+        class="mb-16 w-full 2xl:mb-0 2xl:w-1/2"
+      >
         <slot />
       </div>
 
@@ -18,6 +21,7 @@
             rows="10"
             placeholder="Brief Project Description"
             class="mb-4 max-h-48 w-full sm:max-h-96"
+            required
           />
 
           <div class="flex flex-col sm:flex-row gap-4 mb-4">
@@ -27,17 +31,15 @@
               type="text"
               placeholder="Full Name"
               class="w-full"
-              required
-            />
+            >
 
             <input
-              v-model="company"
-              name="company"
+              v-model="phone"
+              name="phone"
               type="text"
-              placeholder="Company Name"
+              placeholder="Phone"
               class="w-full"
-              required
-            />
+            >
           </div>
 
           <input
@@ -47,7 +49,7 @@
             placeholder="Email"
             class="mb-4 w-full"
             required
-          />
+          >
 
           <div class="flex flex-col sm:flex-row gap-4 mb-4">
             <input
@@ -57,7 +59,7 @@
               placeholder="Estimated Start Date"
               onfocus="(this.type='date')"
               class="w-full"
-            />
+            >
 
             <select
               v-model="budget"
@@ -65,15 +67,30 @@
               placeholder="Budget Size"
               class="w-full"
             >
-              <option value="null" selected disabled>Budget Size</option>
-              <option value="1000-5000">$1,000 - $5,000</option>
-              <option value="5000-25000">$5,000 > $25,000</option>
-              <option value="25000-100000">$25,000 > $100,000</option>
-              <option value="+100000">+ $100,000</option>
+              <option
+                value="null"
+                selected
+                disabled
+              >
+                Budget Size
+              </option>
+              <option value="1000-5000">
+                $1,000 - $5,000
+              </option>
+              <option value="5000-25000">
+                $5,000 > $25,000
+              </option>
+              <option value="25000-100000">
+                $25,000 > $100,000
+              </option>
+              <option value="+100000">
+                + $100,000
+              </option>
             </select>
           </div>
 
           <div
+            v-if="false"
             class="flex flex-row justify-between italic text-black-light dark:text-white"
           >
             <label class="flex items-center">
@@ -83,12 +100,14 @@
                 type="checkbox"
                 :value="nda"
                 @input="nda = !nda"
-              />
-              <span class="ml-2" @click="nda = !nda"> Get an NDA </span>
+              >
+              <span
+                class="ml-2"
+                @click="nda = !nda"
+              > Get an NDA </span>
             </label>
 
             <FileInput
-              v-if="false"
               v-model="files"
               name="files"
               label="Attach Files"
@@ -97,15 +116,18 @@
 
           <div class="mt-8 flex flex-wrap sm:mt-0">
             <button
-              class="button button--outline dark:button--outline-dark m-auto w-full sm:w-1/2"
+              class="button button-outline dark:button-outline-dark m-auto w-full sm:w-1/2"
               type="submit"
             >
-              BOOK A CALL
+              CONTACT US
             </button>
 
             <span class="w-full sm:w-1/2 sm:p-8">
               I consent to Pollux processing my personal data according to the
-              <nuxt-link to="privacy-policy" class="text-pollux-pink">
+              <nuxt-link
+                to="privacy-policy"
+                class="text-pollux-pink"
+              >
                 Privacy Policy
               </nuxt-link>
             </span>
@@ -117,7 +139,7 @@
 </template>
 
 <script>
-import FileInput from '~/components/Common/Inputs/FileInput'
+import FileInput from '~/components/Common/Inputs/FileInput';
 
 export default {
   components: {
@@ -131,11 +153,11 @@ export default {
       email: null,
       files: null,
       fullname: null,
-      company: null,
+      phone: null,
       nda: false,
       startDate: null,
       formUrl: this.$config.CONTACT_FORM_URL,
-    }
+    };
   },
-}
+};
 </script>

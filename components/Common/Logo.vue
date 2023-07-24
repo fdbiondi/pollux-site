@@ -10,7 +10,7 @@
           'h-28 w-28': isMedium,
           'h-40 w-40': isLarge,
         }"
-      />
+      >
       <div class="relative mt-4">
         <div class="font-pollux dark:text-white">
           <div
@@ -63,18 +63,18 @@ export default {
 
   computed: {
     isSmall() {
-      return this.size === 'small'
+      return this.size === 'small';
     },
 
     isMedium() {
-      return this.size === 'medium'
+      return this.size === 'medium';
     },
 
     isLarge() {
-      return this.size === 'large'
+      return this.size === 'large';
     },
   },
-}
+};
 </script>
 
 <style lang="scss" scoped>

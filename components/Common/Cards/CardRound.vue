@@ -4,8 +4,11 @@
       :src="src"
       :alt="alt"
       class="h-32 w-32 rounded-[100%] border-4 border-solid dark:border-gray-100 border-gray-800"
-    />
-    <h4 v-if="text" class="mt-2 text-center font-serif text-2xl text-gray-200">
+    >
+    <h4
+      v-if="text"
+      class="mt-2 text-center font-serif text-2xl text-gray-200"
+    >
       {{ text }}
     </h4>
   </div>
@@ -29,7 +32,7 @@ export default {
       type: String,
     },
   },
-}
+};
 </script>
 
 <style lang="scss" scoped>
