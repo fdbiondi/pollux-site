@@ -10,7 +10,10 @@
       </nuxt-link>
 
       <div class="z-30 flex items-center">
-        <div class="hidden text-lg text-white 2xl:flex">
+        <div
+          v-if="!mobileMenuOpened"
+          class="hidden text-lg text-white 2xl:flex"
+        >
           <a
             v-for="(link, index) in links"
             :key="`nav-item-link-${index}`"
@@ -27,6 +30,7 @@
         <MobileMenu
           class="block 2xl:hidden"
           :links="links"
+          @menu:open="mobileMenuOpened = $event"
         />
       </div>
     </nav>
@@ -49,6 +53,7 @@ export default {
 
   data() {
     return {
+      mobileMenuOpened: false,
       links: [
         { href: '#services', label: 'Services' },
         { href: '#clients', label: 'Our Clients' },

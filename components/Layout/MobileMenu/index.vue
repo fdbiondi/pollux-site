@@ -1,7 +1,7 @@
 <template>
   <div
     class="z-50 duration-700"
-    :class="{ 'fixed inset-0 bg-gray-900': menuOpen }"
+    :class="{ 'fixed inset-0 bg-gray-100 dark:bg-gray-900': menuOpen }"
   >
     <div
       class="menu"
@@ -23,7 +23,7 @@
       :class="[menuOpen ? 'flex' : 'hidden']"
     >
       <div
-        class="flex flex-col space-y-3 text-center text-xl font-light text-white"
+        class="flex flex-col space-y-3 text-center text-xl font-light"
       >
         <a
           v-for="(link, index) in links"
@@ -35,18 +35,33 @@
           {{ link.label }}
         </a>
       </div>
+
+      <div
+        class="fixed left-0 top-0 mx-4 py-8 w-auto delay-150 duration-1000 transition-all"
+        :class="menuOpen ? 'visible' : 'invisible'"
+      >
+        <ThemeSwitch />
+      </div>
     </div>
   </div>
 </template>
 
 <script>
+import ThemeSwitch from '~/components/Common/Buttons/ThemeSwitch';
+
 export default {
+  components: {
+    ThemeSwitch,
+  },
+
   props: {
     links: {
       type: Array,
       required: true,
     },
   },
+
+  emits: ['menu:open'],
 
   data() {
     return {
@@ -58,6 +73,7 @@ export default {
     menuOpen: {
       handler(open) {
         this.toggleBodyScrollbar(open);
+        this.$emit('menu:open', open);
       },
     },
   },
@@ -106,8 +122,9 @@ export default {
     }
 
     &.is-active .hamburger-slice {
+      @apply bg-gray-900 dark:bg-white;
+
       width: 2rem !important;
-      background-color: #fff;
       -webkit-animation: none !important;
       animation: none !important;
       transform-origin: center;
