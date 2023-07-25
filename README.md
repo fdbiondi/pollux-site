@@ -13,8 +13,8 @@ Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introdu
 Make sure to install the dependencies:
 
 ```bash
-# yarn
-yarn install
+# pnpm
+pnpm install
 ```
 
 ## Development Server
@@ -22,8 +22,8 @@ yarn install
 Start the development server on `http://localhost:3000`:
 
 ```bash
-# yarn
-yarn dev
+# pnpm
+pnpm run dev
 ```
 
 ## Production
@@ -31,15 +31,15 @@ yarn dev
 Build the application for production:
 
 ```bash
-# yarn
-yarn build
+# pnpm
+pnpm run build
 ```
 
 Locally preview production build:
 
 ```bash
-# yarn
-yarn preview
+# pnpm
+pnpm run preview
 ```
 
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
