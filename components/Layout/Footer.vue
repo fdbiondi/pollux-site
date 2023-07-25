@@ -95,21 +95,25 @@
           </div>
         </div>
 
-        <div class="w-full lg:w-1/4 py-8">
-          <div
-            v-if="false"
-            class="text-center mb-1"
-          >
-            <h4 class="font-serif font-medium uppercase">
-              trusted by
-            </h4>
-          </div>
-
+        <div
+          class="w-full lg:w-1/4 px-6 py-8 flex flex-col items-end justify-between"
+        >
           <ImageList
-            class="partners my-4"
+            class="partners m-0 justify-between"
             :images="partners"
             :has-link="true"
           />
+
+          <a
+            :href="isoLink"
+            target="_blank"
+          >
+            <img
+              :src="isoImage"
+              alt="ISO 9001 certification"
+              class="w-40"
+            />
+          </a>
         </div>
       </div>
 
@@ -160,7 +164,9 @@ import {
   PHONE,
 } from '~/support/constants/info';
 import { getFromContext } from '~/support/files';
+import isoImage from '~/assets/images/bureau';
 
+const isoLink = 'https://bureauveritas.com.ar';
 const LETS_CONNECT = `Let's connect`;
 
 const firstColumn = sitemap.firstColumn;
@@ -195,12 +201,13 @@ html.dark .footer-icon:hover {
 
 .partners {
   :deep(div) {
-    @apply p-2;
+    @apply p-1 mx-1;
 
     img {
       filter: grayscale(1) invert(0.2);
 
       &:hover {
+        cursor: pointer;
         filter: saturate(2) drop-shadow(0 2px 1px rgb(0 0 0 / 20%))
           drop-shadow(0 2px 2px rgb(0 0 0 / 50%));
         transform: scaleX(1.05) scaleY(1.05);
