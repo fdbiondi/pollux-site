@@ -93,8 +93,8 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     public: {
-      CONTACT_FORM_URL: process.env.FORMSPREE_URL,
-      CAREER_FORM_URL: process.env.FORMSPREE_URL,
+      contactFormURL: process.env.FORMSPREE_URL,
+      careerFormURL: process.env.FORMSPREE_URL,
     },
   },
 

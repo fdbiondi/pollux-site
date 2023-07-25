@@ -62,7 +62,7 @@ export default {
     return {
       curriculum: null,
       name: null,
-      formUrl: this.$config.CAREER_FORM_URL,
+      formUrl: this.$config.careerFormURL,
     };
   },
 

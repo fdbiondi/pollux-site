@@ -140,26 +140,18 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import FileInput from '~/components/Common/Inputs/FileInput';
 
-export default {
-  components: {
-    FileInput,
-  },
+const config = useRuntimeConfig();
 
-  data() {
-    return {
-      budget: null,
-      description: null,
-      email: null,
-      files: null,
-      fullname: null,
-      phone: null,
-      nda: false,
-      startDate: null,
-      formUrl: this.$config.CONTACT_FORM_URL,
-    };
-  },
-};
+const budget = null;
+const description = null;
+const email = null;
+const files = null;
+const fullname = null;
+const phone = null;
+const nda = false;
+const startDate = null;
+const formUrl = config.public.contactFormURL;
 </script>
