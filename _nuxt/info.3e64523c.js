@@ -1,0 +1,1 @@
+const o="Pollux",s=`Copyright © ${new Date().getFullYear()}`,a=`© ${new Date().getFullYear()}`,n="Privacy policy",t="Pollux LTDA",c="2000 Rosario",e="San Lorenzo 1333 3B",l="Santa Fe, Argentina",P="+54 9 341 718 8740",C="polluxcoop.com",O="info@polluxcoop.com";export{e as A,a as C,O as E,n as P,l as S,t as a,c as b,o as c,C as d,P as e,s as f};

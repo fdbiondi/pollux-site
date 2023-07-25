@@ -1,0 +1,1 @@
+import{_ as e,o as _,c}from"./entry.82b8af84.js";const o={},t={class:"image-bg py-8"};function s(n,a){return _(),c("section",t)}const d=e(o,[["render",s],["__scopeId","data-v-82844749"]]);export{d as B};
