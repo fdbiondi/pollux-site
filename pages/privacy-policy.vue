@@ -3,7 +3,9 @@
     class="container mx-auto p-8 lg:p-16 xl:p-24 !pt-8 min-h-screen text-justify"
   >
     <h1>Privacy Policy</h1>
-    <p class="mb-0 text-sm">Last updated: July 25, 2023</p>
+    <p class="mb-0 text-sm">
+      Last updated: July 25, 2023
+    </p>
     <p>
       This Privacy Policy describes Our policies and procedures on the
       collection, use and disclosure of Your information when You use the
@@ -493,12 +495,14 @@
       </a>
     </p>
 
-    <button
-      class="button button-outline dark:button-outline-dark mx-auto my-8 lg:my-16 w-full sm:w-1/4"
-      @click="goHome"
-    >
-      BACK TO HOME
-    </button>
+    <div class="w-full flex justify-center my-8 lg:my-16">
+      <button
+        class="button button-outline dark:button-outline-dark w-full sm:w-1/4"
+        @click="goHome"
+      >
+        BACK TO HOME
+      </button>
+    </div>
   </div>
 </template>
 
