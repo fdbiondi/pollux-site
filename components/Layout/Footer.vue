@@ -39,7 +39,7 @@
       </div>
 
       <div class="flex flex-col flex-wrap lg:flex-row">
-        <div class="w-full p-6 text-xl leading-loose sm:px-10 lg:w-1/4 lg:p-6">
+        <div class="w-full p-6 text-xl leading-loose sm:px-10 lg:w-1/3 lg:p-6 xl:w-1/4">
           <div class="line-block" />
 
           {{ POLLUX_COOP }}
@@ -63,7 +63,7 @@
         </div>
 
         <div
-          class="flex w-full flex-col justify-around lg:w-3/4 lg:flex-row 2xl:w-1/2"
+          class="flex w-full flex-col justify-around lg:w-1/3 lg:flex-row xl:w-1/2"
         >
           <div class="flex flex-col p-6 sm:px-10 lg:p-6">
             <div class="line-block" />
@@ -96,7 +96,7 @@
         </div>
 
         <div
-          class="w-full lg:w-1/4 px-6 py-8 flex flex-col items-end justify-between"
+          class="w-full px-6 py-8 flex flex-col items-center justify-between lg:w-1/3 lg:items-end xl:w-1/4"
         >
           <ImageList
             class="partners m-0 justify-between"
@@ -111,7 +111,7 @@
             <img
               :src="isoImage"
               alt="ISO 9001 certification"
-              class="w-40"
+              class="w-40 mt-10 lg:mt-0"
             />
           </a>
         </div>
