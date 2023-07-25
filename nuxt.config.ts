@@ -84,6 +84,13 @@ export default defineNuxtConfig({
 
   plugins: [{ src: '@/plugins/aos', ssr: false, mode: 'client' }],
 
+  runtimeConfig: {
+    public: {
+      CONTACT_FORM_URL: process.env.FORMSPREE_URL,
+      CAREER_FORM_URL: process.env.FORMSPREE_URL,
+    },
+  },
+
   ssr: false,
 
   colorMode: {
