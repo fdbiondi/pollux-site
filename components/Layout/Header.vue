@@ -1,13 +1,13 @@
 <template>
   <header id="header">
     <nav class="container mx-auto flex items-center justify-between px-6 py-2">
-      <a href="/">
+      <nuxt-link to="/">
         <logo class="hidden md:block" />
         <logo
           size="small"
           class="md:hidden"
         />
-      </a>
+      </nuxt-link>
 
       <div class="z-30 flex items-center">
         <div class="hidden text-lg text-white 2xl:flex">
