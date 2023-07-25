@@ -14,6 +14,7 @@
 
       <span class="my-16 text-xl sm:p-8 2xl:my-0">
         <span>{{ fillOutForm }}</span>
+        <span>&nbsp;</span>
         <a
           :href="`mailto: ${EMAIL}`"
           class="text-pollux-pink"
@@ -25,7 +26,7 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import { EMAIL } from '~/support/constants/info';
 
 const fillOutForm = 'Simply fill out the form or EMAIL us at';
@@ -33,19 +34,6 @@ const getYour = 'get your';
 const moving = 'moving!';
 const project = 'project';
 const talkToUs = 'Talk to us and';
-
-export default {
-  data() {
-    return {
-      EMAIL,
-      fillOutForm,
-      getYour,
-      moving,
-      project,
-      talkToUs,
-    };
-  },
-};
 </script>
 
 <style lang="scss" scoped>
