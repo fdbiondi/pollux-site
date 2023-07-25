@@ -4,12 +4,14 @@ export default defineNuxtConfig({
     baseURL: '/pollux-site/',
 
     head: {
+      title: process.env.HEAD_TITLE,
       charset: 'utf-8',
       viewport: 'width=device-width, initial-scale=1',
-      title: process.env.HEAD_TITLE,
+
       htmlAttrs: {
-        lang: 'es',
+        lang: 'en',
       },
+
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -20,6 +22,7 @@ export default defineNuxtConfig({
         },
         { name: 'format-detection', content: 'telephone=no' },
       ],
+
       link: [
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
         {
@@ -64,14 +67,19 @@ export default defineNuxtConfig({
 
   css: [
     '@/assets/css/tailwind.css',
+
     '@/assets/css/main.scss',
 
     '@fortawesome/fontawesome-svg-core/styles.css',
   ],
 
-  devtools: { enabled: true },
+  devtools: { enabled: false },
 
   modules: [
+    '@nuxtjs/eslint-module',
+
+    '@nuxtjs/stylelint-module',
+
     '@nuxtjs/color-mode',
 
     '@nuxtjs/tailwindcss',
@@ -79,13 +87,9 @@ export default defineNuxtConfig({
     '@nuxtjs/google-fonts',
 
     '@pinia/nuxt',
-
-    '@nuxtjs/eslint-module',
-
-    '@nuxtjs/stylelint-module',
   ],
 
-  plugins: [{ src: '@/plugins/aos', ssr: false, mode: 'client' }],
+  // plugins: [{ src: '@/plugins/aos', ssr: false, mode: 'client' }],
 
   runtimeConfig: {
     public: {
@@ -110,14 +114,5 @@ export default defineNuxtConfig({
       Oswald: true,
     },
     preload: true,
-  },
-
-  pinia: {},
-
-  postcss: {
-    plugins: {
-      tailwindcss: {},
-      autoprefixer: {},
-    },
   },
 });
