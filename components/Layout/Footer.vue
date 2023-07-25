@@ -100,7 +100,9 @@
             v-if="false"
             class="text-center mb-1"
           >
-            <h4 class="font-serif font-medium uppercase">trusted by</h4>
+            <h4 class="font-serif font-medium uppercase">
+              trusted by
+            </h4>
           </div>
 
           <ImageList

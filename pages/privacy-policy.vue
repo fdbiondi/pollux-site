@@ -2,7 +2,9 @@
   <div
     class="container mx-auto p-8 lg:p-16 xl:p-24 !pt-0 gap-8 min-h-screen flex items-center flex-col justify-center"
   >
-    <h2 class="title">Privacy Policy</h2>
+    <h2 class="title">
+      Privacy Policy
+    </h2>
 
     <p>
       {{ COMPANY }} a desarrollado esta Política de Privacidad para describir el
