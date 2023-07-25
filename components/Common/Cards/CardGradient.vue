@@ -41,11 +41,11 @@ export default {
 
 <style scoped>
 * {
-  --accent: 124, 58, 237;
+  --accent: 0, 138, 255;
   --accent-gradient: linear-gradient(
     45deg,
     rgb(var(--accent)),
-    #da62c4 30%,
+    #73f4ff 30%,
     white 60%
   );
 }

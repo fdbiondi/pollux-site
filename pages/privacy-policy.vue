@@ -2,9 +2,7 @@
   <div
     class="container mx-auto p-8 lg:p-16 xl:p-24 !pt-0 gap-8 min-h-screen flex items-center flex-col justify-center"
   >
-    <h2 class="title">
-      Privacy Policy
-    </h2>
+    <h2 class="title">Privacy Policy</h2>
 
     <p>
       {{ COMPANY }} a desarrollado esta Política de Privacidad para describir el
@@ -224,6 +222,13 @@
       información, ingrese a:
     </p>
     <p>&nbsp;www.argentina.gob.ar/aaip/datospersonales/normativa</p>
+
+    <button
+      class="button button-outline dark:button-outline-dark mx-auto my-8 lg:my-16 w-full sm:w-1/4"
+      @click="goHome"
+    >
+      BACK TO HOME
+    </button>
   </div>
 </template>
 
@@ -231,4 +236,10 @@
 import { COMPANY, SITEURL } from '~/support/constants/info';
 
 definePageMeta({ layout: 'no-hero' });
+
+const router = useRouter();
+
+function goHome() {
+  router.push({ path: '/' });
+}
 </script>

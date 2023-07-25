@@ -15,14 +15,24 @@
 
           <span />
 
-          <fa-icon
-            :icon="['fab', 'instagram']"
-            class="footer-icon"
-          />
-          <fa-icon
-            :icon="['fab', 'linkedin-in']"
-            class="footer-icon"
-          />
+          <a
+            href="https://www.instagram.com/polluxcoop/"
+            target="_blank"
+          >
+            <fa-icon
+              :icon="['fab', 'instagram']"
+              class="footer-icon"
+            />
+          </a>
+          <a
+            href="https://ar.linkedin.com/company/polluxcoop"
+            target="_blank"
+          >
+            <fa-icon
+              :icon="['fab', 'linkedin-in']"
+              class="footer-icon"
+            />
+          </a>
 
           <span />
         </div>
@@ -90,9 +100,7 @@
             v-if="false"
             class="text-center mb-1"
           >
-            <h4 class="font-serif font-medium uppercase">
-              trusted by
-            </h4>
+            <h4 class="font-serif font-medium uppercase">trusted by</h4>
           </div>
 
           <ImageList
