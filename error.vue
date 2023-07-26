@@ -37,7 +37,7 @@
     </div>
 
     <div
-      v-if="showStackErrors && false"
+      v-if="showStackErrors"
       class="rounded-t-md flex-1 overflow-y-auto h-auto container mx-auto p-8 bg-gray-200/70 dark:bg-gray-800/70"
     >
       <div
