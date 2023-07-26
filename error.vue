@@ -3,7 +3,7 @@
     class="flex min-h-screen flex-col items-center justify-evenly text-black-light dark:text-white"
   >
     <div
-      class="container -mx-8 flex items-center justify-center custom-drop-shadow-lg"
+      class="custom-drop-shadow-lg container -mx-8 flex items-center justify-center"
     >
       <div class="mx-auto px-2 text-center font-mono">
         <h3 class="my-8 text-5xl font-bold">
@@ -38,10 +38,10 @@
 
     <div
       v-if="showStackErrors"
-      class="rounded-t-md flex-1 overflow-y-auto h-auto container mx-auto p-8 bg-gray-200/70 dark:bg-gray-800/70"
+      class="container mx-auto h-auto flex-1 overflow-y-auto rounded-t-md bg-gray-200/70 p-8 dark:bg-gray-800/70"
     >
       <div
-        class="text-sm font-light leading-tight z-10 p-8 font-mono whitespace-nowrap"
+        class="z-10 whitespace-nowrap p-8 font-mono text-sm font-light leading-tight"
       >
         <span
           v-for="(err, $errIndex) in stackErrors"

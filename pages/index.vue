@@ -92,7 +92,7 @@ const clients = getFromContext(glob, '.*', (src) => {
 
 <style lang="scss" scoped>
 .clients :deep(img) {
-  @apply brightness-200 drop-shadow-none scale-110;
+  @apply scale-110 brightness-200 drop-shadow-none;
 
   /* fix for classes -> grayscale drop-shadow-tight */
   filter: grayscale(1) invert(0.2) drop-shadow(0 2px 1px rgb(0 0 0 / 20%))

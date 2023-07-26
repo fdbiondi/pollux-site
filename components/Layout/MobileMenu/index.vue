@@ -35,7 +35,7 @@
       </div>
 
       <div
-        class="fixed left-0 top-0 mx-4 py-8 w-auto delay-150 duration-1000 transition-all"
+        class="fixed left-0 top-0 mx-4 w-auto py-8 transition-all delay-150 duration-1000"
         :class="menuOpen ? 'visible' : 'invisible'"
       >
         <ThemeSwitch />

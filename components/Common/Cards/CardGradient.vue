@@ -3,7 +3,7 @@
     class="flex list-none rounded-lg bg-gray-800 bg-none p-1 dark:bg-gray-100"
   >
     <a
-      class="w-full rounded-md bg-white py-4 px-5 font-extrabold opacity-90 dark:bg-gray-800"
+      class="w-full rounded-md bg-white px-5 py-4 font-extrabold opacity-90 dark:bg-gray-800"
       :href="href"
     >
       <h2 class="m-0 mt-2 text-xl">

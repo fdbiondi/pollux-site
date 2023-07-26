@@ -98,7 +98,7 @@
         </div>
 
         <div
-          class="w-full px-6 py-8 flex flex-col items-center justify-between lg:w-1/3 lg:items-end xl:w-1/4"
+          class="flex w-full flex-col items-center justify-between px-6 py-8 lg:w-1/3 lg:items-end xl:w-1/4"
         >
           <ImageList
             class="partners m-0 justify-between"
@@ -113,7 +113,7 @@
             <img
               :src="isoImage"
               alt="ISO 9001 certification"
-              class="w-40 mt-10 lg:mt-0"
+              class="mt-10 w-40 lg:mt-0"
             />
           </a>
         </div>
@@ -203,7 +203,7 @@ html.dark .footer-icon:hover {
 
 .partners {
   :deep(div) {
-    @apply p-1 mx-1;
+    @apply mx-1 p-1;
 
     img {
       filter: grayscale(1) invert(0.2);

@@ -1,6 +1,6 @@
 <template>
   <div
-    class="container mx-auto p-8 lg:p-16 xl:p-24 !pt-8 min-h-screen text-justify"
+    class="container mx-auto min-h-screen p-8 !pt-8 text-justify lg:p-16 xl:p-24"
   >
     <h1>Privacy Policy</h1>
     <p class="mb-0 text-sm">
@@ -495,7 +495,7 @@
       </a>
     </p>
 
-    <div class="w-full flex justify-center my-8 lg:my-16">
+    <div class="my-8 flex w-full justify-center lg:my-16">
       <button
         class="button button-outline dark:button-outline-dark w-full sm:w-1/4"
         @click="goHome"
@@ -538,7 +538,7 @@ p {
 }
 
 strong {
-  @apply font-bold scale-105;
+  @apply scale-105 font-bold;
 }
 
 ul {

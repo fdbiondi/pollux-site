@@ -36,7 +36,7 @@
 
     <div
       v-if="curriculum"
-      class="mt-2 text-gray-900 dark:text-gray-200 transition-opacity"
+      class="mt-2 text-gray-900 transition-opacity dark:text-gray-200"
     >
       <span
         class="cursor-pointer hover:text-white"

@@ -18,7 +18,7 @@
       </section>
     </div>
 
-    <section class="overflow-hidden max-h-[20vh] w-full">
+    <section class="max-h-[20vh] w-full overflow-hidden">
       <canvas
         id="gradient-canvas"
         :width="1920 * 4"

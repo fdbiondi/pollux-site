@@ -24,7 +24,7 @@
             required
           />
 
-          <div class="flex flex-col sm:flex-row gap-4 mb-4">
+          <div class="mb-4 flex flex-col gap-4 sm:flex-row">
             <input
               v-model="fullname"
               name="fullname"
@@ -51,7 +51,7 @@
             required
           />
 
-          <div class="flex flex-col sm:flex-row gap-4 mb-4">
+          <div class="mb-4 flex flex-col gap-4 sm:flex-row">
             <input
               v-model="startDate"
               type="text"

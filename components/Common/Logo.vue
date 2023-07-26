@@ -4,7 +4,7 @@
       <img
         src="/logo.svg"
         alt="Pollux Software Engineering"
-        class="z-20 custom-drop-shadow-lg"
+        class="custom-drop-shadow-lg z-20"
         :class="{
           'h-20 w-20': isSmall,
           'h-28 w-28': isMedium,
@@ -14,7 +14,7 @@
       <div class="relative mt-4">
         <div class="font-pollux dark:text-white">
           <div
-            class="px-1 tracking-wider custom-drop-shadow-lg"
+            class="custom-drop-shadow-lg px-1 tracking-wider"
             :class="{
               'text-3xl': isSmall,
               'text-5xl': isMedium,
@@ -24,7 +24,7 @@
             Pollux
           </div>
           <div
-            class="text-pollux-cyan custom-drop-shadow-lg"
+            class="custom-drop-shadow-lg text-pollux-cyan"
             :class="{
               'text-[0.65rem]': isSmall,
               'text-md': isMedium,

@@ -3,7 +3,7 @@
     <img
       :src="src"
       :alt="alt"
-      class="h-32 w-32 rounded-[100%] border-4 border-solid dark:border-gray-100 border-gray-800"
+      class="h-32 w-32 rounded-[100%] border-4 border-solid border-gray-800 dark:border-gray-100"
     />
     <h4
       v-if="text"
