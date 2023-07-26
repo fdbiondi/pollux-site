@@ -95,6 +95,7 @@ export default defineNuxtConfig({
     public: {
       contactFormURL: process.env.FORMSPREE_URL,
       careerFormURL: process.env.FORMSPREE_URL,
+      errorLog: process.env.ERROR_LOG,
     },
   },
 

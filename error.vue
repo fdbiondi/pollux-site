@@ -80,6 +80,7 @@ switch (error.value.statusCode) {
     break;
 }
 
+const config = useRuntimeConfig();
 const stackErrors = error.value.stack.split('    at ').slice(1, -1);
-const showStackErrors = process.env.NODE_ENV !== 'production';
+const showStackErrors = config.public.errorLog === 'STACK';
 </script>
