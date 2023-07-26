@@ -39,7 +39,9 @@
       </div>
 
       <div class="flex flex-col flex-wrap lg:flex-row">
-        <div class="w-full p-6 text-xl leading-loose sm:px-10 lg:w-1/3 lg:p-6 xl:w-1/4">
+        <div
+          class="w-full p-6 text-xl leading-loose sm:px-10 lg:w-1/3 lg:p-6 xl:w-1/4"
+        >
           <div class="line-block" />
 
           {{ POLLUX_COOP }}

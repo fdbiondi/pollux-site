@@ -22,9 +22,7 @@
       class="h-full w-full items-center justify-center"
       :class="[menuOpen ? 'flex' : 'hidden']"
     >
-      <div
-        class="flex flex-col space-y-3 text-center text-xl font-light"
-      >
+      <div class="flex flex-col space-y-3 text-center text-xl font-light">
         <a
           v-for="(link, index) in links"
           :key="`menu-link-${index}`"

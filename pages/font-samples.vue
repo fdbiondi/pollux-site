@@ -64,52 +64,42 @@
         </div>
       </div>
     </div>
-
-    <BackgroundCodeHtml />
   </div>
 </template>
 
-<script>
-import BackgroundCodeHtml from '~/components/Layout/Background/CodeHtml';
+<script setup>
 import Logo from '~/components/Common/Logo';
 
-export default {
-  components: {
-    BackgroundCodeHtml,
-    Logo,
-  },
+definePageMeta({
+  layout: 'simple',
 
-  layout: 'no-hero',
+  middleware: [
+    function() {
+      return navigateTo('/404');
+    },
+  ],
+});
 
-  middleware({ redirect }) {
-    redirect('/404');
-  },
-
-  data() {
-    return {
-      colorPalette: {
-        colors: ['cyan', 'pink'],
-        tones: [
-          '50',
-          '100',
-          '200',
-          '300',
-          '400',
-          '500',
-          '600',
-          '700',
-          '800',
-          '900',
-          'A100',
-          'A200',
-          'A300',
-          'A400',
-          'light',
-          'dark',
-        ],
-      },
-    };
-  },
+const colorPalette = {
+  colors: ['cyan', 'pink'],
+  tones: [
+    '50',
+    '100',
+    '200',
+    '300',
+    '400',
+    '500',
+    '600',
+    '700',
+    '800',
+    '900',
+    'A100',
+    'A200',
+    'A300',
+    'A400',
+    'light',
+    'dark',
+  ],
 };
 </script>
 

@@ -34,7 +34,15 @@ import { onMounted } from 'vue';
 
 import CareerForm from '~/components/Forms/CareerForm';
 
-definePageMeta({ layout: 'no-hero' });
+definePageMeta({
+  layout: 'no-hero',
+
+  middleware: [
+    function() {
+      return navigateTo('/404');
+    },
+  ],
+});
 
 onMounted(() => {
   const g = new Gradient();
