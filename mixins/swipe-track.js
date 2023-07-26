@@ -5,82 +5,82 @@ export default {
       transform: 0,
       initialPosition: null,
       lastPageX: 0,
-    }
+    };
   },
 
   computed: {
     track() {
-      return document.querySelector('.slider--swipe-track')
+      return document.querySelector('.slider--swipe-track');
     },
 
     trackNotExists() {
-      return this.track === null
+      return this.track === null;
     },
   },
 
   methods: {
     gestureStart(event) {
       if (this.trackNotExists) {
-        return
+        return;
       }
 
       if (process.client) {
-        event.preventDefault()
+        event.preventDefault();
 
-        this.initialPosition = event.pageX
-        this.moving = true
+        this.initialPosition = event.pageX;
+        this.moving = true;
 
         const transformMatrix = window
           .getComputedStyle(this.track)
-          .getPropertyValue('transform')
+          .getPropertyValue('transform');
 
         if (transformMatrix !== 'none') {
-          this.transform = parseInt(transformMatrix.split(',')[4].trim())
+          this.transform = parseInt(transformMatrix.split(',')[4].trim());
         }
       }
     },
 
     gestureMove(event) {
       if (this.trackNotExists) {
-        return
+        return;
       }
 
       if (process.client) {
-        event.preventDefault()
+        event.preventDefault();
 
-        const maxTrackSize = this.images.length * 16 * (6 - 1 / 2) // count * 16[=>1rem] * (6 rem - 1/2)
+        const maxTrackSize = this.images.length * 16 * (6 - 1 / 2); // count * 16[=>1rem] * (6 rem - 1/2)
 
         if (this.moving) {
           if (event.pageX - this.lastPageX < 0) {
             if (this.transform > 0) {
-              return
+              return;
             }
           } else if (Math.abs(this.transform) > maxTrackSize) {
-            return
+            return;
           }
 
-          const diff = event.pageX - this.initialPosition
+          const diff = event.pageX - this.initialPosition;
 
           if (this.track) {
             this.track.style.transform = `translateX(${
               this.transform - diff
-            }px)`
+            }px)`;
           }
         }
 
-        this.lastPageX = event.pageX
+        this.lastPageX = event.pageX;
       }
     },
 
     gestureEnd(event) {
       if (this.trackNotExists) {
-        return
+        return;
       }
 
       if (process.client) {
-        event.preventDefault()
-        this.moving = false
+        event.preventDefault();
+        this.moving = false;
       }
     },
   },
-}
+};

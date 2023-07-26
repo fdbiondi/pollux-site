@@ -89,28 +89,29 @@
     @apply shadow-gray-800;
   }
 
-  .button--primary {
+  .button-primary {
     @apply button-pollux-cyan hover:button-reflex hover:button-cyan-reflex;
   }
 
-  .button--secondary {
+  .button-secondary {
     @apply button-black hover:button-reflex hover:button-light-reflex;
   }
 
-  .button--secondary-dark {
+  .button-secondary-dark {
     @apply button-white hover:button-reflex hover:button-dark-reflex;
   }
 
-  .button--outline {
+  .button-outline {
     @apply button-black-outline hover:button-reflex hover:button-darkest-reflex;
   }
 
-  .button--outline-dark {
+  .button-outline-dark {
     @apply button-white-outline hover:button-reflex hover:button-white-reflex;
   }
 
   .button:disabled {
     @apply !border-gray-400 !bg-gray-400 !text-gray-800;
+
     transform: none !important;
     box-shadow: none !important;
   }

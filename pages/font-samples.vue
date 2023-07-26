@@ -32,7 +32,10 @@
         <div class="my-24 flex w-full items-center">
           <!-- Logo's Section -->
           <div class="w-1/2 items-center justify-center py-24">
-            <Logo class="mx-auto my-4" size="large" />
+            <Logo
+              class="mx-auto my-4"
+              size="large"
+            />
           </div>
 
           <!-- Color Palette Section -->
@@ -41,7 +44,9 @@
             data-aos="zoom-in-up"
             data-aos-once="true"
           >
-            <h3 class="text-7xl">Color Palette</h3>
+            <h3 class="text-7xl">
+              Color Palette
+            </h3>
 
             <div
               v-for="color in colorPalette.colors"
@@ -59,53 +64,43 @@
         </div>
       </div>
     </div>
-
-    <BackgroundCodeHtml />
   </div>
 </template>
 
-<script>
-import BackgroundCodeHtml from '~/components/Layout/Background/CodeHtml'
-import Logo from '~/components/Common/Logo'
+<script setup>
+import Logo from '~/components/Common/Logo';
 
-export default {
-  components: {
-    BackgroundCodeHtml,
-    Logo,
-  },
+definePageMeta({
+  layout: 'simple',
 
-  layout: 'no-hero',
+  middleware: [
+    function() {
+      return navigateTo('/404');
+    },
+  ],
+});
 
-  middleware({ redirect }) {
-    redirect('/404')
-  },
-
-  data() {
-    return {
-      colorPalette: {
-        colors: ['cyan', 'pink'],
-        tones: [
-          '50',
-          '100',
-          '200',
-          '300',
-          '400',
-          '500',
-          '600',
-          '700',
-          '800',
-          '900',
-          'A100',
-          'A200',
-          'A300',
-          'A400',
-          'light',
-          'dark',
-        ],
-      },
-    }
-  },
-}
+const colorPalette = {
+  colors: ['cyan', 'pink'],
+  tones: [
+    '50',
+    '100',
+    '200',
+    '300',
+    '400',
+    '500',
+    '600',
+    '700',
+    '800',
+    '900',
+    'A100',
+    'A200',
+    'A300',
+    'A400',
+    'light',
+    'dark',
+  ],
+};
 </script>
 
 <style lang="scss" scoped>

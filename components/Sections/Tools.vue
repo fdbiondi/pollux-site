@@ -1,12 +1,17 @@
 <template>
   <section class="py-4 lg:py-8 xl:py-16">
     <div class="container mx-auto px-8 sm:px-4 md:px-2">
-      <h2 class="title">{{ title }}</h2>
+      <h2 class="title">
+        {{ title }}
+      </h2>
     </div>
 
     <Slider :images="images">
       <template #default="{ props: { name, src, link, vClass } }">
-        <a :href="link" target="_blank">
+        <a
+          :href="link"
+          target="_blank"
+        >
           <img
             :src="src"
             :alt="name"
@@ -21,9 +26,9 @@
 </template>
 
 <script>
-import Slider from '~/components/Common/List/Slider'
-import { getFromContext } from '~/support/files'
-import { getToolClass, getToolLink } from '~/support/strings'
+import Slider from '~/components/Common/List/Slider';
+import { getFromContext } from '~/support/files';
+import { getToolClass, getToolLink } from '~/support/strings';
 
 export default {
   components: {
@@ -34,18 +39,21 @@ export default {
     return {
       images: [],
       title: 'Some of the Technologies that we use',
-    }
+    };
   },
 
   mounted() {
-    this.images = getFromContext(
-      require.context('@/assets/images/tools/', true, /\.svg$/),
-      '.svg',
-      (path, extension) => ({
+    const glob = import.meta.glob('~/assets/images/tools/**/*.svg', {
+      eager: true,
+    });
+
+    this.images = getFromContext(glob, '.svg', (path, extension) => {
+      return {
         link: getToolLink(path, extension),
         vClass: getToolClass(path, extension),
-      }),
-    )
+        src: glob[path].default,
+      };
+    });
   },
-}
+};
 </script>

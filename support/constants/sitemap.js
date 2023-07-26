@@ -5,12 +5,12 @@ export default {
       name: 'Services',
     },
     {
-      href: '#contact',
-      name: 'Contact',
-    },
-    {
       href: '#clients',
       name: 'Our Clients',
+    },
+    {
+      href: '#contact',
+      name: 'Contact',
     },
   ],
   secondColumn: [
@@ -23,4 +23,4 @@ export default {
       name: 'Career',
     },
   ],
-}
+};

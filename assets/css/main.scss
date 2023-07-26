@@ -1,3 +1,8 @@
+@import 'assets/css/modules/common';
+@import 'assets/css/modules/animations';
+@import 'assets/css/modules/inputs';
+@import 'assets/css/modules/hero';
+
 html {
   scroll-behavior: smooth;
   background-color: theme('colors.white');
@@ -45,13 +50,8 @@ img {
   user-drag: none;
 }
 
-@import 'assets/css/modules/common';
-@import 'assets/css/modules/animations';
-@import 'assets/css/modules/inputs';
-@import 'assets/css/modules/hero';
-
 /* fixes drop-shadow, grayscale tailwind classes, once fixed on tw should replace with tw classes */
 .custom-drop-shadow-lg {
-  filter: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04))
-    drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
+  filter: drop-shadow(0 10px 8px rgb(0 0 0 / 4%))
+    drop-shadow(0 4px 3px rgb(0 0 0 / 10%));
 }

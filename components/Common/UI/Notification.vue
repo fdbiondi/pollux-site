@@ -67,22 +67,24 @@ export default {
     },
   },
 
+  emits: ['close', 'ok'],
+
   data() {
     return {
       visible: true,
-    }
+    };
   },
 
   methods: {
     onClose() {
-      this.visible = false
-      this.$emit('close')
+      this.visible = false;
+      this.$emit('close');
     },
 
     onAction() {
-      this.visible = false
-      this.$emit('ok')
+      this.visible = false;
+      this.$emit('ok');
     },
   },
-}
+};
 </script>

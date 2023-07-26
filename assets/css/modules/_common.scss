@@ -14,7 +14,9 @@
 
     &::after {
       content: '';
+
       @apply absolute bottom-0 left-0 h-[0.1em] w-full rounded-sm bg-pollux-cyan;
+
       transition: transform 500ms;
       transform: translate3d(-100%, 0, 0);
     }
@@ -31,6 +33,7 @@
 .line-block {
   width: 2rem;
   height: 0.2rem;
+
   @apply mb-6 rounded-sm bg-gray-800 dark:bg-gray-200;
 }
 

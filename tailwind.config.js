@@ -1,18 +1,18 @@
-import colors from 'tailwindcss/colors'
-import tailwindcss from 'tailwindcss'
-import autoprefixer from 'autoprefixer'
+import colors from 'tailwindcss/colors';
+import tailwindcss from 'tailwindcss';
+import autoprefixer from 'autoprefixer';
 
 const hsl = (h, s, l) => {
   return ({ opacityVariable, opacityValue }) => {
     if (opacityValue !== undefined) {
-      return `hsla(${h}, ${s}, ${l}, ${opacityValue})`
+      return `hsla(${h}, ${s}, ${l}, ${opacityValue})`;
     }
     if (opacityVariable !== undefined) {
-      return `hsla(${h}, ${s}, ${l}, var(${opacityVariable}, 1))`
+      return `hsla(${h}, ${s}, ${l}, var(${opacityVariable}, 1))`;
     }
-    return `hsl(${h}, ${s}, ${l})`
-  }
-}
+    return `hsl(${h}, ${s}, ${l})`;
+  };
+};
 
 export default {
   content: [
@@ -90,4 +90,4 @@ export default {
   },
 
   plugins: [tailwindcss, autoprefixer],
-}
+};

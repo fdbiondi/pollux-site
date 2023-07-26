@@ -1,20 +1,29 @@
 <template>
   <div class="container mx-auto px-8 sm:px-4 md:px-2">
-    <h2 class="title">{{ title }}</h2>
+    <h2 class="title">
+      {{ title }}
+    </h2>
 
     <div
       class="grid grid-cols-1 gap-3 md:grid-cols-2 md:gap-8 lg:m-0 xl:grid-flow-col-dense xl:grid-cols-4"
     >
-      <div v-for="({ title, description, image }, i) in items" :key="i">
+      <div
+        v-for="(item, index) in items"
+        :key="index"
+      >
         <Card
           class="xl:my-4"
-          :title="title"
-          :description="description"
+          :title="item.title"
+          :description="item.description"
           data-aos="zoom-in-up"
           :data-aos-once="true"
-          :data-aos-delay="100 * i"
+          :data-aos-delay="100 * index"
         >
-          <img class="-mx-2" :src="image" :alt="title" />
+          <img
+            class="-mx-2"
+            :src="item.image"
+            :alt="item.title"
+          />
         </Card>
       </div>
     </div>
@@ -22,7 +31,7 @@
 </template>
 
 <script>
-import Card from '~/components/Common/Cards/Card'
+import Card from '~/components/Common/Cards/Card';
 
 export default {
   components: {
@@ -40,20 +49,23 @@ export default {
       required: true,
     },
   },
-}
+};
 </script>
 
 <style scoped>
-* >>> .card {
-  @apply border-4 border-gray-800 hover:bg-gray-800 hover:text-white hover:shadow-xl hover:shadow-gray-400 dark:border-white
-    dark:hover:bg-white dark:hover:text-black-light dark:hover:shadow-gray-200;
+* :deep(.card) {
+  @apply border-4 border-gray-800 hover:bg-gray-800 hover:text-white hover:shadow-xl hover:shadow-gray-400;
 }
 
-* >>> .card:hover img {
+* :deep(.card:hover img) {
   @apply contrast-0;
 }
 
-* >>> .card h3 {
+* :deep(.card h3) {
   @apply lines-2;
+}
+
+html.dark * :deep(.card) {
+  @apply border-white hover:bg-white hover:text-black-light hover:shadow-gray-200;
 }
 </style>

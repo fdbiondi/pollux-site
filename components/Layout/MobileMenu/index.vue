@@ -1,10 +1,10 @@
 <template>
   <div
     class="z-50 duration-700"
-    :class="{ 'fixed inset-0 bg-gray-900': menuOpen }"
+    :class="{ 'fixed inset-0 bg-gray-100 dark:bg-gray-900': menuOpen }"
   >
     <div
-      class="menu__hamburger"
+      class="menu"
       :class="{ 'absolute right-0 top-0 px-6 pt-8': menuOpen }"
     >
       <a
@@ -13,8 +13,8 @@
         :class="{ 'is-active': menuOpen }"
         @click="menuOpen = !menuOpen"
       >
-        <div class="hamburger__slice"></div>
-        <div class="hamburger__slice"></div>
+        <div class="hamburger-slice" />
+        <div class="hamburger-slice" />
       </a>
     </div>
 
@@ -22,9 +22,7 @@
       class="h-full w-full items-center justify-center"
       :class="[menuOpen ? 'flex' : 'hidden']"
     >
-      <div
-        class="flex flex-col space-y-3 text-center text-xl font-light text-white"
-      >
+      <div class="flex flex-col space-y-3 text-center text-xl font-light">
         <a
           v-for="(link, index) in links"
           :key="`menu-link-${index}`"
@@ -35,12 +33,25 @@
           {{ link.label }}
         </a>
       </div>
+
+      <div
+        class="fixed left-0 top-0 mx-4 w-auto py-8 transition-all delay-150 duration-1000"
+        :class="menuOpen ? 'visible' : 'invisible'"
+      >
+        <ThemeSwitch />
+      </div>
     </div>
   </div>
 </template>
 
 <script>
+import ThemeSwitch from '~/components/Common/Buttons/ThemeSwitch';
+
 export default {
+  components: {
+    ThemeSwitch,
+  },
+
   props: {
     links: {
       type: Array,
@@ -48,34 +59,37 @@ export default {
     },
   },
 
+  emits: ['menu:open'],
+
   data() {
     return {
       menuOpen: false,
-    }
+    };
   },
 
   watch: {
     menuOpen: {
       handler(open) {
-        this.toggleBodyScrollbar(open)
+        this.toggleBodyScrollbar(open);
+        this.$emit('menu:open', open);
       },
     },
   },
 
   methods: {
     close() {
-      this.menuOpen = false
+      this.menuOpen = false;
     },
 
     toggleBodyScrollbar(open) {
       if (open) {
-        document.body.classList.add('overflow-hidden')
+        document.body.classList.add('overflow-hidden');
       } else {
-        document.body.classList.remove('overflow-hidden')
+        document.body.classList.remove('overflow-hidden');
       }
     },
   },
-}
+};
 </script>
 
 <style lang="scss" scoped>
@@ -88,40 +102,39 @@ export default {
 }
 
 .menu {
-  &__hamburger {
-    @apply inline-block;
+  @apply inline-block;
 
-    .hamburger {
-      @apply block w-8 cursor-pointer outline-0;
+  .hamburger {
+    @apply block w-8 cursor-pointer outline-0;
 
-      .hamburger__slice {
-        @apply my-2 block h-0.5 bg-white/60 first-of-type:w-8 last-of-type:w-[1.375rem];
-        @include hamburger-transition();
-      }
+    .hamburger-slice {
+      @apply my-2 block h-0.5 bg-white/60 first-of-type:w-8 last-of-type:w-[1.375rem];
+      @include hamburger-transition;
+    }
 
-      &:hover {
-        .hamburger__slice {
-          @apply bg-pollux-cyan-light first-of-type:w-[1.375rem] last-of-type:w-8;
-          @include hamburger-transition();
-        }
+    &:hover {
+      .hamburger-slice {
+        @apply bg-pollux-cyan-light first-of-type:w-[1.375rem] last-of-type:w-8;
+        @include hamburger-transition;
       }
     }
-  }
 
-  &__hamburger .hamburger.is-active .hamburger__slice {
-    width: 2rem !important;
-    background-color: #fff;
-    -webkit-animation: none !important;
-    animation: none !important;
-    transform-origin: center;
-  }
+    &.is-active .hamburger-slice {
+      @apply bg-gray-900 dark:bg-white;
 
-  &__hamburger .hamburger.is-active .hamburger__slice:first-of-type {
-    transform: rotate(45deg) translate(0.125rem, 0.3125rem);
-  }
+      width: 2rem !important;
+      -webkit-animation: none !important;
+      animation: none !important;
+      transform-origin: center;
 
-  &__hamburger .hamburger.is-active .hamburger__slice:last-of-type {
-    transform: rotate(-45deg) translate(0.125rem, -0.3125rem);
+      &:first-of-type {
+        transform: rotate(45deg) translate(0.125rem, 0.3125rem);
+      }
+
+      &:last-of-type {
+        transform: rotate(-45deg) translate(0.125rem, -0.3125rem);
+      }
+    }
   }
 }
 </style>

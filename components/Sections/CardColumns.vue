@@ -12,7 +12,10 @@
             :key="`column-${colIndex}-item-${itemIndex}`"
             class="relative"
           >
-            <div class="float-section-line" :style="column.decoratorStyle" />
+            <div
+              class="float-section-line"
+              :style="column.decoratorStyle"
+            />
 
             <CardSimple
               :class="column.cardClass"
@@ -22,7 +25,11 @@
               data-aos="zoom-in-up"
               :data-aos-once="true"
             >
-              <img v-if="!column.sideImage" :src="image" :alt="title" />
+              <img
+                v-if="!column.sideImage"
+                :src="image"
+                :alt="title"
+              />
             </CardSimple>
           </div>
         </div>
@@ -34,8 +41,8 @@
 </template>
 
 <script>
-import LineSection from '~/components/Common/UI/LineSection'
-import CardSimple from '~/components/Common/Cards/CardSimple'
+import LineSection from '~/components/Common/UI/LineSection';
+import CardSimple from '~/components/Common/Cards/CardSimple';
 
 export default {
   components: {
@@ -82,11 +89,11 @@ export default {
         decoratorStyle: 'top: 3.5rem',
         cardClass: 'my-2 px-8',
       },
-    }
+    };
 
     return {
       opts: Object.assign({}, defaultSettings, this.settings),
-    }
+    };
   },
 
   computed: {
@@ -106,8 +113,8 @@ export default {
           ...this.opts.right,
           items: this.rightItems,
         },
-      ]
+      ];
     },
   },
-}
+};
 </script>

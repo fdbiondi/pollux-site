@@ -28,9 +28,9 @@ export const servicesCategories = [
       'Responsive and accessible user interfaces that allow more people to access it from different types of devices with different needs',
     title: 'User Friendly',
   },
-]
+];
 
-export const SERVICES_SECTION_TITLE = 'Find your software development Service'
+export const SERVICES_SECTION_TITLE = 'Find your software development Service';
 
 export const servicesTypes = [
   {
@@ -60,4 +60,4 @@ export const servicesTypes = [
     image: './icons/icons8-shopping-cart-64.png',
     title: 'E-commerce Development',
   },
-]
+];

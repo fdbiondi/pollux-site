@@ -10,19 +10,34 @@
       :data-aos-delay="100 * i"
       data-aos-once="true"
     >
-      <slot :image="image" :index="i">
-        <a v-if="hasLink" :href="href(image.name)">
-          <img :src="image.src" :alt="name(image.name)" class="w-20" />
+      <slot
+        :image="image"
+        :index="i"
+      >
+        <a
+          v-if="hasLink"
+          :href="href(image.name)"
+        >
+          <img
+            :src="image.src"
+            :alt="name(image.name)"
+            class="w-20"
+          />
         </a>
 
-        <img v-else :src="image.src" :alt="name(image.name)" class="w-20" />
+        <img
+          v-else
+          :src="image.src"
+          :alt="name(image.name)"
+          class="w-20"
+        />
       </slot>
     </div>
   </div>
 </template>
 
 <script>
-import { filenameFromPath, filenameGetHref } from '~/support/files'
+import { filenameFromPath, filenameGetHref } from '~/support/files';
 
 export default {
   props: {
@@ -39,12 +54,12 @@ export default {
 
   computed: {
     name() {
-      return filenameFromPath
+      return filenameFromPath;
     },
 
     href() {
-      return filenameGetHref
+      return filenameGetHref;
     },
   },
-}
+};
 </script>

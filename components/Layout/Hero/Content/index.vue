@@ -8,13 +8,16 @@
       </div>
     </section>
 
-    <TiltDivider v-show="showDivider" class="-mb-24" />
+    <TiltDivider
+      v-show="showDivider"
+      class="-mb-24"
+    />
   </main>
 </template>
 
 <script>
-import TiltDivider from '~/components/Common/UI/TiltDivider'
-import HeroTitle from '~/components/Layout/Hero/Content/Title'
+import TiltDivider from '~/components/Common/UI/TiltDivider';
+import HeroTitle from '~/components/Layout/Hero/Content/Title';
 
 export default {
   components: {
@@ -28,5 +31,5 @@ export default {
       type: Boolean,
     },
   },
-}
+};
 </script>

@@ -1,14 +1,14 @@
 <template>
   <div class="line-section">
-    <div class="line"></div>
-    <div class="line"></div>
-    <div class="line"></div>
-    <div class="line"></div>
+    <div class="line" />
+    <div class="line" />
+    <div class="line" />
+    <div class="line" />
   </div>
 </template>
 
 <script>
-export default {}
+export default {};
 </script>
 
 <style lang="scss">
@@ -18,19 +18,22 @@ export default {}
 
 .line-section .line {
   @apply hidden lg:block;
+  @apply absolute h-full border-l border-dashed border-black-light dark:border-white;
 }
 
 .line-section .line:nth-child(2) {
   @apply left-1/3;
 }
+
 .line-section .line:nth-child(3) {
   @apply left-2/3;
 }
+
 .line-section .line:nth-child(4) {
   @apply left-full;
 }
 
-.line-section .line {
-  @apply absolute h-full border-l border-dashed border-black-light dark:border-white;
+html.dark .line-section .line {
+  @apply border-white;
 }
 </style>

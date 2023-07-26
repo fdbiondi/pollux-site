@@ -5,17 +5,30 @@
     <div class="pt-6">
       <slot name="title">
         <h4 class="subtitle flex items-center">
-          <img v-if="image" :src="image" alt="pollux services" class="mr-2" />
-          <fa-icon v-if="icon" class="mr-2" />
+          <img
+            v-if="image"
+            :src="image"
+            alt="pollux services"
+            class="mr-2"
+          />
+          <fa-icon
+            v-if="icon"
+            class="mr-2"
+          />
           <span class="font-bold">{{ title }}</span>
         </h4>
       </slot>
     </div>
 
-    <slot name="middle"></slot>
+    <slot name="middle" />
 
     <div class="space-y-4 pt-4">
-      <p class="min-h-[6rem]" :class="fontSize">{{ description }}</p>
+      <p
+        class="min-h-[6rem]"
+        :class="fontSize"
+      >
+        {{ description }}
+      </p>
     </div>
   </div>
 </template>
@@ -48,5 +61,5 @@ export default {
       type: String,
     },
   },
-}
+};
 </script>
