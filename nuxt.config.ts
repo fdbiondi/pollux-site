@@ -107,8 +107,6 @@ export default defineNuxtConfig({
     '@pinia/nuxt',
   ],
 
-  // plugins: [{ src: '@/plugins/aos', ssr: false, mode: 'client' }],
-
   runtimeConfig: {
     public: {
       contactFormURL: process.env.FORMSPREE_URL,
