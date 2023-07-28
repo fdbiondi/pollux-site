@@ -58,6 +58,24 @@ export default defineNuxtConfig({
         { rel: 'manifest', href: './site.webmanifest' },
         { rel: 'mask-icon', href: './safari-pinned-tab.svg', color: '#0BC8FE' },
       ],
+
+      script: [
+        {
+          async: true,
+          body: true,
+          src: `https://www.googletagmanager.com/gtag/js?id=${process.env.GTAG_ID}`,
+        },
+        {
+          body: true,
+          children: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){
+              dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+            gtag('config', '${process.env.GTAG_ID}');`,
+        },
+      ],
     },
   },
 
