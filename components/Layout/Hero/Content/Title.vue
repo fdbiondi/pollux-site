@@ -27,7 +27,7 @@
       >
         <nuxt-link :to="leftLink">
           <button
-            class="button button-outline-dark xl:dark:button-secondary-dark xl:button-secondary w-full sm:w-auto"
+            class="button button-white xl:dark:button-secondary-dark xl:button-secondary w-full sm:w-auto"
           >
             {{ knowMore }}
           </button>
