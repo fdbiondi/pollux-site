@@ -74,7 +74,7 @@
   }
 
   .button-light-reflex {
-    @apply shadow-gray-400;
+    @apply shadow-gray-200;
   }
 
   .button-dark-reflex {
@@ -94,7 +94,7 @@
   }
 
   .button-secondary {
-    @apply button-black hover:button-reflex hover:button-light-reflex;
+    @apply button-black hover:button-reflex hover:button-dark-reflex;
   }
 
   .button-secondary-dark {
