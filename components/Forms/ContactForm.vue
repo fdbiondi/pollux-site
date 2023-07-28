@@ -24,23 +24,13 @@
             required
           />
 
-          <div class="mb-4 flex flex-col gap-4 sm:flex-row">
-            <input
-              v-model="fullname"
-              name="fullname"
-              type="text"
-              placeholder="Full Name"
-              class="w-full"
-            />
-
-            <input
-              v-model="phone"
-              name="phone"
-              type="text"
-              placeholder="Phone"
-              class="w-full"
-            />
-          </div>
+          <input
+            v-model="fullname"
+            name="fullname"
+            type="text"
+            placeholder="Full Name"
+            class="mb-4 w-full"
+          />
 
           <input
             v-model="email"
@@ -49,6 +39,14 @@
             placeholder="Email"
             class="mb-4 w-full"
             required
+          />
+
+          <input
+            v-model="phone"
+            name="phone"
+            type="text"
+            placeholder="Phone"
+            class="mb-4 w-full"
           />
 
           <div class="mb-4 flex flex-col gap-4 sm:flex-row">
@@ -121,7 +119,7 @@
               class="button button-outline dark:button-outline-dark m-auto w-full sm:w-1/2"
               type="submit"
             >
-              CONTACT US
+              Contact Us
             </button>
 
             <span class="w-full sm:w-1/2 sm:p-8">

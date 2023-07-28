@@ -50,7 +50,7 @@
   }
 
   .button-white {
-    @apply border-gray-200 bg-gray-200 text-gray-800 hover:border-gray-600 hover:bg-gray-600 hover:text-gray-100;
+    @apply border-gray-100 bg-gray-100 text-gray-800 hover:border-gray-600 hover:bg-gray-600 hover:text-gray-100;
   }
 
   .button-black-outline {
@@ -74,11 +74,11 @@
   }
 
   .button-light-reflex {
-    @apply shadow-gray-400;
+    @apply shadow-gray-200;
   }
 
   .button-dark-reflex {
-    @apply shadow-gray-600;
+    @apply shadow-gray-400;
   }
 
   .button-darker-reflex {
@@ -94,7 +94,7 @@
   }
 
   .button-secondary {
-    @apply button-black hover:button-reflex hover:button-light-reflex;
+    @apply button-black hover:button-reflex hover:button-dark-reflex;
   }
 
   .button-secondary-dark {
