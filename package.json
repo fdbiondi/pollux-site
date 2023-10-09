@@ -28,7 +28,7 @@
     "anim-gradient": "^1.0.0",
     "aos": "^2.3.4",
     "autoprefixer": "^10.4.14",
-    "eslint": "^8.46.0",
+    "eslint": "^8.51.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-config-standard": "^17.1.0",
     "eslint-plugin-import": "^2.28.0",
