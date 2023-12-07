@@ -5,7 +5,7 @@ export const PRIVACY_POLICY = 'Privacy policy';
 
 export const POLLUX_COOP = 'Pollux LTDA';
 export const CITY = '2000 Rosario';
-export const ADDRESS = 'San Lorenzo 1333 3B';
+export const ADDRESS = 'San Lorenzo 1826';
 export const STATE = 'Santa Fe, Argentina';
 export const PHONE = '+54 9 341 718 8740';
 export const SITEURL = 'polluxcoop.com';
