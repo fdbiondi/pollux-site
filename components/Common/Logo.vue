@@ -1,30 +1,30 @@
 <template>
   <div class="logo">
-    <div class="flex items-center">
+    <div class="flex items-center gap-x-3">
       <img
-        src="/logo.svg"
+        src="/logo-redes.png"
         alt="Pollux Software Engineering"
-        class="custom-drop-shadow-lg z-20"
+        class="custom-drop-shadow-lg z-20 mt-4"
         :class="{
-          'h-20 w-20': isSmall,
-          'h-28 w-28': isMedium,
-          'h-40 w-40': isLarge,
+          'h-16 w-16': isSmall,
+          'h-[72px] w-[72px]': isMedium,
+          'h-22 w-22': isLarge,
         }"
       />
       <div class="relative mt-4">
-        <div class="font-pollux dark:text-white">
+        <div class="font-mono dark:text-white">
           <div
             class="custom-drop-shadow-lg px-1 tracking-wider"
             :class="{
               'text-3xl': isSmall,
-              'text-5xl': isMedium,
+              'text-4xl': isMedium,
               'text-7xl': isLarge,
             }"
           >
             Pollux
           </div>
           <div
-            class="custom-drop-shadow-lg text-pollux-cyan"
+            class="custom-drop-shadow-lg text-pollux-cyan-dark dark:text-pollux-cyan"
             :class="{
               'text-[0.65rem]': isSmall,
               'text-md': isMedium,
