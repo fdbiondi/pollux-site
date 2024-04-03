@@ -31,11 +31,12 @@
 
         <div class="my-24 flex w-full items-center">
           <!-- Logo's Section -->
-          <div class="w-1/2 items-center justify-center py-24">
-            <Logo
-              class="mx-auto my-4"
-              size="large"
-            />
+          <div
+            class="flex w-1/2 flex-col items-center justify-center gap-y-6 py-24"
+          >
+            <Logo size="large" />
+            <Logo size="medium" />
+            <Logo size="small" />
           </div>
 
           <!-- Color Palette Section -->
@@ -71,7 +72,7 @@
 import Logo from '~/components/Common/Logo';
 
 definePageMeta({
-  layout: 'simple',
+  layout: 'empty',
 
   middleware: [
     function() {
