@@ -34,9 +34,18 @@
           <div
             class="flex w-1/2 flex-col items-center justify-center gap-y-6 py-24"
           >
-            <Logo size="large" />
-            <Logo size="medium" />
-            <Logo size="small" />
+            <Logo
+              show-text
+              size="large"
+            />
+            <Logo
+              show-text
+              size="medium"
+            />
+            <Logo
+              show-text
+              size="small"
+            />
           </div>
 
           <!-- Color Palette Section -->

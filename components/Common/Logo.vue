@@ -1,20 +1,33 @@
 <template>
   <div class="logo">
-    <div class="flex items-center gap-x-3">
+    <div
+      class="flex items-center"
+      :class="{ 'gap-x-3': showText || !!$slots.default }"
+    >
       <img
-        src="/logo-white.png"
+        v-if="useColorLogo"
+        src="/logo-color.png"
         alt="Pollux Software Engineering"
-        class="custom-drop-shadow-lg z-20 hidden dark:inline"
+        class="custom-drop-shadow-lg z-20"
         :class="logoSizes"
       />
-      <img
-        src="/logo-black.png"
-        alt="Pollux Software Engineering"
-        class="custom-drop-shadow-lg z-20 inline dark:hidden"
-        :class="logoSizes"
-      />
+      <template v-else>
+        <img
+          src="/logo-white.png"
+          alt="Pollux Software Engineering"
+          class="custom-drop-shadow-lg z-20 hidden dark:inline"
+          :class="logoSizes"
+        />
+        <img
+          src="/logo-black.png"
+          alt="Pollux Software Engineering"
+          class="custom-drop-shadow-lg z-20 inline dark:hidden"
+          :class="logoSizes"
+        />
+      </template>
+
       <div class="relative font-mono dark:text-white">
-        <div>
+        <div v-if="showText">
           <div
             class="custom-drop-shadow-lg font-bold"
             :class="{
@@ -37,6 +50,9 @@
           </div>
         </div>
 
+        <!-- text logo -->
+        <slot />
+
         <div class="overlay" />
       </div>
     </div>
@@ -46,19 +62,24 @@
 <script>
 export default {
   props: {
+    customSize: {
+      type: String,
+      default: null,
+    },
+
     size: {
       default: 'medium',
       type: String,
       validator: (value) => ['small', 'medium', 'large'].includes(value),
     },
 
-    showLogo: {
-      default: true,
+    showText: {
+      default: false,
       type: Boolean,
     },
 
-    showText: {
-      default: true,
+    useColorLogo: {
+      default: false,
       type: Boolean,
     },
   },
@@ -77,6 +98,10 @@ export default {
     },
 
     logoSizes() {
+      if (this.customSize) {
+        return this.customSize;
+      }
+
       return {
         'h-20 w-20': this.isSmall,
         'h-28 w-28': this.isMedium,

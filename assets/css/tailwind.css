@@ -3,6 +3,17 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --color-primary: theme('colors.pollux-cyan.DEFAULT');
+    --color-primary-light: theme('colors.pollux-cyan.light');
+    --color-primary-dark: theme('colors.pollux-cyan.dark');
+    --color-accent: theme('colors.pollux-pink.DEFAULT');
+    --color-accent-light: theme('colors.pollux-pink.light');
+    --color-accent-dark: theme('colors.pollux-pink.dark');
+    --color-secondary: theme('colors.white');
+    --color-secondary-dark: theme('colors.black.light');
+  }
+
   .font-title {
     @apply font-serif;
   }

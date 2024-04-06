@@ -3,7 +3,10 @@
     <div class="container mx-auto flex flex-col">
       <div class="mb-6 flex">
         <div class="hidden w-1/4 p-6 lg:block">
-          <Logo />
+          <Logo
+            size="small"
+            show-text
+          />
         </div>
 
         <div
@@ -57,10 +60,14 @@
           <br />
           <br />
 
-          {{ EMAIL }}
+          <a :href="`mailto:${EMAIL}`">
+            {{ EMAIL }}
+          </a>
           <br />
 
-          {{ PHONE }}
+          <a :href="`tel:${PHONE}`">
+            {{ PHONE }}
+          </a>
           <br />
         </div>
 
@@ -123,27 +130,14 @@
         <div
           class="border-t border-gray-800 pt-4 text-sm dark:border-gray-200 lg:text-xs"
         >
-          <div class="flex justify-between">
-            <span>
-              {{ COPYRIGHT }} {{ COMPANY }} |
-              <nuxt-link
-                to="privacy-policy"
-                class="hover:underline"
-              >
-                {{ PRIVACY_POLICY }}
-              </nuxt-link>
-            </span>
-
-            <span class="hidden lg:block">
-              Gradient icons by
-              <a
-                target="_blank"
-                href="https://icons8.com"
-              >
-                Icons8
-              </a>
-            </span>
-          </div>
+          <span>{{ COPYRIGHT }} {{ COMPANY }}</span>
+          <span>&nbsp;|&nbsp;</span>
+          <nuxt-link
+            to="privacy-policy"
+            class="hover:underline"
+          >
+            {{ PRIVACY_POLICY }}
+          </nuxt-link>
         </div>
       </div>
     </div>

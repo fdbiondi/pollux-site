@@ -15,7 +15,7 @@
     &::after {
       content: '';
 
-      @apply absolute bottom-0 left-0 h-[0.1em] w-full rounded-sm bg-pollux-cyan;
+      @apply absolute bottom-0 left-0 h-[0.1em] w-full rounded-sm bg-pollux-pink;
 
       transition: transform 500ms;
       transform: translate3d(-100%, 0, 0);

@@ -1,42 +1,55 @@
 <template>
-  <header id="header">
-    <nav class="container mx-auto flex items-center justify-between px-6 py-2">
-      <nuxt-link to="/">
-        <Logo
-          size="small"
-          class="hidden md:block"
-        />
-        <Logo
-          size="small"
-          class="md:hidden"
-        />
-      </nuxt-link>
+  <header
+    id="header"
+    ref="header"
+    role="banner"
+    :style="stickAtTop ? `height: ${offset}px` : ''"
+  >
+    <div
+      :class="{
+        'sticky z-50 w-full bg-gray-200 shadow-md dark:bg-black md:fixed':
+          stickAtTop,
+      }"
+    >
+      <nav
+        role="navigation"
+        class="container mx-auto flex items-center justify-between px-6 py-2"
+      >
+        <nuxt-link to="/">
+          <Logo
+            size="small"
+            :show-text="!stickAtTop"
+            :use-color-logo="stickAtTop"
+            :custom-size="stickAtTop ? 'h-12 w-12' : null"
+          />
+        </nuxt-link>
 
-      <div class="z-30 flex items-center">
-        <div
-          v-if="!mobileMenuOpened"
-          class="hidden text-lg text-white 2xl:flex"
-        >
-          <a
-            v-for="(link, index) in links"
-            :key="`nav-item-link-${index}`"
-            :href="link.href"
-            class="nav-item route--underline"
+        <div class="z-30 flex items-center">
+          <div
+            v-if="!mobileMenuOpened"
+            class="hidden text-lg text-white 2xl:flex"
           >
-            {{ link.label }}
-          </a>
+            <a
+              v-for="(link, index) in links"
+              :key="`nav-item-link-${index}`"
+              :href="link.href"
+              class="nav-item route--underline"
+            >
+              {{ link.label }}
+            </a>
 
-          <LanguageSwitch v-show="false" />
-          <ThemeSwitch />
+            <LanguageSwitch v-show="false" />
+            <ThemeSwitch />
+          </div>
+
+          <MobileMenu
+            class="block 2xl:hidden"
+            :links="links"
+            @menu:open="mobileMenuOpened = $event"
+          />
         </div>
-
-        <MobileMenu
-          class="block 2xl:hidden"
-          :links="links"
-          @menu:open="mobileMenuOpened = $event"
-        />
-      </div>
-    </nav>
+      </nav>
+    </div>
   </header>
 </template>
 
@@ -56,6 +69,8 @@ export default {
 
   data() {
     return {
+      offset: 0,
+      stickAtTop: false,
       mobileMenuOpened: false,
       links: [
         { href: '#services', label: 'Services' },
@@ -64,6 +79,28 @@ export default {
         { href: '#contact', label: 'Contact Us' },
       ],
     };
+  },
+
+  beforeMount() {
+    window.addEventListener('scroll', this.handleScroll);
+  },
+
+  mounted() {
+    this.offset = this.$refs.header.clientHeight ?? 72;
+  },
+
+  beforeUnmount() {
+    window.removeEventListener('scroll', this.handleScroll);
+  },
+
+  methods: {
+    handleScroll() {
+      if (window.pageYOffset > this.offset) {
+        this.stickAtTop = true;
+      } else {
+        this.stickAtTop = false;
+      }
+    },
   },
 };
 </script>
@@ -75,5 +112,19 @@ export default {
   /* fix for drop-shadow-tight */
   filter: drop-shadow(0 2px 1px rgb(0 0 0 / 20%))
     drop-shadow(0 2px 2px rgb(0 0 0 / 50%));
+}
+
+@keyframes slide-down {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.sticky {
+  animation: slide-down 0.5s ease-in-out;
 }
 </style>
