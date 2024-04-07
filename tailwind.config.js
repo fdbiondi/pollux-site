@@ -44,9 +44,9 @@ export default {
         rose: colors.rose,
         gray: colors.zinc,
         'pollux-cyan': {
-          DEFAULT: '#0BC8FE',
-          light: '#73F4FF',
-          dark: '#008AFF',
+          DEFAULT: '#3BBEEF',
+          light: '#42CAFC',
+          dark: '#02ABEB',
           50: hsl(192, '96%', '85%'),
           100: hsl(192, '94%', '82%'),
           200: hsl(192, '94%', '76%'),

@@ -1,5 +1,3 @@
-![logo](./static/logo.svg)
-
 # Pollux Software Engineering Website
 
 ![Deploy Status](https://github.com/fdbiondi/pollux-site/actions/workflows/nuxtjs.yml/badge.svg)

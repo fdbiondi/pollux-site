@@ -1,33 +1,35 @@
 <template>
   <div class="logo">
-    <div class="flex items-center">
+    <div class="flex items-center gap-x-3">
       <img
-        src="/logo.svg"
+        src="/logo-white.png"
         alt="Pollux Software Engineering"
-        class="custom-drop-shadow-lg z-20"
-        :class="{
-          'h-20 w-20': isSmall,
-          'h-28 w-28': isMedium,
-          'h-40 w-40': isLarge,
-        }"
+        class="custom-drop-shadow-lg z-20 hidden dark:inline"
+        :class="logoSizes"
       />
-      <div class="relative mt-4">
-        <div class="font-pollux dark:text-white">
+      <img
+        src="/logo-black.png"
+        alt="Pollux Software Engineering"
+        class="custom-drop-shadow-lg z-20 inline dark:hidden"
+        :class="logoSizes"
+      />
+      <div class="relative font-mono dark:text-white">
+        <div>
           <div
-            class="custom-drop-shadow-lg px-1 tracking-wider"
+            class="custom-drop-shadow-lg font-bold"
             :class="{
-              'text-3xl': isSmall,
-              'text-5xl': isMedium,
-              'text-7xl': isLarge,
+              'ml-[-2.4px] text-4xl tracking-[3.4px]': isSmall,
+              'ml-[-3.2px] text-5xl tracking-[4.4px]': isMedium,
+              'ml-[-5px] text-7xl tracking-[6.8px]': isLarge,
             }"
           >
             Pollux
           </div>
           <div
-            class="custom-drop-shadow-lg text-pollux-cyan"
+            class="custom-drop-shadow-lg"
             :class="{
-              'text-[0.65rem]': isSmall,
-              'text-md': isMedium,
+              'text-xs': isSmall,
+              'text-base': isMedium,
               'text-2xl': isLarge,
             }"
           >
@@ -72,6 +74,14 @@ export default {
 
     isLarge() {
       return this.size === 'large';
+    },
+
+    logoSizes() {
+      return {
+        'h-20 w-20': this.isSmall,
+        'h-28 w-28': this.isMedium,
+        'h-36 w-36': this.isLarge,
+      };
     },
   },
 };

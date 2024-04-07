@@ -7,7 +7,7 @@
       {{ upperTitle }}
     </h2>
     <h1
-      class="hero--title title-gradient tracking-wider"
+      class="hero--title tracking-wider"
       style="--order: 2"
     >
       {{ title }}
