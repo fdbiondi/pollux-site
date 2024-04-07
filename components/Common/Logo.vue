@@ -16,7 +16,7 @@
       <div class="relative font-mono dark:text-white">
         <div>
           <div
-            class="custom-drop-shadow-lg font-bold tracking-wider"
+            class="custom-drop-shadow-lg font-bold"
             :class="{
               'ml-[-2.4px] text-4xl tracking-[3.4px]': isSmall,
               'ml-[-3.2px] text-5xl tracking-[4.4px]': isMedium,
