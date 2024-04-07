@@ -2,7 +2,10 @@
   <header id="header">
     <nav class="container mx-auto flex items-center justify-between px-6 py-2">
       <nuxt-link to="/">
-        <Logo class="hidden md:block" />
+        <Logo
+          size="small"
+          class="hidden md:block"
+        />
         <Logo
           size="small"
           class="md:hidden"
