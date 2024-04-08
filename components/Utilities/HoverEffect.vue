@@ -25,8 +25,8 @@ function handleMouseMove(event) {
   }
 
   const rect = wrapper.value.getBoundingClientRect();
-  const diffX = event.pageX - rect.x;
-  const diffY = event.pageY - rect.y;
+  const diffX = event.clientX - rect.x;
+  const diffY = event.clientY - rect.y;
 
   wrapper.value.style = `--x: ${diffX}px; --y: ${diffY}px;`;
 }

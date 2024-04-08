@@ -1,8 +1,10 @@
 <template>
-  <HoverEffect class="cursor-pointer rounded-xl border border-white">
+  <HoverEffect
+    class="z-10 cursor-pointer rounded-md border-2 border-black  shadow-[6px_6px_0px_rgba(0,0,0,1)] dark:border-white dark:shadow-white"
+  >
     <div class="px-6 py-4">
       <div class="mb-2 text-xl font-bold">
-        The Coldest Sunset 3
+        <span>The Coldest Sunset</span>
       </div>
       <p class="text-base text-gray-300">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus
@@ -30,7 +32,6 @@
     </div>
   </HoverEffect>
 </template>
-
 <script setup>
 import HoverEffect from './HoverEffect.vue';
 </script>

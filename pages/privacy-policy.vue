@@ -47,8 +47,7 @@
         <p>
           <strong>Company</strong>
           (referred to as either "the Company", "We", "Us" or "Our" in this
-          Agreement) refers to Cooperativa de Trabajo Pollux LTDA, San Lorenzo
-          1333 3B.
+          Agreement) refers to Cooperativa de Trabajo {{ COMPANY }}, {{ ADDRESS }}.
         </p>
       </li>
       <li>
@@ -106,7 +105,7 @@
       <li>
         <p>
           <strong>Website</strong>
-          refers to Pollux, accessible from
+          refers to {{ COMPANY_NAME }}, accessible from
           <a
             :href="WEBSITE"
             rel="external nofollow noopener"
@@ -507,7 +506,7 @@
 </template>
 
 <script setup>
-import { PRIVACY_EMAIL, SITEURL } from '~/support/constants/info';
+import { COMPANY, COMPANY_NAME, ADDRESS, PRIVACY_EMAIL, SITEURL } from '~/support/constants/info';
 
 definePageMeta({ layout: 'no-hero' });
 

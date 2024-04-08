@@ -1,9 +1,11 @@
 <template>
-  <div class="card h-full cursor-pointer px-8 py-8 dark:text-white">
+  <div
+    class="card h-full cursor-pointer border-4 border-gray-800 px-8 py-8 hover:bg-gray-800 hover:text-white hover:shadow-xl hover:shadow-gray-400 dark:border-white dark:text-white dark:hover:bg-white dark:hover:text-black-light dark:hover:shadow-gray-200"
+  >
     <slot />
 
     <div class="mt-4">
-      <h3 class="font-title text-3xl tracking-widest">
+      <h3 class="font-title lines-2 text-3xl tracking-widest">
         {{ title }}
       </h3>
     </div>

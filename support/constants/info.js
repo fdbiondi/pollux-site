@@ -1,9 +1,9 @@
-export const COMPANY = 'Pollux';
+export const COMPANY_NAME = 'Pollux';
 export const COPYRIGHT = `Copyright © ${new Date().getFullYear()}`;
 export const COPYRIGHT_SHORT = `© ${new Date().getFullYear()}`;
 export const PRIVACY_POLICY = 'Privacy policy';
 
-export const POLLUX_COOP = 'Pollux LTDA';
+export const COMPANY = 'Pollux LTDA';
 export const CITY = '2000 Rosario';
 export const ADDRESS = 'San Lorenzo 1826';
 export const STATE = 'Santa Fe, Argentina';

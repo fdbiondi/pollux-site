@@ -21,21 +21,12 @@
       />
       <CardSample3
         class="col-span-3 row-span-2"
-        icon="i-heroicons-computer-desktop"
-        title="Keyboard Shortcuts"
-        description="Nuxt UI comes with a set of Vue composables to easily handle shortcuts."
       />
       <CardSample3
         class="col-span-3 row-span-2"
-        icon="i-heroicons-swatch"
-        title="Color Palette"
-        description="Choose a primary and a gray color from your Tailwind CSS color palette."
       />
       <CardSample3
         class="col-span-3 row-span-3"
-        icon="i-heroicons-wrench-screwdriver"
-        title="Fully Customizable"
-        description="Change the style of any component in your App Config or with ui prop."
       />
       <CardSample3
         class="col-span-3 row-span-3"

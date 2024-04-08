@@ -47,9 +47,6 @@
         >
           <div class="line-block" />
 
-          {{ POLLUX_COOP }}
-          <br />
-
           {{ ADDRESS }}
           <br />
 
@@ -130,7 +127,7 @@
         <div
           class="border-t border-gray-800 pt-4 text-sm dark:border-gray-200 lg:text-xs"
         >
-          <span>{{ COPYRIGHT }} {{ COMPANY }}</span>
+          <span>{{ COPYRIGHT }} {{ COMPANY_NAME }}</span>
           <span>&nbsp;|&nbsp;</span>
           <nuxt-link
             to="privacy-policy"
@@ -151,9 +148,9 @@ import { sitemap } from '~/support/constants';
 import {
   ADDRESS,
   COMPANY,
+  COMPANY_NAME,
   COPYRIGHT,
   PRIVACY_POLICY,
-  POLLUX_COOP,
   CITY,
   STATE,
   EMAIL,

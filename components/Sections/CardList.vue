@@ -53,19 +53,7 @@ export default {
 </script>
 
 <style scoped>
-* :deep(.card) {
-  @apply border-4 border-gray-800 hover:bg-gray-800 hover:text-white hover:shadow-xl hover:shadow-gray-400;
-}
-
 * :deep(.card:hover img) {
   @apply contrast-0;
-}
-
-* :deep(.card h3) {
-  @apply lines-2;
-}
-
-html.dark * :deep(.card) {
-  @apply border-white hover:bg-white hover:text-black-light hover:shadow-gray-200;
 }
 </style>
