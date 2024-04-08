@@ -1,15 +1,8 @@
 <template>
   <header id="header">
-    <nav class="container mx-auto flex items-center justify-between px-6 py-2">
+    <nav class="container mx-auto flex items-center justify-between px-6 py-4">
       <nuxt-link to="/">
-        <Logo
-          size="small"
-          class="hidden md:block"
-        />
-        <Logo
-          size="small"
-          class="md:hidden"
-        />
+        <Logo size="small" />
       </nuxt-link>
 
       <div class="z-30 flex items-center">
