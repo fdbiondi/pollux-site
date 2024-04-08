@@ -27,7 +27,7 @@
     "@types/node": "^20.11.22",
     "anim-gradient": "^1.0.0",
     "aos": "^2.3.4",
-    "autoprefixer": "^10.4.14",
+    "autoprefixer": "^10.4.19",
     "eslint": "^8.57.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-config-standard": "^17.1.0",
