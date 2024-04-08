@@ -135,7 +135,7 @@ import { AppHeader, AppFooter } from '~/components/Layout';
 import CardGradient from '~/components/Common/Cards/CardGradient';
 import ImageList from '~/components/Common/List/ImageList';
 import ContactForm from '~/components/Forms/ContactForm';
-import BackgroundCodeHtml from '~/components/Layout/Background/CodeHtml';
+import BackgroundCodeHtml from '~/components/Layout/BackgroundCodeHtml';
 import CardList from '~/components/Sections/CardList';
 // import Tools from '~/components/Sections/Tools';
 import TalkWithUs from '~/components/Texts/TalkWithUs';

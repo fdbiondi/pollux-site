@@ -28,10 +28,7 @@
     </Notification>
 
     <!-- Hero -->
-    <Hero
-      class="bg-white dark:bg-black-light"
-      tilt-color="fill-white dark:fill-black-light"
-    >
+    <Hero >
       <template #header>
         <!-- Navigation Bar -->
         <AppHeader class="z-20" />
@@ -48,7 +45,7 @@
 
 <script setup>
 import { AppFooter, AppHeader, Hero } from '~/components/Layout';
-import Notification from '~/components/Common/UI/Notification';
+import Notification from '~/components/Common/Notification';
 import { useCookies } from '@/stores/cookies';
 
 const cookies = useCookies();

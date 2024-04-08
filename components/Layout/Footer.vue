@@ -147,7 +147,6 @@ import ImageList from '~/components/Common/List/ImageList';
 import { sitemap } from '~/support/constants';
 import {
   ADDRESS,
-  COMPANY,
   COMPANY_NAME,
   COPYRIGHT,
   PRIVACY_POLICY,

@@ -28,7 +28,7 @@
 </template>
 
 <script>
-import LineSection from '~/components/Common/UI/LineSection';
+import LineSection from '~/components/Common/LineSection';
 import CardSimple from '~/components/Common/Cards/CardSimple';
 
 export default {
