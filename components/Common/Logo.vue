@@ -78,9 +78,9 @@ export default {
 
     logoSizes() {
       return {
-        'h-20 w-20': this.isSmall,
-        'h-28 w-28': this.isMedium,
-        'h-36 w-36': this.isLarge,
+        'h-auto w-12': this.isSmall,
+        'h-auto w-16': this.isMedium,
+        'h-auto w-24': this.isLarge,
       };
     },
   },
