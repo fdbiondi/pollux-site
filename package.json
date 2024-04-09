@@ -23,7 +23,7 @@
     "@nuxtjs/eslint-module": "^4.1.0",
     "@nuxtjs/google-fonts": "^3.0.2",
     "@nuxtjs/stylelint-module": "^5.1.0",
-    "@nuxtjs/tailwindcss": "^6.8.0",
+    "@nuxtjs/tailwindcss": "^6.11.4",
     "@types/node": "^20.12.5",
     "anim-gradient": "^1.0.0",
     "aos": "^2.3.4",
