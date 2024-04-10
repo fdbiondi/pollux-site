@@ -14,8 +14,8 @@ dependencies:
 
 devDependencies:
   '@fortawesome/fontawesome-svg-core':
-    specifier: ^6.4.2
-    version: 6.4.2
+    specifier: ^6.5.2
+    version: 6.5.2
   '@fortawesome/free-brands-svg-icons':
     specifier: ^6.4.2
     version: 6.4.2
@@ -24,7 +24,7 @@ devDependencies:
     version: 6.4.2
   '@fortawesome/vue-fontawesome':
     specifier: ^3.0.6
-    version: 3.0.6(@fortawesome/fontawesome-svg-core@6.4.2)(vue@3.3.4)
+    version: 3.0.6(@fortawesome/fontawesome-svg-core@6.5.2)(vue@3.3.4)
   '@nuxt/devtools':
     specifier: ^0.8.3
     version: 0.8.3(nuxt@3.6.5)(vite@4.4.7)
@@ -1078,12 +1078,18 @@ packages:
     requiresBuild: true
     dev: true
 
-  /@fortawesome/fontawesome-svg-core@6.4.2:
-    resolution: {integrity: sha512-gjYDSKv3TrM2sLTOKBc5rH9ckje8Wrwgx1CxAPbN5N3Fm4prfi7NsJVWd1jklp7i5uSCVwhZS5qlhMXqLrpAIg==}
+  /@fortawesome/fontawesome-common-types@6.5.2:
+    resolution: {integrity: sha512-gBxPg3aVO6J0kpfHNILc+NMhXnqHumFxOmjYCFfOiLZfwhnnfhtsdA2hfJlDnj+8PjAs6kKQPenOTKj3Rf7zHw==}
+    engines: {node: '>=6'}
+    requiresBuild: true
+    dev: true
+
+  /@fortawesome/fontawesome-svg-core@6.5.2:
+    resolution: {integrity: sha512-5CdaCBGl8Rh9ohNdxeeTMxIj8oc3KNBgIeLMvJosBMdslK/UnEB8rzyDRrbKdL1kDweqBPo4GT9wvnakHWucZw==}
     engines: {node: '>=6'}
     requiresBuild: true
     dependencies:
-      '@fortawesome/fontawesome-common-types': 6.4.2
+      '@fortawesome/fontawesome-common-types': 6.5.2
     dev: true
 
   /@fortawesome/free-brands-svg-icons@6.4.2:
@@ -1102,13 +1108,13 @@ packages:
       '@fortawesome/fontawesome-common-types': 6.4.2
     dev: true
 
-  /@fortawesome/vue-fontawesome@3.0.6(@fortawesome/fontawesome-svg-core@6.4.2)(vue@3.3.4):
+  /@fortawesome/vue-fontawesome@3.0.6(@fortawesome/fontawesome-svg-core@6.5.2)(vue@3.3.4):
     resolution: {integrity: sha512-akrL7lTroyNpPkoHtvK2UpsMzJr6jXdHaQ0YdcwqDsB8jdwlpNHZYijpOUd9KJsARr+VB3WXY4EyObepqJ4ytQ==}
     peerDependencies:
       '@fortawesome/fontawesome-svg-core': ~1 || ~6
       vue: '>= 3.0.0 < 4'
     dependencies:
-      '@fortawesome/fontawesome-svg-core': 6.4.2
+      '@fortawesome/fontawesome-svg-core': 6.5.2
       vue: 3.3.4
     dev: true
 
