@@ -12,6 +12,11 @@ html.dark {
   background-color: theme('colors.black.light');
 }
 
+::selection {
+  background-color: theme('colors.pollux-pink.DEFAULT');
+  color: theme('colors.white');
+}
+
 body::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 8px 8px theme('colors.black.light');
   box-shadow: inset 0 0 8px 8px theme('colors.black.light');
