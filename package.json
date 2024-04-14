@@ -13,7 +13,7 @@
     "lint:fix": "prettier --write --list-different . && pnpm run lint:js --fix && pnpm run lint:style --fix"
   },
   "devDependencies": {
-    "@fortawesome/fontawesome-svg-core": "^6.4.2",
+    "@fortawesome/fontawesome-svg-core": "^6.5.2",
     "@fortawesome/free-brands-svg-icons": "^6.4.2",
     "@fortawesome/free-solid-svg-icons": "^6.4.2",
     "@fortawesome/vue-fontawesome": "^3.0.6",
@@ -23,7 +23,7 @@
     "@nuxtjs/eslint-module": "^4.1.0",
     "@nuxtjs/google-fonts": "^3.0.2",
     "@nuxtjs/stylelint-module": "^5.1.0",
-    "@nuxtjs/tailwindcss": "^6.8.0",
+    "@nuxtjs/tailwindcss": "^6.11.4",
     "@types/node": "^20.12.7",
     "anim-gradient": "^1.0.0",
     "aos": "^2.3.4",
@@ -40,7 +40,7 @@
     "postcss": "^8.4.38",
     "postcss-html": "^1.5.0",
     "prettier": "^3.2.5",
-    "prettier-plugin-tailwindcss": "^0.5.3",
+    "prettier-plugin-tailwindcss": "^0.5.13",
     "sass": "^1.66.1",
     "stylelint": "^15.11.0",
     "stylelint-config-recommended-vue": "^1.5.0",
