@@ -13,7 +13,7 @@
     >
       <nav
         role="navigation"
-        class="container mx-auto flex items-center justify-between px-6 py-2"
+        class="container mx-auto flex items-center justify-between px-6 py-4"
       >
         <nuxt-link to="/">
           <Logo
