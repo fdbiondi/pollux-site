@@ -51,7 +51,7 @@
 </template>
 
 <script>
-import FileInput from '~/components/Common/Inputs/FileInput';
+import FileInput from '~/components/Common/FileInput';
 
 export default {
   components: {

@@ -93,6 +93,4 @@ import CardSample1 from '~/components/Utilities/CardSample.vue';
 import CardSample2 from '~/components/Utilities/CardSample2.vue';
 import CardSample3 from '~/components/Utilities/CardSample3.vue';
 import CardSample4 from '~/components/Utilities/CardSample4.vue';
-
-definePageMeta({ layout: 'empty' });
 </script>

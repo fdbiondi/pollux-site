@@ -139,7 +139,7 @@
 </template>
 
 <script setup>
-import FileInput from '~/components/Common/Inputs/FileInput';
+import FileInput from '~/components/Common/FileInput';
 
 const config = useRuntimeConfig();
 

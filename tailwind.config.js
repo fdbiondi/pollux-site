@@ -2,7 +2,7 @@ import colors from 'tailwindcss/colors';
 import tailwindcss from 'tailwindcss';
 import autoprefixer from 'autoprefixer';
 
-const hsl = (h, s, l) => {
+function hsl(h, s, l) {
   return ({ opacityVariable, opacityValue }) => {
     if (opacityValue !== undefined) {
       return `hsla(${h}, ${s}, ${l}, ${opacityValue})`;
@@ -12,7 +12,15 @@ const hsl = (h, s, l) => {
     }
     return `hsl(${h}, ${s}, ${l})`;
   };
-};
+}
+
+const POLLUX_CYAN_DEFAULT = '#3BBEEF';
+const POLLUX_CYAN_LIGHT = hsl(192, '93%', '70%');
+const POLLUX_CYAN_DARK = hsl(194, '100%', '46%');
+
+const POLLUX_PINK_DEFAULT = '#F3448B';
+const POLLUX_PINK_LIGHT = '#ff85b6';
+const POLLUX_PINK_DARK = '#E9005C';
 
 export default {
   content: [
@@ -27,11 +35,9 @@ export default {
 
   theme: {
     fontFamily: {
-      sans: '"Roboto Mono", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif',
+      sans: 'Space Grotesk, Montserrat, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif',
       serif: 'Oswald, ui-serif, Georgia, Cambria, serif',
       mono: '"Roboto Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace',
-      pollux: '"Fredoka One"',
-      stylish: 'Oswald, ui-serif, serif',
     },
 
     extend: {
@@ -40,13 +46,20 @@ export default {
           light: '#141414',
           DEFAULT: colors.black,
         },
-        cyan: colors.cyan,
-        rose: colors.rose,
         gray: colors.zinc,
+        'pollux-gray': {
+          light: '#CFCFCF',
+          DEFAULT: '#848484',
+          dark: '#4E4E4E',
+          darker: '#262626',
+        },
+        'pollux-blue': {
+          DEFAULT: '#14122A',
+        },
         'pollux-cyan': {
-          DEFAULT: '#3BBEEF',
-          light: '#42CAFC',
-          dark: '#02ABEB',
+          DEFAULT: POLLUX_CYAN_DEFAULT,
+          light: POLLUX_CYAN_LIGHT,
+          dark: POLLUX_CYAN_DARK,
           50: hsl(192, '96%', '85%'),
           100: hsl(192, '94%', '82%'),
           200: hsl(192, '94%', '76%'),
@@ -63,9 +76,9 @@ export default {
           A400: hsl(196, '100%', '57%'),
         },
         'pollux-pink': {
-          DEFAULT: '#F3448B',
-          dark: '#E9005C',
-          light: '#ff85b6',
+          DEFAULT: POLLUX_PINK_DEFAULT,
+          light: POLLUX_PINK_LIGHT,
+          dark: POLLUX_PINK_DARK,
           50: hsl(335, '85%', '94%'),
           100: hsl(335, '83%', '91%'),
           200: hsl(335, '83%', '85%'),

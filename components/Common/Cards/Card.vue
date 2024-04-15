@@ -5,7 +5,7 @@
     <slot />
 
     <div class="mt-4">
-      <h3 class="font-title lines-2 text-3xl tracking-widest">
+      <h3 class="font-serif lines-2 text-3xl tracking-widest">
         {{ title }}
       </h3>
     </div>

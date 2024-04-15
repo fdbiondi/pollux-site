@@ -508,8 +508,6 @@
 <script setup>
 import { COMPANY, COMPANY_NAME, ADDRESS, PRIVACY_EMAIL, SITEURL } from '~/support/constants/info';
 
-definePageMeta({ layout: 'no-hero' });
-
 const WEBSITE = `https://${SITEURL}`;
 
 const router = useRouter();
@@ -521,15 +519,15 @@ function goHome() {
 
 <style scoped>
 h1 {
-  @apply font-title mb-12 mt-16 text-5xl font-bold uppercase tracking-[0.12rem];
+  @apply font-serif mb-12 mt-16 text-5xl font-bold uppercase tracking-[0.12rem];
 }
 
 h2 {
-  @apply font-title my-8 text-4xl font-semibold uppercase tracking-[0.10rem];
+  @apply font-serif my-8 text-4xl font-semibold uppercase tracking-[0.10rem];
 }
 
 h3 {
-  @apply font-title my-8 text-2xl font-semibold uppercase tracking-[0.08rem];
+  @apply font-serif my-8 text-2xl font-semibold uppercase tracking-[0.08rem];
 }
 
 p {

@@ -1,9 +1,9 @@
 .title {
-  @apply font-title my-12 text-4xl font-bold uppercase tracking-[0.08rem] lg:mb-8 lg:px-8;
+  @apply font-sans my-12 text-4xl font-bold uppercase tracking-[0.08rem] lg:mb-8 lg:px-8;
 }
 
 .subtitle {
-  @apply font-title mb-4 text-xl font-semibold uppercase tracking-[0.08rem];
+  @apply font-sans mb-4 text-xl font-semibold uppercase tracking-[0.08rem];
 }
 
 .route {

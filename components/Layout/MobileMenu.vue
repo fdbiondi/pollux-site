@@ -27,7 +27,7 @@
           v-for="(link, index) in links"
           :key="`menu-link-${index}`"
           :href="link.href"
-          class="nav-item route duration-300 hover:text-pollux-cyan-light"
+          class="nav-item route duration-300 hover:text-pollux-cyan-A100"
           @click="close"
         >
           {{ link.label }}
@@ -38,14 +38,14 @@
         class="fixed left-0 top-0 mx-4 w-auto py-8 transition-all delay-150 duration-1000"
         :class="menuOpen ? 'visible' : 'invisible'"
       >
-        <ThemeSwitch />
+        <ThemeSwitch v-if="false" />
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import ThemeSwitch from '~/components/Common/Buttons/ThemeSwitch';
+import ThemeSwitch from '~/components/Common/ThemeSwitch';
 
 export default {
   components: {
@@ -114,7 +114,7 @@ export default {
 
     &:hover {
       .hamburger-slice {
-        @apply bg-pollux-cyan-light first-of-type:w-[1.375rem] last-of-type:w-8;
+        @apply bg-pollux-cyan-A100 first-of-type:w-[1.375rem] last-of-type:w-8;
         @include hamburger-transition;
       }
     }

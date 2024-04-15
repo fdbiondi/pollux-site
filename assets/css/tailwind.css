@@ -14,10 +14,6 @@
     --color-secondary-dark: theme('colors.black.light');
   }
 
-  .font-title {
-    @apply font-serif;
-  }
-
   .title-gradient {
     background: linear-gradient(
       45deg,
@@ -39,7 +35,7 @@
 @layer components {
   /* Button Components */
   .button {
-    @apply border-4 px-8 py-4 font-stylish text-2xl font-bold tracking-[0.08em] outline-0;
+    @apply border-4 px-8 py-4 font-serif text-2xl font-bold tracking-[0.08em] outline-0;
   }
 
   .button:hover {
@@ -53,7 +49,7 @@
 
   .button-pollux-cyan {
     @apply border-pollux-cyan bg-pollux-cyan text-white;
-    @apply hover:border-pollux-cyan-light hover:bg-pollux-cyan-light hover:text-gray-800;
+    @apply hover:border-pollux-cyan-A100 hover:bg-pollux-cyan-A100 hover:text-gray-800;
   }
 
   .button-black {
@@ -77,7 +73,7 @@
   }
 
   .button-cyan-reflex {
-    @apply shadow-pollux-cyan-light;
+    @apply shadow-pollux-cyan-A100;
   }
 
   .button-white-reflex {

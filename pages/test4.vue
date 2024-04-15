@@ -46,6 +46,4 @@
 
 <script setup>
 import CardSample3 from '~/components/Utilities/CardSample3.vue';
-
-definePageMeta({ layout: 'empty' });
 </script>

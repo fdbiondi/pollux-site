@@ -1,5 +1,5 @@
 <template>
-  <div class="text-gray-800 dark:text-gray-200">
+  <div class="bg-gray-100 text-gray-800 dark:bg-black-light dark:text-gray-200">
     <Notification
       v-if="!cookies.accepted"
       action="I Accept"
@@ -27,24 +27,12 @@
       </span>
     </Notification>
 
-    <!-- Hero -->
-    <Hero >
-      <template #header>
-        <!-- Navigation Bar -->
-        <AppHeader class="z-20" />
-      </template>
-    </Hero>
-
     <!-- Content -->
     <slot />
-
-    <!-- Footer Section -->
-    <AppFooter class="bg-white dark:bg-black-light" />
   </div>
 </template>
 
 <script setup>
-import { AppFooter, AppHeader, Hero } from '~/components/Layout';
 import Notification from '~/components/Common/Notification';
 import { useCookies } from '@/stores/cookies';
 

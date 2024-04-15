@@ -12,7 +12,7 @@
         <div
           class="flex w-full flex-wrap items-center justify-around p-6 lg:w-3/4"
         >
-          <span class="hidden font-stylish text-2xl tracking-widest sm:block">
+          <span class="hidden font-serif text-2xl tracking-widest sm:block">
             {{ LETS_CONNECT }}
           </span>
 
@@ -41,19 +41,19 @@
         </div>
       </div>
 
-      <div class="flex flex-col flex-wrap lg:flex-row">
+      <div class="flex flex-col flex-wrap font-mono lg:flex-row">
         <div
           class="w-full p-6 text-xl leading-loose sm:px-10 lg:w-1/3 lg:p-6 xl:w-1/4"
         >
           <div class="line-block" />
 
-          {{ ADDRESS }}
+          <span>{{ ADDRESS }}</span>
           <br />
 
-          {{ CITY }}
+          <span>{{ CITY }}</span>
           <br />
 
-          {{ STATE }}
+          <span>{{ STATE }}</span>
           <br />
           <br />
 

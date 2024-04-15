@@ -63,7 +63,5 @@ import { ref } from 'vue';
 import CardSample2 from '~/components/Utilities/CardSample2.vue';
 import LoaderEffect from '~/components/Utilities/LoaderEffect.vue';
 
-definePageMeta({ layout: 'empty' });
-
 const content = ref(null);
 </script>

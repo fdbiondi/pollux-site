@@ -126,8 +126,9 @@ export default defineNuxtConfig({
 
   googleFonts: {
     families: {
-      'Fredoka+One': true,
       'Roboto+Mono': true,
+      'Space+Grotesk': true,
+      Montserrat: true,
       Oswald: true,
     },
     preload: true,

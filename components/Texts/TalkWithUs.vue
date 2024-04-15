@@ -2,18 +2,19 @@
   <div class="flex flex-col items-center 2xl:block">
     <div class="font-serif">
       <h2 class="font-light">
-        {{ talkToUs }}
+        <span>Talk to us and</span>
       </h2>
       <h2 class="font-bold">
-        {{ getYour }}
+        <span>get your</span>
       </h2>
       <h2 class="font-bold">
-        <span class="text-pollux-pink">{{ project }}</span>
-        {{ moving }}
+        <span class="text-pollux-pink">project</span>
+        <span>&nbsp;</span>
+        <span>moving!</span>
       </h2>
 
       <span class="my-16 text-xl sm:p-8 2xl:my-0">
-        <span>{{ fillOutForm }}</span>
+        <span>Simply fill out the form or EMAIL us at</span>
         <span>&nbsp;</span>
         <a
           :href="`mailto: ${EMAIL}`"
@@ -28,12 +29,6 @@
 
 <script setup>
 import { EMAIL } from '~/support/constants/info';
-
-const fillOutForm = 'Simply fill out the form or EMAIL us at';
-const getYour = 'get your';
-const moving = 'moving!';
-const project = 'project';
-const talkToUs = 'Talk to us and';
 </script>
 
 <style lang="scss" scoped>

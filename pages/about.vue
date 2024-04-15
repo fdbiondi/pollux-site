@@ -55,8 +55,6 @@ import BackgroundCodeHtml from '~/components/Layout/BackgroundCodeHtml';
 import ProductDesign from '~/components/Sections/ProductDesign';
 
 definePageMeta({
-  layout: 'no-hero',
-
   middleware: [
     function() {
       return navigateTo('/404');

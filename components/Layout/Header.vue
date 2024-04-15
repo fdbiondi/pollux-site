@@ -7,7 +7,7 @@
   >
     <div
       :class="{
-        'sticky z-50 w-full bg-gray-200 shadow-md dark:bg-black md:fixed':
+        'sticky z-50 w-full bg-white shadow-md dark:bg-black md:fixed':
           stickAtTop,
       }"
     >
@@ -27,7 +27,7 @@
         <div class="z-30 flex items-center">
           <div
             v-if="!mobileMenuOpened"
-            class="hidden text-lg text-white 2xl:flex"
+            class="hidden font-mono text-lg text-pollux-gray-dark dark:text-white  2xl:flex"
           >
             <a
               v-for="(link, index) in links"
@@ -38,8 +38,8 @@
               {{ link.label }}
             </a>
 
-            <LanguageSwitch v-show="false" />
-            <ThemeSwitch />
+            <LanguageSwitch v-if="false" />
+            <ThemeSwitch v-if="false"/>
           </div>
 
           <MobileMenu
@@ -54,8 +54,8 @@
 </template>
 
 <script>
-import LanguageSwitch from '~/components/Common/Buttons/LanguageSwitch';
-import ThemeSwitch from '~/components/Common/Buttons/ThemeSwitch';
+import LanguageSwitch from '~/components/Common/LanguageSwitch';
+import ThemeSwitch from '~/components/Common/ThemeSwitch';
 import Logo from '~/components/Common/Logo';
 import MobileMenu from '~/components/Layout/MobileMenu';
 

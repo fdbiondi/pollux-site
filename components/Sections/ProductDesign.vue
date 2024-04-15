@@ -28,8 +28,8 @@
 </template>
 
 <script>
-import LineSection from '~/components/Common/LineSection';
 import CardSimple from '~/components/Common/Cards/CardSimple';
+import LineSection from './LineSection';
 
 export default {
   components: {

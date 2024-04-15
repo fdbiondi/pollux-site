@@ -21,8 +21,7 @@
               <h2 class="hero--title">
                 <span>We build awesome and custom</span>
               </h2>
-              <!-- <h1 class="hero--title tracking-wider !text-[#015270]"> -->
-              <h1 class="hero--title tracking-wider !text-pollux-pink">
+              <h1 class="hero--title tracking-wider">
                 <span>SOFTWARE SOLUTIONS</span>
               </h1>
               <p class="hero--title">
@@ -64,7 +63,7 @@
   <!-- Our clients -->
   <section
     id="clients"
-    class="bg-white py-8 dark:bg-black-light lg:py-16 xl:py-24"
+    class="py-8 lg:py-16 xl:py-24"
   >
     <div class="container mx-auto px-6">
       <ImageList
@@ -81,41 +80,38 @@
 
   <section
     id="services"
-    class="bg-white py-8 dark:bg-black-light lg:py-16 xl:py-24"
+    class="py-8 lg:py-16 xl:py-24"
   >
-    <CardList
-      :items="servicesTypes"
-      :title="SERVICES_SECTION_TITLE"
-    />
+    <!--   <CardList -->
+    <!--     :items="servicesTypes" -->
+    <!--     :title="SERVICES_SECTION_TITLE" -->
+    <!--   /> -->
   </section>
-
-  <!-- Technologies that we use -->
-  <!-- <Tools class="bg-white dark:bg-black-light" /> -->
 
   <!-- What we offer -->
   <section
     id="what-we-offer"
-    class="bg-white py-16 dark:bg-black-light lg:py-24 xl:py-32"
+    class="py-16 lg:py-24 xl:py-32"
   >
-    <div class="container mx-auto px-4 sm:px-4 md:px-2">
-      <ul
-        role="list"
-        class="grid grid-cols-1 gap-6 lg:grid-cols-3 lg:gap-12 lg:gap-y-16"
-      >
-        <CardGradient
-          v-for="(item, index) in servicesCategories"
-          :key="`card-gradient-${index}`"
-          :title="item.title"
-          :description="item.description"
-        />
-      </ul>
-    </div>
+    <!-- <div class="container mx-auto px-4 sm:px-4 md:px-2"> -->
+    <!--     <ul -->
+    <!--       role="list" -->
+    <!--       class="grid grid-cols-1 gap-6 lg:grid-cols-3 lg:gap-12 lg:gap-y-16" -->
+    <!--     > -->
+    <!--       <CardGradient -->
+    <!--         v-for="(item, index) in servicesCategories" -->
+    <!--         :key="`card-gradient-${index}`" -->
+    <!--         :title="item.title" -->
+    <!--         :description="item.description" -->
+    <!--       /> -->
+    <!--     </ul> -->
+    <!-- </div> -->
   </section>
 
   <!-- Talk to us / Contact Form -->
   <section
     id="contact"
-    class="bg-gray-200 py-8 shadow-inner shadow-black-light/20 dark:bg-black-light dark:shadow-gray-800/20 lg:py-16 xl:py-32"
+    class="py-8 shadow-inner shadow-black-light/20 dark:shadow-gray-800/20 lg:py-16 xl:py-32"
   >
     <ContactForm>
       <TalkWithUs />
@@ -124,28 +120,20 @@
 
   <BackgroundCodeHtml />
 
-  <AppFooter class="bg-white dark:bg-black-light" />
+  <AppFooter />
 </template>
 
 <script setup>
 import { ref } from 'vue';
 
 import { AppHeader, AppFooter } from '~/components/Layout';
-
-import CardGradient from '~/components/Common/Cards/CardGradient';
-import ImageList from '~/components/Common/List/ImageList';
-import ContactForm from '~/components/Forms/ContactForm';
 import BackgroundCodeHtml from '~/components/Layout/BackgroundCodeHtml';
-import CardList from '~/components/Sections/CardList';
-// import Tools from '~/components/Sections/Tools';
-import TalkWithUs from '~/components/Texts/TalkWithUs';
+// import CardGradient from '~/components/Common/Cards/CardGradient';
+// import CardList from '~/components/Sections/CardList';
+import ContactForm from '~/components/Forms/ContactForm';
+import ImageList from '~/components/Common/List/ImageList';
 import LoaderEffect from '~/components/Utilities/LoaderEffect.vue';
-
-import {
-  servicesCategories,
-  servicesTypes,
-  SERVICES_SECTION_TITLE,
-} from '~/support/constants/home';
+import TalkWithUs from '~/components/Texts/TalkWithUs';
 import { getFromContext } from '~/support/files';
 
 const glob = import.meta.glob('~/assets/images/clients/*.*', { eager: true });
@@ -154,8 +142,6 @@ const clients = getFromContext(glob, '.*', (src) => {
     src: glob[src].default,
   };
 });
-
-definePageMeta({ layout: 'empty' });
 
 const hero = ref(null);
 </script>

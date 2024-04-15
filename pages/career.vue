@@ -1,7 +1,7 @@
 <template>
   <div class="w-full">
     <div class="container mx-auto flex flex-wrap items-center pb-24">
-      <section class="py-8 font-stylish lg:py-12 xl:py-16">
+      <section class="py-8 font-serif lg:py-12 xl:py-16">
         <div class="container mx-auto px-32 text-center">
           <h2 class="title">
             Career / Get On Board
@@ -35,8 +35,6 @@ import { onMounted } from 'vue';
 import CareerForm from '~/components/Forms/CareerForm';
 
 definePageMeta({
-  layout: 'no-hero',
-
   middleware: [
     function() {
       return navigateTo('/404');
