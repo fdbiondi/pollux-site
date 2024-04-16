@@ -43,7 +43,7 @@ export default {
     extend: {
       colors: {
         black: {
-          light: '#141414',
+          light: '#141414', // #0d0d0d
           DEFAULT: colors.black,
         },
         gray: colors.zinc,

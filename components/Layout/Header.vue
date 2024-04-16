@@ -3,12 +3,14 @@
     id="header"
     ref="header"
     role="banner"
-    :style="stickAtTop ? `height: ${offset}px` : ''"
+    :class="{ sticking }"
+    :style="{ '--min-height': `${headerMinHeight}px` }"
   >
     <div
+      class="header-content"
       :class="{
         'sticky z-50 w-full bg-white shadow-md dark:bg-black md:fixed':
-          stickAtTop,
+          sticking,
       }"
     >
       <nav
@@ -16,18 +18,19 @@
         class="container mx-auto flex items-center justify-between px-6 py-4"
       >
         <nuxt-link to="/">
+          <!-- :show-text="!sticking" -->
+          <!-- :use-color-logo="sticking" -->
           <Logo
             size="small"
-            :show-text="!stickAtTop"
-            :use-color-logo="stickAtTop"
-            :custom-size="stickAtTop ? 'h-12 w-12' : null"
+            show-text
+            :custom-size="sticking ? 'h-12 w-12' : null"
           />
         </nuxt-link>
 
         <div class="z-30 flex items-center">
           <div
             v-if="!mobileMenuOpened"
-            class="hidden font-mono text-lg text-pollux-gray-dark dark:text-white  2xl:flex"
+            class="text-pollux-gray-dark hidden font-mono text-lg dark:text-white 2xl:flex"
           >
             <a
               v-for="(link, index) in links"
@@ -39,7 +42,7 @@
             </a>
 
             <LanguageSwitch v-if="false" />
-            <ThemeSwitch v-if="false"/>
+            <ThemeSwitch v-if="false" />
           </div>
 
           <MobileMenu
@@ -53,56 +56,43 @@
   </header>
 </template>
 
-<script>
+<script setup>
 import LanguageSwitch from '~/components/Common/LanguageSwitch';
 import ThemeSwitch from '~/components/Common/ThemeSwitch';
 import Logo from '~/components/Common/Logo';
 import MobileMenu from '~/components/Layout/MobileMenu';
 
-export default {
-  components: {
-    LanguageSwitch,
-    Logo,
-    ThemeSwitch,
-    MobileMenu,
-  },
+const mobileMenuOpened = ref(false);
+const links = [
+  { href: '#services', label: 'Services' },
+  { href: '#clients', label: 'Our Clients' },
+  // { href: '/about', label: 'About Us' },
+  { href: '#contact', label: 'Contact Us' },
+];
 
-  data() {
-    return {
-      offset: 0,
-      stickAtTop: false,
-      mobileMenuOpened: false,
-      links: [
-        { href: '#services', label: 'Services' },
-        { href: '#clients', label: 'Our Clients' },
-        // { href: '/about', label: 'About Us' },
-        { href: '#contact', label: 'Contact Us' },
-      ],
-    };
-  },
+const sticking = ref(false);
+const header = ref();
+const headerMinHeight = ref(0);
 
-  beforeMount() {
-    window.addEventListener('scroll', this.handleScroll);
-  },
+onMounted(() => {
+  headerMinHeight.value = header.value.clientHeight ?? 72;
+  const intercept = document.createElement('div');
 
-  mounted() {
-    this.offset = this.$refs.header.clientHeight ?? 72;
-  },
+  console.log(window.pageYOffset, 'onMounted');
 
-  beforeUnmount() {
-    window.removeEventListener('scroll', this.handleScroll);
-  },
+  intercept.setAttribute('data-observer-intercept', '');
+  header.value.before(intercept);
 
-  methods: {
-    handleScroll() {
-      if (window.pageYOffset > this.offset) {
-        this.stickAtTop = true;
-      } else {
-        this.stickAtTop = false;
-      }
+  const observer = new IntersectionObserver(
+    ([entry]) => {
+      sticking.value = !entry.isIntersecting;
+      // header.classList.toggle('sticking', !entry.isIntersecting);
     },
-  },
-};
+    { rootMargin: '200px 0px 0px 0px' },
+  );
+
+  observer.observe(intercept);
+});
 </script>
 
 <style lang="scss" scoped>
@@ -124,7 +114,15 @@ export default {
   }
 }
 
-.sticky {
-  animation: slide-down 0.5s ease-in-out;
+header.sticking {
+  min-height: var(--min-height);
+}
+
+.header-content {
+  transition: background-color 500ms ease-in-out;
+
+  &.sticky {
+    animation: slide-down 700ms ease-in-out;
+  }
 }
 </style>

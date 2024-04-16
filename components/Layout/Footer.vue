@@ -143,7 +143,7 @@
 
 <script setup>
 import Logo from '~/components/Common/Logo';
-import ImageList from '~/components/Common/List/ImageList';
+import ImageList from '~/components/Common/ImageList';
 import { sitemap } from '~/support/constants';
 import {
   ADDRESS,

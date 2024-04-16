@@ -65,34 +65,58 @@
     id="clients"
     class="py-8 lg:py-16 xl:py-24"
   >
-    <div class="container mx-auto px-6">
-      <ImageList
-        class="clients mb-6"
-        :images="clients"
-        :has-link="true"
-      />
-
-      <hr
-        class="mx-16 border-t border-solid border-gray-800 dark:border-white"
-      />
-    </div>
+    <ClientsList class="container mx-auto px-6" />
   </section>
 
-  <section
-    id="services"
-    class="py-8 lg:py-16 xl:py-24"
-  >
-    <!--   <CardList -->
-    <!--     :items="servicesTypes" -->
-    <!--     :title="SERVICES_SECTION_TITLE" -->
-    <!--   /> -->
-  </section>
+  <!-- <section -->
+  <!--   id="services" -->
+  <!--   class="py-8 lg:py-16 xl:py-24" -->
+  <!-- > -->
+  <!--   <CardList -->
+  <!--     :items="servicesTypes" -->
+  <!--     :title="SERVICES_SECTION_TITLE" -->
+  <!--   /> -->
+  <!-- </section> -->
 
   <!-- What we offer -->
   <section
     id="what-we-offer"
-    class="py-16 lg:py-24 xl:py-32"
+    class="py-8 lg:py-16 xl:py-24"
   >
+    <!-- class="py-16 lg:py-24 xl:py-32" -->
+    <div class="container mx-auto">
+      <div class="grid grid-cols-1 gap-4 md:grid-cols-12">
+        <div class="block-column">
+          <div class="block-paragraph">
+            <p class="">
+              WE BUILD DIGITAL
+              <br />
+              PRODUCTS
+            </p>
+          </div>
+        </div>
+
+        <div class="block-column">
+          <div class="block-heading">
+            <h2 class="">
+              Ready to take your ambitious project from intriguing idea to
+              smashing success?
+            </h2>
+          </div>
+        </div>
+
+        <div class="block-column">
+          <div class="block-paragraph">
+            <p class="">
+              You want to improve your processes, serve more customers, and grow
+              your business with cutting-edge technology? We know how to get you
+              there.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- <div class="container mx-auto px-4 sm:px-4 md:px-2"> -->
     <!--     <ul -->
     <!--       role="list" -->
@@ -127,37 +151,11 @@
 import { ref } from 'vue';
 
 import { AppHeader, AppFooter } from '~/components/Layout';
-import BackgroundCodeHtml from '~/components/Layout/BackgroundCodeHtml';
-// import CardGradient from '~/components/Common/Cards/CardGradient';
-// import CardList from '~/components/Sections/CardList';
+import BackgroundCodeHtml from '~/components/Sections/BackgroundCodeHtml';
 import ContactForm from '~/components/Forms/ContactForm';
-import ImageList from '~/components/Common/List/ImageList';
-import LoaderEffect from '~/components/Utilities/LoaderEffect.vue';
-import TalkWithUs from '~/components/Texts/TalkWithUs';
-import { getFromContext } from '~/support/files';
-
-const glob = import.meta.glob('~/assets/images/clients/*.*', { eager: true });
-const clients = getFromContext(glob, '.*', (src) => {
-  return {
-    src: glob[src].default,
-  };
-});
+import LoaderEffect from '~/components/Utilities/LoaderEffect';
+import TalkWithUs from '~/components/Sections/TalkWithUs';
+import ClientsList from '~/components/Sections/ClientsList';
 
 const hero = ref(null);
 </script>
-
-<style lang="scss" scoped>
-.clients :deep(img) {
-  @apply scale-110 brightness-200 drop-shadow-none;
-
-  /* fix for classes -> grayscale drop-shadow-tight */
-  filter: grayscale(1) invert(0.2) drop-shadow(0 2px 1px rgb(0 0 0 / 20%))
-    drop-shadow(0 2px 2px rgb(0 0 0 / 50%));
-
-  &:hover {
-    filter: saturate(1.5) drop-shadow(0 2px 1px rgb(0 0 0 / 20%))
-      drop-shadow(0 2px 2px rgb(0 0 0 / 50%));
-    transform: scaleX(1.2) scaleY(1.2);
-  }
-}
-</style>

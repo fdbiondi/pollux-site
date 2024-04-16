@@ -26,7 +26,7 @@
 </template>
 
 <script>
-import Slider from '~/components/Common/List/Slider';
+import Slider from '~/components/Common/Slider';
 import { getFromContext } from '~/support/files';
 import { getToolClass, getToolLink } from '~/support/strings';
 

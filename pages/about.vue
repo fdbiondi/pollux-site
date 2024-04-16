@@ -51,7 +51,7 @@
 </template>
 
 <script setup>
-import BackgroundCodeHtml from '~/components/Layout/BackgroundCodeHtml';
+import BackgroundCodeHtml from '~/components/Sections/BackgroundCodeHtml';
 import ProductDesign from '~/components/Sections/ProductDesign';
 
 definePageMeta({
