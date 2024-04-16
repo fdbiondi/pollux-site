@@ -6,37 +6,18 @@
       class="w-full rounded-md bg-white px-5 py-4 font-extrabold opacity-90 dark:bg-gray-800"
       :href="href"
     >
-      <h2 class="m-0 mt-2 text-xl">
-        {{ title }}
-        <!-- <span>&rarr;</span> -->
-      </h2>
-
-      <slot>
-        <p>{{ description }}</p>
-      </slot>
+      <slot />
     </a>
   </li>
 </template>
 
-<script>
-export default {
-  props: {
-    description: {
-      default: '',
-      type: String,
-    },
-
-    href: {
-      default: '',
-      type: String,
-    },
-
-    title: {
-      default: '',
-      type: String,
-    },
+<script setup>
+defineProps({
+  href: {
+    type: String,
+    default: '',
   },
-};
+});
 </script>
 
 <style scoped>
@@ -65,11 +46,21 @@ li:is(:hover, :focus-within) {
   background-image: none;
 }
 
-li h2 {
+li h1,
+li h2,
+li h3,
+li h4,
+li h5,
+li h6 {
   color: rgb(var(--accent));
 }
 
-li:is(:hover, :focus-within) h2 {
+li:is(:hover, :focus-within) h1,
+li:is(:hover, :focus-within) h2,
+li:is(:hover, :focus-within) h3,
+li:is(:hover, :focus-within) h4,
+li:is(:hover, :focus-within) h5,
+li:is(:hover, :focus-within) h6 {
   color: unset;
 }
 </style>

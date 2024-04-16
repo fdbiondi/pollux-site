@@ -41,7 +41,7 @@
 </template>
 
 <script>
-import CardSimple from '~/components/Common/Cards/CardSimple';
+import CardSimple from './CardSimple';
 import LineSection from './LineSection';
 
 export default {

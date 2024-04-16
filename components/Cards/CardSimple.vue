@@ -33,33 +33,31 @@
   </div>
 </template>
 
-<script>
-export default {
-  props: {
-    description: {
-      default: '',
-      type: String,
-    },
-
-    icon: {
-      default: null,
-      type: String,
-    },
-
-    image: {
-      default: null,
-      type: String,
-    },
-
-    title: {
-      default: '',
-      type: String,
-    },
-
-    fontSize: {
-      default: 'text-md',
-      type: String,
-    },
+<script setup>
+defineProps({
+  description: {
+    default: '',
+    type: String,
   },
-};
+
+  icon: {
+    default: null,
+    type: String,
+  },
+
+  image: {
+    default: null,
+    type: String,
+  },
+
+  title: {
+    default: '',
+    type: String,
+  },
+
+  fontSize: {
+    default: 'text-md',
+    type: String,
+  },
+});
 </script>
