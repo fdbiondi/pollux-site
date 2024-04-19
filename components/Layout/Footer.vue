@@ -3,10 +3,7 @@
     <div class="container mx-auto flex flex-col">
       <div class="mb-6 flex">
         <div class="hidden w-1/4 p-6 lg:block">
-          <Logo
-            size="small"
-            show-text
-          />
+          <Logo />
         </div>
 
         <div

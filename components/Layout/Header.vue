@@ -15,22 +15,18 @@
     >
       <nav
         role="navigation"
-        class="container mx-auto flex items-center justify-between px-6 py-4"
+        class="container mx-auto flex items-center justify-between px-6"
+        :class="[sticking ? 'py-1' : 'py-4']"
       >
         <nuxt-link to="/">
-          <!-- :show-text="!sticking" -->
-          <!-- :use-color-logo="sticking" -->
-          <Logo
-            size="small"
-            show-text
-            :custom-size="sticking ? 'h-12 w-12' : null"
-          />
+          <Logo v-bind="logoProps" />
         </nuxt-link>
 
         <div class="z-30 flex items-center">
           <div
             v-if="!mobileMenuOpened"
-            class="text-pollux-gray-dark hidden font-mono text-lg dark:text-white 2xl:flex"
+            class="text-pollux-gray-dark hidden font-mono dark:text-white 2xl:flex"
+            :class="[sticking ? 'text-base' : 'text-lg']"
           >
             <a
               v-for="(link, index) in links"
@@ -73,6 +69,16 @@ const links = [
 const sticking = ref(false);
 const header = ref();
 const headerMinHeight = ref(0);
+
+const logoProps = ref({});
+
+watch(sticking, (newValue) => {
+  if (newValue) {
+    logoProps.value = { kind: 'vertical', size: 'w-16 h-auto' };
+  } else {
+    logoProps.value = {};
+  }
+});
 
 onMounted(() => {
   headerMinHeight.value = header.value.clientHeight ?? 72;

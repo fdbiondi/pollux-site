@@ -1,133 +1,87 @@
 <template>
-  <div class="logo">
-    <div
-      class="flex items-center"
-      :class="{ 'gap-x-3': showText || !!$slots.default }"
-    >
-      <img
-        v-if="useColorLogo"
-        src="/logo-color.png"
-        alt="Pollux Software Engineering"
-        class="custom-drop-shadow-lg z-20"
-        :class="logoSizes"
-      />
-      <template v-else>
-        <img
-          src="/logo-white.png"
-          alt="Pollux Software Engineering"
-          class="custom-drop-shadow-lg z-20 hidden dark:inline"
-          :class="logoSizes"
-        />
-        <img
-          src="/logo-black.png"
-          alt="Pollux Software Engineering"
-          class="custom-drop-shadow-lg z-20 inline dark:hidden"
-          :class="logoSizes"
-        />
-      </template>
-
-      <div class="relative font-mono dark:text-white">
-        <div v-if="showText">
-          <div
-            class="custom-drop-shadow-lg font-bold"
-            :class="{
-              'ml-[-2.4px] text-4xl tracking-[3.4px]': isSmall,
-              'ml-[-3.2px] text-5xl tracking-[4.4px]': isMedium,
-              'ml-[-5px] text-7xl tracking-[6.8px]': isLarge,
-            }"
-          >
-            Pollux
-          </div>
-          <div
-            class="custom-drop-shadow-lg"
-            :class="{
-              'text-xs': isSmall,
-              'text-base': isMedium,
-              'text-2xl': isLarge,
-            }"
-          >
-            Software Engineering
-          </div>
-        </div>
-
-        <!-- text logo -->
-        <slot />
-
-        <div class="overlay" />
-      </div>
-    </div>
-  </div>
+  <img
+    :src="lightLogo"
+    v-bind="logoProps"
+    class="inline dark:hidden"
+  />
+  <img
+    :src="darkLogo"
+    v-bind="logoProps"
+    class="hidden dark:inline"
+  />
 </template>
 
-<script>
-export default {
-  props: {
-    customSize: {
-      type: String,
-      default: null,
-    },
-
-    size: {
-      default: 'medium',
-      type: String,
-      validator: (value) => ['small', 'medium', 'large'].includes(value),
-    },
-
-    showText: {
-      default: false,
-      type: Boolean,
-    },
-
-    useColorLogo: {
-      default: false,
-      type: Boolean,
-    },
+<script setup>
+const props = defineProps({
+  size: {
+    default: 'w-48 h-auto',
+    type: String,
   },
+  tone: {
+    default: 'greyscale',
+    type: String,
+    validator: (value) => ['color', 'greyscale'].includes(value),
+  },
+  kind: {
+    default: 'horizontal',
+    type: String,
+    validator: (value) => ['horizontal', 'vertical', 'isotype'].includes(value),
+  },
+});
 
-  computed: {
-    isSmall() {
-      return this.size === 'small';
-    },
+const logoProps = ref();
 
-    isMedium() {
-      return this.size === 'medium';
-    },
+const lightLogo = ref('');
+const darkLogo = ref('');
 
-    isLarge() {
-      return this.size === 'large';
-    },
+watch(
+  () => [props.tone, props.kind],
+  () => {
+    logoProps.value = {
+      class: ['custom-drop-shadow-lg z-20', props.size],
+      alt: 'Pollux Software Engineering',
+    };
 
-    logoSizes() {
-      if (this.customSize) {
-        return this.customSize;
+    switchLogo();
+  },
+  { immediate: true }
+);
+
+function switchLogo() {
+  switch (props.kind) {
+    case 'isotype':
+      if (props.tone === 'greyscale') {
+        lightLogo.value = '/logos/logos-15.png';
+        darkLogo.value = '/logos/logos-16.png';
+      } else {
+        lightLogo.value = '/logos/logos-13.png';
+        darkLogo.value = '/logos/logos-14.png';
       }
 
-      return {
-        'h-auto w-12': this.isSmall,
-        'h-auto w-16': this.isMedium,
-        'h-auto w-24': this.isLarge,
-      };
-    },
-  },
-};
+      break;
+
+    case 'vertical':
+      if (props.tone === 'greyscale') {
+        lightLogo.value = '/logos/logos-10.png';
+        darkLogo.value = '/logos/logos-11.png';
+      } else {
+        lightLogo.value = '/logos/logos-08.png';
+        darkLogo.value = '/logos/logos-09.png';
+      }
+
+      break;
+
+    case 'horizontal':
+    default:
+      if (props.tone === 'greyscale') {
+        lightLogo.value = '/logos/logos-05.png';
+        darkLogo.value = '/logos/logos-06.png';
+      } else {
+        lightLogo.value = '/logos/logos-03.png';
+        darkLogo.value = '/logos/logos-04.png';
+      }
+
+      break;
+  }
+}
 </script>
-
-<style lang="scss" scoped>
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: transparent;
-  cursor: pointer;
-}
-
-.logo {
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -o-user-select: none;
-  user-select: none;
-}
-</style>
