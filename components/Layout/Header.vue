@@ -57,19 +57,19 @@ import ThemeSwitch from '~/components/Common/ThemeSwitch';
 import Logo from '~/components/Common/Logo';
 import MobileMenu from '~/components/Layout/MobileMenu';
 
-const mobileMenuOpened = ref(false);
 const links = [
   { href: '#services', label: 'Services' },
   { href: '#clients', label: 'Our Clients' },
   // { href: '/about', label: 'About Us' },
   { href: '#contact', label: 'Contact Us' },
 ];
-
+const mobileMenuOpened = ref(false);
 const sticking = ref(false);
 const header = ref();
 const headerMinHeight = ref(0);
-
 const logoProps = ref({});
+
+let previousScrollPosition = 0;
 
 watch(sticking, (newValue) => {
   if (newValue) {
@@ -79,21 +79,42 @@ watch(sticking, (newValue) => {
   }
 });
 
+function isScrollingDown() {
+  const scrollPosition = window.pageYOffset;
+  let goingDown = false;
+
+  if (scrollPosition > previousScrollPosition) {
+    goingDown = true;
+  }
+
+  previousScrollPosition = scrollPosition;
+
+  return goingDown;
+}
+
+function handleScroll() {
+  const OFFSET = 104;
+
+  if (isScrollingDown()) {
+    sticking.value = false;
+    headerMinHeight.value = 0;
+  } else {
+    if (window.pageYOffset > OFFSET) {
+      sticking.value = true;
+      headerMinHeight.value = OFFSET;
+    } else {
+      sticking.value = false;
+      headerMinHeight.value = 0;
+    }
+  }
+}
+
 onMounted(() => {
-  const intercept = document.createElement('div');
+  window.addEventListener('scroll', handleScroll);
+});
 
-  intercept.setAttribute('data-observer-intercept', '');
-  header.value.before(intercept);
-
-  const observer = new IntersectionObserver(
-    ([entry]) => {
-      headerMinHeight.value = header.value.clientHeight;
-      sticking.value = !entry.isIntersecting;
-    },
-    { rootMargin: '200px 0px 0px 0px' }
-  );
-
-  observer.observe(intercept);
+onBeforeUnmount(() => {
+  window.removeEventListener('scroll', handleScroll);
 });
 </script>
 
@@ -127,7 +148,10 @@ onMounted(() => {
 }
 
 header {
-  transition: all 0.5s ease;
+  .header-content {
+    transition: all 0.5s ease-in-out;
+    animation: sticky-out 0.5s ease-in-out;
+  }
 
   &.sticking {
     min-height: var(--min-height);
@@ -135,11 +159,6 @@ header {
     .header-content {
       animation: sticky-in 0.5s ease-in-out;
     }
-  }
-
-  .header-content {
-    animation: sticky-out 0.5s ease-in-out;
-    transition: all 0.5s ease;
   }
 }
 </style>
