@@ -33,7 +33,7 @@ import { EMAIL } from '~/support/constants/info';
 
 <style lang="scss" scoped>
 h2 {
-  @apply my-1 cursor-default text-7xl uppercase last-of-type:mb-12 sm:px-8 sm:text-9xl md:text-8xl 2xl:my-16 2xl:last-of-type:mb-16;
+  @apply my-1 cursor-default text-6xl uppercase last-of-type:mb-12 sm:px-8 sm:text-9xl md:text-8xl 2xl:my-16 2xl:last-of-type:mb-16;
 
   &:hover {
     text-shadow: 0 0 1.5rem hsl(0deg 0% 0% / 50%);

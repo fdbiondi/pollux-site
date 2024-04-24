@@ -3,14 +3,13 @@
     id="header"
     ref="header"
     role="banner"
-    :class="{ sticking }"
+    :class="{ sticking, 'h-screen': mobileMenuOpened }"
     :style="{ '--min-height': `${headerMinHeight}px` }"
   >
     <div
       class="header-content"
       :class="{
-        'sticky z-50 w-full bg-white shadow-md dark:bg-black md:fixed':
-          sticking,
+        'z-50 w-full shadow-md md:fixed md:bg-white md:dark:bg-black': sticking,
       }"
     >
       <nav
@@ -81,20 +80,17 @@ watch(sticking, (newValue) => {
 });
 
 onMounted(() => {
-  headerMinHeight.value = header.value.clientHeight ?? 72;
   const intercept = document.createElement('div');
-
-  console.log(window.pageYOffset, 'onMounted');
 
   intercept.setAttribute('data-observer-intercept', '');
   header.value.before(intercept);
 
   const observer = new IntersectionObserver(
     ([entry]) => {
+      headerMinHeight.value = header.value.clientHeight;
       sticking.value = !entry.isIntersecting;
-      // header.classList.toggle('sticking', !entry.isIntersecting);
     },
-    { rootMargin: '200px 0px 0px 0px' },
+    { rootMargin: '200px 0px 0px 0px' }
   );
 
   observer.observe(intercept);
@@ -110,7 +106,17 @@ onMounted(() => {
     drop-shadow(0 2px 2px rgb(0 0 0 / 50%));
 }
 
-@keyframes slide-down {
+@keyframes sticky-out {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes sticky-in {
   0% {
     transform: translateY(-100%);
   }
@@ -120,15 +126,20 @@ onMounted(() => {
   }
 }
 
-header.sticking {
-  min-height: var(--min-height);
-}
+header {
+  transition: all 0.5s ease;
 
-.header-content {
-  transition: background-color 500ms ease-in-out;
+  &.sticking {
+    min-height: var(--min-height);
 
-  &.sticky {
-    animation: slide-down 700ms ease-in-out;
+    .header-content {
+      animation: sticky-in 0.5s ease-in-out;
+    }
+  }
+
+  .header-content {
+    animation: sticky-out 0.5s ease-in-out;
+    transition: all 0.5s ease;
   }
 }
 </style>

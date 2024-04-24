@@ -1,6 +1,6 @@
 <template>
   <div
-    class="z-50 duration-700"
+    class="duration-700"
     :class="{ 'fixed inset-0 bg-gray-100 dark:bg-gray-900': menuOpen }"
   >
     <div
