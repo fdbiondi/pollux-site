@@ -3,7 +3,7 @@
     id="header"
     ref="header"
     role="banner"
-    :class="{ sticking, 'h-screen': mobileMenuOpened }"
+    :class="{ sticking }"
     :style="{ '--min-height': `${headerMinHeight}px` }"
   >
     <div

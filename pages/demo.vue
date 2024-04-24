@@ -10,7 +10,7 @@
       <AppHeader />
 
       <section
-        class="hero--wrapper relative z-20 flex cursor-none items-center py-8 lg:py-16 xl:py-24"
+        class="hero--wrapper z-20 flex cursor-none items-center py-8 lg:py-16 xl:py-24"
       >
         <div
           class="container mx-auto flex w-full items-center justify-center px-6 pb-16 text-center"

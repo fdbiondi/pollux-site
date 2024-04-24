@@ -1,7 +1,7 @@
 <template>
   <div
     class="duration-700"
-    :class="{ 'fixed inset-0 bg-gray-100 dark:bg-gray-900': menuOpen }"
+    :class="{ 'h-screen fixed inset-0 bg-gray-100 dark:bg-gray-900': menuOpen }"
   >
     <div
       class="menu"
