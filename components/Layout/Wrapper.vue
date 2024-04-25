@@ -1,5 +1,5 @@
 <template>
-  <div class="wrapper">
+  <div class="wrapper mb-4">
     <section class="wrapper__inner">
       <slot />
     </section>

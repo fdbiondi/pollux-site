@@ -1,6 +1,6 @@
 <template>
   <Wrapper
-    class="py-8 shadow-inner shadow-black-light/20 dark:shadow-gray-800/20 lg:py-16 xl:py-32"
+    class="py-8 shadow-inner shadow-black-light/20 dark:shadow-gray-800/20 lg:py-16 xl:py-32 !m-0"
   >
     <div class="container mx-auto px-4 font-serif sm:px-6">
       <div class="flex flex-wrap">
