@@ -156,14 +156,7 @@
     </BlockSticky>
 
     <!-- Talk to us / Contact Form -->
-    <Wrapper
-      id="contact"
-      class="py-8 shadow-inner shadow-black-light/20 dark:shadow-gray-800/20 lg:py-16 xl:py-32"
-    >
-      <ContactForm>
-        <TalkWithUs />
-      </ContactForm>
-    </Wrapper>
+    <ContactForm id="contact" />
 
     <BackgroundCodeHtml />
   </main>
@@ -176,9 +169,8 @@ import { ref } from 'vue';
 
 import { AppHeader, AppFooter } from '~/components/Layout';
 import BackgroundCodeHtml from '~/components/Sections/BackgroundCodeHtml';
-import ContactForm from '~/components/Forms/ContactForm';
+import ContactForm from '~/components/Forms/ContactForm/ContactForm.vue';
 import LoaderEffect from '~/components/Utilities/LoaderEffect';
-import TalkWithUs from '~/components/Sections/TalkWithUs';
 import ClientsList from '~/components/Sections/ClientsList';
 
 import BlockSticky from '~/components/Blocks/BlockSticky.vue';
