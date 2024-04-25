@@ -7,7 +7,7 @@
         <slot name="heading" />
       </div>
 
-      <div class="col-[7_/_span_5] text-2xl">
+      <div class="col-[7_/_span_5]">
         <slot />
       </div>
     </div>
