@@ -28,6 +28,7 @@
     ],
     "no-descending-specificity": null,
     "property-no-vendor-prefix": null,
-    "property-no-unknown": null
+    "property-no-unknown": null,
+    "selector-class-pattern": null
   }
 }

@@ -61,13 +61,12 @@
     </LoaderEffect>
 
     <!-- Our clients -->
-    <section
-
+    <Wrapper
       id="clients"
       class="py-8 lg:py-16 xl:py-24"
     >
       <ClientsList class="container mx-auto px-6" />
-    </section>
+    </Wrapper>
 
     <!-- What we offer -->
     <section
@@ -109,17 +108,62 @@
       </div>
     </section>
 
-    <Block1 anchor="what-we-offer" />
+    <BlockDivider />
+
+    <BlockSticky>
+      <template #heading>
+        <CardSimple>
+          <template #label>
+            <span>01</span>
+          </template>
+          <template #heading>
+            <span>Qualifications & Experience</span>
+          </template>
+        </CardSimple>
+      </template>
+
+      <div class="lists">
+        <ul
+          class="typography js-typography lists__typography"
+          data-id="b9d46722"
+        >
+          <li>4+ years of experience as a frontend or full-stack developer</li>
+          <li>3+ years of experience in react</li>
+          <li>
+            ability to handle new projects as well as improve existing ones
+          </li>
+          <li>a good understanding of the web and browsers</li>
+          <li>excellent command of english</li>
+          <li>
+            experience with hands-on, cross-functional product teams and short
+            feedback loops is a big plus
+          </li>
+          <li>previous experience within the financial sector is a plus</li>
+          <li>4+ years of experience as a frontend or full-stack developer</li>
+          <li>3+ years of experience in react</li>
+          <li>
+            ability to handle new projects as well as improve existing ones
+          </li>
+          <li>a good understanding of the web and browsers</li>
+          <li>excellent command of english</li>
+          <li>
+            experience with hands-on, cross-functional product teams and short
+            feedback loops is a big plus
+          </li>
+          <li>previous experience within the financial sector is a plus</li>
+        </ul>
+      </div>
+    </BlockSticky>
 
     <!-- Talk to us / Contact Form -->
-    <section
+    <Wrapper
       id="contact"
       class="py-8 shadow-inner shadow-black-light/20 dark:shadow-gray-800/20 lg:py-16 xl:py-32"
     >
       <ContactForm>
         <TalkWithUs />
       </ContactForm>
-    </section>
+    </Wrapper>
 
     <BackgroundCodeHtml />
   </main>
@@ -136,7 +180,11 @@ import ContactForm from '~/components/Forms/ContactForm';
 import LoaderEffect from '~/components/Utilities/LoaderEffect';
 import TalkWithUs from '~/components/Sections/TalkWithUs';
 import ClientsList from '~/components/Sections/ClientsList';
-import Block1 from '~/components/Test/Block1.vue';
+
+import BlockSticky from '~/components/Blocks/BlockSticky.vue';
+import BlockDivider from '~/components/Blocks/BlockDivider.vue';
+import Wrapper from '~/components/Layout/Wrapper.vue';
+import CardSimple from '~/components/Cards/CardSimple.vue';
 
 const hero = ref(null);
 </script>
