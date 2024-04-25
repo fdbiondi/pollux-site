@@ -109,6 +109,8 @@
       </div>
     </section>
 
+    <Block1 anchor="what-we-offer" />
+
     <!-- Talk to us / Contact Form -->
     <section
       id="contact"
@@ -134,6 +136,7 @@ import ContactForm from '~/components/Forms/ContactForm';
 import LoaderEffect from '~/components/Utilities/LoaderEffect';
 import TalkWithUs from '~/components/Sections/TalkWithUs';
 import ClientsList from '~/components/Sections/ClientsList';
+import Block1 from '~/components/Test/Block1.vue';
 
 const hero = ref(null);
 </script>

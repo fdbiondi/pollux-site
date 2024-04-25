@@ -126,9 +126,14 @@ export default defineNuxtConfig({
 
   googleFonts: {
     families: {
-      'Roboto+Mono': true,
-      'Space+Grotesk': true,
-      Montserrat: true,
+      'Roboto+Mono': {
+        wght: '100..900',
+        ital: '100..900',
+      },
+      Montserrat: {
+        wght: '100..900',
+        ital: '100..900',
+      },
       Oswald: true,
     },
     preload: true,
