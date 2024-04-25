@@ -102,7 +102,7 @@
           class="flex w-full flex-col items-center justify-between px-6 py-8 lg:w-1/3 lg:items-end xl:w-1/4"
         >
           <ImageList
-            class="partners m-0 justify-between"
+            class="partners m-0 flex w-full flex-row flex-wrap items-center justify-between lg:flex-nowrap"
             :images="partners"
             :has-link="true"
           />

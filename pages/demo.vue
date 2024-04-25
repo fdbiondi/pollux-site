@@ -43,6 +43,7 @@
                   Know More
                 </button>
               </nuxt-link>
+
               <nuxt-link
                 to="#contact"
                 class="cursor-none"
@@ -61,21 +62,12 @@
 
     <!-- Our clients -->
     <section
+
       id="clients"
       class="py-8 lg:py-16 xl:py-24"
     >
       <ClientsList class="container mx-auto px-6" />
     </section>
-
-    <!-- <section -->
-    <!--   id="services" -->
-    <!--   class="py-8 lg:py-16 xl:py-24" -->
-    <!-- > -->
-    <!--   <CardList -->
-    <!--     :items="servicesTypes" -->
-    <!--     :title="SERVICES_SECTION_TITLE" -->
-    <!--   /> -->
-    <!-- </section> -->
 
     <!-- What we offer -->
     <section
@@ -115,20 +107,6 @@
           </div>
         </div>
       </div>
-
-      <!-- <div class="container mx-auto px-4 sm:px-4 md:px-2"> -->
-      <!--     <ul -->
-      <!--       role="list" -->
-      <!--       class="grid grid-cols-1 gap-6 lg:grid-cols-3 lg:gap-12 lg:gap-y-16" -->
-      <!--     > -->
-      <!--       <CardGradient -->
-      <!--         v-for="(item, index) in servicesCategories" -->
-      <!--         :key="`card-gradient-${index}`" -->
-      <!--         :title="item.title" -->
-      <!--         :description="item.description" -->
-      <!--       /> -->
-      <!--     </ul> -->
-      <!-- </div> -->
     </section>
 
     <!-- Talk to us / Contact Form -->

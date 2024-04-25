@@ -1,7 +1,7 @@
 <template>
   <div>
     <ImageList
-      class="clients mb-6"
+      class="clients mb-6 grid grid-cols-3 sm:grid-flow-col sm:grid-rows-2 items-center justify-center 2xl:grid-flow-col 2xl:grid-rows-1"
       :images="clients"
       :has-link="true"
     />

@@ -23,8 +23,7 @@
 
         <div class="z-30 flex items-center">
           <div
-            v-if="!mobileMenuOpened"
-            class="text-pollux-gray-dark hidden font-mono dark:text-white 2xl:flex"
+            class="hidden font-mono text-pollux-gray-dark dark:text-white 2xl:flex"
             :class="[sticking ? 'text-base' : 'text-lg']"
           >
             <a
