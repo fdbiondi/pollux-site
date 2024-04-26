@@ -16,11 +16,70 @@ export default defineNuxtConfig({
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
         {
+          'http-equiv': 'X-UA-Compatible',
+          content: 'IE=edge',
+        },
+        {
+          'http-equiv': 'Content-type',
+          content: 'text/html; charset=utf-8',
+        },
+        {
+          name: 'application-name',
+          content: process.env.APP_NAME,
+        },
+        {
+          name: 'robots',
+          content: 'noindex,nofollow,noindex_internal,noarchive',
+        },
+        {
+          name: 'keywords',
+          content:
+            'software engineering, software development services, software architecture, dedicated team services, staff augmentation services, custom software solutions, it services, engineering consulting, technology consulting, mobile applications development, enterprise software development, blockchain services',
+        },
+
+        {
+          hid: 'name',
+          name: 'name',
+          itemprop: 'name',
+          content: process.env.APP_NAME,
+        },
+        {
           hid: 'description',
           name: 'description',
+          itemprop: 'description',
           content: process.env.HEAD_DESCRIPTION,
         },
+        {
+          hid: 'image',
+          name: 'image',
+          itemprop: 'image',
+          content: '/android-chrome-512x512.png',
+        },
+
+        { property: 'og:title', content: process.env.HEAD_TITLE },
+        { property: 'og:description', content: process.env.HEAD_DESCRIPTION },
+        { property: 'og:type', content: 'website' },
+        { property: 'og:url', content: process.env.APP_URL },
+        { property: 'og:locale', content: 'en_US' },
+        {
+          property: 'og:image',
+          content: `${process.env.APP_URL}/logo-color.png`,
+        },
+
         { name: 'format-detection', content: 'telephone=no' },
+        {
+          'http-equiv': 'Content-Security-Policy',
+          content: "frame-ancestors 'self';",
+        },
+        {
+          name: 'apple-mobile-web-app-title',
+          content: process.env.HEAD_TITLE,
+        },
+        {
+          name: 'apple-mobile-web-app-capable',
+          content: 'yes',
+        },
+        { name: 'msapplication-TileColor', content: '#3BBEEF' },
       ],
 
       link: [
