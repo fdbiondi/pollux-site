@@ -18,7 +18,7 @@
     "@fortawesome/free-solid-svg-icons": "^6.5.2",
     "@fortawesome/vue-fontawesome": "^3.0.6",
     "@nuxt/devtools": "^0.8.3",
-    "@nuxt/eslint-config": "^0.1.1",
+    "@nuxt/eslint-config": "^0.3.10",
     "@nuxtjs/color-mode": "^3.3.3",
     "@nuxtjs/eslint-module": "^4.1.0",
     "@nuxtjs/google-fonts": "^3.0.2",
