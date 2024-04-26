@@ -2,6 +2,80 @@
   <main class="py-24">
     <BlockDivider class="!mb-4" />
 
+    <BlockColumns class="pb-40">
+      <template #col-1>
+        <BlockParagraph>
+          <span class="text-base">THE BACKSTORY</span>
+        </BlockParagraph>
+      </template>
+
+      <template #col-2>
+        <BlockParagraph>
+          <span class="text-3xl">
+            Back in 2005, before the App Store even existed, two engineering
+            students won an app-building contest and used the prize money to
+            start a company. The rest is history.
+          </span>
+        </BlockParagraph>
+      </template>
+    </BlockColumns>
+
+    <!-- content big title with 2 cards -->
+
+    <BlockGrid
+      class="pt-0"
+      span="8"
+    >
+      <BlockHeading>
+        <span class="text-9xl">We build digital products</span>
+      </BlockHeading>
+    </BlockGrid>
+
+    <BlockColumns
+      class="pb-40 pt-0"
+      col-1-start="1"
+      col-1-span="4"
+      col-2-start="5"
+      col-2-span="4"
+    >
+      <template #col-1>
+        <BlockCardSimple>
+          <BlockHeading>
+            <span class="text-[2.65rem]/[1]">Transforming businesses</span>
+          </BlockHeading>
+
+          <BlockParagraph>
+            <span class="text-xl font-extralight">
+              We partner with forward-thinking brands, organizations, and
+              founders that understand the value of technology. Together, we
+              embrace change, envision new business models, and enhance existing
+              practices to grow their business.
+            </span>
+          </BlockParagraph>
+        </BlockCardSimple>
+      </template>
+
+      <template #col-2>
+        <BlockCardSimple>
+          <BlockHeading>
+            <span class="text-[2.65rem]/[1]">Supporting the community</span>
+          </BlockHeading>
+
+          <BlockParagraph>
+            <span class="text-xl font-extralight">
+              We believe if you’re good at something, you should pass down the
+              knowledge. It’s how we progress as a community. We publish open
+              source, write articles, speak at conferences, and host events that
+              benefit design, engineering, and tech enthusiasts.
+            </span>
+          </BlockParagraph>
+        </BlockCardSimple>
+      </template>
+    </BlockColumns>
+    <!-- content big title with 2 cards -->
+
+    <BlockDivider class="!mb-4" />
+
     <BlockParagraph class="px-24">
       <span class="text-base">WE ARE LOOKING FOR</span>
     </BlockParagraph>
@@ -31,7 +105,9 @@
           workshops, and we regularly contribute to open source.
         </BlockParagraph>
 
-        <BlockParagraph class="!mb-12 font-bold">Position specifics</BlockParagraph>
+        <BlockParagraph class="!mb-12 font-bold">
+          Position specifics
+        </BlockParagraph>
 
         <BlockParagraph class="!mb-12">
           This is a project-based position within the financial services
@@ -98,6 +174,51 @@
         </div>
       </BlockParagraph>
     </BlockSticky>
+
+    <BlockDivider class="!my-48" />
+
+    <BlockColumns
+      class="flex h-screen items-center"
+      col-2-span="8"
+      col-2-start="7"
+    >
+      <template #col-1>
+        <BlockParagraph class="mt-4">
+          <span class="text-base">WE'RE HIRING</span>
+        </BlockParagraph>
+      </template>
+
+      <template #col-2>
+        <BlockHeading>
+          <template #block>
+            <span class="text-[8.5rem] font-extrabold leading-none">
+              Want to join us?
+            </span>
+          </template>
+        </BlockHeading>
+      </template>
+    </BlockColumns>
+
+    <BlockDivider class="!mb-4" />
+
+    <BlockGrid class="pb-0">
+      <BlockParagraph>
+        <span class="text-base">WE KEEP BUSY</span>
+      </BlockParagraph>
+    </BlockGrid>
+
+    <BlockGrid
+      class="pt-0"
+      span="5"
+    >
+      <BlockHeading>
+        <template #block>
+          <span class="text-[5.25rem] leading-none font-extrabold">
+            Initiatives we’re proud of
+          </span>
+        </template>
+      </BlockHeading>
+    </BlockGrid>
   </main>
 </template>
 
@@ -108,4 +229,5 @@ import BlockHeading from '~/components/Blocks/BlockHeading.vue';
 import BlockParagraph from '~/components/Blocks/BlockParagraph.vue';
 import BlockCardSimple from '~/components/Blocks/BlockCardSimple.vue';
 import BlockColumns from '~/components/Blocks/BlockColumns.vue';
+import BlockGrid from '~/components/Blocks/BlockGrid.vue';
 </script>
