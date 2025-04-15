@@ -155,9 +155,7 @@ import {
   PHONE,
 } from '~/support/constants/info';
 import { getFromContext } from '~/support/files';
-import isoImage from '~/assets/images/bureau';
 
-const isoLink = 'https://bureauveritas.com.ar';
 const LETS_CONNECT = `Let's connect`;
 
 const firstColumn = sitemap.firstColumn;
