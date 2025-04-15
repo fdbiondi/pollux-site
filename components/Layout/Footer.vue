@@ -105,17 +105,6 @@
             :images="partners"
             :has-link="true"
           />
-
-          <a
-            :href="isoLink"
-            target="_blank"
-          >
-            <img
-              :src="isoImage"
-              alt="ISO 9001 certification"
-              class="mt-10 w-40 lg:mt-0"
-            />
-          </a>
         </div>
       </div>
 
