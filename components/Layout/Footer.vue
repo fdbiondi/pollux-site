@@ -105,17 +105,6 @@
             :images="partners"
             :has-link="true"
           />
-
-          <a
-            :href="isoLink"
-            target="_blank"
-          >
-            <img
-              :src="isoImage"
-              alt="ISO 9001 certification"
-              class="mt-10 w-40 lg:mt-0"
-            />
-          </a>
         </div>
       </div>
 
@@ -166,9 +155,7 @@ import {
   PHONE,
 } from '~/support/constants/info';
 import { getFromContext } from '~/support/files';
-import isoImage from '~/assets/images/bureau';
 
-const isoLink = 'https://bureauveritas.com.ar';
 const LETS_CONNECT = `Let's connect`;
 
 const firstColumn = sitemap.firstColumn;
